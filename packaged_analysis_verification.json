@@ -67,23 +67,23 @@
   "independent_machine_reproduction": false,
   "manuscript_compile_pages": 13,
   "manuscript_render_sha256": [
-    "da3f55feded6ac6f54fbe5a32240a531336fa90e559130fe5b2d6b2b2714da00",
-    "705d17e146168319fbb58d666c041db06c81349fa9d245f44a1103a22ced5f51",
-    "22b99211f2d4699c70d416a6ca1ea949fcaf3ed210b7b863ebab99ba3d890262",
-    "20ada96ae7c4be9974edad7ad22f7305b3d1821b0d3eb698bb5ec89a1fa66e4d",
-    "18a176b415af74c6a2bdcc2a92fdd30133be0470c15885b1add73e14ab7dba47",
-    "74edcac39b8158e818f16325ff86dcd8888bec2dba99f6105de064a833fde943",
-    "693a8b09c0aa82058e2624cb82c95ed273577405cb1864d30df69a800a4335d3",
-    "a17ba0eb740c9379e09873656f962aa4d525d1f4791b6e527d8b013163469f66",
-    "1c381ea6a7b5c488ba6e293b707c02437e70ea16966099bb25d2b64ee10deec6",
-    "122dc25599922260ba93216ceceb78ef5a4fb9375fe59bfde5d5ce5ed5b58f8c",
-    "c6ab9327932f2f345d1ebc6605532a86d59896446978f09a997d57cf7fc2cfd6",
-    "8773215dbfc9df3b3ab87164c9388bfa5eb5450ea727cb3a111c85d49d9b51fb",
-    "d3c4d07a0461fbe6d5d0662badea779ecff40b1116ad06604cf3ef657d641e52"
+    "2e0f6021e2bbbc7d44ad5ca82751d7c69ad2045d8200a4404a4223f7237db27c",
+    "58fd7d79f68ae87d73627b6f6ae33b2dc78a42b755540c3c3eb24a522f617855",
+    "84cf9afd96934a128f3361f2cdc29c1571b98478bc3568c3ac4afdf7b3a4a9d1",
+    "e049b70eba37887e156e56d4300772dc6abb2b5eff5aec5a6c3975f2f99e59d9",
+    "69cbded41384a426b33b3b2d34cab3f844376e18236372542662e12582680e08",
+    "4c362e8e6dc6b23331e77e0d04f4f9bb4a38fa1093f496de3c1ec41753aec8bc",
+    "f6db792d3a755d32003adbabde91802bbc327006a88e7cfd80e45c841629ac3f",
+    "c7e2f49e66e930d7a2e652748b4044a0c14f72ba96f9d54f79e5963da1ab5a1d",
+    "e50ab4d6b4849d483aecf7439fcf646fc4acbe47f8ae03a9571ceb0f33c01570",
+    "3106a21c5efe38699daf3e25cf1f5ef7773a24384a1c01eb6050a76bb68d1725",
+    "8c6a3194aa915f2f48ca365198ebf75c4953d852c2fee86971c36210e6954d8e",
+    "bf22f48a4ee7096e98211866d41d555bca86c974b8a41afc13d498901860b0af",
+    "23935e38dfe8c1e87367b93d8cd69d6f67331e6b5d37997e1a64d9f599207305"
   ],
-  "final_pdf_sha256": "9a2404be0b37525c6cb1c8880cb0326586ab8a9cd9426e45c6ba83ee7b9563fd",
-  "final_tex_sha256": "0503a4ebe51c1dffafa95e9afc0ddae0611496d940f47330392825675cfdff0a",
-  "manuscript_refresh_scope": "ICDE 2027 public artifact and 12-page main-text revision. Added a public repository hyperlink, minimality witnesses, the implemented LOF equations, task-specific method-selection guidance and reproduction instructions. Figures, statistical tables and raw results are preserved. AI disclosure and references occupy a separate excluded page; no appendix.",
+  "final_pdf_sha256": "cfcbae16726a46c528a5cc406228975af8a180b81b8341c295363b7c33e01110",
+  "final_tex_sha256": "23db1dda126772ba386333774b396f4da8d20478fd53842db3e85a0fc6bfc01b",
+  "manuscript_refresh_scope": "Nine verified ICDE 2024\u20132026 references added and cited in Introduction and Related Work, including four ICDE 2026 EAB papers. Redundant prose compressed to retain 12 main-text pages plus one full references/disclosure page. All figures, statistical tables and raw results are unchanged. No appendix",
   "packaged_pdf_compilation_passed": true,
   "qwen_logo_sha256": "794b43dad06ab847ba1b27a791f6ccc393e16d12ec87898d7bc509476f8cdd7f",
   "manuscript_figures": 6,
@@ -106,5 +106,6 @@
     "url": "https://github.com/KDDElab/known-outlier-benchmark",
     "anonymous_access_verified": true,
     "verification_commit": "80602f1a2ce3e629da9d10203c83c111582fbe28"
-  }
+  },
+  "manuscript_references": 41
 }

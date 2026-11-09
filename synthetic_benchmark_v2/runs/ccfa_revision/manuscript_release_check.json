@@ -1,28 +1,28 @@
 {
   "pages": 13,
   "page_words": [
-    750,
-    843,
-    729,
-    855,
-    847,
-    752,
-    661,
-    760,
-    796,
-    842,
-    579,
-    628,
-    975
+    745,
+    839,
+    709,
+    846,
+    865,
+    755,
+    657,
+    741,
+    812,
+    825,
+    578,
+    614,
+    1273
   ],
   "figures": 6,
   "tables": 6,
-  "references": 32,
+  "references": 41,
   "undefined_references": false,
   "overfull_boxes": false,
   "fonts_and_margins": "IEEEtran conference body defaults; scriptsize result tables with local row spacing",
-  "pdf_sha256": "9a2404be0b37525c6cb1c8880cb0326586ab8a9cd9426e45c6ba83ee7b9563fd",
-  "tex_sha256": "0503a4ebe51c1dffafa95e9afc0ddae0611496d940f47330392825675cfdff0a",
+  "pdf_sha256": "cfcbae16726a46c528a5cc406228975af8a180b81b8341c295363b7c33e01110",
+  "tex_sha256": "23db1dda126772ba386333774b396f4da8d20478fd53842db3e85a0fc6bfc01b",
   "completed_new_model_records": 1368,
   "human_evidence_pending": true,
   "public_artifact_url_pending": false,
@@ -145,16 +145,43 @@
     "publication_status": "public_repository_verified"
   },
   "last_manuscript_revision": {
-    "scope": "12 main-text pages and excluded references/disclosure; substantive minimality, LOF and task-selection explanation; public artifact link and reproduction instructions",
+    "scope": "Nine verified ICDE 2024–2026 references, all cited in Introduction/Related Work; four are confirmed ICDE 2026 EAB papers. Redundant prose compressed to retain 12 main-text pages and one full references/disclosure page.",
     "figures_unchanged": true,
     "statistical_results_unchanged": true,
     "new_model_inference": false,
-    "scoped_alignment": "Minimality witnesses follow the finite-support definition. LOF equations match the implemented reference-only reachability and density calculations. All numerical comparisons and limits are retained. Public repository and the hash manifest were retrieved without authentication."
+    "sections_II_through_VI_byte_identical": true,
+    "all_figure_and_table_environments_byte_identical": true,
+    "added_reference_keys": [
+      "ni2025zeroed",
+      "wu2025zeroec",
+      "qin2024bclean",
+      "papadakis2024reevaluation",
+      "zhang2026xrag",
+      "mu2026aqp",
+      "yang2026tr360",
+      "zhu2026beacon",
+      "schreiber2026verification"
+    ],
+    "new_reference_numbers": {
+      "ni2025zeroed": 2,
+      "wu2025zeroec": 3,
+      "qin2024bclean": 35,
+      "papadakis2024reevaluation": 37,
+      "zhang2026xrag": 38,
+      "mu2026aqp": 41,
+      "yang2026tr360": 39,
+      "zhu2026beacon": 40,
+      "schreiber2026verification": 36
+    },
+    "total_references": 41,
+    "evidence_record": "synthetic_benchmark_v2/runs/ccfa_revision/recent_icde_reference_evidence.json",
+    "scoped_alignment": "Crossref publication metadata verified against primary papers, publisher abstracts, author artifacts and official ICDE EAB lists. All nine new references occur in main-text prose; no new empirical claims or experiments. Rendered layout reviewed on all 13 pages."
   },
   "public_artifact": {
     "url": "https://github.com/KDDElab/known-outlier-benchmark",
     "anonymous_access_verified": true,
     "verification_commit": "80602f1a2ce3e629da9d10203c83c111582fbe28",
     "release_tag": "icde2027-eab-v1"
-  }
+  },
+  "bib_sha256": "4b6a6f851f0cf10a837e2559bfbd48043e9af082d052a4d21b6c98505dbbb06c"
 }

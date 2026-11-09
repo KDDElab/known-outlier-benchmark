@@ -1,0 +1,1394 @@
+{
+  "verified_date": "2026-11-09",
+  "crossref_records": {
+    "ni2025zeroed": {
+      "title": [
+        "ZeroED: Hybrid Zero-Shot Error Detection Through Large Language Model Reasoning"
+      ],
+      "author": [
+        {
+          "given": "Wei",
+          "family": "Ni",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Center for Data Science, Zhejiang University,Hangzhou,China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Kaihang",
+          "family": "Zhang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Center for Data Science, Zhejiang University,Hangzhou,China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Xiaoye",
+          "family": "Miao",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Center for Data Science, Zhejiang University,Hangzhou,China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Xiangyu",
+          "family": "Zhao",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "City University of Hong Kong,Department of Data Science,Hong Kong,China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yangyang",
+          "family": "Wu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Software College, Zhejiang University,Ningbo,China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yaoshu",
+          "family": "Wang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Shenzhen Institute of Computing Sciences,Shenzhen,China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jianwei",
+          "family": "Yin",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "College of Computer Science, Zhejiang University,Hangzhou,China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "page": "3126-3139",
+      "DOI": "10.1109/icde65448.2025.00234",
+      "container-title": [
+        "2025 IEEE 41st International Conference on Data Engineering (ICDE)"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2025,
+            5,
+            19
+          ]
+        ]
+      },
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/11112833/11112834/11113226.pdf?arnumber=11113226",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "wu2025zeroec": {
+      "title": [
+        "A Zero-Training Error Correction System with Large Language Models"
+      ],
+      "author": [
+        {
+          "given": "Yangyang",
+          "family": "Wu",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Software College, Zhejiang University,Ningbo,China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Chen",
+          "family": "Yang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Software College, Zhejiang University,Ningbo,China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Mengying",
+          "family": "Zhu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Software College, Zhejiang University,Ningbo,China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Xiaoye",
+          "family": "Miao",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Center for Data Science, Zhejiang University,Hangzhou,China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Wei",
+          "family": "Ni",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Center for Data Science, Zhejiang University,Hangzhou,China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Meng",
+          "family": "Xi",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Software College, Zhejiang University,Ningbo,China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Xinkui",
+          "family": "Zhao",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Software College, Zhejiang University,Ningbo,China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jianwei",
+          "family": "Yin",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "College of Computer Science, Zhejiang University,Hangzhou,China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "page": "2949-2962",
+      "DOI": "10.1109/icde65448.2025.00221",
+      "container-title": [
+        "2025 IEEE 41st International Conference on Data Engineering (ICDE)"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2025,
+            5,
+            19
+          ]
+        ]
+      },
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/11112833/11112834/11113193.pdf?arnumber=11113193",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "qin2024bclean": {
+      "title": [
+        "BClean: A Bayesian Data Cleaning System"
+      ],
+      "author": [
+        {
+          "given": "Jianbin",
+          "family": "Qin",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Shenzhen University"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Sifan",
+          "family": "Huang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Shenzhen University"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yaoshu",
+          "family": "Wang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Shenzhen Institute of Computing Science"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jing",
+          "family": "Zhu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Shenzhen University"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yifan",
+          "family": "Zhang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Shenzhen University"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yukai",
+          "family": "Miao",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Zhongguancun Laboratory"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Rui",
+          "family": "Mao",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Shenzhen University"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Makoto",
+          "family": "Onizuka",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Osaka Univeristy"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Chuan",
+          "family": "Xiao",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Osaka Univeristy"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "page": "3407-3420",
+      "DOI": "10.1109/icde60146.2024.00263",
+      "container-title": [
+        "2024 IEEE 40th International Conference on Data Engineering (ICDE)"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2024,
+            5,
+            13
+          ]
+        ]
+      },
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/10597630/10597390/10597910.pdf?arnumber=10597910",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "papadakis2024reevaluation": {
+      "title": [
+        "A Critical Re-evaluation of Record Linkage Benchmarks for Learning-Based Matching Algorithms"
+      ],
+      "author": [
+        {
+          "given": "George",
+          "family": "Papadakis",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "National &#x0026; Kapodistrian University of Athens,Greece"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Nishadi",
+          "family": "Kirielle",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "The Australian National University,Australia"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Peter",
+          "family": "Christen",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "The Australian National University,Australia"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Themis",
+          "family": "Palpanas",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Universit&#x00E9; Paris Cit&#x00E9; &#x0026; French University Institute,France"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "page": "3435-3448",
+      "DOI": "10.1109/icde60146.2024.00265",
+      "container-title": [
+        "2024 IEEE 40th International Conference on Data Engineering (ICDE)"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2024,
+            5,
+            13
+          ]
+        ]
+      },
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/10597630/10597390/10598022.pdf?arnumber=10598022",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "zhang2026xrag": {
+      "title": [
+        "XRAG: Examining the Core - Benchmarking Foundational Components in Advanced Retrieval-Augmented Generation"
+      ],
+      "author": [
+        {
+          "given": "Qili",
+          "family": "Zhang",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Zhongguancun Laboratory"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Qianren",
+          "family": "Mao",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Zhongguancun Laboratory"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yangyifei",
+          "family": "Luo",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Beihang University"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yashuo",
+          "family": "Luo",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Beihang University"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Hanwen",
+          "family": "Hao",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Beihang University"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Zhilong",
+          "family": "Cao",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Beihang University"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Weifeng",
+          "family": "Jiang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Nanyang Technological University"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Zhijun",
+          "family": "Chen",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Beihang University"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Junnan",
+          "family": "Liu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Beihang University"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Feng",
+          "family": "Yan",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Beihang University"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Xiaolong",
+          "family": "Wang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Beihang University"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jinlong",
+          "family": "Zhang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Beihang University"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Zhenting",
+          "family": "Huang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Beihang University"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Zhixing",
+          "family": "Tan",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Zhongguancun Laboratory"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jie",
+          "family": "Sun",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Zhongguancun Laboratory"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Bo",
+          "family": "Li",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Beihang University"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jianxin",
+          "family": "Li",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Beihang University"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Philip S.",
+          "family": "Yu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Illinois Chicago"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "page": "2697-2710",
+      "DOI": "10.1109/icde65706.2026.00201",
+      "container-title": [
+        "2026 IEEE 42nd International Conference on Data Engineering (ICDE)"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2026,
+            5
+          ]
+        ]
+      },
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/11629178/11629165/11629265.pdf?arnumber=11629265",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "mu2026aqp": {
+      "title": [
+        "[Experiment, Analysis, and Benchmark] Systematic Evaluation of Plan-Based Adaptive Query Processing"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0003-2781-8032",
+          "authenticated-orcid": false,
+          "given": "Pei",
+          "family": "Mu",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "University of Edinburgh"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Anderson Chaves",
+          "family": "Carniel",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Huawei Technologies Research & Development (UK) Limited"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-1641-0779",
+          "authenticated-orcid": false,
+          "given": "Antonio",
+          "family": "Barbalace",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Edinburgh"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-9062-759X",
+          "authenticated-orcid": false,
+          "given": "Amir",
+          "family": "Shaikhha",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Edinburgh"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "page": "3501-3514",
+      "DOI": "10.1109/icde65706.2026.00257",
+      "container-title": [
+        "2026 IEEE 42nd International Conference on Data Engineering (ICDE)"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2026,
+            5
+          ]
+        ]
+      },
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/11629178/11629165/11629512.pdf?arnumber=11629512",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "yang2026tr360": {
+      "title": [
+        "Revisiting Single-Table Retrieval: An Open Problem Under 360° Stress Tests"
+      ],
+      "author": [
+        {
+          "given": "Chenyu",
+          "family": "Yang",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "HKUST (GZ)"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ziyu",
+          "family": "Jiang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "HKUST (GZ)"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Junhao",
+          "family": "Li",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "HKUST (GZ)"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yuyu",
+          "family": "Luo",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "HKUST (GZ)"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ju",
+          "family": "Fan",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Renmin University of China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Nan",
+          "family": "Tang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "HKUST (GZ)"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "page": "3569-3583",
+      "DOI": "10.1109/icde65706.2026.00262",
+      "container-title": [
+        "2026 IEEE 42nd International Conference on Data Engineering (ICDE)"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2026,
+            5
+          ]
+        ]
+      },
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/11629178/11629165/11629253.pdf?arnumber=11629253",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "zhu2026beacon": {
+      "title": [
+        "[Experiment, Analysis, and Benchmark] BEACON: A Benchmark for Efficient and Accurate Counting of Subgraphs"
+      ],
+      "author": [
+        {
+          "given": "Xiangju",
+          "family": "Zhu",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "The University of Hong Kong",
+              "place": [
+                "Hong Kong SAR, China"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Mohammad Matin",
+          "family": "Najafi",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Chrysanthi",
+          "family": "Kosyfaki",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "The Hong Kong University of Science and Technology",
+              "place": [
+                "Hong Kong SAR, China"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Xiaodong",
+          "family": "Li",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Xiamen University",
+              "place": [
+                "Xiamen, China"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Reynold",
+          "family": "Cheng",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "The University of Hong Kong",
+              "place": [
+                "Hong Kong SAR, China"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Laks V.S.",
+          "family": "Lakshmanan",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of British Columbia",
+              "place": [
+                "Vancouver, Canada"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "page": "2683-2696",
+      "DOI": "10.1109/icde65706.2026.00200",
+      "container-title": [
+        "2026 IEEE 42nd International Conference on Data Engineering (ICDE)"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2026,
+            5
+          ]
+        ]
+      },
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/11629178/11629165/11629305.pdf?arnumber=11629305",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    },
+    "schreiber2026verification": {
+      "title": [
+        "Query-Guided Analysis and Mitigation of Data Verification Errors"
+      ],
+      "author": [
+        {
+          "given": "Ran",
+          "family": "Schreiber",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Bar-Ilan University",
+              "place": [
+                "Ramat Gan, Israel"
+              ],
+              "department": [
+                "The Department of Computer Science"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yael",
+          "family": "Amsterdamer",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Bar-Ilan University",
+              "place": [
+                "Ramat Gan, Israel"
+              ],
+              "department": [
+                "The Department of Computer Science"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "page": "1994-2007",
+      "DOI": "10.1109/icde65706.2026.00151",
+      "container-title": [
+        "2026 IEEE 42nd International Conference on Data Engineering (ICDE)"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2026,
+            5
+          ]
+        ]
+      },
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx8/11629178/11629165/11629526.pdf?arnumber=11629526",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ]
+    }
+  },
+  "scope": "Nine recent ICDE references, each cited in manuscript prose; metadata from IEEE-deposited Crossref records, claims from the papers or author artifacts. No new experiments or results.",
+  "venue_confirmation": [
+    "https://icde2024.github.io/papers.html",
+    "https://icde2026.github.io/accepted-papers",
+    "https://icde2026.github.io/program_details.html"
+  ],
+  "citation_support": {
+    "ni2025zeroed": {
+      "primary_source": "https://arxiv.org/html/2504.05345v1",
+      "inspected_location": "Abstract and Section III-A",
+      "supported_context": "LLM criteria and labeling support error detection and classifier training.",
+      "manuscript_location": "Introduction; Related Work"
+    },
+    "wu2025zeroec": {
+      "primary_source": "https://ieeexplore.ieee.org/document/11113193/",
+      "inspected_location": "Publisher abstract, CTS/TEC descriptions",
+      "supported_context": "Contextual tuple retrieval and LLM-generated correction rules/explanations without model training.",
+      "manuscript_location": "Introduction; Related Work"
+    },
+    "qin2024bclean": {
+      "primary_source": "https://arxiv.org/html/2311.06517v1",
+      "inspected_location": "Introduction, Our approach; Sections 3-5",
+      "supported_context": "Bayesian-network cleaning uses observed attribute relationships and user priors to repair values.",
+      "manuscript_location": "Related Work"
+    },
+    "papadakis2024reevaluation": {
+      "primary_source": "https://helios2.mi.parisdescartes.fr/~themisp/publications/icde24-dlmatching.pdf",
+      "inspected_location": "Page 1, Introduction",
+      "supported_context": "Blocking and candidate-pair generation affect matching difficulty.",
+      "manuscript_location": "Related Work"
+    },
+    "zhang2026xrag": {
+      "primary_source": "https://ieeexplore.ieee.org/document/11629265/",
+      "inspected_location": "Abstract; supplied arXiv 2412.15529v4, Introduction",
+      "supported_context": "Component evaluation divides RAG into pre-retrieval, retrieval, post-retrieval and generation.",
+      "manuscript_location": "Related Work"
+    },
+    "mu2026aqp": {
+      "primary_source": "https://arxiv.org/abs/2511.16455",
+      "inspected_location": "Supplied v1 abstract and Introduction",
+      "supported_context": "Separately analyzes plan reordering and cardinality updating across PostgreSQL and DuckDB.",
+      "manuscript_location": "Related Work"
+    },
+    "yang2026tr360": {
+      "primary_source": "https://github.com/CTXY/table_retrieval",
+      "inspected_location": "Authors artifact README: Project Overview; model/training/encoding/linearization sections",
+      "supported_context": "Dense table retrieval design includes architecture, training, table encoding and serialization. Repository retains an earlier paper title; publication identity verified by Crossref and the authors publication page. No performance claim is made.",
+      "manuscript_location": "Related Work"
+    },
+    "zhu2026beacon": {
+      "primary_source": "https://researchportal.hkust.edu.hk/en/publications/experiment-analysis-and-benchmark-beacon-a-benchmark-for-efficien/",
+      "inspected_location": "Published abstract; supplied arXiv 2504.10948v1 abstract",
+      "supported_context": "Compares algorithmic and ML subgraph counting with standardized data and verified ground truths. Use final ICDE author order, not preprint order.",
+      "manuscript_location": "Related Work"
+    },
+    "schreiber2026verification": {
+      "primary_source": "https://arxiv.org/html/2603.08612v1",
+      "inspected_location": "Abstract; Introduction; Section 3.1",
+      "supported_context": "Studies how verification-label uncertainty propagates to query outputs.",
+      "manuscript_location": "Related Work"
+    }
+  },
+  "confirmed_eab_keys": [
+    "zhang2026xrag",
+    "mu2026aqp",
+    "yang2026tr360",
+    "zhu2026beacon"
+  ],
+  "bibliography_numbers": {
+    "ni2025zeroed": 2,
+    "wu2025zeroec": 3,
+    "qin2024bclean": 35,
+    "papadakis2024reevaluation": 37,
+    "zhang2026xrag": 38,
+    "mu2026aqp": 41,
+    "yang2026tr360": 39,
+    "zhu2026beacon": 40,
+    "schreiber2026verification": 36
+  },
+  "all_new_references_cited_in_main_text": true
+}

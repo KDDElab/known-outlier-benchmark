@@ -5,7 +5,7 @@ and analysis code for **Evaluating Language Models and Subspace Methods for
 Explaining Known Tabular Outliers**.
 
 - Public repository: https://github.com/KDDElab/known-outlier-benchmark
-- Fixed artifact release: https://github.com/KDDElab/known-outlier-benchmark/releases/tag/icde2027-eab-v1
+- Fixed artifact release: https://github.com/KDDElab/known-outlier-benchmark/releases/tag/icde2027-eab-v2
 - Paper: [PDF](phase_d_manuscript_draft.pdf) and [LaTeX](phase_d_manuscript_draft.tex).
 - The paper has **12 main-text pages plus one page of AI disclosure and references**,
   following the [ICDE 2027 EAB page rule](https://icde2027.github.io/cf-research-papers.html).

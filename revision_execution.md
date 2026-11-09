@@ -1,5 +1,14 @@
 # CCFA 修订执行记录
 
+## 2026-11-09 补充近期 ICDE 文献并在正文引用
+
+- 新增 **9 篇 2024—2026 年正式 ICDE 论文**，参考文献由 32 条增至 **41 条**；全部在引言或相关工作正文中引用，没有使用未引用条目填充版面。
+- 数据质量研究：ZeroED、ZeroEC（ICDE 2025）、BClean、记录链接基准再评估（ICDE 2024）、Query-Guided Analysis and Mitigation of Data Verification Errors（ICDE 2026）。引言用 ZeroED/ZeroEC 补充 LLM 动机，相关工作说明检测、修复、查询可靠性与最小支持解释的区别。
+- 已核实 ICDE 2026 EAB 身份的四篇：XRAG、Revisiting Single-Table Retrieval、BEACON、Systematic Evaluation of Plan-Based Adaptive Query Processing。正文分别说明组件拆分、表格编码/序列化、真值和方法对照、跨引擎机制分析与本文诊断设计的关系。
+- 作者、题名、年份、页码和 DOI 按正式出版元数据核实；BEACON 采用正式版本的作者顺序。来源与引用位置保存在 `synthetic_benchmark_v2/runs/ccfa_revision/recent_icde_reference_evidence.json`。
+- PDF 仍为 **正文 12 页 + 第 13 页 AI 声明和参考文献**，两页均接近版心底部，保持 IEEEtran 默认字体及页边距，无附录。编译没有未定义引用、溢出或 LaTeX 警告。
+- 第 II—VI 节及所有图表环境逐字保持不变；6 图、6 表、194 个均值±标准差单元格和全部实验结果保留。没有新增模型推理。公开复现材料同步为新的 `icde2027-eab-v2` 版本，保留原 v1 版本。
+
 ## 2026-11-09 GitHub 公开复现材料与 ICDE 2027 正文页数
 
 - 已按用户授权发布公开仓库：https://github.com/KDDElab/known-outlier-benchmark 。仓库及校验清单已通过不带登录凭据的访问确认，解决此前 C7 的审稿材料访问缺口。固定版本标记为 `icde2027-eab-v1`，提供完整压缩包和 SHA-256 校验文件。
