@@ -101,5 +101,10 @@
     "excluded_reference_and_disclosure_pages": 1,
     "main_text_within_limit": true,
     "appendix": false
+  },
+  "public_artifact": {
+    "url": "https://github.com/KDDElab/known-outlier-benchmark",
+    "anonymous_access_verified": true,
+    "verification_commit": "80602f1a2ce3e629da9d10203c83c111582fbe28"
   }
 }

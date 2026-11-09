@@ -25,7 +25,7 @@
   "tex_sha256": "0503a4ebe51c1dffafa95e9afc0ddae0611496d940f47330392825675cfdff0a",
   "completed_new_model_records": 1368,
   "human_evidence_pending": true,
-  "public_artifact_url_pending": true,
+  "public_artifact_url_pending": false,
   "scope": "Same-assistant manuscript/evidence alignment and layout inspection; not an independent reviewer assessment.",
   "last_semantic_clarification": "Continuous values: finite-sample exact-match absence distinguished from membership in a modeled population support.",
   "last_visual_change": {
@@ -142,13 +142,19 @@
     "appendix_allowed": false,
     "reproducibility_artifacts_required": true,
     "public_repository": "https://github.com/KDDElab/known-outlier-benchmark",
-    "publication_status": "prepared_for_push"
+    "publication_status": "public_repository_verified"
   },
   "last_manuscript_revision": {
     "scope": "12 main-text pages and excluded references/disclosure; substantive minimality, LOF and task-selection explanation; public artifact link and reproduction instructions",
     "figures_unchanged": true,
     "statistical_results_unchanged": true,
     "new_model_inference": false,
-    "scoped_alignment": "Minimality witnesses follow the finite-support definition. LOF equations checked against run_gower_subspace_baseline.py lines 96–115 and bounded Gower distances. Interpretation preserves all prior comparison and evidence limits. Public availability awaits push verification."
+    "scoped_alignment": "Minimality witnesses follow the finite-support definition. LOF equations match the implemented reference-only reachability and density calculations. All numerical comparisons and limits are retained. Public repository and the hash manifest were retrieved without authentication."
+  },
+  "public_artifact": {
+    "url": "https://github.com/KDDElab/known-outlier-benchmark",
+    "anonymous_access_verified": true,
+    "verification_commit": "80602f1a2ce3e629da9d10203c83c111582fbe28",
+    "release_tag": "icde2027-eab-v1"
   }
 }
