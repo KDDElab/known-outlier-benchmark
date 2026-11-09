@@ -1,0 +1,17 @@
+{
+  "style_reference": "2511.16455v1.pdf Figures 7--10: bars, hatches, boxed axes, grids, aggregate/distribution panels",
+  "reference_values_used": false,
+  "new_model_inference": false,
+  "primary_uncertainty": "Original 2000-replicate, 95% template-bootstrap intervals",
+  "primary_distributions": "38 actual template means; median/IQR, 1.5-IQR whiskers, visible outliers",
+  "intervention_figures": "Original macro means; no new significance tests",
+  "source_sha256": {
+    "synthetic_benchmark_v2/runs/ccfa_acceptance_revision/presentation_statistics.csv": "246d17a42f04a76480646fabbf0d8ea82bc53024719d3f10d0121f5b6c49edfe",
+    "synthetic_benchmark_v2/runs/ccfa_acceptance_revision/presentation_group_values.csv": "78ca65b81ed6cc4d094af14891ffd23d164623ccea8ae72fb583f7d4f3a7bbc8",
+    "synthetic_benchmark_v2/runs/ccfa_acceptance_revision/invoice_sweep_summary.csv": "521be902aadc6fa150f164c4e3a6b732f4ced917af82c02b9e1923bb669f018b",
+    "synthetic_benchmark_v2/runs/ccfa_acceptance_revision/invoice_candidate_scores.jsonl.gz": "aa2b23f60be7154dbdc5d17d4f6cacde05b7edbddcab613ac893244ec5bf7190",
+    "synthetic_benchmark_v2/runs/ccfa_acceptance_revision/invoice_lof_mechanism_summary.json": "e551dab6faffddf42b65e030ab26268d92fa04983ea840e00a9b77a4b2680acb",
+    "synthetic_benchmark_v2/runs/ccfa_revision/main_summary.csv": "e8bd9637404ad68d37e63ee16ae68f85fe63b1c60e734adf10765543d5c627d8"
+  },
+  "runner_sha256": "6d3ea9f518601efca4eb270a61c13a7c172997f809c0203d9952fd0ab7e40e55"
+}

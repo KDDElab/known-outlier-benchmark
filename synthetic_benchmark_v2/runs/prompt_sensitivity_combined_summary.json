@@ -1,0 +1,154 @@
+{
+  "model": "Qwen3.5-9B",
+  "conditions": [
+    "joint_field_and_row_reversal",
+    "field_order_only_reversal",
+    "reference_row_order_only_reversal",
+    "opaque_feature_id_permutation"
+  ],
+  "metrics": [
+    "support_any_minimal_hit",
+    "support_best_jaccard"
+  ],
+  "planned_contrast_count": 8,
+  "completed_contrast_count": 8,
+  "cluster_unit": "24 held-out templates; four paired cases per template",
+  "tests": "Two-sided template-cluster sign flips; Holm correction across both primary metrics and all four prompt/order conditions.",
+  "bootstrap_replicates": 2000,
+  "permutations": 20000,
+  "seed": 20261111,
+  "preregistration": "Not preregistered. The feature-ID condition and analysis code were frozen before that condition's inference; the combined family is reported to account for related post-hoc sensitivity contrasts.",
+  "sha256": {
+    "analysis_script": "1b7391e7db1abb3cb98b38fb3d43748828849c4dfcf72eeccf0a8cc3ffe91564",
+    "joint_field_and_row_reversal_control": "3e05e50693681ff41610112633ed26ed09886ff61665dafcd108db3b690fe83c",
+    "joint_field_and_row_reversal_variant": "45ab7fbe243920ad871064411907c64f48e7fcd9be832644142e6655f7fcfbc2",
+    "field_order_only_reversal_control": "2d363df8df63bf6110a6ed1df1a79ab7c94c83221fa234fe01affa0c30bfc693",
+    "field_order_only_reversal_variant": "bcb818a9cd323081f9f146d039c386e8fe9af500c90819f73e8c23fb41707813",
+    "reference_row_order_only_reversal_control": "2d363df8df63bf6110a6ed1df1a79ab7c94c83221fa234fe01affa0c30bfc693",
+    "reference_row_order_only_reversal_variant": "beb4044d75819c1eb3bccf62587363b74621cc1fa82bfe29725f3946bb52e506",
+    "opaque_feature_id_permutation_control": "2d363df8df63bf6110a6ed1df1a79ab7c94c83221fa234fe01affa0c30bfc693",
+    "opaque_feature_id_permutation_variant": "8a17ae9b3e7fc7c1b3020eaaae2aa5bbc03a1b6863cbd7b6d14bfa3412f1d3a6"
+  },
+  "contrasts": [
+    {
+      "condition": "joint_field_and_row_reversal",
+      "metric": "support_any_minimal_hit",
+      "control_mean": 0.4791666666666667,
+      "condition_mean": 0.14583333333333334,
+      "condition_minus_control": -0.3333333333333333,
+      "template_cluster_bootstrap_95_ci": [
+        -0.4375,
+        -0.23958333333333334
+      ],
+      "two_sided_template_sign_flip_p": 4.999750012499375e-05,
+      "n_cases": 96,
+      "n_templates": 24,
+      "holm_adjusted_p_all_eight_sensitivity_contrasts": 0.00039998000099995
+    },
+    {
+      "condition": "joint_field_and_row_reversal",
+      "metric": "support_best_jaccard",
+      "control_mean": 0.6618923611111112,
+      "condition_mean": 0.3268398268398268,
+      "condition_minus_control": -0.33505253427128423,
+      "template_cluster_bootstrap_95_ci": [
+        -0.3978976709054834,
+        -0.26838933419011546
+      ],
+      "two_sided_template_sign_flip_p": 4.999750012499375e-05,
+      "n_cases": 96,
+      "n_templates": 24,
+      "holm_adjusted_p_all_eight_sensitivity_contrasts": 0.00039998000099995
+    },
+    {
+      "condition": "field_order_only_reversal",
+      "metric": "support_any_minimal_hit",
+      "control_mean": 0.4791666666666667,
+      "condition_mean": 0.125,
+      "condition_minus_control": -0.3541666666666667,
+      "template_cluster_bootstrap_95_ci": [
+        -0.4479166666666667,
+        -0.2604166666666667
+      ],
+      "two_sided_template_sign_flip_p": 4.999750012499375e-05,
+      "n_cases": 96,
+      "n_templates": 24,
+      "holm_adjusted_p_all_eight_sensitivity_contrasts": 0.00039998000099995
+    },
+    {
+      "condition": "field_order_only_reversal",
+      "metric": "support_best_jaccard",
+      "control_mean": 0.6618923611111112,
+      "condition_mean": 0.3163694234006734,
+      "condition_minus_control": -0.3455229377104377,
+      "template_cluster_bootstrap_95_ci": [
+        -0.4129857823021885,
+        -0.2711001946548822
+      ],
+      "two_sided_template_sign_flip_p": 4.999750012499375e-05,
+      "n_cases": 96,
+      "n_templates": 24,
+      "holm_adjusted_p_all_eight_sensitivity_contrasts": 0.00039998000099995
+    },
+    {
+      "condition": "reference_row_order_only_reversal",
+      "metric": "support_any_minimal_hit",
+      "control_mean": 0.4791666666666667,
+      "condition_mean": 0.4895833333333333,
+      "condition_minus_control": 0.010416666666666666,
+      "template_cluster_bootstrap_95_ci": [
+        -0.07291666666666667,
+        0.09375
+      ],
+      "two_sided_template_sign_flip_p": 1.0,
+      "n_cases": 96,
+      "n_templates": 24,
+      "holm_adjusted_p_all_eight_sensitivity_contrasts": 1.0
+    },
+    {
+      "condition": "reference_row_order_only_reversal",
+      "metric": "support_best_jaccard",
+      "control_mean": 0.6618923611111112,
+      "condition_mean": 0.6717013888888889,
+      "condition_minus_control": 0.009809027777777778,
+      "template_cluster_bootstrap_95_ci": [
+        -0.04028211805555556,
+        0.060509982638888855
+      ],
+      "two_sided_template_sign_flip_p": 0.7142142892855358,
+      "n_cases": 96,
+      "n_templates": 24,
+      "holm_adjusted_p_all_eight_sensitivity_contrasts": 1.0
+    },
+    {
+      "condition": "opaque_feature_id_permutation",
+      "metric": "support_any_minimal_hit",
+      "control_mean": 0.4791666666666667,
+      "condition_mean": 0.46875,
+      "condition_minus_control": -0.010416666666666666,
+      "template_cluster_bootstrap_95_ci": [
+        -0.09375,
+        0.07291666666666667
+      ],
+      "two_sided_template_sign_flip_p": 1.0,
+      "n_cases": 96,
+      "n_templates": 24,
+      "holm_adjusted_p_all_eight_sensitivity_contrasts": 1.0
+    },
+    {
+      "condition": "opaque_feature_id_permutation",
+      "metric": "support_best_jaccard",
+      "control_mean": 0.6618923611111112,
+      "condition_mean": 0.6546875,
+      "condition_minus_control": -0.007204861111111109,
+      "template_cluster_bootstrap_95_ci": [
+        -0.05382161458333333,
+        0.039670138888888894
+      ],
+      "two_sided_template_sign_flip_p": 0.7768111594420279,
+      "n_cases": 96,
+      "n_templates": 24,
+      "holm_adjusted_p_all_eight_sensitivity_contrasts": 1.0
+    }
+  ]
+}

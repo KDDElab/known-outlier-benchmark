@@ -1,0 +1,25 @@
+\begin{table*}[t]
+\centering\scriptsize
+\caption{Public corrected-field inspection, including canonicalization. Schema uses identical prompts with fixed singleton JSON decoding. Recall@3 covers recorded corrections. Inspections is the first corrected field's position among up to four suggestions; failure receives $d+1$ (6/9/10 fields by source). Invalid and abstained lists score zero on retrieval. Uniform is an analytic expectation.}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}|l|rrr|rrrr|}
+\hline
+Method & \multicolumn{3}{c|}{FieldHit@1 by source (24 each)} & \multicolumn{4}{c|}{Equal-source mean (72)} \\
+\cline{2-8}
+ & Flights & Beers & Rayyan & FieldHit@1 & FieldHit@3 & Recall@3 & Inspections \\
+\hline
+Qwen & 0.000 & 0.125 & 0.250 & 0.125 & 0.139 & 0.098 & 8.000 \\
+Qwen (schema) & 0.667 & 0.958 & 0.333 & 0.653 & 0.833 & 0.721 & 2.819 \\
+DeepSeek & 0.250 & 0.083 & 0.125 & 0.153 & 0.389 & 0.286 & 6.236 \\
+DeepSeek (schema) & 0.250 & 0.083 & 0.167 & 0.167 & 0.403 & 0.291 & 6.097 \\
+Llama & 0.042 & 0.042 & 0.083 & 0.056 & 0.153 & 0.108 & 8.028 \\
+Llama (schema) & 0.208 & 0.750 & 0.250 & 0.403 & 0.750 & 0.578 & 3.181 \\
+Gower-LOF & 0.000 & 1.000 & 0.208 & 0.403 & 0.597 & 0.388 & 3.750 \\
+Gower-kNN & 0.042 & 1.000 & 0.167 & 0.403 & 0.708 & 0.465 & 3.681 \\
+Uniform (expected) & 0.361 & 0.227 & 0.208 & 0.265 & 0.616 & 0.378 & 4.253 \\
+\hline
+\end{tabular*}
+\renewcommand{\arraystretch}{1.0}
+\label{tab:real-cells}
+\end{table*}

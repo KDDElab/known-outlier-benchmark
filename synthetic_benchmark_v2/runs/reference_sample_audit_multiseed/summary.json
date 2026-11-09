@@ -1,0 +1,758 @@
+{
+  "candidate_max_order": 3,
+  "seeds": [
+    20261106,
+    20261107,
+    20261108
+  ],
+  "test_cases_per_seed": 288,
+  "total_test_case_instances": 864,
+  "n_unique_template_groups": 38,
+  "summary_unit": "Macro-average within-template means across all seed-specific held-out cases; bootstrap unique template groups, not case rows.",
+  "definition": "A sample-absent subset has a target projection observed in none of the sampled normal references; sample-minimal means no proper subset up to the same order is absent.",
+  "overall": {
+    "n_cases": 864,
+    "n_templates": 38,
+    "sample_minimal_set_exact_match": 0.0029239766081871343,
+    "sample_minimal_set_exact_match_template_cluster_bootstrap_95_ci": [
+      0.0,
+      0.008040935672514621
+    ],
+    "has_spurious_sample_minimal": 0.9970760233918128,
+    "has_spurious_sample_minimal_template_cluster_bootstrap_95_ci": [
+      0.9919590643274854,
+      1.0
+    ],
+    "gold_candidate_recall": 0.8626340155945418,
+    "gold_candidate_recall_template_cluster_bootstrap_95_ci": [
+      0.7968993664717348,
+      0.9227750365497075
+    ],
+    "spurious_sample_minimal_count": 60.934576023391806,
+    "spurious_sample_minimal_count_template_cluster_bootstrap_95_ci": [
+      57.4830317982456,
+      64.39271747076022
+    ],
+    "sample_minimal_candidate_count": 62.05263157894738,
+    "sample_minimal_candidate_count_template_cluster_bootstrap_95_ci": [
+      58.61792763157895,
+      65.55198282163744
+    ]
+  },
+  "per_seed": {
+    "20261106": {
+      "n_cases": 288,
+      "n_templates": 24,
+      "sample_minimal_set_exact_match": 0.0,
+      "sample_minimal_set_exact_match_template_cluster_bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "has_spurious_sample_minimal": 1.0,
+      "has_spurious_sample_minimal_template_cluster_bootstrap_95_ci": [
+        1.0,
+        1.0
+      ],
+      "gold_candidate_recall": 0.8182870370370371,
+      "gold_candidate_recall_template_cluster_bootstrap_95_ci": [
+        0.7193287037037037,
+        0.9068287037037037
+      ],
+      "spurious_sample_minimal_count": 63.15972222222223,
+      "spurious_sample_minimal_count_template_cluster_bootstrap_95_ci": [
+        58.64565972222223,
+        68.34045138888888
+      ],
+      "sample_minimal_candidate_count": 64.23958333333333,
+      "sample_minimal_candidate_count_template_cluster_bootstrap_95_ci": [
+        59.885416666666664,
+        68.88567708333333
+      ]
+    },
+    "20261107": {
+      "n_cases": 288,
+      "n_templates": 24,
+      "sample_minimal_set_exact_match": 0.0,
+      "sample_minimal_set_exact_match_template_cluster_bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "has_spurious_sample_minimal": 1.0,
+      "has_spurious_sample_minimal_template_cluster_bootstrap_95_ci": [
+        1.0,
+        1.0
+      ],
+      "gold_candidate_recall": 0.9091435185185185,
+      "gold_candidate_recall_template_cluster_bootstrap_95_ci": [
+        0.8559027777777778,
+        0.9565972222222223
+      ],
+      "spurious_sample_minimal_count": 60.47222222222223,
+      "spurious_sample_minimal_count_template_cluster_bootstrap_95_ci": [
+        55.39904513888888,
+        65.44878472222223
+      ],
+      "sample_minimal_candidate_count": 61.677083333333336,
+      "sample_minimal_candidate_count_template_cluster_bootstrap_95_ci": [
+        56.715190972222224,
+        66.86588541666666
+      ]
+    },
+    "20261108": {
+      "n_cases": 288,
+      "n_templates": 24,
+      "sample_minimal_set_exact_match": 0.006944444444444444,
+      "sample_minimal_set_exact_match_template_cluster_bootstrap_95_ci": [
+        0.0,
+        0.01736111111111111
+      ],
+      "has_spurious_sample_minimal": 0.9930555555555555,
+      "has_spurious_sample_minimal_template_cluster_bootstrap_95_ci": [
+        0.9826388888888888,
+        1.0
+      ],
+      "gold_candidate_recall": 0.8657407407407408,
+      "gold_candidate_recall_template_cluster_bootstrap_95_ci": [
+        0.78125,
+        0.9409722222222222
+      ],
+      "spurious_sample_minimal_count": 59.899305555555564,
+      "spurious_sample_minimal_count_template_cluster_bootstrap_95_ci": [
+        55.01362847222222,
+        65.67048611111112
+      ],
+      "sample_minimal_candidate_count": 61.020833333333336,
+      "sample_minimal_candidate_count_template_cluster_bootstrap_95_ci": [
+        55.732204861111114,
+        66.46215277777777
+      ]
+    }
+  },
+  "slices": {
+    "reference_count": {
+      "16": {
+        "n_cases": 288,
+        "n_templates": 38,
+        "sample_minimal_set_exact_match": 0.0,
+        "sample_minimal_set_exact_match_template_cluster_bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "has_spurious_sample_minimal": 1.0,
+        "has_spurious_sample_minimal_template_cluster_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ],
+        "gold_candidate_recall": 0.8837719298245614,
+        "gold_candidate_recall_template_cluster_bootstrap_95_ci": [
+          0.8157894736842105,
+          0.9429824561403509
+        ],
+        "spurious_sample_minimal_count": 57.95175438596492,
+        "spurious_sample_minimal_count_template_cluster_bootstrap_95_ci": [
+          50.05057565789474,
+          66.08390899122807
+        ],
+        "sample_minimal_candidate_count": 59.07456140350877,
+        "sample_minimal_candidate_count_template_cluster_bootstrap_95_ci": [
+          51.3156798245614,
+          66.9986019736842
+        ]
+      },
+      "32": {
+        "n_cases": 288,
+        "n_templates": 38,
+        "sample_minimal_set_exact_match": 0.008771929824561403,
+        "sample_minimal_set_exact_match_template_cluster_bootstrap_95_ci": [
+          0.0,
+          0.024122807017543862
+        ],
+        "has_spurious_sample_minimal": 0.9912280701754386,
+        "has_spurious_sample_minimal_template_cluster_bootstrap_95_ci": [
+          0.9736842105263158,
+          1.0
+        ],
+        "gold_candidate_recall": 0.9523026315789473,
+        "gold_candidate_recall_template_cluster_bootstrap_95_ci": [
+          0.9095394736842105,
+          0.9884868421052632
+        ],
+        "spurious_sample_minimal_count": 89.40899122807018,
+        "spurious_sample_minimal_count_template_cluster_bootstrap_95_ci": [
+          77.5516995614035,
+          101.24268092105262
+        ],
+        "sample_minimal_candidate_count": 90.65131578947367,
+        "sample_minimal_candidate_count_template_cluster_bootstrap_95_ci": [
+          78.46888706140352,
+          103.77151864035086
+        ]
+      },
+      "8": {
+        "n_cases": 288,
+        "n_templates": 38,
+        "sample_minimal_set_exact_match": 0.0,
+        "sample_minimal_set_exact_match_template_cluster_bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "has_spurious_sample_minimal": 1.0,
+        "has_spurious_sample_minimal_template_cluster_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ],
+        "gold_candidate_recall": 0.751827485380117,
+        "gold_candidate_recall_template_cluster_bootstrap_95_ci": [
+          0.6410544590643273,
+          0.8576480263157895
+        ],
+        "spurious_sample_minimal_count": 35.44298245614035,
+        "spurious_sample_minimal_count_template_cluster_bootstrap_95_ci": [
+          31.647724780701754,
+          38.87423245614035
+        ],
+        "sample_minimal_candidate_count": 36.43201754385965,
+        "sample_minimal_candidate_count_template_cluster_bootstrap_95_ci": [
+          33.06987390350877,
+          40.0000274122807
+        ]
+      }
+    },
+    "feature_count": {
+      "12": {
+        "n_cases": 288,
+        "n_templates": 38,
+        "sample_minimal_set_exact_match": 0.0,
+        "sample_minimal_set_exact_match_template_cluster_bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "has_spurious_sample_minimal": 1.0,
+        "has_spurious_sample_minimal_template_cluster_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ],
+        "gold_candidate_recall": 0.8368055555555556,
+        "gold_candidate_recall_template_cluster_bootstrap_95_ci": [
+          0.7556606359649123,
+          0.9106359649122806
+        ],
+        "spurious_sample_minimal_count": 26.327850877192983,
+        "spurious_sample_minimal_count_template_cluster_bootstrap_95_ci": [
+          24.665378289473683,
+          27.95394736842105
+        ],
+        "sample_minimal_candidate_count": 27.42214912280702,
+        "sample_minimal_candidate_count_template_cluster_bootstrap_95_ci": [
+          25.792598684210525,
+          29.190981359649122
+        ]
+      },
+      "24": {
+        "n_cases": 288,
+        "n_templates": 38,
+        "sample_minimal_set_exact_match": 0.0,
+        "sample_minimal_set_exact_match_template_cluster_bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "has_spurious_sample_minimal": 1.0,
+        "has_spurious_sample_minimal_template_cluster_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ],
+        "gold_candidate_recall": 0.8810307017543861,
+        "gold_candidate_recall_template_cluster_bootstrap_95_ci": [
+          0.8157894736842105,
+          0.9375
+        ],
+        "spurious_sample_minimal_count": 151.9155701754386,
+        "spurious_sample_minimal_count_template_cluster_bootstrap_95_ci": [
+          141.97118969298245,
+          161.91524122807016
+        ],
+        "sample_minimal_candidate_count": 153.047149122807,
+        "sample_minimal_candidate_count_template_cluster_bootstrap_95_ci": [
+          143.39830043859652,
+          163.19635416666665
+        ]
+      },
+      "6": {
+        "n_cases": 288,
+        "n_templates": 38,
+        "sample_minimal_set_exact_match": 0.008771929824561403,
+        "sample_minimal_set_exact_match_template_cluster_bootstrap_95_ci": [
+          0.0,
+          0.02412280701754386
+        ],
+        "has_spurious_sample_minimal": 0.9912280701754386,
+        "has_spurious_sample_minimal_template_cluster_bootstrap_95_ci": [
+          0.9736842105263158,
+          1.0
+        ],
+        "gold_candidate_recall": 0.8700657894736844,
+        "gold_candidate_recall_template_cluster_bootstrap_95_ci": [
+          0.7966008771929824,
+          0.9320312500000001
+        ],
+        "spurious_sample_minimal_count": 4.5603070175438605,
+        "spurious_sample_minimal_count_template_cluster_bootstrap_95_ci": [
+          4.169901315789473,
+          4.937527412280701
+        ],
+        "sample_minimal_candidate_count": 5.688596491228071,
+        "sample_minimal_candidate_count_template_cluster_bootstrap_95_ci": [
+          5.343201754385966,
+          6.011019736842106
+        ]
+      }
+    },
+    "nuisance_profile": {
+      "deterministic_proxy_broken": {
+        "n_cases": 144,
+        "n_templates": 38,
+        "sample_minimal_set_exact_match": 0.0,
+        "sample_minimal_set_exact_match_template_cluster_bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "has_spurious_sample_minimal": 1.0,
+        "has_spurious_sample_minimal_template_cluster_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ],
+        "gold_candidate_recall": 0.9060672514619882,
+        "gold_candidate_recall_template_cluster_bootstrap_95_ci": [
+          0.837719298245614,
+          0.9594389619883041
+        ],
+        "spurious_sample_minimal_count": 73.70833333333333,
+        "spurious_sample_minimal_count_template_cluster_bootstrap_95_ci": [
+          61.17505482456141,
+          86.68009868421052
+        ],
+        "sample_minimal_candidate_count": 75.1140350877193,
+        "sample_minimal_candidate_count_template_cluster_bootstrap_95_ci": [
+          62.33876096491228,
+          88.02127192982455
+        ]
+      },
+      "deterministic_proxy_preserved": {
+        "n_cases": 144,
+        "n_templates": 38,
+        "sample_minimal_set_exact_match": 0.013157894736842105,
+        "sample_minimal_set_exact_match_template_cluster_bootstrap_95_ci": [
+          0.0,
+          0.039473684210526314
+        ],
+        "has_spurious_sample_minimal": 0.9868421052631579,
+        "has_spurious_sample_minimal_template_cluster_bootstrap_95_ci": [
+          0.9605263157894737,
+          1.0
+        ],
+        "gold_candidate_recall": 0.8421052631578947,
+        "gold_candidate_recall_template_cluster_bootstrap_95_ci": [
+          0.7478070175438596,
+          0.9210526315789473
+        ],
+        "spurious_sample_minimal_count": 48.23684210526316,
+        "spurious_sample_minimal_count_template_cluster_bootstrap_95_ci": [
+          38.973464912280704,
+          57.64495614035087
+        ],
+        "sample_minimal_candidate_count": 49.93640350877193,
+        "sample_minimal_candidate_count_template_cluster_bootstrap_95_ci": [
+          40.703947368421055,
+          59.469078947368416
+        ]
+      },
+      "high_cardinality_noise": {
+        "n_cases": 144,
+        "n_templates": 38,
+        "sample_minimal_set_exact_match": 0.0,
+        "sample_minimal_set_exact_match_template_cluster_bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "has_spurious_sample_minimal": 1.0,
+        "has_spurious_sample_minimal_template_cluster_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ],
+        "gold_candidate_recall": 0.8618421052631579,
+        "gold_candidate_recall_template_cluster_bootstrap_95_ci": [
+          0.7828399122807018,
+          0.9298793859649122
+        ],
+        "spurious_sample_minimal_count": 58.60745614035087,
+        "spurious_sample_minimal_count_template_cluster_bootstrap_95_ci": [
+          47.42214912280702,
+          71.10630482456142
+        ],
+        "sample_minimal_candidate_count": 59.52412280701754,
+        "sample_minimal_candidate_count_template_cluster_bootstrap_95_ci": [
+          47.85246710526315,
+          72.01288377192981
+        ]
+      },
+      "independent": {
+        "n_cases": 144,
+        "n_templates": 38,
+        "sample_minimal_set_exact_match": 0.0,
+        "sample_minimal_set_exact_match_template_cluster_bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "has_spurious_sample_minimal": 1.0,
+        "has_spurious_sample_minimal_template_cluster_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ],
+        "gold_candidate_recall": 0.8793859649122806,
+        "gold_candidate_recall_template_cluster_bootstrap_95_ci": [
+          0.8070175438596491,
+          0.9451754385964911
+        ],
+        "spurious_sample_minimal_count": 57.36842105263158,
+        "spurious_sample_minimal_count_template_cluster_bootstrap_95_ci": [
+          44.14199561403508,
+          70.98349780701753
+        ],
+        "sample_minimal_candidate_count": 58.274122807017555,
+        "sample_minimal_candidate_count_template_cluster_bootstrap_95_ci": [
+          45.05043859649123,
+          71.5626644736842
+        ]
+      },
+      "missingness_noise": {
+        "n_cases": 144,
+        "n_templates": 38,
+        "sample_minimal_set_exact_match": 0.0,
+        "sample_minimal_set_exact_match_template_cluster_bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "has_spurious_sample_minimal": 1.0,
+        "has_spurious_sample_minimal_template_cluster_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ],
+        "gold_candidate_recall": 0.8530701754385964,
+        "gold_candidate_recall_template_cluster_bootstrap_95_ci": [
+          0.7696820175438597,
+          0.9276315789473685
+        ],
+        "spurious_sample_minimal_count": 63.66447368421053,
+        "spurious_sample_minimal_count_template_cluster_bootstrap_95_ci": [
+          48.166611842105254,
+          82.03695175438592
+        ],
+        "sample_minimal_candidate_count": 64.58114035087719,
+        "sample_minimal_candidate_count_template_cluster_bootstrap_95_ci": [
+          48.76008771929825,
+          82.30942982456139
+        ]
+      },
+      "noisy_proxy": {
+        "n_cases": 144,
+        "n_templates": 38,
+        "sample_minimal_set_exact_match": 0.0043859649122807015,
+        "sample_minimal_set_exact_match_template_cluster_bootstrap_95_ci": [
+          0.0,
+          0.013157894736842105
+        ],
+        "has_spurious_sample_minimal": 0.9956140350877194,
+        "has_spurious_sample_minimal_template_cluster_bootstrap_95_ci": [
+          0.9868421052631579,
+          1.0
+        ],
+        "gold_candidate_recall": 0.8333333333333333,
+        "gold_candidate_recall_template_cluster_bootstrap_95_ci": [
+          0.7411732456140351,
+          0.9145285087719295
+        ],
+        "spurious_sample_minimal_count": 64.02192982456141,
+        "spurious_sample_minimal_count_template_cluster_bootstrap_95_ci": [
+          53.06524122807018,
+          75.84539473684211
+        ],
+        "sample_minimal_candidate_count": 64.88596491228071,
+        "sample_minimal_candidate_count_template_cluster_bootstrap_95_ci": [
+          54.0188048245614,
+          76.91995614035088
+        ]
+      }
+    },
+    "feature_width_x_reference_count": {
+      "12x16": {
+        "n_cases": 97,
+        "n_templates": 38,
+        "sample_minimal_set_exact_match": 0.0,
+        "sample_minimal_set_exact_match_template_cluster_bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "has_spurious_sample_minimal": 1.0,
+        "has_spurious_sample_minimal_template_cluster_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ],
+        "gold_candidate_recall": 0.8951754385964912,
+        "gold_candidate_recall_template_cluster_bootstrap_95_ci": [
+          0.8074451754385964,
+          0.9671052631578947
+        ],
+        "spurious_sample_minimal_count": 25.52675438596491,
+        "spurious_sample_minimal_count_template_cluster_bootstrap_95_ci": [
+          23.745339912280702,
+          27.37324561403508
+        ],
+        "sample_minimal_candidate_count": 26.627631578947366,
+        "sample_minimal_candidate_count_template_cluster_bootstrap_95_ci": [
+          24.899550438596492,
+          28.450679824561394
+        ]
+      },
+      "12x32": {
+        "n_cases": 102,
+        "n_templates": 37,
+        "sample_minimal_set_exact_match": 0.0,
+        "sample_minimal_set_exact_match_template_cluster_bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "has_spurious_sample_minimal": 1.0,
+        "has_spurious_sample_minimal_template_cluster_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ],
+        "gold_candidate_recall": 0.9256756756756757,
+        "gold_candidate_recall_template_cluster_bootstrap_95_ci": [
+          0.8445945945945946,
+          0.9864864864864865
+        ],
+        "spurious_sample_minimal_count": 33.00405405405406,
+        "spurious_sample_minimal_count_template_cluster_bootstrap_95_ci": [
+          30.39052927927928,
+          35.69656531531531
+        ],
+        "sample_minimal_candidate_count": 34.25,
+        "sample_minimal_candidate_count_template_cluster_bootstrap_95_ci": [
+          31.69128378378378,
+          36.921362612612604
+        ]
+      },
+      "12x8": {
+        "n_cases": 89,
+        "n_templates": 35,
+        "sample_minimal_set_exact_match": 0.0,
+        "sample_minimal_set_exact_match_template_cluster_bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "has_spurious_sample_minimal": 1.0,
+        "has_spurious_sample_minimal_template_cluster_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ],
+        "gold_candidate_recall": 0.6887301587301587,
+        "gold_candidate_recall_template_cluster_bootstrap_95_ci": [
+          0.5347261904761905,
+          0.8286269841269839
+        ],
+        "spurious_sample_minimal_count": 19.726190476190478,
+        "spurious_sample_minimal_count_template_cluster_bootstrap_95_ci": [
+          18.395238095238096,
+          21.164285714285718
+        ],
+        "sample_minimal_candidate_count": 20.66190476190476,
+        "sample_minimal_candidate_count_template_cluster_bootstrap_95_ci": [
+          19.314226190476194,
+          22.09297619047619
+        ]
+      },
+      "24x16": {
+        "n_cases": 94,
+        "n_templates": 37,
+        "sample_minimal_set_exact_match": 0.0,
+        "sample_minimal_set_exact_match_template_cluster_bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "has_spurious_sample_minimal": 1.0,
+        "has_spurious_sample_minimal_template_cluster_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ],
+        "gold_candidate_recall": 0.8797297297297296,
+        "gold_candidate_recall_template_cluster_bootstrap_95_ci": [
+          0.7905405405405406,
+          0.954054054054054
+        ],
+        "spurious_sample_minimal_count": 139.94684684684685,
+        "spurious_sample_minimal_count_template_cluster_bootstrap_95_ci": [
+          132.45833333333331,
+          146.8142454954955
+        ],
+        "sample_minimal_candidate_count": 141.10405405405405,
+        "sample_minimal_candidate_count_template_cluster_bootstrap_95_ci": [
+          133.70682432432432,
+          147.92584459459457
+        ]
+      },
+      "24x32": {
+        "n_cases": 96,
+        "n_templates": 34,
+        "sample_minimal_set_exact_match": 0.0,
+        "sample_minimal_set_exact_match_template_cluster_bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "has_spurious_sample_minimal": 1.0,
+        "has_spurious_sample_minimal_template_cluster_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ],
+        "gold_candidate_recall": 0.9558823529411765,
+        "gold_candidate_recall_template_cluster_bootstrap_95_ci": [
+          0.9117647058823529,
+          0.9926470588235294
+        ],
+        "spurious_sample_minimal_count": 233.64117647058825,
+        "spurious_sample_minimal_count_template_cluster_bootstrap_95_ci": [
+          218.26008578431373,
+          247.8297549019607
+        ],
+        "sample_minimal_candidate_count": 234.88529411764708,
+        "sample_minimal_candidate_count_template_cluster_bootstrap_95_ci": [
+          220.56410539215688,
+          249.14928921568628
+        ]
+      },
+      "24x8": {
+        "n_cases": 98,
+        "n_templates": 36,
+        "sample_minimal_set_exact_match": 0.0,
+        "sample_minimal_set_exact_match_template_cluster_bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "has_spurious_sample_minimal": 1.0,
+        "has_spurious_sample_minimal_template_cluster_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ],
+        "gold_candidate_recall": 0.7546296296296297,
+        "gold_candidate_recall_template_cluster_bootstrap_95_ci": [
+          0.6342592592592592,
+          0.8703703703703703
+        ],
+        "spurious_sample_minimal_count": 83.34606481481482,
+        "spurious_sample_minimal_count_template_cluster_bootstrap_95_ci": [
+          78.64233217592594,
+          87.8462673611111
+        ],
+        "sample_minimal_candidate_count": 84.28703703703702,
+        "sample_minimal_candidate_count_template_cluster_bootstrap_95_ci": [
+          80.02065972222222,
+          88.79079861111111
+        ]
+      },
+      "6x16": {
+        "n_cases": 97,
+        "n_templates": 33,
+        "sample_minimal_set_exact_match": 0.0,
+        "sample_minimal_set_exact_match_template_cluster_bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "has_spurious_sample_minimal": 1.0,
+        "has_spurious_sample_minimal_template_cluster_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ],
+        "gold_candidate_recall": 0.8602693602693603,
+        "gold_candidate_recall_template_cluster_bootstrap_95_ci": [
+          0.7626262626262625,
+          0.9444865319865319
+        ],
+        "spurious_sample_minimal_count": 4.624242424242425,
+        "spurious_sample_minimal_count_template_cluster_bootstrap_95_ci": [
+          4.015050505050506,
+          5.296085858585857
+        ],
+        "sample_minimal_candidate_count": 5.746753246753246,
+        "sample_minimal_candidate_count_template_cluster_bootstrap_95_ci": [
+          5.186320346320346,
+          6.33538961038961
+        ]
+      },
+      "6x32": {
+        "n_cases": 90,
+        "n_templates": 36,
+        "sample_minimal_set_exact_match": 0.023148148148148147,
+        "sample_minimal_set_exact_match_template_cluster_bootstrap_95_ci": [
+          0.0,
+          0.05555555555555555
+        ],
+        "has_spurious_sample_minimal": 0.9768518518518517,
+        "has_spurious_sample_minimal_template_cluster_bootstrap_95_ci": [
+          0.9398148148148147,
+          1.0
+        ],
+        "gold_candidate_recall": 0.9583333333333334,
+        "gold_candidate_recall_template_cluster_bootstrap_95_ci": [
+          0.8888888888888888,
+          1.0
+        ],
+        "spurious_sample_minimal_count": 4.420833333333333,
+        "spurious_sample_minimal_count_template_cluster_bootstrap_95_ci": [
+          3.8490277777777777,
+          5.0046875
+        ],
+        "sample_minimal_candidate_count": 5.650462962962963,
+        "sample_minimal_candidate_count_template_cluster_bootstrap_95_ci": [
+          5.053703703703705,
+          6.206099537037037
+        ]
+      },
+      "6x8": {
+        "n_cases": 101,
+        "n_templates": 37,
+        "sample_minimal_set_exact_match": 0.0,
+        "sample_minimal_set_exact_match_template_cluster_bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "has_spurious_sample_minimal": 1.0,
+        "has_spurious_sample_minimal_template_cluster_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ],
+        "gold_candidate_recall": 0.7855855855855854,
+        "gold_candidate_recall_template_cluster_bootstrap_95_ci": [
+          0.6806193693693693,
+          0.8851351351351351
+        ],
+        "spurious_sample_minimal_count": 4.632882882882883,
+        "spurious_sample_minimal_count_template_cluster_bootstrap_95_ci": [
+          4.228806306306305,
+          5.048749999999999
+        ],
+        "sample_minimal_candidate_count": 5.704054054054054,
+        "sample_minimal_candidate_count_template_cluster_bootstrap_95_ci": [
+          5.337342342342342,
+          6.104515765765766
+        ]
+      }
+    }
+  },
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20261116,
+  "source_ground_truth_sha256": {
+    "20261106": "4bd36c032d8f1530248bb0e50d5d1f91d3f08e5a5e5b95403375f62e440a8932",
+    "20261107": "8911f8601158c69f66e4c2ec5fd119898eb76a4da481de5cfbaceca49efd66bc",
+    "20261108": "a6f9326db3c14961b536f7bf2a7109b5f7f6e63bed604b3fd75373e306603e23"
+  },
+  "analysis_script_sha256": "ea99efffc9cfbd29c71eb53fba900a26e5eced717455901713cb6c3a91b04ce7"
+}

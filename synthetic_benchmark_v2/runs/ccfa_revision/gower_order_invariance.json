@@ -1,0 +1,12 @@
+[
+  {
+    "method": "gower_lof_subspace",
+    "matched_candidate_lists": 480,
+    "required": 480
+  },
+  {
+    "method": "gower_knn_subspace",
+    "matched_candidate_lists": 480,
+    "required": 480
+  }
+]

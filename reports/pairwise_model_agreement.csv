@@ -1,0 +1,11 @@
+annotator_a,model_a,family_a,annotator_b,model_b,family_b,n_cases,mean_jaccard,exact_set_match_rate
+deepseek_v2_lite_chat,DeepSeek-V2-Lite-Chat,DeepSeek,gemma3_4b,Gemma-3-4B-it,Gemma,44,0.327273,0.113636
+deepseek_v2_lite_chat,DeepSeek-V2-Lite-Chat,DeepSeek,llama31_8b_instruct,Llama-3.1-8B-Instruct,Llama,44,0.329545,0.068182
+deepseek_v2_lite_chat,DeepSeek-V2-Lite-Chat,DeepSeek,phi4_mini,Phi-4-mini-instruct,Phi,42,0.353571,0.071429
+deepseek_v2_lite_chat,DeepSeek-V2-Lite-Chat,DeepSeek,qwen35_9b,Qwen3.5-9B,Qwen,43,0.21938,0.0
+gemma3_4b,Gemma-3-4B-it,Gemma,llama31_8b_instruct,Llama-3.1-8B-Instruct,Llama,78,0.437179,0.179487
+gemma3_4b,Gemma-3-4B-it,Gemma,phi4_mini,Phi-4-mini-instruct,Phi,72,0.479861,0.138889
+gemma3_4b,Gemma-3-4B-it,Gemma,qwen35_9b,Qwen3.5-9B,Qwen,77,0.335931,0.077922
+llama31_8b_instruct,Llama-3.1-8B-Instruct,Llama,phi4_mini,Phi-4-mini-instruct,Phi,72,0.417593,0.069444
+llama31_8b_instruct,Llama-3.1-8B-Instruct,Llama,qwen35_9b,Qwen3.5-9B,Qwen,77,0.328139,0.051948
+phi4_mini,Phi-4-mini-instruct,Phi,qwen35_9b,Qwen3.5-9B,Qwen,71,0.351174,0.056338

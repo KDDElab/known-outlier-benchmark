@@ -1,0 +1,45 @@
+{
+  "status": "completed_measurements_verified",
+  "models": [
+    {
+      "model": "qwen35_9b",
+      "conditions": 1728,
+      "reused": 673,
+      "new": 1055,
+      "input_limit_cases": 17,
+      "new_file_sha256": "dbf7dc83f481f8fc375b916774d7e212fe704a4cd05809e2f831d7db835070e6",
+      "reused_file_sha256": "454349d0ec0c711ada1462654bc61e94fce6e9c06dd66b3b0f2eb737c49ba9fe"
+    },
+    {
+      "model": "deepseek_v2_lite_chat",
+      "conditions": 1728,
+      "reused": 673,
+      "new": 1055,
+      "input_limit_cases": 19,
+      "new_file_sha256": "b492c831d47db4aeb42c1b7b11edc49ccb873410b8951c4ddd24bdeb0df06214",
+      "reused_file_sha256": "922b62fdce3d9631dfa8c3360fc2f4871df9fc1aa6db43458180ab8d4d075ace"
+    },
+    {
+      "model": "llama31_8b_instruct",
+      "conditions": 1728,
+      "reused": 673,
+      "new": 1055,
+      "input_limit_cases": 0,
+      "new_file_sha256": "35562a4c8832d928b16623144da35f637f3116b6440d0c3e88897d24b874b09c",
+      "reused_file_sha256": "3220510be75a57513a05758d43bb4a47b25db419229299181aa3b1a970c88344"
+    }
+  ],
+  "main_methods": 12,
+  "main_paired_tests": 18,
+  "table_test_estimators_agree": true,
+  "metric_ordering_invariants": true,
+  "all_infeasible_inputs_preserved": true,
+  "matched_choice_budget_verified": true,
+  "gower_order_invariant_lists": 960,
+  "checkpoint_files_rehashed": 25,
+  "independent_machine_reproduction": false,
+  "primary_snapshot_preserved": true,
+  "intervention_test_family_sizes_verified": true,
+  "prediction_absence_decomposition_verified": true,
+  "audit_sha256": "ab83861748229f18d1bdf0471c83da45683087430031ed0ff789a959e1c59ef3"
+}

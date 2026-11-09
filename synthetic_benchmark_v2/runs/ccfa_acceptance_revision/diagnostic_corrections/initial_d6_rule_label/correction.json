@@ -1,0 +1,6 @@
+{
+  "timestamp": "2026-11-08T11:36:25.016165+00:00",
+  "correction": "Initial d6 diagnostic used rule-minimal labels. Corrected to population support labels, matching the main endpoint. No predictions, inputs, scores or invoice results changed. Original outputs archived here; initial diagnostics were never used in the manuscript.",
+  "code_sha256": "90f7176d11fb79a61e2be771278e1a2cac4c5d958eebafdac2d314a3d233ace8",
+  "aggregation": "Equal seed-within-template then equal template, matching main estimator; corrected along with label target."
+}

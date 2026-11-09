@@ -1,0 +1,62 @@
+[
+  {
+    "model": "qwen35_9b",
+    "gpu": "0",
+    "pid": 3906307,
+    "command": [
+      "/opt/conda/bin/python",
+      "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/annotate_v2.py",
+      "--model",
+      "qwen35_9b",
+      "--inputs-path",
+      "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_acceptance_revision/inputs_prior3.jsonl",
+      "--annotations-path",
+      "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_acceptance_revision/annotations_prior3_qwen35_9b.jsonl",
+      "--run-log-path",
+      "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_acceptance_revision/model_runs_prior3_qwen35_9b.jsonl",
+      "--protocol-id",
+      "known_outlier_acceptance_diagnostics_v1",
+      "--resume"
+    ]
+  },
+  {
+    "model": "deepseek_v2_lite_chat",
+    "gpu": "1,2",
+    "pid": 3906308,
+    "command": [
+      "/opt/conda/bin/python",
+      "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/annotate_v2.py",
+      "--model",
+      "deepseek_v2_lite_chat",
+      "--inputs-path",
+      "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_acceptance_revision/inputs_prior3.jsonl",
+      "--annotations-path",
+      "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_acceptance_revision/annotations_prior3_deepseek_v2_lite_chat.jsonl",
+      "--run-log-path",
+      "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_acceptance_revision/model_runs_prior3_deepseek_v2_lite_chat.jsonl",
+      "--protocol-id",
+      "known_outlier_acceptance_diagnostics_v1",
+      "--resume"
+    ]
+  },
+  {
+    "model": "llama31_8b_instruct",
+    "gpu": "3",
+    "pid": 3906309,
+    "command": [
+      "/opt/conda/bin/python",
+      "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/annotate_v2.py",
+      "--model",
+      "llama31_8b_instruct",
+      "--inputs-path",
+      "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_acceptance_revision/inputs_prior3.jsonl",
+      "--annotations-path",
+      "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_acceptance_revision/annotations_prior3_llama31_8b_instruct.jsonl",
+      "--run-log-path",
+      "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_acceptance_revision/model_runs_prior3_llama31_8b_instruct.jsonl",
+      "--protocol-id",
+      "known_outlier_acceptance_diagnostics_v1",
+      "--resume"
+    ]
+  }
+]

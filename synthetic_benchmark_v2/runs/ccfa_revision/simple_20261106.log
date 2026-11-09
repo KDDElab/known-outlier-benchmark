@@ -1,0 +1,18 @@
+{
+  "benchmark_protocol": "known_anomaly_subspace_benchmark_v2_compact_json_v1",
+  "split": "test",
+  "n_cases": 288,
+  "random_replicates": 100,
+  "random_seed_base": 20261105,
+  "random_size_pool_source": "training split reference_support_sufficient_minimal_subspaces only",
+  "univariate_score": "max(empirical rarity, absolute median deviation / (1.4826*MAD)); nonnumeric uses empirical rarity",
+  "oracle_methods": [
+    "reference_support_minimal",
+    "rule_minimal"
+  ],
+  "inputs_path": "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/seed_20261106/inputs.jsonl",
+  "ground_truth_path": "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/seed_20261106/ground_truth.jsonl",
+  "inputs_sha256": "3dbedbb9578bddad9c8226facfd58a5ad55373cbdaafadf2deaf11402b001a51",
+  "ground_truth_sha256": "f6efd1d09d34c8b736017608b92a5fcfa5dd4031806d9daab473d7b5fc490b9b",
+  "runner_sha256": "4342ce27f013f0b70c6b8b8d720039d865e5858424c43c65f8e085dcfb88781d"
+}

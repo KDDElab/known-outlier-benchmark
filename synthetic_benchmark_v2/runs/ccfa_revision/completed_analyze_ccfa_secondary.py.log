@@ -1,0 +1,7 @@
+/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/analyze_ccfa_secondary.py:70: DtypeWarning: Columns (0: task_label_correct, 1: task_label_scored, 2: prediction_present, 3: mechanism_metric_applicable, 4: mechanism_exact, 5: interaction_case, 6: interaction_metric_applicable, 7: interaction_all_fields_hit) have mixed types. Specify dtype option on import or set low_memory=False.
+  data=pd.read_csv(OUT/'all_scores.csv')
+/opt/conda/lib/python3.13/site-packages/numpy/lib/_nanfunctions_impl.py:1573: RuntimeWarning: All-NaN slice encountered
+  return _nanquantile_unchecked(
+/opt/conda/lib/python3.13/site-packages/numpy/lib/_nanfunctions_impl.py:1573: RuntimeWarning: All-NaN slice encountered
+  return _nanquantile_unchecked(
+Secondary comparisons, invariance and feasibility analysis completed

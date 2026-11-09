@@ -1,0 +1,31 @@
+\begin{table*}[t]
+\centering\footnotesize
+\caption{Main comparison: 864 cases, identical inputs, one frozen random display per case. Point estimates use the paired tests' template estimator; failures remain misses. Figure~\ref{fig:pareto}(d) gives 95\% template-bootstrap intervals for the three models and two Gower rankers, conditional on these displays. Table~\ref{tab:random-orders} reports four-order sensitivity. Size is conditional on answering; bold marks the best non-control localization score. M\textsuperscript{2}OE is evaluated separately.}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}|c|l|rrrr|rr|rr|}
+\hline
+\multicolumn{2}{|c|}{Methods} & \multicolumn{4}{c|}{Population-support labels ($\uparrow$)} & \multicolumn{2}{c|}{Rule labels ($\uparrow$)} & \multicolumn{2}{c|}{Output behavior} \\
+\cline{1-10}
+Group & Method & Suff.@1 & Exact@1 & Hit@4 & Jaccard@4 & Exact@1 & Hit@4 & \shortstack{Top-one\\fraction} & Answered \\
+\hline
+\multirow{3}{*}{\rotatebox{90}{\scriptsize LMs}} & Qwen3.5-9B & 0.537 & 0.231 & 0.249 & 0.460 & 0.202 & 0.235 & 0.228 & 0.992 \\
+ & DeepSeek-V2-Lite-Chat & 0.291 & 0.023 & 0.039 & 0.200 & 0.020 & 0.032 & 0.406 & 0.731 \\
+ & Llama-3.1-8B-Instruct & 0.183 & 0.032 & 0.049 & 0.216 & 0.024 & 0.041 & 0.202 & 0.821 \\
+\hline
+\multirow{3}{*}{\rotatebox{90}{\scriptsize Rankers}} & Gower-LOF & 0.538 & \textbf{0.514} & \textbf{0.637} & \textbf{0.762} & \textbf{0.451} & \textbf{0.603} & 0.131 & 1.000 \\
+ & Gower-kNN & 0.608 & 0.411 & 0.499 & 0.683 & 0.351 & 0.480 & 0.197 & 1.000 \\
+ & RLAX adaptation & 0.498 & 0.426 & 0.478 & 0.665 & 0.393 & 0.440 & 0.143 & 1.000 \\
+\hline
+\multirow{2}{*}{\rotatebox{90}{\scriptsize Adapt.}} & SOD adaptation & \textbf{0.610} & 0.000 & 0.000 & 0.162 & 0.000 & 0.000 & 0.577 & 1.000 \\
+ & COP adaptation & 0.011 & 0.011 & 0.021 & 0.144 & 0.009 & 0.018 & 0.097 & 1.000 \\
+\hline
+\multirow{4}{*}{\rotatebox{90}{\scriptsize Controls}} & Univariate top four & 0.144 & 0.144 & 0.391 & 0.537 & 0.129 & 0.386 & 0.097 & 1.000 \\
+ & Random size prior & 0.108 & 0.033 & 0.123 & 0.343 & 0.028 & 0.106 & 0.162 & 1.000 \\
+ & All fields & 1.000 & 0.000 & 0.000 & 0.157 & 0.000 & 0.000 & 1.000 & 1.000 \\
+ & First three positions & 0.220 & 0.002 & 0.002 & 0.154 & 0.002 & 0.002 & 0.292 & 1.000 \\
+\hline
+\end{tabular*}
+\renewcommand{\arraystretch}{1.0}
+\label{tab:main}
+\end{table*}

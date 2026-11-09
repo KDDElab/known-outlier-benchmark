@@ -1,0 +1,28 @@
+{
+  "frozen_at_utc": "2026-11-08T11:26:41.898195+00:00",
+  "runner_sha256": "374d57c03556ad74c33fa0d785dc275d734afeedfa29a53cef087ff6588dc1ea",
+  "base_code_sha256": "fc6a01fd7e673b9a552fbcc0da20187924b8e60cbd0d1a728fc813d4dbc72a31",
+  "invoice_grid": {
+    "cap": [
+      1,
+      2,
+      3,
+      4,
+      8
+    ],
+    "k": [
+      1,
+      3,
+      5,
+      10
+    ],
+    "fields": [
+      "all",
+      "roles_only_oracle"
+    ]
+  },
+  "additional_diagnostic": "At k=3 and all candidates, remove duplicate reference projections separately in each subspace; keep target. Changes empirical density weights; not a proposed replacement method.",
+  "score_record": "Raw score for every candidate plus projected duplicate and zero-distance frequencies.",
+  "d6": "All original 288 width-six cases, cap3 versus cap6; unchanged scores and tie rules.",
+  "stats": "Descriptive paired sweeps; no best-setting selection for headline results."
+}

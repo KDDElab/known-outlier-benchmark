@@ -1,0 +1,799 @@
+2026-11-07 20:41:17.499213: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+M2OE 1/96 case=s20261106_main_V2_0007 error=None
+2026-11-07 20:41:25.047101: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:41:30.374613: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:41:40.768626: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:41:46.428916: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:41:52.416096: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:42:01.845044: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:42:07.754676: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:42:20.805638: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+M2OE 10/96 case=s20261106_main_V2_0062 error=None
+2026-11-07 20:42:26.234336: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:42:40.071831: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:42:47.259728: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:42:57.378272: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:43:02.608882: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:43:07.762795: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:43:13.136688: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:43:19.207892: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+M2OE 20/96 case=s20261106_main_V2_0092 error=None
+2026-11-07 20:43:29.895088: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:43:36.228112: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:43:41.708292: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:43:47.071685: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:43:55.948122: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:44:10.162597: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:44:18.475886: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:44:31.083071: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:44:43.170810: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:44:52.467204: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+M2OE 30/96 case=s20261106_main_V2_0137 error=None
+2026-11-07 20:44:57.870561: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:45:03.916305: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:45:13.230431: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:45:19.571601: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:45:27.702512: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:45:32.942365: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:45:39.015798: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:45:44.382406: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:45:50.445881: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:45:59.773018: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+M2OE 40/96 case=s20261106_main_V2_0178 error=None
+2026-11-07 20:46:08.789424: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:46:15.010132: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:46:21.054655: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:46:28.773978: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:46:37.504943: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:46:42.941945: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:46:51.673143: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:46:57.587520: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:47:05.433762: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:47:11.194131: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+M2OE 50/96 case=s20261106_main_V2_0229 error=None
+2026-11-07 20:47:18.640966: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:47:27.180206: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:47:38.002806: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:47:43.311687: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:47:48.595781: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:47:57.485631: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:48:06.901323: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:48:12.498964: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:48:18.310931: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:48:23.612014: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+M2OE 60/96 case=s20261106_main_V2_0272 error=None
+2026-11-07 20:48:29.138922: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:48:34.451251: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:48:39.473181: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:48:48.085040: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:48:53.470666: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:48:59.024632: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:49:06.555207: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:49:12.204843: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:49:17.719174: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:49:23.188944: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+M2OE 70/96 case=s20261106_main_V2_0331 error=None
+2026-11-07 20:49:31.931266: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:49:37.317656: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:49:48.791060: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:49:56.860308: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:50:02.317083: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:50:13.731956: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:50:19.083246: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:50:25.129009: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:50:31.002316: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:50:36.010796: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+M2OE 80/96 case=s20261106_main_V2_0395 error=None
+2026-11-07 20:50:41.411361: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:50:46.881668: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:51:02.536540: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:51:09.075156: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:51:14.204721: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:51:19.419693: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:51:25.109498: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:51:35.155112: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:51:40.856808: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+M2OE 90/96 case=s20261106_main_V2_0452 error=None
+2026-11-07 20:51:46.401947: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:51:51.708663: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:51:58.695974: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:52:04.449148: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+2026-11-07 20:52:14.499167: E tensorflow/core/framework/node_def_util.cc:680] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_16}}
+/tmp/m2oe_tf_env/lib/python3.13/site-packages/keras/src/backend/tensorflow/trainer.py:671: UserWarning: `model.compiled_metrics()` is deprecated. Instead, use e.g.:
+```
+for metric in self.metrics:
+    metric.update_state(y, y_pred)
+```
+
+  return self._compiled_metrics_update_state(
+M2OE 96/96 case=s20261106_main_V2_0478 error=None
+{
+  "method": "M2OE official TabularExplainer, choice outputs only",
+  "inputs_path": "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/inputs_panel.jsonl",
+  "n_cases": 96,
+  "split": "test",
+  "seed_base": 20261106,
+  "epochs": 30,
+  "batch_size": 16,
+  "neighbors": 30,
+  "elapsed_seconds": 673.3825230207294,
+  "encoding": "legacy_reference_clip",
+  "runner_sha256": "1169cdcb21fcb54d009ce6bd350bbf382221eb8e8a00ef2cd698c9e7c08aaa6b",
+  "ranking_note": "M\u00b2OE does not define a candidate ranking score; preserves official returned order and scores Hit@4/recall only descriptively.",
+  "source_repository_revision": "925c96ec0abca1e4cfd934d486f1217623184c7f",
+  "environment": {
+    "python": "3.13.11",
+    "tensorflow": "2.20.0",
+    "numpy": "2.5.4",
+    "scikit_learn": "1.9.1",
+    "mlxtend": "0.22.0"
+  },
+  "input_sha256": "35c50861be0d180a7e3af79422b6d258952a0b343c4c31bc5ff283db253b0656",
+  "predictions_sha256": "bf2b22eb23001a954776c4b3fac085637f6a434dc57241375c3cec27f9e89ccb",
+  "official_source_compatibility_patch": "Removed four unused tensorflow.python.keras.layers imports (ReLU, BatchNormalization) and tuple-wrapped four Keras Input shapes for TF 2.20/Keras 3; API compatibility only, no algorithm code changed."
+}

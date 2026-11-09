@@ -1,0 +1,4 @@
+method,n_panel,n_evaluable,early_stopped,early_stopped_same_raw,cap512_reached,cap512_prefix_preserved
+deepseek_v2_lite_chat,96,94,78,78,16,16
+llama31_8b_instruct,96,96,82,82,14,14
+qwen35_9b,96,94,94,94,0,0

@@ -1,0 +1,1623 @@
+{
+  "models": {
+    "qwen35_9b": {
+      "model": "qwen35_9b",
+      "protocol_id": "known_anomaly_subspace_benchmark_v2_compact_json_v1",
+      "n_test_cases": 288,
+      "n_template_clusters": 24,
+      "n_protocol_records": 288,
+      "n_parsed_records": 286,
+      "mean_latency_seconds": 11.424397222222222,
+      "n_latency_measurements": 288,
+      "p95_latency_seconds": 17.7396,
+      "mean_prompt_tokens": 6568.465034965035,
+      "n_prompt_token_measurements": 286,
+      "mean_prompt_tokens_including_recorded_over_cap_inputs": 6638.40625,
+      "n_recorded_input_over_cap": 2,
+      "max_recorded_prompt_tokens_including_over_cap": 16698,
+      "mean_output_tokens": 217.19230769230768,
+      "n_output_token_measurements": 286,
+      "total_prompt_tokens": 1878581,
+      "total_output_tokens": 62117,
+      "parse_failure_reasons": {
+        "inference failed: ValueError: rendered input has 16698 tokens, exceeding 16384; input was not truncated": 1,
+        "inference failed: ValueError: rendered input has 16582 tokens, exceeding 16384; input was not truncated": 1
+      },
+      "output_protocol_audit": {
+        "n_test_cases": 288,
+        "n_parseable_schema_records": 286,
+        "parseable_schema_rate": 0.9930555555555556,
+        "strict_json_only_exact_schema_and_evidence_limit_count": 285,
+        "strict_json_only_exact_schema_and_evidence_limit_rate": 0.9895833333333334,
+        "exact_key_schema_count": 286,
+        "exact_key_schema_rate": 0.9930555555555556,
+        "all_candidate_evidence_within_20_words_count_among_parsed": 285,
+        "all_candidate_evidence_within_20_words_rate_among_parsed": 0.9965034965034965,
+        "outputs_with_non_json_prefix_count": 0,
+        "outputs_with_non_json_suffix_count": 0
+      },
+      "run_metadata": {
+        "run_id": "qwen35_9b_20261105T055139Z_01913d10",
+        "model_id": "Qwen3.5-9B",
+        "model_path": "<LOCAL_MODEL_ROOT>/Qwen3.5/Qwen3.5-9B",
+        "model_type": "qwen3_5",
+        "dtype": "torch.bfloat16",
+        "inference_transformers_version": "5.15.0",
+        "torch_version": "2.13.0+cu130",
+        "gpu": {
+          "device_name": "NVIDIA GeForce RTX 3090",
+          "visible_devices": "3"
+        },
+        "decoding": {
+          "temperature": 0.0,
+          "do_sample": false,
+          "num_beams": 1,
+          "max_input_tokens": 16384,
+          "max_new_tokens": 512,
+          "input_truncation": false
+        },
+        "started_at_utc": "2026-11-05T05:51:39+00:00",
+        "completed_at_utc": "2026-11-05T06:48:22+00:00",
+        "elapsed_seconds": 3291.909,
+        "model_files": {
+          "config": {
+            "name": "config.json",
+            "bytes": 3126,
+            "sha256": "d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05"
+          },
+          "weights": [
+            {
+              "name": "model.safetensors-00001-of-00004.safetensors",
+              "bytes": 5276436216,
+              "sha256": "db6f444b43d318c92f360a13a25561a6a65b10c0631b8ed305a426dbaa6c380e"
+            },
+            {
+              "name": "model.safetensors-00002-of-00004.safetensors",
+              "bytes": 5335161512,
+              "sha256": "31c7d7e2dd5d207840b31cc59083c8f4c4718959149e0358c0364052bb9a0330"
+            },
+            {
+              "name": "model.safetensors-00003-of-00004.safetensors",
+              "bytes": 5368717440,
+              "sha256": "7ec36ba3a4176a44c3c0876ad80c56a2f70c84bf008d82e9501df642f17dadec"
+            },
+            {
+              "name": "model.safetensors-00004-of-00004.safetensors",
+              "bytes": 3325995712,
+              "sha256": "b62b0c4cd7e44edee103ee8f4fe225f246d5e768e07bfd5f25b63a8aa1fdd0c6"
+            }
+          ],
+          "tokenizer_files": [
+            {
+              "name": "chat_template.jinja",
+              "bytes": 7756,
+              "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+            },
+            {
+              "name": "merges.txt",
+              "bytes": 3353259,
+              "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+            },
+            {
+              "name": "tokenizer.json",
+              "bytes": 12807982,
+              "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "bytes": 16710,
+              "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+            },
+            {
+              "name": "vocab.json",
+              "bytes": 6722759,
+              "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+            }
+          ]
+        }
+      },
+      "evaluator_summary": {
+        "n_cases": 288,
+        "n_structurally_valid": 286,
+        "structured_output_rate": 0.9930555555555556,
+        "task_label_coverage": 0.9930555555555556,
+        "mechanism_metric_coverage": 0.9930555555555556,
+        "abstention_rate_on_valid_predictions": 0.0,
+        "task_label_accuracy_on_valid_predictions": 0.23776223776223776,
+        "mechanism_feature_metrics": {
+          "micro_precision": 0.4399441340782123,
+          "micro_recall": 0.6274900398406374,
+          "micro_f1": 0.5172413793103449,
+          "macro_case_f1": 0.6244023497869652,
+          "exact_set_accuracy": 0.28321678321678323
+        },
+        "interaction_case_count": 180,
+        "interaction_scored_case_count": 180,
+        "interaction_metric_coverage": 1.0,
+        "interaction_all_fields_recovery_rate": 0.06111111111111111,
+        "support_top1_sufficiency_rate": 0.6805555555555556,
+        "support_top1_minimal_exact_hit_rate": 0.4375,
+        "support_any_minimal_hit_at_4": 0.4513888888888889,
+        "support_mean_recall_at_4": 0.41435185185185186,
+        "support_mean_reciprocal_rank": 0.4429976851851852,
+        "support_mean_best_jaccard": 0.6432280393217894,
+        "rule_top1_sufficiency_rate": 0.6423611111111112,
+        "rule_top1_minimal_exact_hit_rate": 0.40625,
+        "rule_any_minimal_hit_at_4": 0.4166666666666667,
+        "mean_predicted_subspace_fraction": 0.20830905205905204
+      },
+      "cluster_bootstrap_metrics": {
+        "structured_output_rate": {
+          "estimate": 0.9930555555555556,
+          "ci95_low": 0.9826388888888888,
+          "ci95_high": 1.0,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "strict_json_contract_compliance_rate": {
+          "estimate": 0.9895833333333334,
+          "ci95_low": 0.9756944444444444,
+          "ci95_high": 1.0,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "support_top1_sufficiency_rate": {
+          "estimate": 0.6805555555555556,
+          "ci95_low": 0.5590277777777778,
+          "ci95_high": 0.7986111111111112,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "support_top1_minimal_exact_hit_rate": {
+          "estimate": 0.4375,
+          "ci95_low": 0.3263888888888889,
+          "ci95_high": 0.5451388888888888,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "support_any_minimal_hit_at_4": {
+          "estimate": 0.4513888888888889,
+          "ci95_low": 0.3472222222222222,
+          "ci95_high": 0.5520833333333334,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "support_mean_best_jaccard": {
+          "estimate": 0.6432280393217894,
+          "ci95_low": 0.5676978114478115,
+          "ci95_high": 0.7168575637325637,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "support_mean_reciprocal_rank": {
+          "estimate": 0.4429976851851852,
+          "ci95_low": 0.33188657407407407,
+          "ci95_high": 0.5471643518518519,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "mechanism_micro_f1_on_valid_predictions": {
+          "estimate": 0.5172413793103449,
+          "ci95_low": 0.47727272727272724,
+          "ci95_high": 0.5655172413793104,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "mechanism_micro_f1_invalid_as_empty": {
+          "estimate": 0.5163934426229508,
+          "ci95_low": 0.47809948032665184,
+          "ci95_high": 0.5705939629990263,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "interaction_all_fields_recovery_rate": {
+          "estimate": 0.06111111111111111,
+          "ci95_low": 0.027777777777777776,
+          "ci95_high": 0.09444444444444444,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 15,
+          "n_interaction_cases": 180
+        },
+        "task_label_accuracy_on_scored": {
+          "estimate": 0.23776223776223776,
+          "ci95_low": 0.12237762237762238,
+          "ci95_high": 0.36363636363636365,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "task_label_accuracy_invalid_as_wrong": {
+          "estimate": 0.2361111111111111,
+          "ci95_low": 0.125,
+          "ci95_high": 0.3576388888888889,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "support_mean_recall_at_4": {
+          "estimate": 0.41435185185185186,
+          "ci95_low": 0.30671296296296297,
+          "ci95_high": 0.5289351851851852,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "mean_predicted_subspace_fraction": {
+          "estimate": 0.20830905205905204,
+          "ci95_low": 0.18376068376068375,
+          "ci95_high": 0.23282099844599846,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        }
+      },
+      "subgroups": {
+        "task_label_gold": {
+          "categorical_rare": {
+            "n_cases": 36,
+            "support_top1_minimal_exact_hit_rate": 0.7777777777777778,
+            "support_any_minimal_hit_at_4": 0.7777777777777778,
+            "support_mean_best_jaccard": 0.8483796296296297,
+            "structured_output_rate": 1.0
+          },
+          "conditional_group": {
+            "n_cases": 36,
+            "support_top1_minimal_exact_hit_rate": 0.1388888888888889,
+            "support_any_minimal_hit_at_4": 0.1388888888888889,
+            "support_mean_best_jaccard": 0.4212962962962963,
+            "structured_output_rate": 1.0
+          },
+          "higher_order": {
+            "n_cases": 36,
+            "support_top1_minimal_exact_hit_rate": 0.19444444444444445,
+            "support_any_minimal_hit_at_4": 0.19444444444444445,
+            "support_mean_best_jaccard": 0.4062830687830688,
+            "structured_output_rate": 1.0
+          },
+          "modified_vs_mechanism": {
+            "n_cases": 36,
+            "support_top1_minimal_exact_hit_rate": 0.8055555555555556,
+            "support_any_minimal_hit_at_4": 0.8055555555555556,
+            "support_mean_best_jaccard": 0.8449074074074074,
+            "structured_output_rate": 0.9444444444444444
+          },
+          "multiple_valid": {
+            "n_cases": 36,
+            "support_top1_minimal_exact_hit_rate": 0.6388888888888888,
+            "support_any_minimal_hit_at_4": 0.6388888888888888,
+            "support_mean_best_jaccard": 0.7833333333333333,
+            "structured_output_rate": 1.0
+          },
+          "numeric_marginal": {
+            "n_cases": 36,
+            "support_top1_minimal_exact_hit_rate": 0.5277777777777778,
+            "support_any_minimal_hit_at_4": 0.5277777777777778,
+            "support_mean_best_jaccard": 0.7060185185185186,
+            "structured_output_rate": 1.0
+          },
+          "pairwise_interaction": {
+            "n_cases": 36,
+            "support_top1_minimal_exact_hit_rate": 0.2222222222222222,
+            "support_any_minimal_hit_at_4": 0.2222222222222222,
+            "support_mean_best_jaccard": 0.5425925925925925,
+            "structured_output_rate": 1.0
+          },
+          "relational": {
+            "n_cases": 36,
+            "support_top1_minimal_exact_hit_rate": 0.19444444444444445,
+            "support_any_minimal_hit_at_4": 0.3055555555555556,
+            "support_mean_best_jaccard": 0.593013468013468,
+            "structured_output_rate": 1.0
+          }
+        },
+        "feature_count": {
+          "12": {
+            "n_cases": 96,
+            "support_top1_minimal_exact_hit_rate": 0.4375,
+            "support_any_minimal_hit_at_4": 0.4583333333333333,
+            "support_mean_best_jaccard": 0.644701479076479,
+            "structured_output_rate": 1.0
+          },
+          "24": {
+            "n_cases": 96,
+            "support_top1_minimal_exact_hit_rate": 0.3333333333333333,
+            "support_any_minimal_hit_at_4": 0.3333333333333333,
+            "support_mean_best_jaccard": 0.5374131944444445,
+            "structured_output_rate": 0.9791666666666666
+          },
+          "6": {
+            "n_cases": 96,
+            "support_top1_minimal_exact_hit_rate": 0.5416666666666666,
+            "support_any_minimal_hit_at_4": 0.5625,
+            "support_mean_best_jaccard": 0.7475694444444444,
+            "structured_output_rate": 1.0
+          }
+        },
+        "reference_count": {
+          "16": {
+            "n_cases": 96,
+            "support_top1_minimal_exact_hit_rate": 0.4895833333333333,
+            "support_any_minimal_hit_at_4": 0.5,
+            "support_mean_best_jaccard": 0.6712673611111111,
+            "structured_output_rate": 1.0
+          },
+          "32": {
+            "n_cases": 96,
+            "support_top1_minimal_exact_hit_rate": 0.4895833333333333,
+            "support_any_minimal_hit_at_4": 0.5,
+            "support_mean_best_jaccard": 0.6691806457431458,
+            "structured_output_rate": 0.9791666666666666
+          },
+          "8": {
+            "n_cases": 96,
+            "support_top1_minimal_exact_hit_rate": 0.3333333333333333,
+            "support_any_minimal_hit_at_4": 0.3541666666666667,
+            "support_mean_best_jaccard": 0.5892361111111111,
+            "structured_output_rate": 1.0
+          }
+        },
+        "nuisance_profile": {
+          "deterministic_proxy_broken": {
+            "n_cases": 48,
+            "support_top1_minimal_exact_hit_rate": 0.4583333333333333,
+            "support_any_minimal_hit_at_4": 0.4791666666666667,
+            "support_mean_best_jaccard": 0.7251984126984127,
+            "structured_output_rate": 1.0
+          },
+          "deterministic_proxy_preserved": {
+            "n_cases": 48,
+            "support_top1_minimal_exact_hit_rate": 0.4375,
+            "support_any_minimal_hit_at_4": 0.4375,
+            "support_mean_best_jaccard": 0.6263573232323233,
+            "structured_output_rate": 1.0
+          },
+          "high_cardinality_noise": {
+            "n_cases": 48,
+            "support_top1_minimal_exact_hit_rate": 0.5416666666666666,
+            "support_any_minimal_hit_at_4": 0.5416666666666666,
+            "support_mean_best_jaccard": 0.6722222222222222,
+            "structured_output_rate": 0.9583333333333334
+          },
+          "independent": {
+            "n_cases": 48,
+            "support_top1_minimal_exact_hit_rate": 0.4166666666666667,
+            "support_any_minimal_hit_at_4": 0.4375,
+            "support_mean_best_jaccard": 0.6538194444444444,
+            "structured_output_rate": 1.0
+          },
+          "missingness_noise": {
+            "n_cases": 48,
+            "support_top1_minimal_exact_hit_rate": 0.4166666666666667,
+            "support_any_minimal_hit_at_4": 0.4375,
+            "support_mean_best_jaccard": 0.5980902777777778,
+            "structured_output_rate": 1.0
+          },
+          "noisy_proxy": {
+            "n_cases": 48,
+            "support_top1_minimal_exact_hit_rate": 0.3541666666666667,
+            "support_any_minimal_hit_at_4": 0.375,
+            "support_mean_best_jaccard": 0.5836805555555555,
+            "structured_output_rate": 1.0
+          }
+        },
+        "field_name_mode": {
+          "neutral_names": {
+            "n_cases": 144,
+            "support_top1_minimal_exact_hit_rate": 0.4375,
+            "support_any_minimal_hit_at_4": 0.4513888888888889,
+            "support_mean_best_jaccard": 0.6476250601250602,
+            "structured_output_rate": 0.9861111111111112
+          },
+          "opaque": {
+            "n_cases": 144,
+            "support_top1_minimal_exact_hit_rate": 0.4375,
+            "support_any_minimal_hit_at_4": 0.4513888888888889,
+            "support_mean_best_jaccard": 0.6388310185185184,
+            "structured_output_rate": 1.0
+          }
+        }
+      },
+      "bootstrap": {
+        "method": "resample eligible template groups with replacement; retain all cases in each sampled group",
+        "n_replicates": 2000,
+        "seed": 20261105
+      },
+      "paths": {
+        "predictions": "<PROJECT_ROOT>/synthetic_benchmark_v2/runs/predictions_qwen35_9b_known_anomaly_subspace_benchmark_v2_compact_json_v1.jsonl",
+        "evaluation": "<PROJECT_ROOT>/synthetic_benchmark_v2/runs/evaluation_qwen35_9b_known_anomaly_subspace_benchmark_v2_compact_json_v1",
+        "protocol_compliance": "<PROJECT_ROOT>/synthetic_benchmark_v2/runs/evaluation_qwen35_9b_known_anomaly_subspace_benchmark_v2_compact_json_v1/protocol_compliance.csv"
+      }
+    },
+    "deepseek_v2_lite_chat": {
+      "model": "deepseek_v2_lite_chat",
+      "protocol_id": "known_anomaly_subspace_benchmark_v2_compact_json_v1",
+      "n_test_cases": 288,
+      "n_template_clusters": 24,
+      "n_protocol_records": 288,
+      "n_parsed_records": 216,
+      "mean_latency_seconds": 17.621700694444442,
+      "n_latency_measurements": 288,
+      "p95_latency_seconds": 38.1816,
+      "mean_prompt_tokens": 6612.636363636364,
+      "n_prompt_token_measurements": 286,
+      "mean_prompt_tokens_including_recorded_over_cap_inputs": 6682.871527777777,
+      "n_recorded_input_over_cap": 2,
+      "max_recorded_prompt_tokens_including_over_cap": 16783,
+      "mean_output_tokens": 327.9475524475524,
+      "n_output_token_measurements": 286,
+      "total_prompt_tokens": 1891214,
+      "total_output_tokens": 93793,
+      "parse_failure_reasons": {
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 52 column 19 (char 1235)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 32 column 19 (char 619)": 3,
+        "explanations must be an array with at most four candidates": 13,
+        "JSON decode failed: JSONDecodeError: Expecting property name enclosed in double quotes: line 38 column 6 (char 1442)": 1,
+        "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 52 column 22 (char 1473)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 51 column 3 (char 1237)": 1,
+        "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 12 column 130 (char 1392)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 42 column 19 (char 1025)": 1,
+        "JSON decode failed: JSONDecodeError: Expecting value: line 51 column 13 (char 1139)": 1,
+        "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 7 column 380 (char 682)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 47 column 19 (char 1271)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 50 column 19 (char 1250)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 48 column 7 (char 1482)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 52 column 19 (char 1297)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 52 column 19 (char 1281)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 36 column 19 (char 1404)": 1,
+        "JSON decode failed: JSONDecodeError: Expecting property name enclosed in double quotes: line 62 column 1 (char 1181)": 1,
+        "JSON decode failed: JSONDecodeError: Expecting value: line 46 column 27 (char 1212)": 1,
+        "JSON decode failed: JSONDecodeError: Expecting value: line 51 column 21 (char 1277)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 34 column 19 (char 1502)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 54 column 19 (char 1511)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 60 column 20 (char 1282)": 1,
+        "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 49 column 1 (char 1189)": 1,
+        "JSON decode failed: JSONDecodeError: Expecting property name enclosed in double quotes: line 47 column 6 (char 1186)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 55 column 20 (char 1293)": 1,
+        "unsupported task_label": 3,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 52 column 19 (char 1118)": 1,
+        "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 56 column 22 (char 1392)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 56 column 7 (char 1353)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 35 column 19 (char 821)": 1,
+        "inference failed: ValueError: rendered input has 16783 tokens, exceeding 16384; input was not truncated": 1,
+        "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 32 column 1 (char 892)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 31 column 3 (char 1491)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 9 column 108 (char 1012)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 52 column 19 (char 1304)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 46 column 19 (char 1343)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 46 column 100 (char 1216)": 1,
+        "JSON decode failed: JSONDecodeError: Expecting property name enclosed in double quotes: line 37 column 1 (char 1546)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 44 column 20 (char 1332)": 1,
+        "JSON decode failed: JSONDecodeError: Expecting property name enclosed in double quotes: line 14 column 86 (char 1192)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 57 column 19 (char 1278)": 1,
+        "JSON decode failed: JSONDecodeError: Expecting property name enclosed in double quotes: line 57 column 1 (char 1265)": 1,
+        "JSON decode failed: JSONDecodeError: Expecting value: line 48 column 21 (char 1269)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 47 column 19 (char 1126)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 56 column 19 (char 1314)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 49 column 3 (char 1320)": 1,
+        "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 48 column 4 (char 1126)": 1,
+        "inference failed: ValueError: rendered input has 16670 tokens, exceeding 16384; input was not truncated": 1,
+        "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 53 column 22 (char 1458)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 32 column 7 (char 1360)": 1,
+        "JSON decode failed: JSONDecodeError: Expecting value: line 56 column 18 (char 1280)": 1,
+        "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 49 column 19 (char 1247)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 55 column 20 (char 1260)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 51 column 28 (char 1107)": 1,
+        "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 41 column 4 (char 1448)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 46 column 19 (char 1532)": 1
+      },
+      "output_protocol_audit": {
+        "n_test_cases": 288,
+        "n_parseable_schema_records": 216,
+        "parseable_schema_rate": 0.75,
+        "strict_json_only_exact_schema_and_evidence_limit_count": 115,
+        "strict_json_only_exact_schema_and_evidence_limit_rate": 0.3993055555555556,
+        "exact_key_schema_count": 216,
+        "exact_key_schema_rate": 0.75,
+        "all_candidate_evidence_within_20_words_count_among_parsed": 115,
+        "all_candidate_evidence_within_20_words_rate_among_parsed": 0.5324074074074074,
+        "outputs_with_non_json_prefix_count": 0,
+        "outputs_with_non_json_suffix_count": 0
+      },
+      "run_metadata": {
+        "run_id": "deepseek_v2_lite_chat_20261105T055139Z_a01f24b2",
+        "model_id": "DeepSeek-V2-Lite-Chat",
+        "model_path": "<LOCAL_MODEL_ROOT>/deepseek/DeepSeek-V2-Lite-Chat",
+        "model_type": "deepseek_v2",
+        "dtype": "torch.bfloat16",
+        "inference_transformers_version": "5.15.0",
+        "torch_version": "2.13.0+cu130",
+        "gpu": {
+          "device_name": "NVIDIA GeForce RTX 3090",
+          "visible_devices": "0,1"
+        },
+        "decoding": {
+          "temperature": 0.0,
+          "do_sample": false,
+          "num_beams": 1,
+          "max_input_tokens": 16384,
+          "max_new_tokens": 512,
+          "input_truncation": false
+        },
+        "started_at_utc": "2026-11-05T05:51:40+00:00",
+        "completed_at_utc": "2026-11-05T07:18:57+00:00",
+        "elapsed_seconds": 5077.525,
+        "model_files": {
+          "config": {
+            "name": "config.json",
+            "bytes": 1522,
+            "sha256": "f346286b0f1c8b044252fd54cb4fa78b9fab6472a6e8bebb9edfe03d414ea03d"
+          },
+          "weights": [
+            {
+              "name": "model-00001-of-000004.safetensors",
+              "bytes": 8594887408,
+              "sha256": "a314b79a30810b1038f9db08345178e16fb5742aa266c4a3dc05054c59800082"
+            },
+            {
+              "name": "model-00002-of-000004.safetensors",
+              "bytes": 8591757448,
+              "sha256": "b0bd088feada0af954614da3a5b179c4d4d5d8bb2482ec83194d101f3fe91796"
+            },
+            {
+              "name": "model-00003-of-000004.safetensors",
+              "bytes": 8590718520,
+              "sha256": "d31b192e488f0b3a04e007d842c3c9ba5783d944cb1cc27402fe8b8bb837c490"
+            },
+            {
+              "name": "model-00004-of-000004.safetensors",
+              "bytes": 5636263200,
+              "sha256": "304499be0ea06bf8a3937d7a3cc515bc3738dbd288bdd0bbc1b2d3560fce4930"
+            }
+          ],
+          "tokenizer_files": [
+            {
+              "name": "tokenizer.json",
+              "bytes": 4607451,
+              "sha256": "41f3bf64213da8c012d8bd0871a58a1fdf70463e8f08f110ddbb1082f529f669"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "bytes": 1279,
+              "sha256": "31181eaf79394ea26728d95ecb54fe7c8413e6f56085dbabc8b0818134380ec8"
+            }
+          ]
+        }
+      },
+      "evaluator_summary": {
+        "n_cases": 288,
+        "n_structurally_valid": 216,
+        "structured_output_rate": 0.75,
+        "task_label_coverage": 0.75,
+        "mechanism_metric_coverage": 0.75,
+        "abstention_rate_on_valid_predictions": 0.09722222222222222,
+        "task_label_accuracy_on_valid_predictions": 0.10648148148148148,
+        "mechanism_feature_metrics": {
+          "micro_precision": 0.1620712844653665,
+          "micro_recall": 0.6342105263157894,
+          "micro_f1": 0.25816818425281196,
+          "macro_case_f1": 0.287812398506843,
+          "exact_set_accuracy": 0.0
+        },
+        "interaction_case_count": 180,
+        "interaction_scored_case_count": 180,
+        "interaction_metric_coverage": 1.0,
+        "interaction_all_fields_recovery_rate": 0.0,
+        "support_top1_sufficiency_rate": 0.3645833333333333,
+        "support_top1_minimal_exact_hit_rate": 0.10069444444444445,
+        "support_any_minimal_hit_at_4": 0.12152777777777778,
+        "support_mean_recall_at_4": 0.10659722222222222,
+        "support_mean_reciprocal_rank": 0.10850694444444445,
+        "support_mean_best_jaccard": 0.28514673019881354,
+        "rule_top1_sufficiency_rate": 0.3472222222222222,
+        "rule_top1_minimal_exact_hit_rate": 0.09375,
+        "rule_any_minimal_hit_at_4": 0.11458333333333333,
+        "mean_predicted_subspace_fraction": 0.3639081790123457
+      },
+      "cluster_bootstrap_metrics": {
+        "structured_output_rate": {
+          "estimate": 0.75,
+          "ci95_low": 0.7152777777777778,
+          "ci95_high": 0.7847222222222222,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "strict_json_contract_compliance_rate": {
+          "estimate": 0.3993055555555556,
+          "ci95_low": 0.34375,
+          "ci95_high": 0.4548611111111111,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "support_top1_sufficiency_rate": {
+          "estimate": 0.3645833333333333,
+          "ci95_low": 0.3020833333333333,
+          "ci95_high": 0.4236111111111111,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "support_top1_minimal_exact_hit_rate": {
+          "estimate": 0.10069444444444445,
+          "ci95_low": 0.052083333333333336,
+          "ci95_high": 0.15625,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "support_any_minimal_hit_at_4": {
+          "estimate": 0.12152777777777778,
+          "ci95_low": 0.0625,
+          "ci95_high": 0.1840277777777778,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "support_mean_best_jaccard": {
+          "estimate": 0.28514673019881354,
+          "ci95_low": 0.2276457531665865,
+          "ci95_high": 0.34090608465608463,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "support_mean_reciprocal_rank": {
+          "estimate": 0.10850694444444445,
+          "ci95_low": 0.055844907407407406,
+          "ci95_high": 0.16608796296296297,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "mechanism_micro_f1_on_valid_predictions": {
+          "estimate": 0.25816818425281196,
+          "ci95_low": 0.2102366538249862,
+          "ci95_high": 0.3044949250845819,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "mechanism_micro_f1_invalid_as_empty": {
+          "estimate": 0.24208940231039677,
+          "ci95_low": 0.19763694951664876,
+          "ci95_high": 0.2864476386036961,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "interaction_all_fields_recovery_rate": {
+          "estimate": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 15,
+          "n_interaction_cases": 180
+        },
+        "task_label_accuracy_on_scored": {
+          "estimate": 0.10648148148148148,
+          "ci95_low": 0.009523809523809525,
+          "ci95_high": 0.22580645161290322,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "task_label_accuracy_invalid_as_wrong": {
+          "estimate": 0.0798611111111111,
+          "ci95_low": 0.010416666666666666,
+          "ci95_high": 0.1701388888888889,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "support_mean_recall_at_4": {
+          "estimate": 0.10659722222222222,
+          "ci95_low": 0.051041666666666666,
+          "ci95_high": 0.16666666666666666,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "mean_predicted_subspace_fraction": {
+          "estimate": 0.3639081790123457,
+          "ci95_low": 0.3292020318930041,
+          "ci95_high": 0.40102544132917967,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        }
+      },
+      "subgroups": {
+        "task_label_gold": {
+          "categorical_rare": {
+            "n_cases": 36,
+            "support_top1_minimal_exact_hit_rate": 0.0,
+            "support_any_minimal_hit_at_4": 0.0,
+            "support_mean_best_jaccard": 0.1701388888888889,
+            "structured_output_rate": 0.6944444444444444
+          },
+          "conditional_group": {
+            "n_cases": 36,
+            "support_top1_minimal_exact_hit_rate": 0.3055555555555556,
+            "support_any_minimal_hit_at_4": 0.3055555555555556,
+            "support_mean_best_jaccard": 0.38270502645502646,
+            "structured_output_rate": 0.8333333333333334
+          },
+          "higher_order": {
+            "n_cases": 36,
+            "support_top1_minimal_exact_hit_rate": 0.05555555555555555,
+            "support_any_minimal_hit_at_4": 0.08333333333333333,
+            "support_mean_best_jaccard": 0.42410714285714285,
+            "structured_output_rate": 0.7777777777777778
+          },
+          "modified_vs_mechanism": {
+            "n_cases": 36,
+            "support_top1_minimal_exact_hit_rate": 0.0,
+            "support_any_minimal_hit_at_4": 0.0,
+            "support_mean_best_jaccard": 0.14187710437710438,
+            "structured_output_rate": 0.75
+          },
+          "multiple_valid": {
+            "n_cases": 36,
+            "support_top1_minimal_exact_hit_rate": 0.0,
+            "support_any_minimal_hit_at_4": 0.0,
+            "support_mean_best_jaccard": 0.23819444444444443,
+            "structured_output_rate": 0.6666666666666666
+          },
+          "numeric_marginal": {
+            "n_cases": 36,
+            "support_top1_minimal_exact_hit_rate": 0.0,
+            "support_any_minimal_hit_at_4": 0.0,
+            "support_mean_best_jaccard": 0.09313271604938272,
+            "structured_output_rate": 0.7777777777777778
+          },
+          "pairwise_interaction": {
+            "n_cases": 36,
+            "support_top1_minimal_exact_hit_rate": 0.19444444444444445,
+            "support_any_minimal_hit_at_4": 0.3055555555555556,
+            "support_mean_best_jaccard": 0.4421296296296296,
+            "structured_output_rate": 0.7222222222222222
+          },
+          "relational": {
+            "n_cases": 36,
+            "support_top1_minimal_exact_hit_rate": 0.25,
+            "support_any_minimal_hit_at_4": 0.2777777777777778,
+            "support_mean_best_jaccard": 0.3888888888888889,
+            "structured_output_rate": 0.7777777777777778
+          }
+        },
+        "feature_count": {
+          "12": {
+            "n_cases": 96,
+            "support_top1_minimal_exact_hit_rate": 0.10416666666666667,
+            "support_any_minimal_hit_at_4": 0.11458333333333333,
+            "support_mean_best_jaccard": 0.25004584535834534,
+            "structured_output_rate": 0.8020833333333334
+          },
+          "24": {
+            "n_cases": 96,
+            "support_top1_minimal_exact_hit_rate": 0.041666666666666664,
+            "support_any_minimal_hit_at_4": 0.041666666666666664,
+            "support_mean_best_jaccard": 0.1481026785714286,
+            "structured_output_rate": 0.5104166666666666
+          },
+          "6": {
+            "n_cases": 96,
+            "support_top1_minimal_exact_hit_rate": 0.15625,
+            "support_any_minimal_hit_at_4": 0.20833333333333334,
+            "support_mean_best_jaccard": 0.45729166666666665,
+            "structured_output_rate": 0.9375
+          }
+        },
+        "reference_count": {
+          "16": {
+            "n_cases": 96,
+            "support_top1_minimal_exact_hit_rate": 0.11458333333333333,
+            "support_any_minimal_hit_at_4": 0.14583333333333334,
+            "support_mean_best_jaccard": 0.3117311507936508,
+            "structured_output_rate": 0.7916666666666666
+          },
+          "32": {
+            "n_cases": 96,
+            "support_top1_minimal_exact_hit_rate": 0.052083333333333336,
+            "support_any_minimal_hit_at_4": 0.0625,
+            "support_mean_best_jaccard": 0.22327628968253968,
+            "structured_output_rate": 0.7083333333333334
+          },
+          "8": {
+            "n_cases": 96,
+            "support_top1_minimal_exact_hit_rate": 0.13541666666666666,
+            "support_any_minimal_hit_at_4": 0.15625,
+            "support_mean_best_jaccard": 0.32043275012025013,
+            "structured_output_rate": 0.75
+          }
+        },
+        "nuisance_profile": {
+          "deterministic_proxy_broken": {
+            "n_cases": 48,
+            "support_top1_minimal_exact_hit_rate": 0.08333333333333333,
+            "support_any_minimal_hit_at_4": 0.125,
+            "support_mean_best_jaccard": 0.3508928571428571,
+            "structured_output_rate": 0.8333333333333334
+          },
+          "deterministic_proxy_preserved": {
+            "n_cases": 48,
+            "support_top1_minimal_exact_hit_rate": 0.10416666666666667,
+            "support_any_minimal_hit_at_4": 0.125,
+            "support_mean_best_jaccard": 0.30415088383838385,
+            "structured_output_rate": 0.8333333333333334
+          },
+          "high_cardinality_noise": {
+            "n_cases": 48,
+            "support_top1_minimal_exact_hit_rate": 0.0625,
+            "support_any_minimal_hit_at_4": 0.08333333333333333,
+            "support_mean_best_jaccard": 0.23958333333333334,
+            "structured_output_rate": 0.6458333333333334
+          },
+          "independent": {
+            "n_cases": 48,
+            "support_top1_minimal_exact_hit_rate": 0.16666666666666666,
+            "support_any_minimal_hit_at_4": 0.1875,
+            "support_mean_best_jaccard": 0.3263888888888889,
+            "structured_output_rate": 0.7291666666666666
+          },
+          "missingness_noise": {
+            "n_cases": 48,
+            "support_top1_minimal_exact_hit_rate": 0.08333333333333333,
+            "support_any_minimal_hit_at_4": 0.08333333333333333,
+            "support_mean_best_jaccard": 0.2177579365079365,
+            "structured_output_rate": 0.75
+          },
+          "noisy_proxy": {
+            "n_cases": 48,
+            "support_top1_minimal_exact_hit_rate": 0.10416666666666667,
+            "support_any_minimal_hit_at_4": 0.125,
+            "support_mean_best_jaccard": 0.2721064814814815,
+            "structured_output_rate": 0.7083333333333334
+          }
+        },
+        "field_name_mode": {
+          "neutral_names": {
+            "n_cases": 144,
+            "support_top1_minimal_exact_hit_rate": 0.09722222222222222,
+            "support_any_minimal_hit_at_4": 0.11805555555555555,
+            "support_mean_best_jaccard": 0.29731065616482283,
+            "structured_output_rate": 0.7847222222222222
+          },
+          "opaque": {
+            "n_cases": 144,
+            "support_top1_minimal_exact_hit_rate": 0.10416666666666667,
+            "support_any_minimal_hit_at_4": 0.125,
+            "support_mean_best_jaccard": 0.27298280423280424,
+            "structured_output_rate": 0.7152777777777778
+          }
+        }
+      },
+      "bootstrap": {
+        "method": "resample eligible template groups with replacement; retain all cases in each sampled group",
+        "n_replicates": 2000,
+        "seed": 20261105
+      },
+      "paths": {
+        "predictions": "<PROJECT_ROOT>/synthetic_benchmark_v2/runs/predictions_deepseek_v2_lite_chat_known_anomaly_subspace_benchmark_v2_compact_json_v1.jsonl",
+        "evaluation": "<PROJECT_ROOT>/synthetic_benchmark_v2/runs/evaluation_deepseek_v2_lite_chat_known_anomaly_subspace_benchmark_v2_compact_json_v1",
+        "protocol_compliance": "<PROJECT_ROOT>/synthetic_benchmark_v2/runs/evaluation_deepseek_v2_lite_chat_known_anomaly_subspace_benchmark_v2_compact_json_v1/protocol_compliance.csv"
+      }
+    },
+    "llama31_8b_instruct": {
+      "model": "llama31_8b_instruct",
+      "protocol_id": "known_anomaly_subspace_benchmark_v2_compact_json_v1",
+      "n_test_cases": 288,
+      "n_template_clusters": 24,
+      "n_protocol_records": 288,
+      "n_parsed_records": 236,
+      "mean_latency_seconds": 7.005010416666667,
+      "n_latency_measurements": 288,
+      "p95_latency_seconds": 14.9935,
+      "mean_prompt_tokens": 4860.774305555556,
+      "n_prompt_token_measurements": 288,
+      "mean_prompt_tokens_including_recorded_over_cap_inputs": 4860.774305555556,
+      "n_recorded_input_over_cap": 0,
+      "max_recorded_prompt_tokens_including_over_cap": 11974,
+      "mean_output_tokens": 220.5625,
+      "n_output_token_measurements": 288,
+      "total_prompt_tokens": 1399903,
+      "total_output_tokens": 63522,
+      "parse_failure_reasons": {
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 3 column 45 (char 86)": 1,
+        "no JSON object found": 29,
+        "JSON decode failed: JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)": 7,
+        "JSON decode failed: JSONDecodeError: Expecting property name enclosed in double quotes: line 12 column 6 (char 288)": 1,
+        "JSON decode failed: JSONDecodeError: Expecting value: line 7 column 18 (char 166)": 1,
+        "JSON decode failed: JSONDecodeError: Expecting value: line 18 column 21 (char 734)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 21 column 7 (char 683)": 1,
+        "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 8 column 1 (char 118)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 13 column 7 (char 342)": 1,
+        "JSON decode failed: JSONDecodeError: Expecting value: line 2 column 16 (char 17)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 2 column 17 (char 18)": 1,
+        "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 13 column 24 (char 367)": 1,
+        "JSON decode failed: JSONDecodeError: Expecting property name enclosed in double quotes: line 3 column 2 (char 43)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 11 column 20 (char 364)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 24 column 5 (char 315)": 1,
+        "JSON decode failed: JSONDecodeError: Expecting value: line 3 column 27 (char 68)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 17 column 19 (char 652)": 1,
+        "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 12 column 19 (char 301)": 1
+      },
+      "output_protocol_audit": {
+        "n_test_cases": 288,
+        "n_parseable_schema_records": 236,
+        "parseable_schema_rate": 0.8194444444444444,
+        "strict_json_only_exact_schema_and_evidence_limit_count": 186,
+        "strict_json_only_exact_schema_and_evidence_limit_rate": 0.6458333333333334,
+        "exact_key_schema_count": 236,
+        "exact_key_schema_rate": 0.8194444444444444,
+        "all_candidate_evidence_within_20_words_count_among_parsed": 223,
+        "all_candidate_evidence_within_20_words_rate_among_parsed": 0.9449152542372882,
+        "outputs_with_non_json_prefix_count": 90,
+        "outputs_with_non_json_suffix_count": 38
+      },
+      "run_metadata": {
+        "run_id": "llama31_8b_instruct_20261105T055712Z_e98a5548",
+        "model_id": "Llama-3.1-8B-Instruct",
+        "model_path": "<LOCAL_MODEL_ROOT>/llama/Llama-3.1-8B-Instruct",
+        "model_type": "llama",
+        "dtype": "torch.bfloat16",
+        "inference_transformers_version": "5.15.0",
+        "torch_version": "2.13.0+cu130",
+        "gpu": {
+          "device_name": "NVIDIA GeForce RTX 3090",
+          "visible_devices": "2"
+        },
+        "decoding": {
+          "temperature": 0.0,
+          "do_sample": false,
+          "num_beams": 1,
+          "max_input_tokens": 16384,
+          "max_new_tokens": 512,
+          "input_truncation": false
+        },
+        "started_at_utc": "2026-11-05T05:57:12+00:00",
+        "completed_at_utc": "2026-11-05T06:31:43+00:00",
+        "elapsed_seconds": 2019.142,
+        "model_files": {
+          "config": {
+            "name": "config.json",
+            "bytes": 855,
+            "sha256": "29e4c210b0d6ac178b16b2a255a568bdb23b581e50ca1ef6a6d071dd85704e6e"
+          },
+          "weights": [
+            {
+              "name": "model-00001-of-00004.safetensors",
+              "bytes": 4976698672,
+              "sha256": "2b1879f356aed350030bb40eb45ad362c89d9891096f79a3ab323d3ba5607668"
+            },
+            {
+              "name": "model-00002-of-00004.safetensors",
+              "bytes": 4999802720,
+              "sha256": "09d433f650646834a83c580877bd60c6d1f88f7755305c12576b5c7058f9af15"
+            },
+            {
+              "name": "model-00003-of-00004.safetensors",
+              "bytes": 4915916176,
+              "sha256": "fc1cdddd6bfa91128d6e94ee73d0ce62bfcdb7af29e978ddcab30c66ae9ea7fa"
+            },
+            {
+              "name": "model-00004-of-00004.safetensors",
+              "bytes": 1168138808,
+              "sha256": "92ecfe1a2414458b4821ac8c13cf8cb70aed66b5eea8dc5ad9eeb4ff309d6d7b"
+            }
+          ],
+          "tokenizer_files": [
+            {
+              "name": "special_tokens_map.json",
+              "bytes": 68,
+              "sha256": "b7455f0e8f00539108837bfa586c4fbf424e31f8717819a6798be74bef813d05"
+            },
+            {
+              "name": "tokenizer.json",
+              "bytes": 9084449,
+              "sha256": "bbc1904d35169c542dffbe1f7589a5994ec7426d9e5b609d07bab876f32e97ab"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "bytes": 50870,
+              "sha256": "24e8a6dc2547164b7002e3125f10b415105644fcf02bf9ad8b674c87b1eaaed6"
+            }
+          ]
+        }
+      },
+      "evaluator_summary": {
+        "n_cases": 288,
+        "n_structurally_valid": 236,
+        "structured_output_rate": 0.8194444444444444,
+        "task_label_coverage": 0.8194444444444444,
+        "mechanism_metric_coverage": 0.8194444444444444,
+        "abstention_rate_on_valid_predictions": 0.0,
+        "task_label_accuracy_on_valid_predictions": 0.1483050847457627,
+        "mechanism_feature_metrics": {
+          "micro_precision": 0.5331905781584583,
+          "micro_recall": 0.5914489311163895,
+          "micro_f1": 0.5608108108108109,
+          "macro_case_f1": 0.5509887005649717,
+          "exact_set_accuracy": 0.2330508474576271
+        },
+        "interaction_case_count": 180,
+        "interaction_scored_case_count": 180,
+        "interaction_metric_coverage": 1.0,
+        "interaction_all_fields_recovery_rate": 0.2833333333333333,
+        "support_top1_sufficiency_rate": 0.4166666666666667,
+        "support_top1_minimal_exact_hit_rate": 0.18055555555555555,
+        "support_any_minimal_hit_at_4": 0.21180555555555555,
+        "support_mean_recall_at_4": 0.17297453703703705,
+        "support_mean_reciprocal_rank": 0.1941550925925926,
+        "support_mean_best_jaccard": 0.4079861111111111,
+        "rule_top1_sufficiency_rate": 0.4027777777777778,
+        "rule_top1_minimal_exact_hit_rate": 0.16666666666666666,
+        "rule_any_minimal_hit_at_4": 0.19444444444444445,
+        "mean_predicted_subspace_fraction": 0.1973870056497175
+      },
+      "cluster_bootstrap_metrics": {
+        "structured_output_rate": {
+          "estimate": 0.8194444444444444,
+          "ci95_low": 0.7708333333333334,
+          "ci95_high": 0.8645833333333334,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "strict_json_contract_compliance_rate": {
+          "estimate": 0.6458333333333334,
+          "ci95_low": 0.6006944444444444,
+          "ci95_high": 0.6875,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "support_top1_sufficiency_rate": {
+          "estimate": 0.4166666666666667,
+          "ci95_low": 0.3298611111111111,
+          "ci95_high": 0.4965277777777778,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "support_top1_minimal_exact_hit_rate": {
+          "estimate": 0.18055555555555555,
+          "ci95_low": 0.10416666666666667,
+          "ci95_high": 0.2604166666666667,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "support_any_minimal_hit_at_4": {
+          "estimate": 0.21180555555555555,
+          "ci95_low": 0.13194444444444445,
+          "ci95_high": 0.2986111111111111,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "support_mean_best_jaccard": {
+          "estimate": 0.4079861111111111,
+          "ci95_low": 0.3420138888888889,
+          "ci95_high": 0.47106481481481477,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "support_mean_reciprocal_rank": {
+          "estimate": 0.1941550925925926,
+          "ci95_low": 0.11603009259259259,
+          "ci95_high": 0.2824074074074074,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "mechanism_micro_f1_on_valid_predictions": {
+          "estimate": 0.5608108108108109,
+          "ci95_low": 0.49821215733015495,
+          "ci95_high": 0.6148723640399556,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "mechanism_micro_f1_invalid_as_empty": {
+          "estimate": 0.5128733264675592,
+          "ci95_low": 0.4573991031390135,
+          "ci95_high": 0.5601539942252165,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "interaction_all_fields_recovery_rate": {
+          "estimate": 0.2833333333333333,
+          "ci95_low": 0.18888888888888888,
+          "ci95_high": 0.37222222222222223,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 15,
+          "n_interaction_cases": 180
+        },
+        "task_label_accuracy_on_scored": {
+          "estimate": 0.1483050847457627,
+          "ci95_low": 0.01639344262295082,
+          "ci95_high": 0.29777777777777775,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "task_label_accuracy_invalid_as_wrong": {
+          "estimate": 0.12152777777777778,
+          "ci95_low": 0.013888888888888888,
+          "ci95_high": 0.2569444444444444,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "support_mean_recall_at_4": {
+          "estimate": 0.17297453703703705,
+          "ci95_low": 0.10474537037037038,
+          "ci95_high": 0.24305555555555555,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        },
+        "mean_predicted_subspace_fraction": {
+          "estimate": 0.1973870056497175,
+          "ci95_low": 0.19108992467043315,
+          "ci95_high": 0.20453117144293614,
+          "bootstrap_replicates": 2000,
+          "n_template_clusters": 24
+        }
+      },
+      "subgroups": {
+        "task_label_gold": {
+          "categorical_rare": {
+            "n_cases": 36,
+            "support_top1_minimal_exact_hit_rate": 0.0,
+            "support_any_minimal_hit_at_4": 0.027777777777777776,
+            "support_mean_best_jaccard": 0.2916666666666667,
+            "structured_output_rate": 0.7222222222222222
+          },
+          "conditional_group": {
+            "n_cases": 36,
+            "support_top1_minimal_exact_hit_rate": 0.4166666666666667,
+            "support_any_minimal_hit_at_4": 0.4444444444444444,
+            "support_mean_best_jaccard": 0.5787037037037037,
+            "structured_output_rate": 0.9444444444444444
+          },
+          "higher_order": {
+            "n_cases": 36,
+            "support_top1_minimal_exact_hit_rate": 0.1388888888888889,
+            "support_any_minimal_hit_at_4": 0.19444444444444445,
+            "support_mean_best_jaccard": 0.49074074074074076,
+            "structured_output_rate": 0.8611111111111112
+          },
+          "modified_vs_mechanism": {
+            "n_cases": 36,
+            "support_top1_minimal_exact_hit_rate": 0.08333333333333333,
+            "support_any_minimal_hit_at_4": 0.08333333333333333,
+            "support_mean_best_jaccard": 0.2777777777777778,
+            "structured_output_rate": 0.7777777777777778
+          },
+          "multiple_valid": {
+            "n_cases": 36,
+            "support_top1_minimal_exact_hit_rate": 0.0,
+            "support_any_minimal_hit_at_4": 0.05555555555555555,
+            "support_mean_best_jaccard": 0.3472222222222222,
+            "structured_output_rate": 0.75
+          },
+          "numeric_marginal": {
+            "n_cases": 36,
+            "support_top1_minimal_exact_hit_rate": 0.08333333333333333,
+            "support_any_minimal_hit_at_4": 0.08333333333333333,
+            "support_mean_best_jaccard": 0.2777777777777778,
+            "structured_output_rate": 0.7777777777777778
+          },
+          "pairwise_interaction": {
+            "n_cases": 36,
+            "support_top1_minimal_exact_hit_rate": 0.25,
+            "support_any_minimal_hit_at_4": 0.2777777777777778,
+            "support_mean_best_jaccard": 0.4259259259259259,
+            "structured_output_rate": 0.8888888888888888
+          },
+          "relational": {
+            "n_cases": 36,
+            "support_top1_minimal_exact_hit_rate": 0.4722222222222222,
+            "support_any_minimal_hit_at_4": 0.5277777777777778,
+            "support_mean_best_jaccard": 0.5740740740740741,
+            "structured_output_rate": 0.8333333333333334
+          }
+        },
+        "feature_count": {
+          "12": {
+            "n_cases": 96,
+            "support_top1_minimal_exact_hit_rate": 0.14583333333333334,
+            "support_any_minimal_hit_at_4": 0.17708333333333334,
+            "support_mean_best_jaccard": 0.3532986111111111,
+            "structured_output_rate": 0.71875
+          },
+          "24": {
+            "n_cases": 96,
+            "support_top1_minimal_exact_hit_rate": 0.1875,
+            "support_any_minimal_hit_at_4": 0.20833333333333334,
+            "support_mean_best_jaccard": 0.39496527777777773,
+            "structured_output_rate": 0.78125
+          },
+          "6": {
+            "n_cases": 96,
+            "support_top1_minimal_exact_hit_rate": 0.20833333333333334,
+            "support_any_minimal_hit_at_4": 0.25,
+            "support_mean_best_jaccard": 0.4756944444444444,
+            "structured_output_rate": 0.9583333333333334
+          }
+        },
+        "reference_count": {
+          "16": {
+            "n_cases": 96,
+            "support_top1_minimal_exact_hit_rate": 0.16666666666666666,
+            "support_any_minimal_hit_at_4": 0.19791666666666666,
+            "support_mean_best_jaccard": 0.4114583333333333,
+            "structured_output_rate": 0.8541666666666666
+          },
+          "32": {
+            "n_cases": 96,
+            "support_top1_minimal_exact_hit_rate": 0.21875,
+            "support_any_minimal_hit_at_4": 0.25,
+            "support_mean_best_jaccard": 0.4817708333333333,
+            "structured_output_rate": 0.875
+          },
+          "8": {
+            "n_cases": 96,
+            "support_top1_minimal_exact_hit_rate": 0.15625,
+            "support_any_minimal_hit_at_4": 0.1875,
+            "support_mean_best_jaccard": 0.3307291666666667,
+            "structured_output_rate": 0.7291666666666666
+          }
+        },
+        "nuisance_profile": {
+          "deterministic_proxy_broken": {
+            "n_cases": 48,
+            "support_top1_minimal_exact_hit_rate": 0.22916666666666666,
+            "support_any_minimal_hit_at_4": 0.2708333333333333,
+            "support_mean_best_jaccard": 0.484375,
+            "structured_output_rate": 0.7916666666666666
+          },
+          "deterministic_proxy_preserved": {
+            "n_cases": 48,
+            "support_top1_minimal_exact_hit_rate": 0.2708333333333333,
+            "support_any_minimal_hit_at_4": 0.2916666666666667,
+            "support_mean_best_jaccard": 0.517361111111111,
+            "structured_output_rate": 0.875
+          },
+          "high_cardinality_noise": {
+            "n_cases": 48,
+            "support_top1_minimal_exact_hit_rate": 0.2708333333333333,
+            "support_any_minimal_hit_at_4": 0.2708333333333333,
+            "support_mean_best_jaccard": 0.41840277777777773,
+            "structured_output_rate": 0.8125
+          },
+          "independent": {
+            "n_cases": 48,
+            "support_top1_minimal_exact_hit_rate": 0.10416666666666667,
+            "support_any_minimal_hit_at_4": 0.125,
+            "support_mean_best_jaccard": 0.3159722222222222,
+            "structured_output_rate": 0.8541666666666666
+          },
+          "missingness_noise": {
+            "n_cases": 48,
+            "support_top1_minimal_exact_hit_rate": 0.125,
+            "support_any_minimal_hit_at_4": 0.14583333333333334,
+            "support_mean_best_jaccard": 0.3211805555555555,
+            "structured_output_rate": 0.75
+          },
+          "noisy_proxy": {
+            "n_cases": 48,
+            "support_top1_minimal_exact_hit_rate": 0.08333333333333333,
+            "support_any_minimal_hit_at_4": 0.16666666666666666,
+            "support_mean_best_jaccard": 0.390625,
+            "structured_output_rate": 0.8333333333333334
+          }
+        },
+        "field_name_mode": {
+          "neutral_names": {
+            "n_cases": 144,
+            "support_top1_minimal_exact_hit_rate": 0.1527777777777778,
+            "support_any_minimal_hit_at_4": 0.1875,
+            "support_mean_best_jaccard": 0.39641203703703703,
+            "structured_output_rate": 0.8055555555555556
+          },
+          "opaque": {
+            "n_cases": 144,
+            "support_top1_minimal_exact_hit_rate": 0.20833333333333334,
+            "support_any_minimal_hit_at_4": 0.2361111111111111,
+            "support_mean_best_jaccard": 0.4195601851851852,
+            "structured_output_rate": 0.8333333333333334
+          }
+        }
+      },
+      "bootstrap": {
+        "method": "resample eligible template groups with replacement; retain all cases in each sampled group",
+        "n_replicates": 2000,
+        "seed": 20261105
+      },
+      "paths": {
+        "predictions": "<PROJECT_ROOT>/synthetic_benchmark_v2/runs/predictions_llama31_8b_instruct_known_anomaly_subspace_benchmark_v2_compact_json_v1.jsonl",
+        "evaluation": "<PROJECT_ROOT>/synthetic_benchmark_v2/runs/evaluation_llama31_8b_instruct_known_anomaly_subspace_benchmark_v2_compact_json_v1",
+        "protocol_compliance": "<PROJECT_ROOT>/synthetic_benchmark_v2/runs/evaluation_llama31_8b_instruct_known_anomaly_subspace_benchmark_v2_compact_json_v1/protocol_compliance.csv"
+      }
+    }
+  },
+  "paired_template_bootstrap_contrasts": {
+    "qwen35_9b_minus_top_univariate": {
+      "support_top1_minimal_exact_hit_rate": {
+        "paired_difference": 0.2847222222222222,
+        "ci95_low": 0.1875,
+        "ci95_high": 0.3854166666666667,
+        "n_bootstrap": 2000,
+        "cluster_signflip_p": 4.999750012499375e-05,
+        "n_template_clusters": 24,
+        "n_paired_cases": 288,
+        "holm_adjusted_p_exploratory_model_vs_univariate_family": 0.000599970001499925
+      },
+      "support_any_minimal_hit_at_4": {
+        "paired_difference": 0.059027777777777776,
+        "ci95_low": -0.04513888888888889,
+        "ci95_high": 0.1597222222222222,
+        "n_bootstrap": 2000,
+        "cluster_signflip_p": 0.2884855757212139,
+        "n_template_clusters": 24,
+        "n_paired_cases": 288,
+        "holm_adjusted_p_exploratory_model_vs_univariate_family": 0.8654567271636417
+      },
+      "support_mean_best_jaccard": {
+        "paired_difference": 0.08304285413660413,
+        "ci95_low": 0.007465277777777773,
+        "ci95_high": 0.15483104858104857,
+        "n_bootstrap": 2000,
+        "cluster_signflip_p": 0.05009749512524374,
+        "n_template_clusters": 24,
+        "n_paired_cases": 288,
+        "holm_adjusted_p_exploratory_model_vs_univariate_family": 0.3005849707514624
+      },
+      "support_top1_sufficiency_rate": {
+        "paired_difference": 0.5277777777777778,
+        "ci95_low": 0.4270833333333333,
+        "ci95_high": 0.625,
+        "n_bootstrap": 2000,
+        "cluster_signflip_p": 4.999750012499375e-05,
+        "n_template_clusters": 24,
+        "n_paired_cases": 288,
+        "holm_adjusted_p_exploratory_model_vs_univariate_family": 0.000599970001499925
+      }
+    },
+    "deepseek_v2_lite_chat_minus_top_univariate": {
+      "support_top1_minimal_exact_hit_rate": {
+        "paired_difference": -0.052083333333333336,
+        "ci95_low": -0.1736111111111111,
+        "ci95_high": 0.06944444444444445,
+        "n_bootstrap": 2000,
+        "cluster_signflip_p": 0.4573771311434428,
+        "n_template_clusters": 24,
+        "n_paired_cases": 288,
+        "holm_adjusted_p_exploratory_model_vs_univariate_family": 0.9147542622868856
+      },
+      "support_any_minimal_hit_at_4": {
+        "paired_difference": -0.2708333333333333,
+        "ci95_low": -0.4756944444444444,
+        "ci95_high": -0.0625,
+        "n_bootstrap": 2000,
+        "cluster_signflip_p": 0.02569871506424679,
+        "n_template_clusters": 24,
+        "n_paired_cases": 288,
+        "holm_adjusted_p_exploratory_model_vs_univariate_family": 0.17989100544972753
+      },
+      "support_mean_best_jaccard": {
+        "paired_difference": -0.27503845498637164,
+        "ci95_low": -0.43293487954946286,
+        "ci95_high": -0.11983300264550266,
+        "n_bootstrap": 2000,
+        "cluster_signflip_p": 0.0021498925053747312,
+        "n_template_clusters": 24,
+        "n_paired_cases": 288,
+        "holm_adjusted_p_exploratory_model_vs_univariate_family": 0.01719914004299785
+      },
+      "support_top1_sufficiency_rate": {
+        "paired_difference": 0.21180555555555555,
+        "ci95_low": 0.1111111111111111,
+        "ci95_high": 0.3090277777777778,
+        "n_bootstrap": 2000,
+        "cluster_signflip_p": 0.0010499475026248687,
+        "n_template_clusters": 24,
+        "n_paired_cases": 288,
+        "holm_adjusted_p_exploratory_model_vs_univariate_family": 0.009449527523623817
+      }
+    },
+    "llama31_8b_instruct_minus_top_univariate": {
+      "support_top1_minimal_exact_hit_rate": {
+        "paired_difference": 0.027777777777777776,
+        "ci95_low": -0.1111111111111111,
+        "ci95_high": 0.16319444444444445,
+        "n_bootstrap": 2000,
+        "cluster_signflip_p": 0.7388630568471577,
+        "n_template_clusters": 24,
+        "n_paired_cases": 288,
+        "holm_adjusted_p_exploratory_model_vs_univariate_family": 0.9147542622868856
+      },
+      "support_any_minimal_hit_at_4": {
+        "paired_difference": -0.18055555555555555,
+        "ci95_low": -0.4131944444444444,
+        "ci95_high": 0.04513888888888889,
+        "n_bootstrap": 2000,
+        "cluster_signflip_p": 0.14824258787060646,
+        "n_template_clusters": 24,
+        "n_paired_cases": 288,
+        "holm_adjusted_p_exploratory_model_vs_univariate_family": 0.5929703514824258
+      },
+      "support_mean_best_jaccard": {
+        "paired_difference": -0.15219907407407407,
+        "ci95_low": -0.2922453703703704,
+        "ci95_high": -0.010416666666666671,
+        "n_bootstrap": 2000,
+        "cluster_signflip_p": 0.05979701014949253,
+        "n_template_clusters": 24,
+        "n_paired_cases": 288,
+        "holm_adjusted_p_exploratory_model_vs_univariate_family": 0.3005849707514624
+      },
+      "support_top1_sufficiency_rate": {
+        "paired_difference": 0.2638888888888889,
+        "ci95_low": 0.16666666666666666,
+        "ci95_high": 0.3541666666666667,
+        "n_bootstrap": 2000,
+        "cluster_signflip_p": 0.000199990000499975,
+        "n_template_clusters": 24,
+        "n_paired_cases": 288,
+        "holm_adjusted_p_exploratory_model_vs_univariate_family": 0.00199990000499975
+      }
+    },
+    "qwen35_9b_minus_deepseek_v2_lite_chat": {
+      "support_top1_minimal_exact_hit_rate": {
+        "paired_difference": 0.3368055555555556,
+        "ci95_low": 0.1909722222222222,
+        "ci95_high": 0.4826388888888889,
+        "n_bootstrap": 2000,
+        "cluster_signflip_p": 0.00034998250087495624,
+        "n_template_clusters": 24,
+        "n_paired_cases": 288,
+        "holm_adjusted_p_primary_model_pair_family": 0.003149842507874606
+      },
+      "support_any_minimal_hit_at_4": {
+        "paired_difference": 0.3298611111111111,
+        "ci95_low": 0.17708333333333334,
+        "ci95_high": 0.4861111111111111,
+        "n_bootstrap": 2000,
+        "cluster_signflip_p": 0.0004999750012499375,
+        "n_template_clusters": 24,
+        "n_paired_cases": 288,
+        "holm_adjusted_p_primary_model_pair_family": 0.0034998250087495625
+      },
+      "support_mean_best_jaccard": {
+        "paired_difference": 0.35808130912297575,
+        "ci95_low": 0.2432550955988456,
+        "ci95_high": 0.47613523629148635,
+        "n_bootstrap": 2000,
+        "cluster_signflip_p": 4.999750012499375e-05,
+        "n_template_clusters": 24,
+        "n_paired_cases": 288,
+        "holm_adjusted_p_primary_model_pair_family": 0.000599970001499925
+      },
+      "interaction_all_fields_recovery_rate": {
+        "paired_difference": 0.06111111111111111,
+        "ci95_low": 0.03333333333333333,
+        "ci95_high": 0.09444444444444444,
+        "n_bootstrap": 2000,
+        "cluster_signflip_p": 0.007649617519124044,
+        "n_template_clusters": 15,
+        "n_paired_cases": 180,
+        "holm_adjusted_p_primary_model_pair_family": 0.030598470076496177
+      }
+    },
+    "qwen35_9b_minus_llama31_8b_instruct": {
+      "support_top1_minimal_exact_hit_rate": {
+        "paired_difference": 0.2569444444444444,
+        "ci95_low": 0.0798611111111111,
+        "ci95_high": 0.4305555555555556,
+        "n_bootstrap": 2000,
+        "cluster_signflip_p": 0.010599470026498675,
+        "n_template_clusters": 24,
+        "n_paired_cases": 288,
+        "holm_adjusted_p_primary_model_pair_family": 0.03179841007949602
+      },
+      "support_any_minimal_hit_at_4": {
+        "paired_difference": 0.23958333333333334,
+        "ci95_low": 0.0625,
+        "ci95_high": 0.40625,
+        "n_bootstrap": 2000,
+        "cluster_signflip_p": 0.01584920753962302,
+        "n_template_clusters": 24,
+        "n_paired_cases": 288,
+        "holm_adjusted_p_primary_model_pair_family": 0.03179841007949602
+      },
+      "support_mean_best_jaccard": {
+        "paired_difference": 0.23524192821067821,
+        "ci95_low": 0.11241620069745067,
+        "ci95_high": 0.3566550925925926,
+        "n_bootstrap": 2000,
+        "cluster_signflip_p": 0.0012499375031248437,
+        "n_template_clusters": 24,
+        "n_paired_cases": 288,
+        "holm_adjusted_p_primary_model_pair_family": 0.007499625018749062
+      },
+      "interaction_all_fields_recovery_rate": {
+        "paired_difference": -0.2222222222222222,
+        "ci95_low": -0.29444444444444445,
+        "ci95_high": -0.15,
+        "n_bootstrap": 2000,
+        "cluster_signflip_p": 0.00039998000099995,
+        "n_template_clusters": 15,
+        "n_paired_cases": 180,
+        "holm_adjusted_p_primary_model_pair_family": 0.0031998400079996
+      }
+    },
+    "deepseek_v2_lite_chat_minus_llama31_8b_instruct": {
+      "support_top1_minimal_exact_hit_rate": {
+        "paired_difference": -0.0798611111111111,
+        "ci95_low": -0.13541666666666666,
+        "ci95_high": -0.027777777777777776,
+        "n_bootstrap": 2000,
+        "cluster_signflip_p": 0.01134943252837358,
+        "n_template_clusters": 24,
+        "n_paired_cases": 288,
+        "holm_adjusted_p_primary_model_pair_family": 0.03179841007949602
+      },
+      "support_any_minimal_hit_at_4": {
+        "paired_difference": -0.09027777777777778,
+        "ci95_low": -0.14583333333333334,
+        "ci95_high": -0.03819444444444445,
+        "n_bootstrap": 2000,
+        "cluster_signflip_p": 0.004449777511124443,
+        "n_template_clusters": 24,
+        "n_paired_cases": 288,
+        "holm_adjusted_p_primary_model_pair_family": 0.022248887555622217
+      },
+      "support_mean_best_jaccard": {
+        "paired_difference": -0.12283938091229757,
+        "ci95_low": -0.17533306778098445,
+        "ci95_high": -0.07532930996472663,
+        "n_bootstrap": 2000,
+        "cluster_signflip_p": 0.00014999250037498125,
+        "n_template_clusters": 24,
+        "n_paired_cases": 288,
+        "holm_adjusted_p_primary_model_pair_family": 0.0016499175041247937
+      },
+      "interaction_all_fields_recovery_rate": {
+        "paired_difference": -0.2833333333333333,
+        "ci95_low": -0.37222222222222223,
+        "ci95_high": -0.19444444444444445,
+        "n_bootstrap": 2000,
+        "cluster_signflip_p": 0.0002999850007499625,
+        "n_template_clusters": 15,
+        "n_paired_cases": 180,
+        "holm_adjusted_p_primary_model_pair_family": 0.002999850007499625
+      }
+    }
+  },
+  "evaluation_software_sha256": {
+    "generate_benchmark.py": "fd64352369cf713c6d5437677e3dab8b833b126dd7c101b3bb74183f2d39a717",
+    "annotate_v2.py": "b01afde9d32a9396be67202d5eceff069644f255d8cf3a659e183f91da32cdfb",
+    "export_predictions_v2.py": "c92b58de01e51be62a05307e3bb697871b485e1c45fd8e86af5f155b880171f3",
+    "evaluate_benchmark.py": "722b8a90307f8c8eecf006c001650d00ad07b3ae16f8fba3c7b68ffbcf79f77f",
+    "analyze_model_runs_v2.py": "6cb1c9152afc2d0a3af0b489c9ee8d06fcd841e214c7e3db52a247a1155e5535"
+  },
+  "multiple_testing": {
+    "method": "Holm step-down",
+    "permutation_null": "paired template-level sign flips; two-sided",
+    "n_permutations": 20000,
+    "primary_model_pair_family": {
+      "interpretation": "planned comparison among the three LLMs; 4 metrics for each of 3 pairs",
+      "n_tests": 12,
+      "test_names": [
+        "deepseek_v2_lite_chat_minus_llama31_8b_instruct:interaction_all_fields_recovery_rate",
+        "deepseek_v2_lite_chat_minus_llama31_8b_instruct:support_any_minimal_hit_at_4",
+        "deepseek_v2_lite_chat_minus_llama31_8b_instruct:support_mean_best_jaccard",
+        "deepseek_v2_lite_chat_minus_llama31_8b_instruct:support_top1_minimal_exact_hit_rate",
+        "qwen35_9b_minus_deepseek_v2_lite_chat:interaction_all_fields_recovery_rate",
+        "qwen35_9b_minus_deepseek_v2_lite_chat:support_any_minimal_hit_at_4",
+        "qwen35_9b_minus_deepseek_v2_lite_chat:support_mean_best_jaccard",
+        "qwen35_9b_minus_deepseek_v2_lite_chat:support_top1_minimal_exact_hit_rate",
+        "qwen35_9b_minus_llama31_8b_instruct:interaction_all_fields_recovery_rate",
+        "qwen35_9b_minus_llama31_8b_instruct:support_any_minimal_hit_at_4",
+        "qwen35_9b_minus_llama31_8b_instruct:support_mean_best_jaccard",
+        "qwen35_9b_minus_llama31_8b_instruct:support_top1_minimal_exact_hit_rate"
+      ]
+    },
+    "exploratory_model_vs_top_univariate_family": {
+      "interpretation": "post hoc paired comparison against the deterministic top-four univariate baseline",
+      "n_tests": 12,
+      "test_names": [
+        "deepseek_v2_lite_chat_minus_top_univariate:support_any_minimal_hit_at_4",
+        "deepseek_v2_lite_chat_minus_top_univariate:support_mean_best_jaccard",
+        "deepseek_v2_lite_chat_minus_top_univariate:support_top1_minimal_exact_hit_rate",
+        "deepseek_v2_lite_chat_minus_top_univariate:support_top1_sufficiency_rate",
+        "llama31_8b_instruct_minus_top_univariate:support_any_minimal_hit_at_4",
+        "llama31_8b_instruct_minus_top_univariate:support_mean_best_jaccard",
+        "llama31_8b_instruct_minus_top_univariate:support_top1_minimal_exact_hit_rate",
+        "llama31_8b_instruct_minus_top_univariate:support_top1_sufficiency_rate",
+        "qwen35_9b_minus_top_univariate:support_any_minimal_hit_at_4",
+        "qwen35_9b_minus_top_univariate:support_mean_best_jaccard",
+        "qwen35_9b_minus_top_univariate:support_top1_minimal_exact_hit_rate",
+        "qwen35_9b_minus_top_univariate:support_top1_sufficiency_rate"
+      ]
+    }
+  }
+}

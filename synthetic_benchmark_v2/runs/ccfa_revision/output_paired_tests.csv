@@ -1,0 +1,13 @@
+left,right,metric,difference,lo,hi,p_raw,n_templates,n_pairs,method,p_holm
+full1024,main,support_top1_minimal,0.0,0.0,0.0,1.0,24,96,qwen35_9b,1.0
+full1024,main,support_any_minimal_hit,0.0,0.0,0.0,1.0,24,96,qwen35_9b,1.0
+minimal512,main,support_top1_minimal,-0.3125,-0.4375,-0.19791666666666666,4.999750012499375e-05,24,96,qwen35_9b,0.000599970001499925
+minimal512,main,support_any_minimal_hit,-0.3229166666666667,-0.4479166666666667,-0.19791666666666666,9.99950002499875e-05,24,96,qwen35_9b,0.0010999450027498626
+full1024,main,support_top1_minimal,0.0,0.0,0.0,1.0,24,96,deepseek_v2_lite_chat,1.0
+full1024,main,support_any_minimal_hit,0.0,0.0,0.0,1.0,24,96,deepseek_v2_lite_chat,1.0
+minimal512,main,support_top1_minimal,-0.03125,-0.0625,0.0,0.25308734563271834,24,96,deepseek_v2_lite_chat,1.0
+minimal512,main,support_any_minimal_hit,-0.020833333333333332,-0.0625,0.020833333333333332,0.6256687165641718,24,96,deepseek_v2_lite_chat,1.0
+full1024,main,support_top1_minimal,0.0,0.0,0.0,1.0,24,96,llama31_8b_instruct,1.0
+full1024,main,support_any_minimal_hit,0.010416666666666666,0.0,0.03125,1.0,24,96,llama31_8b_instruct,1.0
+minimal512,main,support_top1_minimal,-0.020833333333333332,-0.07291666666666667,0.03125,0.6897155142242888,24,96,llama31_8b_instruct,1.0
+minimal512,main,support_any_minimal_hit,-0.020833333333333332,-0.07291666666666667,0.03125,0.7254637268136593,24,96,llama31_8b_instruct,1.0

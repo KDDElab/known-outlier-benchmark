@@ -1,0 +1,148 @@
+{
+  "n_cases_per_condition": 96,
+  "n_templates": 24,
+  "conditions": [
+    "field_order_only",
+    "reference_row_order_only"
+  ],
+  "models": [
+    "qwen35_9b"
+  ],
+  "seed": 20261106,
+  "permutations": 20000,
+  "bootstrap_replicates": 2000,
+  "input_change": "field-order condition reverses schema and within-row field order, preserving reference row order; row-order condition reverses only the reference-row list",
+  "inference": "paired template-cluster bootstrap and two-sided template sign-flip tests, Holm-adjusted across 4 requested metric contrasts",
+  "results": {
+    "qwen35_9b/field_order_only": {
+      "support_any_minimal_hit": {
+        "control_mean": 0.4791666666666667,
+        "condition_mean": 0.125,
+        "paired_difference": -0.3541666666666667,
+        "template_cluster_bootstrap_95_ci": [
+          -0.4479166666666667,
+          -0.2604166666666667
+        ],
+        "two_sided_template_sign_flip_p": 4.999750012499375e-05,
+        "n_cases": 96,
+        "n_templates": 24,
+        "holm_adjusted_p_contrast_family": 0.000199990000499975
+      },
+      "support_best_jaccard": {
+        "control_mean": 0.661892361111111,
+        "condition_mean": 0.31636942340067337,
+        "paired_difference": -0.3455229377104377,
+        "template_cluster_bootstrap_95_ci": [
+          -0.4140144938973064,
+          -0.2673666351010101
+        ],
+        "two_sided_template_sign_flip_p": 4.999750012499375e-05,
+        "n_cases": 96,
+        "n_templates": 24,
+        "holm_adjusted_p_contrast_family": 0.000199990000499975
+      },
+      "top1_prediction_stability": {
+        "n_valid_pairs": 95,
+        "mean_jaccard": 0.33642477405635296
+      }
+    },
+    "qwen35_9b/reference_row_order_only": {
+      "support_any_minimal_hit": {
+        "control_mean": 0.4791666666666667,
+        "condition_mean": 0.4895833333333333,
+        "paired_difference": 0.010416666666666666,
+        "template_cluster_bootstrap_95_ci": [
+          -0.07291666666666667,
+          0.09375
+        ],
+        "two_sided_template_sign_flip_p": 1.0,
+        "n_cases": 96,
+        "n_templates": 24,
+        "holm_adjusted_p_contrast_family": 1.0
+      },
+      "support_best_jaccard": {
+        "control_mean": 0.661892361111111,
+        "condition_mean": 0.6717013888888889,
+        "paired_difference": 0.009809027777777778,
+        "template_cluster_bootstrap_95_ci": [
+          -0.04046006944444445,
+          0.05920789930555553
+        ],
+        "two_sided_template_sign_flip_p": 0.7179641017949102,
+        "n_cases": 96,
+        "n_templates": 24,
+        "holm_adjusted_p_contrast_family": 1.0
+      },
+      "top1_prediction_stability": {
+        "n_valid_pairs": 95,
+        "mean_jaccard": 0.7319298245614035
+      }
+    }
+  },
+  "contrast_rows": [
+    {
+      "model": "qwen35_9b",
+      "condition": "field_order_only",
+      "metric": "support_any_minimal_hit",
+      "control_mean": 0.4791666666666667,
+      "condition_mean": 0.125,
+      "paired_difference": -0.3541666666666667,
+      "template_cluster_bootstrap_95_ci": [
+        -0.4479166666666667,
+        -0.2604166666666667
+      ],
+      "two_sided_template_sign_flip_p": 4.999750012499375e-05,
+      "n_cases": 96,
+      "n_templates": 24,
+      "holm_adjusted_p_contrast_family": 0.000199990000499975
+    },
+    {
+      "model": "qwen35_9b",
+      "condition": "field_order_only",
+      "metric": "support_best_jaccard",
+      "control_mean": 0.661892361111111,
+      "condition_mean": 0.31636942340067337,
+      "paired_difference": -0.3455229377104377,
+      "template_cluster_bootstrap_95_ci": [
+        -0.4140144938973064,
+        -0.2673666351010101
+      ],
+      "two_sided_template_sign_flip_p": 4.999750012499375e-05,
+      "n_cases": 96,
+      "n_templates": 24,
+      "holm_adjusted_p_contrast_family": 0.000199990000499975
+    },
+    {
+      "model": "qwen35_9b",
+      "condition": "reference_row_order_only",
+      "metric": "support_any_minimal_hit",
+      "control_mean": 0.4791666666666667,
+      "condition_mean": 0.4895833333333333,
+      "paired_difference": 0.010416666666666666,
+      "template_cluster_bootstrap_95_ci": [
+        -0.07291666666666667,
+        0.09375
+      ],
+      "two_sided_template_sign_flip_p": 1.0,
+      "n_cases": 96,
+      "n_templates": 24,
+      "holm_adjusted_p_contrast_family": 1.0
+    },
+    {
+      "model": "qwen35_9b",
+      "condition": "reference_row_order_only",
+      "metric": "support_best_jaccard",
+      "control_mean": 0.661892361111111,
+      "condition_mean": 0.6717013888888889,
+      "paired_difference": 0.009809027777777778,
+      "template_cluster_bootstrap_95_ci": [
+        -0.04046006944444445,
+        0.05920789930555553
+      ],
+      "two_sided_template_sign_flip_p": 0.7179641017949102,
+      "n_cases": 96,
+      "n_templates": 24,
+      "holm_adjusted_p_contrast_family": 1.0
+    }
+  ]
+}

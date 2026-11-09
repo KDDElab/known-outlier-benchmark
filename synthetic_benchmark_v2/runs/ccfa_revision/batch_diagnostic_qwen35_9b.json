@@ -1,0 +1,68 @@
+[
+  {
+    "case_id": "s20261106_back_V2_0072",
+    "prompt_sha256": "27a564c7f83356e2fdf2850b0d1495af91abbf1a47258376611583b7d2e201db",
+    "batch_size": 3,
+    "serial_raw": "{\"task_label\":\"numeric_marginal\",\"mechanism_feature_ids\":[\"F005\"],\"explanations\":[{\"features\":[\"F005\"],\"evidence\":\"Target F005 is 0.0, absent from all normal reference rows.\",\"confidence\":1.0}],\"abstain\":false}",
+    "batch_raw": "{\"task_label\":\"numeric_marginal\",\"mechanism_feature_ids\":[\"F005\"],\"explanations\":[{\"features\":[\"F005\"],\"evidence\":\"Target F005 is 0.0, absent from all normal reference rows.\",\"confidence\":1.0}],\"abstain\":false}",
+    "raw_exact": true,
+    "localization_exact": true,
+    "serial_seconds": 4.092140946537256,
+    "batch_seconds": 17.611389437690377
+  },
+  {
+    "case_id": "s20261106_back_V2_0016",
+    "prompt_sha256": "5aff85afe5ba9e3875d03525b41fa6b19549dd27f5b6514ab153075d9d34f811",
+    "batch_size": 3,
+    "serial_raw": "{\n  \"task_label\": \"relational\",\n  \"mechanism_feature_ids\": [\"F001\", \"F003\", \"F006\"],\n  \"explanations\": [\n    {\n      \"features\": [\"F001\", \"F003\", \"F006\"],\n      \"evidence\": \"Target violates normal pattern where F001=0.0 implies F003=0.0 and F006=1.0.\",\n      \"confidence\": 0.95\n    },\n    {\n      \"features\": [\"F001\", \"F003\", \"F006\"],\n      \"evidence\": \"No normal row has F001=0.0 with F003=0.5 and F006=0.75.\",\n      \"confidence\": 0.92\n    },\n    {\n      \"features\": [\"F001\", \"F003\", \"F006\"],\n      \"evidence\": \"F001=0.0 consistently pairs with F003=0.0 in all reference data.\",\n      \"confidence\": 0.88\n    }\n  ],\n  \"abstain\": false\n}",
+    "batch_raw": "{\n  \"task_label\": \"relational\",\n  \"mechanism_feature_ids\": [\"F001\", \"F003\", \"F006\"],\n  \"explanations\": [\n    {\n      \"features\": [\"F001\", \"F003\", \"F006\"],\n      \"evidence\": \"Target violates normal pattern where F001=0.0 implies F003=0.0 and F006=1.0.\",\n      \"confidence\": 0.95\n    },\n    {\n      \"features\": [\"F001\", \"F003\", \"F006\"],\n      \"evidence\": \"No normal row has F001=0.0, F003=0.5, and F006=0.75 simultaneously.\",\n      \"confidence\": 0.9\n    },\n    {\n      \"features\": [\"F001\", \"F003\", \"F006\"],\n      \"evidence\": \"F001=0.0 consistently pairs with F003=0.0 in all reference data.\",\n      \"confidence\": 0.85\n    }\n  ],\n  \"abstain\": false\n}",
+    "raw_exact": false,
+    "localization_exact": true,
+    "serial_seconds": 17.20202801004052,
+    "batch_seconds": 17.611389437690377
+  },
+  {
+    "case_id": "s20261106_back_V2_0076",
+    "prompt_sha256": "98f2e9db014fcbdf3c18b3506672f39bef5a86ad2ff86d7e02ad5a234a7cdef1",
+    "batch_size": 3,
+    "serial_raw": "{\n  \"task_label\": \"categorical_rare\",\n  \"mechanism_feature_ids\": [\"F001\", \"F004\", \"F002\"],\n  \"explanations\": [\n    {\n      \"features\": [\"F001\"],\n      \"evidence\": \"Target value 'c4' is absent from all normal reference rows.\",\n      \"confidence\": 0.95\n    },\n    {\n      \"features\": [\"F004\"],\n      \"evidence\": \"Target value 'c4' is absent from all normal reference rows.\",\n      \"confidence\": 0.95\n    },\n    {\n      \"features\": [\"F002\"],\n      \"evidence\": \"Target value 'c4' is absent from all normal reference rows.\",\n      \"confidence\": 0.95\n    }\n  ],\n  \"abstain\": false\n}",
+    "batch_raw": "{\"task_label\":\"categorical_rare\",\"mechanism_feature_ids\":[\"F001\",\"F004\",\"F002\"],\"explanations\":[{\"features\":[\"F001\"],\"evidence\":\"Value c4 is absent in all normal reference rows.\",\"confidence\":1.0},{\"features\":[\"F004\"],\"evidence\":\"Value c4 is absent in all normal reference rows.\",\"confidence\":1.0},{\"features\":[\"F002\"],\"evidence\":\"Value c4 is absent in all normal reference rows.\",\"confidence\":1.0}],\"abstain\":false}",
+    "raw_exact": false,
+    "localization_exact": true,
+    "serial_seconds": 10.863870561122894,
+    "batch_seconds": 17.611389437690377
+  },
+  {
+    "case_id": "s20261106_back_V2_0078",
+    "prompt_sha256": "2f85994f98503b0a66e0ed764538c807bc59a40937510a4e1a930d222c2ba5f2",
+    "batch_size": 2,
+    "serial_raw": "{\n  \"task_label\": \"relational\",\n  \"mechanism_feature_ids\": [\"F002\", \"F004\", \"F006\"],\n  \"explanations\": [\n    {\n      \"features\": [\"F002\", \"F004\", \"F006\"],\n      \"evidence\": \"No normal row has record_code 0 with group_delta 1.0 and status_epsilon c4.\",\n      \"confidence\": 0.95\n    },\n    {\n      \"features\": [\"F002\", \"F004\", \"F006\"],\n      \"evidence\": \"The combination of low record_code, high group_delta, and c4 status is absent in references.\",\n      \"confidence\": 0.9\n    },\n    {\n      \"features\": [\"F002\", \"F004\", \"F006\"],\n      \"evidence\": \"Normal data shows c4 status only with record_code 4, not 0.\",\n      \"confidence\": 0.85\n    }\n  ],\n  \"abstain\": false\n}",
+    "batch_raw": "{\n  \"task_label\": \"pairwise_interaction\",\n  \"mechanism_feature_ids\": [\"F002\", \"F006\"],\n  \"explanations\": [\n    {\n      \"features\": [\"F002\", \"F006\"],\n      \"evidence\": \"Normal data shows no valid combinations for F002=0 and F006=c4.\",\n      \"confidence\": 0.95\n    },\n    {\n      \"features\": [\"F002\", \"F006\"],\n      \"evidence\": \"Target row contains the unique pair (0, c4) absent in all references.\",\n      \"confidence\": 0.95\n    },\n    {\n      \"features\": [\"F002\", \"F006\"],\n      \"evidence\": \"All other fields vary widely in normal data, isolating the pair as the anomaly.\",\n      \"confidence\": 0.8\n    }\n  ],\n  \"abstain\": false\n}",
+    "raw_exact": false,
+    "localization_exact": false,
+    "serial_seconds": 13.246983824297786,
+    "batch_seconds": 19.098160050809383
+  },
+  {
+    "case_id": "s20261106_back_V2_0062",
+    "prompt_sha256": "64308b4263b61b9ee47afabb3f05d2d759dac62b1722e47817b7334b5b17d038",
+    "batch_size": 2,
+    "serial_raw": "{\n  \"task_label\": \"relational\",\n  \"mechanism_feature_ids\": [\"F001\", \"F003\", \"F004\", \"F006\", \"F005\"],\n  \"explanations\": [\n    {\n      \"features\": [\"F001\", \"F003\", \"F004\", \"F006\", \"F005\"],\n      \"evidence\": \"No normal row matches the specific combination of all five features in the target.\",\n      \"confidence\": 0.95\n    },\n    {\n      \"features\": [\"F001\", \"F003\", \"F004\", \"F006\", \"F005\"],\n      \"evidence\": \"The target violates the implicit joint distribution observed in the reference set.\",\n      \"confidence\": 0.9\n    }\n  ],\n  \"abstain\": false\n}",
+    "batch_raw": "{\n  \"task_label\": \"relational\",\n  \"mechanism_feature_ids\": [\"F001\", \"F003\", \"F004\", \"F006\", \"F005\"],\n  \"explanations\": [\n    {\n      \"features\": [\"F001\", \"F003\", \"F004\", \"F006\", \"F005\"],\n      \"evidence\": \"No normal row matches the specific combination of all five features.\",\n      \"confidence\": 0.95\n    },\n    {\n      \"features\": [\"F001\", \"F003\", \"F004\", \"F006\", \"F005\"],\n      \"evidence\": \"The target row is unique across the entire normal reference population.\",\n      \"confidence\": 0.95\n    },\n    {\n      \"features\": [\"F001\", \"F003\", \"F004\", \"F006\", \"F005\"],\n      \"evidence\": \"All five fields jointly define a pattern absent in normal data.\",\n      \"confidence\": 0.95\n    },\n    {\n      \"features\": [\"F001\", \"F003\", \"F004\", \"F006\", \"F005\"],\n      \"evidence\": \"The full feature set distinguishes the target from all normal rows.\",\n      \"confidence\": 0.95\n    }\n  ],\n  \"abstain\": false\n}",
+    "raw_exact": false,
+    "localization_exact": false,
+    "serial_seconds": 11.482241531834006,
+    "batch_seconds": 19.098160050809383
+  },
+  {
+    "case_id": "s20261106_back_V2_0049",
+    "prompt_sha256": "6fe9b978e9f5a05c370bbbceb89923b80b9563b5fd2be945ecab41837b29ee1f",
+    "batch_size": 1,
+    "serial_raw": "{\"task_label\":\"pairwise_interaction\",\"mechanism_feature_ids\":[\"F001\",\"F005\"],\"explanations\":[{\"features\":[\"F001\",\"F005\"],\"evidence\":\"Target has level_20 and c5, while normal rows with c5 have level_55 or c4.\",\"confidence\":0.85},{\"features\":[\"F001\",\"F005\"],\"evidence\":\"No normal row combines level_20 with c5; they appear in distinct groups.\",\"confidence\":0.82},{\"features\":[\"F001\",\"F005\"],\"evidence\":\"F001=level_20 is rare, but F005=c5 is the stronger discriminator in pairs.\",\"confidence\":0.75}],\"abstain\":false}",
+    "batch_raw": "{\"task_label\":\"pairwise_interaction\",\"mechanism_feature_ids\":[\"F001\",\"F005\"],\"explanations\":[{\"features\":[\"F001\",\"F005\"],\"evidence\":\"Target has level_20 and c5, while normal rows with c5 have level_55 or c4.\",\"confidence\":0.85},{\"features\":[\"F001\",\"F005\"],\"evidence\":\"No normal row combines level_20 with c5; they appear in distinct groups.\",\"confidence\":0.82},{\"features\":[\"F001\",\"F005\"],\"evidence\":\"F001=level_20 is rare, but F005=c5 is the stronger discriminator in pairs.\",\"confidence\":0.75}],\"abstain\":false}",
+    "raw_exact": true,
+    "localization_exact": true,
+    "serial_seconds": 9.506232744082808,
+    "batch_seconds": 9.092284386977553
+  }
+]

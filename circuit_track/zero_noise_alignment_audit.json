@@ -1,0 +1,338 @@
+{
+  "archive": "/root/nas/SPELT-master/adbench_llm_reference_v1/data/circuit/harvard_dataset_10.7910_DVN_W4FPPN.zip",
+  "archive_sha256": "e1495d11e64bbff0a98edee9423f1025c54ec45c3a8b587c911528cbe9c20010",
+  "condition": "zero noise",
+  "pair_count": 16,
+  "total_labeled_anomalous_rows": 66834,
+  "per_circuit": {
+    "74181": {
+      "zero_noise_pairs": 4,
+      "labeled_anomalous_rows": 63488
+    },
+    "74182": {
+      "zero_noise_pairs": 4,
+      "labeled_anomalous_rows": 1560
+    },
+    "74283": {
+      "zero_noise_pairs": 4,
+      "labeled_anomalous_rows": 1680
+    },
+    "c17": {
+      "zero_noise_pairs": 4,
+      "labeled_anomalous_rows": 106
+    }
+  },
+  "alignment_errors": 0,
+  "notes": [
+    "Keys are complete input-feature vectors.",
+    "An anomalous row is identified by the source label and verified by at least one output differing from the matching original row.",
+    "The set of changed outputs is checked against the output keys in the source explanation dictionary.",
+    "This is a data-alignment audit, not an LLM evaluation."
+  ],
+  "pairs": [
+    {
+      "circuit": "74181",
+      "modified_table": "Truth_Tables/74181/74181_modified_o8_and4_to_nand4_0noise_in_labeled.tab",
+      "original_table": "Truth_Tables/74181/74181_0noise_out.tab",
+      "ground_truth": "Ground_Truth/74181/74181_modified_o8_and4_to_nand4_ground_truth_0noise.csv",
+      "n_table_rows": 16384,
+      "n_input_features": 14,
+      "n_output_features": 8,
+      "n_anomalous_rows": 16384,
+      "n_ground_truth_rows": 16384,
+      "changed_output_row_counts": {
+        "o1": 0,
+        "o2": 0,
+        "o3": 0,
+        "o4": 0,
+        "o5": 0,
+        "o6": 0,
+        "o7": 0,
+        "o8": 16384
+      },
+      "output_specific_ground_truth_aligned": true
+    },
+    {
+      "circuit": "74181",
+      "modified_table": "Truth_Tables/74181/74181_modified_z32_nor2_to_or2_0noise_in_labeled.tab",
+      "original_table": "Truth_Tables/74181/74181_0noise_out.tab",
+      "ground_truth": "Ground_Truth/74181/74181_modified_z32_nor2_to_or2_ground_truth_0noise.csv",
+      "n_table_rows": 16384,
+      "n_input_features": 14,
+      "n_output_features": 8,
+      "n_anomalous_rows": 16384,
+      "n_ground_truth_rows": 16384,
+      "changed_output_row_counts": {
+        "o1": 8064,
+        "o2": 0,
+        "o3": 1576,
+        "o4": 1088,
+        "o5": 1664,
+        "o6": 3072,
+        "o7": 16384,
+        "o8": 3152
+      },
+      "output_specific_ground_truth_aligned": true
+    },
+    {
+      "circuit": "74181",
+      "modified_table": "Truth_Tables/74181/74181_modified_z33_nor3_to_or3_0noise_in_labeled.tab",
+      "original_table": "Truth_Tables/74181/74181_0noise_out.tab",
+      "ground_truth": "Ground_Truth/74181/74181_modified_z33_nor3_to_or3_ground_truth_0noise.csv",
+      "n_table_rows": 16384,
+      "n_input_features": 14,
+      "n_output_features": 8,
+      "n_anomalous_rows": 16384,
+      "n_ground_truth_rows": 16384,
+      "changed_output_row_counts": {
+        "o1": 0,
+        "o2": 3584,
+        "o3": 2008,
+        "o4": 1472,
+        "o5": 2432,
+        "o6": 5120,
+        "o7": 16384,
+        "o8": 3632
+      },
+      "output_specific_ground_truth_aligned": true
+    },
+    {
+      "circuit": "74181",
+      "modified_table": "Truth_Tables/74181/74181_modified_z6_and3_to_nand3_0noise_in_labeled.tab",
+      "original_table": "Truth_Tables/74181/74181_0noise_out.tab",
+      "ground_truth": "Ground_Truth/74181/74181_modified_z6_and3_to_nand3_ground_truth_0noise.csv",
+      "n_table_rows": 16384,
+      "n_input_features": 14,
+      "n_output_features": 8,
+      "n_anomalous_rows": 14336,
+      "n_ground_truth_rows": 14336,
+      "changed_output_row_counts": {
+        "o1": 7504,
+        "o2": 3424,
+        "o3": 4892,
+        "o4": 14336,
+        "o5": 0,
+        "o6": 0,
+        "o7": 0,
+        "o8": 2728
+      },
+      "output_specific_ground_truth_aligned": true
+    },
+    {
+      "circuit": "74182",
+      "modified_table": "Truth_Tables/74182/74182_modified_o5_nor2_to_or2_0noise_in_labeled.tab",
+      "original_table": "Truth_Tables/74182/74182_0noise_out.tab",
+      "ground_truth": "Ground_Truth/74182/74182_modified_o5_nor2_to_or2_ground_truth_0noise.csv",
+      "n_table_rows": 512,
+      "n_input_features": 9,
+      "n_output_features": 5,
+      "n_anomalous_rows": 512,
+      "n_ground_truth_rows": 512,
+      "changed_output_row_counts": {
+        "o1": 0,
+        "o2": 0,
+        "o3": 0,
+        "o4": 0,
+        "o5": 512
+      },
+      "output_specific_ground_truth_aligned": true
+    },
+    {
+      "circuit": "74182",
+      "modified_table": "Truth_Tables/74182/74182_modified_z2_and4_to_nand4_0noise_in_labeled.tab",
+      "original_table": "Truth_Tables/74182/74182_0noise_out.tab",
+      "ground_truth": "Ground_Truth/74182/74182_modified_z2_and4_to_nand4_ground_truth_0noise.csv",
+      "n_table_rows": 512,
+      "n_input_features": 9,
+      "n_output_features": 5,
+      "n_anomalous_rows": 344,
+      "n_ground_truth_rows": 344,
+      "changed_output_row_counts": {
+        "o1": 0,
+        "o2": 344,
+        "o3": 0,
+        "o4": 0,
+        "o5": 0
+      },
+      "output_specific_ground_truth_aligned": true
+    },
+    {
+      "circuit": "74182",
+      "modified_table": "Truth_Tables/74182/74182_modified_z7_and4_to_nand4_0noise_in_labeled.tab",
+      "original_table": "Truth_Tables/74182/74182_0noise_out.tab",
+      "ground_truth": "Ground_Truth/74182/74182_modified_z7_and4_to_nand4_ground_truth_0noise.csv",
+      "n_table_rows": 512,
+      "n_input_features": 9,
+      "n_output_features": 5,
+      "n_anomalous_rows": 344,
+      "n_ground_truth_rows": 344,
+      "changed_output_row_counts": {
+        "o1": 0,
+        "o2": 0,
+        "o3": 344,
+        "o4": 0,
+        "o5": 0
+      },
+      "output_specific_ground_truth_aligned": true
+    },
+    {
+      "circuit": "74182",
+      "modified_table": "Truth_Tables/74182/74182_modified_z8_and3_to_nand3_0noise_in_labeled.tab",
+      "original_table": "Truth_Tables/74182/74182_0noise_out.tab",
+      "ground_truth": "Ground_Truth/74182/74182_modified_z8_and3_to_nand3_ground_truth_0noise.csv",
+      "n_table_rows": 512,
+      "n_input_features": 9,
+      "n_output_features": 5,
+      "n_anomalous_rows": 360,
+      "n_ground_truth_rows": 360,
+      "changed_output_row_counts": {
+        "o1": 0,
+        "o2": 0,
+        "o3": 360,
+        "o4": 0,
+        "o5": 0
+      },
+      "output_specific_ground_truth_aligned": true
+    },
+    {
+      "circuit": "74283",
+      "modified_table": "Truth_Tables/74283/74283_modified_o1_nor5_to_or5_0noise_in_labeled.tab",
+      "original_table": "Truth_Tables/74283/74283_0noise_out.tab",
+      "ground_truth": "Ground_Truth/74283/74283_modified_o1_nor5_to_or5_ground_truth_0noise.csv",
+      "n_table_rows": 512,
+      "n_input_features": 9,
+      "n_output_features": 5,
+      "n_anomalous_rows": 512,
+      "n_ground_truth_rows": 512,
+      "changed_output_row_counts": {
+        "o1": 512,
+        "o2": 0,
+        "o3": 0,
+        "o4": 0,
+        "o5": 0
+      },
+      "output_specific_ground_truth_aligned": true
+    },
+    {
+      "circuit": "74283",
+      "modified_table": "Truth_Tables/74283/74283_modified_z17_and5_to_nand5_0noise_in_labeled.tab",
+      "original_table": "Truth_Tables/74283/74283_0noise_out.tab",
+      "ground_truth": "Ground_Truth/74283/74283_modified_z17_and5_to_nand5_ground_truth_0noise.csv",
+      "n_table_rows": 512,
+      "n_input_features": 9,
+      "n_output_features": 5,
+      "n_anomalous_rows": 272,
+      "n_ground_truth_rows": 272,
+      "changed_output_row_counts": {
+        "o1": 272,
+        "o2": 0,
+        "o3": 0,
+        "o4": 0,
+        "o5": 0
+      },
+      "output_specific_ground_truth_aligned": true
+    },
+    {
+      "circuit": "74283",
+      "modified_table": "Truth_Tables/74283/74283_modified_z18_and2_to_nand2_0noise_in_labeled.tab",
+      "original_table": "Truth_Tables/74283/74283_0noise_out.tab",
+      "ground_truth": "Ground_Truth/74283/74283_modified_z18_and2_to_nand2_ground_truth_0noise.csv",
+      "n_table_rows": 512,
+      "n_input_features": 9,
+      "n_output_features": 5,
+      "n_anomalous_rows": 512,
+      "n_ground_truth_rows": 512,
+      "changed_output_row_counts": {
+        "o1": 0,
+        "o2": 512,
+        "o3": 0,
+        "o4": 0,
+        "o5": 0
+      },
+      "output_specific_ground_truth_aligned": true
+    },
+    {
+      "circuit": "74283",
+      "modified_table": "Truth_Tables/74283/74283_modified_z2_nand2_to_and2_0noise_in_labeled.tab",
+      "original_table": "Truth_Tables/74283/74283_0noise_out.tab",
+      "ground_truth": "Ground_Truth/74283/74283_modified_z2_nand2_to_and2_ground_truth_0noise.csv",
+      "n_table_rows": 512,
+      "n_input_features": 9,
+      "n_output_features": 5,
+      "n_anomalous_rows": 384,
+      "n_ground_truth_rows": 384,
+      "changed_output_row_counts": {
+        "o1": 192,
+        "o2": 384,
+        "o3": 0,
+        "o4": 0,
+        "o5": 0
+      },
+      "output_specific_ground_truth_aligned": true
+    },
+    {
+      "circuit": "c17",
+      "modified_table": "Truth_Tables/c17/c17_modified_o2_nand2_to_and2_0noise_in_labeled.tab",
+      "original_table": "Truth_Tables/c17/c17_0noise_out.tab",
+      "ground_truth": "Ground_Truth/c17/c17_modified_o2_nand2_to_and2_ground_truth_0noise.csv",
+      "n_table_rows": 32,
+      "n_input_features": 5,
+      "n_output_features": 2,
+      "n_anomalous_rows": 32,
+      "n_ground_truth_rows": 32,
+      "changed_output_row_counts": {
+        "o1": 0,
+        "o2": 32
+      },
+      "output_specific_ground_truth_aligned": true
+    },
+    {
+      "circuit": "c17",
+      "modified_table": "Truth_Tables/c17/c17_modified_z2_nand2_to_and2_0noise_in_labeled.tab",
+      "original_table": "Truth_Tables/c17/c17_0noise_out.tab",
+      "ground_truth": "Ground_Truth/c17/c17_modified_z2_nand2_to_and2_ground_truth_0noise.csv",
+      "n_table_rows": 32,
+      "n_input_features": 5,
+      "n_output_features": 2,
+      "n_anomalous_rows": 24,
+      "n_ground_truth_rows": 24,
+      "changed_output_row_counts": {
+        "o1": 12,
+        "o2": 24
+      },
+      "output_specific_ground_truth_aligned": true
+    },
+    {
+      "circuit": "c17",
+      "modified_table": "Truth_Tables/c17/c17_modified_z3_nand2_to_and2_0noise_in_labeled.tab",
+      "original_table": "Truth_Tables/c17/c17_0noise_out.tab",
+      "ground_truth": "Ground_Truth/c17/c17_modified_z3_nand2_to_and2_ground_truth_0noise.csv",
+      "n_table_rows": 32,
+      "n_input_features": 5,
+      "n_output_features": 2,
+      "n_anomalous_rows": 30,
+      "n_ground_truth_rows": 30,
+      "changed_output_row_counts": {
+        "o1": 24,
+        "o2": 20
+      },
+      "output_specific_ground_truth_aligned": true
+    },
+    {
+      "circuit": "c17",
+      "modified_table": "Truth_Tables/c17/c17_modified_z4_nand2_to_and2_0noise_in_labeled.tab",
+      "original_table": "Truth_Tables/c17/c17_0noise_out.tab",
+      "ground_truth": "Ground_Truth/c17/c17_modified_z4_nand2_to_and2_ground_truth_0noise.csv",
+      "n_table_rows": 32,
+      "n_input_features": 5,
+      "n_output_features": 2,
+      "n_anomalous_rows": 20,
+      "n_ground_truth_rows": 20,
+      "changed_output_row_counts": {
+        "o1": 0,
+        "o2": 20
+      },
+      "output_specific_ground_truth_aligned": true
+    }
+  ]
+}

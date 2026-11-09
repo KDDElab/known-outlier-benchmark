@@ -1,0 +1,155 @@
+[llama31_8b_instruct] loading <LOCAL_MODEL_ROOT>/llama/Llama-3.1-8B-Instruct; cases=288; GPUs=2
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/291 [00:02<13:31,  2.80s/it]
+Loading weights:   1%|          | 2/291 [00:06<16:04,  3.34s/it]
+Loading weights:   1%|▏         | 4/291 [00:06<06:16,  1.31s/it]
+Loading weights:   2%|▏         | 5/291 [00:07<04:52,  1.02s/it]
+Loading weights:   2%|▏         | 6/291 [00:07<03:57,  1.20it/s]
+Loading weights:   3%|▎         | 8/291 [00:07<02:13,  2.12it/s]
+Loading weights:   3%|▎         | 10/291 [00:07<01:29,  3.13it/s]
+Loading weights:   4%|▍         | 11/291 [00:08<01:25,  3.28it/s]
+Loading weights:   4%|▍         | 12/291 [00:08<01:12,  3.84it/s]
+Loading weights:   4%|▍         | 13/291 [00:08<01:10,  3.96it/s]
+Loading weights:   5%|▍         | 14/291 [00:08<01:21,  3.39it/s]
+Loading weights:   5%|▌         | 15/291 [00:09<01:24,  3.28it/s]
+Loading weights:   7%|▋         | 19/291 [00:09<00:43,  6.29it/s]
+Loading weights:   7%|▋         | 20/291 [00:09<00:47,  5.72it/s]
+Loading weights:   8%|▊         | 22/291 [00:09<00:37,  7.12it/s]
+Loading weights:   8%|▊         | 23/291 [00:10<00:50,  5.30it/s]
+Loading weights:   8%|▊         | 24/291 [00:10<01:17,  3.47it/s]
+Loading weights:  10%|▉         | 28/291 [00:11<00:49,  5.32it/s]
+Loading weights:  11%|█         | 31/291 [00:11<00:36,  7.14it/s]
+Loading weights:  11%|█         | 32/291 [00:11<00:38,  6.79it/s]
+Loading weights:  11%|█▏        | 33/291 [00:12<00:52,  4.94it/s]
+Loading weights:  13%|█▎        | 37/291 [00:12<00:32,  7.87it/s]
+Loading weights:  13%|█▎        | 39/291 [00:12<00:34,  7.37it/s]
+Loading weights:  14%|█▎        | 40/291 [00:12<00:37,  6.64it/s]
+Loading weights:  14%|█▍        | 41/291 [00:13<00:48,  5.13it/s]
+Loading weights:  14%|█▍        | 42/291 [00:13<01:00,  4.15it/s]
+Loading weights:  16%|█▌        | 46/291 [00:13<00:32,  7.62it/s]
+Loading weights:  16%|█▋        | 48/291 [00:14<00:33,  7.32it/s]
+Loading weights:  17%|█▋        | 50/291 [00:14<00:31,  7.54it/s]
+Loading weights:  18%|█▊        | 51/291 [00:14<00:36,  6.50it/s]
+Loading weights:  19%|█▉        | 55/291 [00:14<00:27,  8.45it/s]
+Loading weights:  20%|█▉        | 58/291 [00:15<00:24,  9.34it/s]
+Loading weights:  20%|██        | 59/291 [00:15<00:31,  7.38it/s]
+Loading weights:  21%|██        | 60/291 [00:16<00:44,  5.14it/s]
+Loading weights:  22%|██▏       | 63/291 [00:16<00:30,  7.44it/s]
+Loading weights:  22%|██▏       | 65/291 [00:16<00:33,  6.78it/s]
+Loading weights:  23%|██▎       | 67/291 [00:16<00:31,  7.11it/s]
+Loading weights:  23%|██▎       | 68/291 [00:17<00:39,  5.69it/s]
+Loading weights:  24%|██▎       | 69/291 [00:17<00:51,  4.28it/s]
+Loading weights:  25%|██▌       | 73/291 [00:17<00:35,  6.11it/s]
+Loading weights:  26%|██▌       | 76/291 [00:18<00:26,  8.01it/s]
+Loading weights:  27%|██▋       | 78/291 [00:18<00:40,  5.30it/s]
+Loading weights:  27%|██▋       | 80/291 [00:19<00:34,  6.15it/s]
+Loading weights:  29%|██▊       | 83/291 [00:19<00:33,  6.26it/s]
+Loading weights:  30%|██▉       | 86/291 [00:19<00:27,  7.59it/s]
+Loading weights:  30%|██▉       | 87/291 [00:20<00:30,  6.75it/s]
+Loading weights:  31%|███       | 90/291 [00:20<00:26,  7.64it/s]
+Loading weights:  32%|███▏      | 94/291 [00:20<00:18, 10.75it/s]
+Loading weights:  33%|███▎      | 96/291 [00:21<00:26,  7.35it/s]
+Loading weights:  34%|███▍      | 100/291 [00:21<00:19,  9.60it/s]
+Loading weights:  35%|███▌      | 103/291 [00:21<00:16, 11.63it/s]
+Loading weights:  36%|███▌      | 105/291 [00:21<00:21,  8.70it/s]
+Loading weights:  37%|███▋      | 109/291 [00:22<00:16, 11.00it/s]
+Loading weights:  38%|███▊      | 111/291 [00:22<00:17, 10.37it/s]
+Loading weights:  39%|███▉      | 113/291 [00:22<00:24,  7.28it/s]
+Loading weights:  41%|████      | 118/291 [00:22<00:14, 11.82it/s]
+Loading weights:  42%|████▏     | 121/291 [00:23<00:17,  9.85it/s]
+Loading weights:  42%|████▏     | 123/291 [00:23<00:22,  7.31it/s]
+Loading weights:  43%|████▎     | 126/291 [00:24<00:19,  8.47it/s]
+Loading weights:  45%|████▍     | 130/291 [00:24<00:14, 10.92it/s]
+Loading weights:  45%|████▌     | 132/291 [00:24<00:19,  8.14it/s]
+Loading weights:  47%|████▋     | 137/291 [00:25<00:14, 10.94it/s]
+Loading weights:  48%|████▊     | 139/291 [00:25<00:13, 11.59it/s]
+Loading weights:  48%|████▊     | 141/291 [00:25<00:17,  8.55it/s]
+Loading weights:  50%|████▉     | 145/291 [00:25<00:12, 11.68it/s]
+Loading weights:  51%|█████     | 147/291 [00:26<00:13, 10.90it/s]
+Loading weights:  51%|█████     | 149/291 [00:26<00:15,  9.44it/s]
+Loading weights:  52%|█████▏    | 151/291 [00:26<00:16,  8.51it/s]
+Loading weights:  53%|█████▎    | 154/291 [00:26<00:14,  9.39it/s]
+Loading weights:  54%|█████▍    | 157/291 [00:27<00:11, 11.56it/s]
+Loading weights:  55%|█████▍    | 159/291 [00:27<00:15,  8.34it/s]
+Loading weights:  56%|█████▋    | 164/291 [00:27<00:11, 11.47it/s]
+Loading weights:  57%|█████▋    | 166/291 [00:27<00:10, 11.84it/s]
+Loading weights:  58%|█████▊    | 168/291 [00:28<00:14,  8.64it/s]
+Loading weights:  59%|█████▉    | 172/291 [00:28<00:12,  9.52it/s]
+Loading weights:  60%|██████    | 175/291 [00:28<00:11, 10.27it/s]
+Loading weights:  61%|██████    | 177/291 [00:29<00:18,  6.23it/s]
+Loading weights:  62%|██████▏   | 181/291 [00:30<00:18,  5.92it/s]
+Loading weights:  64%|██████▎   | 185/291 [00:30<00:16,  6.42it/s]
+Loading weights:  65%|██████▌   | 190/291 [00:31<00:14,  7.13it/s]
+Loading weights:  66%|██████▋   | 193/291 [00:31<00:11,  8.61it/s]
+Loading weights:  67%|██████▋   | 195/291 [00:32<00:17,  5.38it/s]
+Loading weights:  68%|██████▊   | 199/291 [00:32<00:12,  7.55it/s]
+Loading weights:  69%|██████▉   | 201/291 [00:33<00:15,  5.79it/s]
+Loading weights:  70%|██████▉   | 203/291 [00:33<00:15,  5.60it/s]
+Loading weights:  70%|███████   | 204/291 [00:34<00:20,  4.21it/s]
+Loading weights:  71%|███████▏  | 208/291 [00:34<00:16,  5.16it/s]
+Loading weights:  73%|███████▎  | 211/291 [00:35<00:13,  6.01it/s]
+Loading weights:  73%|███████▎  | 212/291 [00:35<00:17,  4.57it/s]
+Loading weights:  73%|███████▎  | 213/291 [00:36<00:18,  4.13it/s]
+Loading weights:  75%|███████▍  | 217/291 [00:36<00:12,  5.93it/s]
+Loading weights:  76%|███████▌  | 220/291 [00:36<00:08,  7.93it/s]
+Loading weights:  76%|███████▋  | 222/291 [00:37<00:12,  5.41it/s]
+Loading weights:  78%|███████▊  | 226/291 [00:37<00:10,  6.46it/s]
+Loading weights:  78%|███████▊  | 227/291 [00:38<00:10,  5.98it/s]
+Loading weights:  79%|███████▉  | 230/291 [00:38<00:11,  5.28it/s]
+Loading weights:  81%|████████  | 235/291 [00:38<00:06,  8.37it/s]
+Loading weights:  82%|████████▏ | 238/291 [00:39<00:06,  8.74it/s]
+Loading weights:  82%|████████▏ | 240/291 [00:40<00:08,  5.94it/s]
+Loading weights:  84%|████████▍ | 244/291 [00:40<00:06,  6.84it/s]
+Loading weights:  85%|████████▍ | 247/291 [00:40<00:05,  8.29it/s]
+Loading weights:  86%|████████▌ | 249/291 [00:41<00:07,  5.31it/s]
+Loading weights:  86%|████████▋ | 251/291 [00:41<00:06,  6.39it/s]
+Loading weights:  87%|████████▋ | 254/291 [00:41<00:04,  7.56it/s]
+Loading weights:  88%|████████▊ | 256/291 [00:42<00:04,  7.42it/s]
+Loading weights:  89%|████████▊ | 258/291 [00:42<00:06,  5.39it/s]
+Loading weights:  90%|█████████ | 263/291 [00:43<00:04,  6.17it/s]
+Loading weights:  91%|█████████▏| 266/291 [00:43<00:03,  7.47it/s]
+Loading weights:  92%|█████████▏| 268/291 [00:44<00:03,  6.41it/s]
+Loading weights:  93%|█████████▎| 270/291 [00:44<00:03,  6.89it/s]
+Loading weights:  93%|█████████▎| 271/291 [00:44<00:03,  5.11it/s]
+Loading weights:  94%|█████████▍| 274/291 [00:45<00:03,  4.51it/s]
+Loading weights:  95%|█████████▍| 276/291 [00:46<00:03,  4.49it/s]
+Loading weights:  96%|█████████▌| 279/291 [00:46<00:01,  6.02it/s]
+Loading weights:  97%|█████████▋| 281/291 [00:46<00:01,  6.58it/s]
+Loading weights:  97%|█████████▋| 283/291 [00:47<00:01,  5.81it/s]
+Loading weights:  98%|█████████▊| 284/291 [00:47<00:01,  5.77it/s]
+Loading weights:  98%|█████████▊| 285/291 [00:47<00:01,  5.13it/s]
+Loading weights: 100%|██████████| 291/291 [00:47<00:00,  6.12it/s]
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer TokenizersBackend. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+[llama31_8b_instruct] 1/288 case=V2_0004 parse=ok
+[llama31_8b_instruct] 10/288 case=V2_0024 parse=ok
+[llama31_8b_instruct] 20/288 case=V2_0043 parse=ok
+[llama31_8b_instruct] 30/288 case=V2_0058 parse=ok
+[llama31_8b_instruct] 40/288 case=V2_0074 parse=ok
+[llama31_8b_instruct] 50/288 case=V2_0090 parse=ok
+[llama31_8b_instruct] 60/288 case=V2_0105 parse=failed
+[llama31_8b_instruct] 70/288 case=V2_0119 parse=ok
+[llama31_8b_instruct] 80/288 case=V2_0133 parse=ok
+[llama31_8b_instruct] 90/288 case=V2_0148 parse=ok
+[llama31_8b_instruct] 100/288 case=V2_0168 parse=failed
+[llama31_8b_instruct] 110/288 case=V2_0183 parse=ok
+[llama31_8b_instruct] 120/288 case=V2_0200 parse=failed
+[llama31_8b_instruct] 130/288 case=V2_0219 parse=ok
+[llama31_8b_instruct] 140/288 case=V2_0235 parse=failed
+[llama31_8b_instruct] 150/288 case=V2_0256 parse=ok
+[llama31_8b_instruct] 160/288 case=V2_0273 parse=ok
+[llama31_8b_instruct] 170/288 case=V2_0289 parse=failed
+[llama31_8b_instruct] 180/288 case=V2_0309 parse=ok
+[llama31_8b_instruct] 190/288 case=V2_0326 parse=ok
+[llama31_8b_instruct] 200/288 case=V2_0340 parse=ok
+[llama31_8b_instruct] 210/288 case=V2_0354 parse=ok
+[llama31_8b_instruct] 220/288 case=V2_0368 parse=ok
+[llama31_8b_instruct] 230/288 case=V2_0384 parse=ok
+[llama31_8b_instruct] 240/288 case=V2_0399 parse=ok
+[llama31_8b_instruct] 250/288 case=V2_0416 parse=ok
+[llama31_8b_instruct] 260/288 case=V2_0432 parse=ok
+[llama31_8b_instruct] 270/288 case=V2_0452 parse=failed
+[llama31_8b_instruct] 280/288 case=V2_0467 parse=ok
+[llama31_8b_instruct] 288/288 case=V2_0480 parse=ok
+[llama31_8b_instruct] completed; new records=288

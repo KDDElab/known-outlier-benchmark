@@ -1,0 +1,31 @@
+{
+  "identity": "paper-guided Beam with shared Gower-LOF scoring; not a canonical reproduction",
+  "paper": "https://openproceedings.org/2021/conf/edbt/p4.pdf",
+  "inspected_upstream": "https://github.com/anomaly-detection-macrobase-benchmark/macrobase/tree/alexp-vmu/alexp",
+  "upstream_commit": "6b31396096923295e4501f1baa8c59e9e5ecb4d6",
+  "beam_width": 100,
+  "minimum_order": 2,
+  "maximum_order": 3,
+  "candidate_budget": 4,
+  "stage_search": "all pairs, retain top 100, expand by one field; global rank includes pairs and visited triples",
+  "same_size_control": "exhaustive pairs and triples with identical scorer and tie rule",
+  "tie_rule": "descending score, ascending size, canonical feature-ID tuple",
+  "k": "min(3, reference_count-1), shared with main Gower-LOF",
+  "adaptations": [
+    "mixed types via original-field Gower groups",
+    "reference-only novelty LOF",
+    "four outputs",
+    "no gold dimension supplied"
+  ],
+  "selection": "literature beam width 100; existing fixed scorer; no development/test score-based tuning",
+  "inference": "exploratory supplement outside frozen 18-test main family",
+  "inputs_sha256": "4d34a6309068f15ea92394d190bf117bd69f64904e0352aaa02f178881acafa1",
+  "source_sha256": "b40fd8c5c64524aa8abf90f46b8dd61a82712ad3cbf49b68e9a3f47edb1bfa5d",
+  "frozen_unix": 1794057805.8783813,
+  "n_cases": 864,
+  "completed_unix": 1794057822.3876262,
+  "outputs": {
+    "beam_gower_lof_adaptation": "e87c3e1c3381eb88de64128448dbb8d19effc596cc2cf1f1da187655c90f629a",
+    "exhaustive_pairs_triples_gower_lof": "a273c5880a2354e2f648addb17afc8d1b4006508e0cc0e3af7c47d4f34501a36"
+  }
+}

@@ -1,0 +1,27 @@
+You are annotating a known anomalous row in a tabular dataset. Compare the
+target row with the provided normal reference rows and their summaries.
+
+Return one compact JSON object only. Choose zero to three feature IDs, ranked
+from the strongest observed deviation to the weakest. Choose an empty list
+only when abstain is true. Base every choice on the supplied values and schema.
+Use the normal reference summaries to avoid treating ordinary variation as
+unusual. Do not use or guess a hidden label column.
+
+This is a descriptive feature-reference task. Do not claim that a selected
+feature caused the anomaly, was modified, explains a detector score, or is a
+verified minimal sufficient explanation. Do not invent domain facts that are
+not in the supplied schema. If the evidence is ambiguous, say so and lower
+confidence. Do not provide long explanations or extra fields.
+
+Required schema:
+{
+  "feature_ids_ranked": ["F001"],
+  "deviation_direction": {"F001": "above|below|rare_category|unusual_combination|unclear"},
+  "abstain": false,
+  "confidence": 0.0,
+  "uncertainty_note": "at most 15 words"
+}
+
+All feature IDs must occur in the supplied target. Return no more than three
+feature IDs. Confidence must be a number from 0 to 1. Keep uncertainty_note
+brief; use an empty string when no note is needed.

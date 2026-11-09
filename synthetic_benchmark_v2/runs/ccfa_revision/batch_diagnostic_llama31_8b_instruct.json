@@ -1,0 +1,68 @@
+[
+  {
+    "case_id": "s20261106_back_V2_0072",
+    "prompt_sha256": "27a564c7f83356e2fdf2850b0d1495af91abbf1a47258376611583b7d2e201db",
+    "batch_size": 4,
+    "serial_raw": "{\"task_label\": \"numeric_marginal\", \"mechanism_feature_ids\": [\"F005\"], \"explanations\": [{\"features\": [\"F005\"], \"evidence\": \"value 0.0 is less than all normal reference values\", \"confidence\": 1.0}], \"abstain\": false}",
+    "batch_raw": "{\"task_label\": \"numeric_marginal\", \"mechanism_feature_ids\": [\"F005\"], \"explanations\": [{\"features\": [\"F005\"], \"evidence\": \"value 0.0 is less than all normal reference values\", \"confidence\": 1.0}], \"abstain\": false}",
+    "raw_exact": true,
+    "localization_exact": true,
+    "serial_seconds": 2.318721441552043,
+    "batch_seconds": 16.940236404538155
+  },
+  {
+    "case_id": "s20261106_back_V2_0016",
+    "prompt_sha256": "5aff85afe5ba9e3875d03525b41fa6b19549dd27f5b6514ab153075d9d34f811",
+    "batch_size": 4,
+    "serial_raw": "{\n  \"task_label\": \"pairwise_interaction\",\n  \"mechanism_feature_ids\": [\"F001\", \"F003\"],\n  \"explanations\": [\n    {\n      \"features\": [\"F001\", \"F003\"],\n      \"evidence\": \"F001 and F003 deviate from normal references\",\n      \"confidence\": 0.8\n    },\n    {\n      \"features\": [\"F001\", \"F006\"],\n      \"evidence\": \"F001 and F006 deviate from normal references\",\n      \"confidence\": 0.7\n    },\n    {\n      \"features\": [\"F003\", \"F006\"],\n      \"evidence\": \"F003 and F006 deviate from normal references\",\n      \"confidence\": 0.6\n    },\n    {\n      \"features\": [\"F001\", \"F002\", \"F006\"],\n      \"evidence\": \"F001, F002, and F006 deviate from normal references\",\n      \"confidence\": 0.5\n    }\n  ],\n  \"abstain\": false\n}",
+    "batch_raw": "{\n  \"task_label\": \"pairwise_interaction\",\n  \"mechanism_feature_ids\": [\"F001\", \"F003\"],\n  \"explanations\": [\n    {\n      \"features\": [\"F001\", \"F003\"],\n      \"evidence\": \"F001 and F003 are both lower than their respective normal reference medians\",\n      \"confidence\": 0.8\n    },\n    {\n      \"features\": [\"F001\", \"F003\"],\n      \"evidence\": \"F001 and F003 are both lower than their respective normal reference means\",\n      \"confidence\": 0.7\n    },\n    {\n      \"features\": [\"F001\", \"F003\"],\n      \"evidence\": \"F001 and F003 are both lower than their respective normal reference quartiles\",\n      \"confidence\": 0.6\n    },\n    {\n      \"features\": [\"F001\", \"F003\"],\n      \"evidence\": \"F001 and F003 are both lower than their respective normal reference percentiles\",\n      \"confidence\": 0.5\n    }\n  ],\n  \"abstain\": false\n}",
+    "raw_exact": false,
+    "localization_exact": false,
+    "serial_seconds": 6.839520959183574,
+    "batch_seconds": 16.940236404538155
+  },
+  {
+    "case_id": "s20261106_back_V2_0076",
+    "prompt_sha256": "98f2e9db014fcbdf3c18b3506672f39bef5a86ad2ff86d7e02ad5a234a7cdef1",
+    "batch_size": 4,
+    "serial_raw": "{\n  \"task_label\": \"pairwise_interaction\",\n  \"mechanism_feature_ids\": [\"F001\", \"F003\"],\n  \"explanations\": [\n    {\n      \"features\": [\"F001\", \"F003\"],\n      \"evidence\": \"F001 and F003 values are not present in normal references\",\n      \"confidence\": 0.8\n    },\n    {\n      \"features\": [\"F001\", \"F003\"],\n      \"evidence\": \"F001 and F003 values are not present in normal references\",\n      \"confidence\": 0.8\n    }\n  ],\n  \"abstain\": false\n}",
+    "batch_raw": "{\n  \"task_label\": \"pairwise_interaction\",\n  \"mechanism_feature_ids\": [\"F001\", \"F003\"],\n  \"explanations\": [\n    {\n      \"features\": [\"F001\", \"F003\"],\n      \"evidence\": \"F001 and F003 have a strong interaction in the target row\",\n      \"confidence\": 0.8\n    },\n    {\n      \"features\": [\"F001\", \"F003\"],\n      \"evidence\": \"F001 and F003 have a strong interaction in the target row, contrasting with normal references\",\n      \"confidence\": 0.9\n    }\n  ],\n  \"abstain\": false\n}",
+    "raw_exact": false,
+    "localization_exact": true,
+    "serial_seconds": 4.1419185642153025,
+    "batch_seconds": 16.940236404538155
+  },
+  {
+    "case_id": "s20261106_back_V2_0062",
+    "prompt_sha256": "64308b4263b61b9ee47afabb3f05d2d759dac62b1722e47817b7334b5b17d038",
+    "batch_size": 4,
+    "serial_raw": "{\n  \"task_label\": \"pairwise_interaction\",\n  \"mechanism_feature_ids\": [\n    \"F003\",\n    \"F005\"\n  ],\n  \"explanations\": [\n    {\n      \"features\": [\"F003\", \"F005\"],\n      \"evidence\": \"F003 and F005 values are different from normal references\",\n      \"confidence\": 0.8\n    },\n    {\n      \"features\": [\"F003\", \"F004\"],\n      \"evidence\": \"F003 and F004 values are different from normal references\",\n      \"confidence\": 0.7\n    },\n    {\n      \"features\": [\"F005\", \"F006\"],\n      \"evidence\": \"F005 and F006 values are different from normal references\",\n      \"confidence\": 0.6\n    },\n    {\n      \"features\": [\"F003\", \"F006\"],\n      \"evidence\": \"F003 and F006 values are different from normal references\",\n      \"confidence\": 0.5\n    }\n  ],\n  \"abstain\": false\n}",
+    "batch_raw": "{\n  \"task_label\": \"pairwise_interaction\",\n  \"mechanism_feature_ids\": [\n    \"F003\",\n    \"F005\"\n  ],\n  \"explanations\": [\n    {\n      \"features\": [\"F003\", \"F005\"],\n      \"evidence\": \"F003 and F005 values are different from normal references\",\n      \"confidence\": 0.8\n    },\n    {\n      \"features\": [\"F003\", \"F004\"],\n      \"evidence\": \"F003 and F004 values are different from normal references\",\n      \"confidence\": 0.7\n    },\n    {\n      \"features\": [\"F005\", \"F006\"],\n      \"evidence\": \"F005 and F006 values are different from normal references\",\n      \"confidence\": 0.6\n    }\n  ],\n  \"abstain\": false\n}",
+    "raw_exact": false,
+    "localization_exact": false,
+    "serial_seconds": 6.530784210190177,
+    "batch_seconds": 16.940236404538155
+  },
+  {
+    "case_id": "s20261106_back_V2_0049",
+    "prompt_sha256": "6fe9b978e9f5a05c370bbbceb89923b80b9563b5fd2be945ecab41837b29ee1f",
+    "batch_size": 2,
+    "serial_raw": "Based on the provided schema, normal reference rows, and target row, I will infer the broad task label, identify the fields that appear essential to the anomalous pattern, and return up to four ranked candidate inclusion-minimal feature subspaces that distinguish the target from the normal population.\n\n**Task Label:** pairwise_interaction\n\n**Essential Fields:**\n\n* F001 (channel_beta)\n* F005 (reading_gamma)\n\nThese fields appear to be essential to the anomalous pattern because the target row has a value for F005 that is not present in any of the normal reference rows (c5), and the value for F001 is also not present in any of the normal reference rows (level_20).\n\n**Ranked Candidate Inclusion-Minimal Feature Subspaces:**\n\n1. **Subspace 1:** F001, F005\n\t* Explanation: The target row has a value for F005 (c5) that is not present in any of the normal reference rows, and the value for F001 (level_20) is also not present in any of the normal reference rows.\n\t* Evidence: Contrast with normal references.\n\t* Confidence: 0.8\n2. **Subspace 2:** F001, F004\n\t* Explanation: The target row has a value for F001 (level_20) that is not present in any of the normal reference rows, and the value for F004 (1.0) is also not present in any of the normal reference rows.\n\t* Evidence: Contrast with normal references.\n\t* Confidence: 0.7\n3. **Subspace 3:** F005, F004\n\t* Explanation: The target row has a value for F005 (c5) that is not present in any of the normal reference rows, and the value for F004 (1.0) is also not present in any of the normal reference rows.\n\t* Evidence: Contrast with normal references.\n\t* Confidence: 0.6\n4. **Subspace 4:** F001, F003, F005\n\t* Explanation: The target row has a value for F001 (level_20) that is not present in any of the normal reference rows, and the values for F003 (2026-01-04) and F005 (c5) are also not present in any of the normal reference rows.\n\t* Evidence: Contrast with normal references.\n\t* Confidence: 0.5\n\n**JSON Output:**\n```json",
+    "batch_raw": "Based on the provided schema, normal reference rows, and target row, I will infer the broad task label, identify the fields that appear essential to the anomalous pattern, and return up to four ranked candidate inclusion-minimal feature subspaces that distinguish the target from the normal population.\n\n**Task Label:** pairwise_interaction\n\n**Essential Fields:**\n\n* F001 (channel_beta)\n* F005 (reading_gamma)\n\nThese fields appear to be essential to the anomalous pattern because the target row has a value for F005 that is not present in any of the normal reference rows (c5), and the value for F001 is also not present in any of the normal reference rows (level_20).\n\n**Ranked Candidate Inclusion-Minimal Feature Subspaces:**\n\n1. **Subspace 1:** F001, F005\n\t* Explanation: The target row has a value for F005 (c5) that is not present in any of the normal reference rows, and the value for F001 (level_20) is also not present in any of the normal reference rows.\n\t* Evidence: Contrast with normal references.\n\t* Confidence: 0.8\n2. **Subspace 2:** F001, F004\n\t* Explanation: The target row has a value for F001 (level_20) that is not present in any of the normal reference rows, and the value for F004 (1.0) is also not present in any of the normal reference rows.\n\t* Evidence: Contrast with normal references.\n\t* Confidence: 0.7\n3. **Subspace 3:** F005, F004\n\t* Explanation: The target row has a value for F005 (c5) that is not present in any of the normal reference rows, and the value for F004 (1.0) is also not present in any of the normal reference rows.\n\t* Evidence: Contrast with normal references.\n\t* Confidence: 0.6\n4. **Subspace 4:** F001, F003\n\t* Explanation: The target row has a value for F001 (level_20) that is not present in any of the normal reference rows, and the value for F003 (2026-01-04) is also not present in any of the normal reference rows.\n\t* Evidence: Contrast with normal references.\n\t* Confidence: 0.5\n\n**JSON Output:**\n```json\n{\n  \"task_label\": \"pairwise",
+    "raw_exact": false,
+    "localization_exact": true,
+    "serial_seconds": 14.171282483264804,
+    "batch_seconds": 28.587349316105247
+  },
+  {
+    "case_id": "s20261106_back_V2_0074",
+    "prompt_sha256": "35c960b8b36b04ab6eb7aa789aad806bf50051bf0353e3129573d0546cde5ff0",
+    "batch_size": 2,
+    "serial_raw": "{\n  \"task_label\": \"pairwise_interaction\",\n  \"mechanism_feature_ids\": [\n    \"F001\",\n    \"F003\"\n  ],\n  \"explanations\": [\n    {\n      \"features\": [\"F001\", \"F003\"],\n      \"evidence\": \"contrast with normal references\",\n      \"confidence\": 0.8\n    },\n    {\n      \"features\": [\"F001\", \"F005\"],\n      \"evidence\": \"contrast with normal references\",\n      \"confidence\": 0.7\n    },\n    {\n      \"features\": [\"F003\", \"F005\"],\n      \"evidence\": \"contrast with normal references\",\n      \"confidence\": 0.6\n    }\n  ],\n  \"abstain\": false\n}",
+    "batch_raw": "Based on the provided input, I will infer the broad task label, identify the fields that appear essential to the anomalous pattern, and return up to four ranked candidate inclusion-minimal feature subspaces that distinguish the target from the normal population.\n\n**Task Label:** pairwise_interaction\n\n**Essential Fields:** F006, F004, F002, F009, F008, F010, F001, F005, F003, F012\n\n**Ranked Candidate Subspaces:**\n\n1. **Subspace 1:** F006, F004\n\t* Explanation: The target row has a lower value of F006 (0.0) compared to the normal references (average 0.5), and a higher value of F004 (4) compared to the normal references (average 2.5).\n\t* Evidence: The target row's F006 value is the lowest in the dataset, and its F004 value is the highest.\n\t* Confidence: 0.8\n2. **Subspace 2:** F006, F002\n\t* Explanation: The target row has a lower value of F006 (0.0) compared to the normal references (average 0.5), and a specific value of F002 (\"id_043\") that is not present in the normal references.\n\t* Evidence: The target row's F006 value is the lowest in the dataset, and its F002 value is not present in the normal references.\n\t* Confidence: 0.7\n3. **Subspace 3:** F004, F002\n\t* Explanation: The target row has a higher value of F004 (4) compared to the normal references (average 2.5), and a specific value of F002 (\"id_043\") that is not present in the normal references.\n\t* Evidence: The target row's F004 value is the highest in the dataset, and its F002 value is not present in the normal references.\n\t* Confidence: 0.6\n4. **Subspace 4:** F006, F008\n\t* Explanation: The target row has a lower value of F006 (0.0) compared to the normal references (average 0.5), and a specific value of F008 (\"u2\") that is not present in the normal references.\n\t* Evidence: The target row's F006 value is the lowest in the dataset, and its F008 value is not present in the normal references.\n\t* Confidence: 0",
+    "raw_exact": false,
+    "localization_exact": false,
+    "serial_seconds": 5.404519164934754,
+    "batch_seconds": 28.587349316105247
+  }
+]

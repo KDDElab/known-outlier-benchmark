@@ -1,0 +1,21 @@
+\begin{table*}[t]
+\centering\scriptsize
+\caption{New-rule validation: mean $\pm$ sample SD across 12 compositions. Gower searches all 63 subsets of six fields. Draws 0--2 independently sample 32 normal rows; Complete supplies every normal tuple and declares completeness. Stable is a target count with an available, identical first set across draws.}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}|l|rr|rrr|rr|r|}
+\hline
+Method & \multicolumn{2}{c|}{New targets (48)} & \multicolumn{3}{c|}{Repeated draws (same 24)} & \multicolumn{2}{c|}{Complete population (24)} & Stable \\
+\cline{2-8}
+ & Exact & Hit@4 & Draw 0 Exact & Draw 1 Exact & Draw 2 Exact & Exact & Hit@4 & / 24 \\
+\hline
+Qwen & $0.167\!\pm\!0.289$ & $0.229\!\pm\!0.271$ & $0.208\!\pm\!0.334$ & $0.125\!\pm\!0.311$ & $0.042\!\pm\!0.144$ & $0.125\!\pm\!0.311$ & $0.167\!\pm\!0.326$ & 2 \\
+DeepSeek & $0.042\!\pm\!0.144$ & $0.104\!\pm\!0.167$ & $0.042\!\pm\!0.144$ & $0.042\!\pm\!0.144$ & $0.000\!\pm\!0.000$ & $0.000\!\pm\!0.000$ & $0.000\!\pm\!0.000$ & 6 \\
+Llama & $0.042\!\pm\!0.097$ & $0.063\!\pm\!0.155$ & $0.042\!\pm\!0.144$ & $0.000\!\pm\!0.000$ & $0.000\!\pm\!0.000$ & $0.042\!\pm\!0.144$ & $0.042\!\pm\!0.144$ & 12 \\
+Gower-LOF & $0.542\!\pm\!0.424$ & $0.729\!\pm\!0.445$ & $0.542\!\pm\!0.498$ & $0.542\!\pm\!0.498$ & $0.458\!\pm\!0.450$ & $0.583\!\pm\!0.515$ & $0.833\!\pm\!0.389$ & 12 \\
+Gower-kNN & $0.625\!\pm\!0.446$ & $0.833\!\pm\!0.343$ & $0.583\!\pm\!0.469$ & $0.583\!\pm\!0.515$ & $0.583\!\pm\!0.469$ & $0.625\!\pm\!0.483$ & $0.833\!\pm\!0.389$ & 10 \\
+\hline
+\end{tabular*}
+\renewcommand{\arraystretch}{1.0}
+\label{tab:new-rules}
+\end{table*}

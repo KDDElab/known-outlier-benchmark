@@ -1,0 +1,166 @@
+{
+  "timestamp_utc": "2026-11-08T11:58:55.725793+00:00",
+  "reason": "Reuse GPUs as shorter model queues finish; batch1/checkpoints/prompts/decoder unchanged. No predictions discarded or duplicated.",
+  "terminated_waiting_supervisors": [
+    {
+      "pid": 3987675,
+      "command": [
+        "python",
+        "adbench_llm_reference_v1/synthetic_benchmark_v2/queue_acceptance_jobs.py",
+        "--wait-pid",
+        "3912965",
+        "--model",
+        "qwen35_9b",
+        "--gpus",
+        "0",
+        "--batch",
+        "real_cells",
+        "--protocol-id",
+        "public_corrected_cells_v1"
+      ]
+    },
+    {
+      "pid": 3987676,
+      "command": [
+        "python",
+        "adbench_llm_reference_v1/synthetic_benchmark_v2/queue_acceptance_jobs.py",
+        "--wait-pid",
+        "3912966",
+        "--model",
+        "deepseek_v2_lite_chat",
+        "--gpus",
+        "1,2",
+        "--batch",
+        "real_cells",
+        "--protocol-id",
+        "public_corrected_cells_v1"
+      ]
+    },
+    {
+      "pid": 3912965,
+      "command": [
+        "python",
+        "adbench_llm_reference_v1/synthetic_benchmark_v2/queue_acceptance_jobs.py",
+        "--wait-pid",
+        "3911581",
+        "--model",
+        "qwen35_9b",
+        "--gpus",
+        "0",
+        "--batch",
+        "structured",
+        "--runner",
+        "annotate_acceptance_structured.py",
+        "--protocol-id",
+        "known_outlier_structured_v1"
+      ]
+    },
+    {
+      "pid": 3912966,
+      "command": [
+        "python",
+        "adbench_llm_reference_v1/synthetic_benchmark_v2/queue_acceptance_jobs.py",
+        "--wait-pid",
+        "3911584",
+        "--model",
+        "deepseek_v2_lite_chat",
+        "--gpus",
+        "1,2",
+        "--batch",
+        "structured",
+        "--runner",
+        "annotate_acceptance_structured.py",
+        "--protocol-id",
+        "known_outlier_structured_v1"
+      ]
+    }
+  ],
+  "replacement_workers": [
+    {
+      "pid": 216837,
+      "model": "qwen35_9b",
+      "gpus": "3",
+      "batch": "structured",
+      "command": [
+        "python",
+        "adbench_llm_reference_v1/synthetic_benchmark_v2/queue_acceptance_jobs.py",
+        "--wait-pid",
+        "3987677",
+        "--model",
+        "qwen35_9b",
+        "--gpus",
+        "3",
+        "--batch",
+        "structured",
+        "--protocol-id",
+        "known_outlier_structured_v1",
+        "--runner",
+        "annotate_acceptance_structured.py"
+      ]
+    },
+    {
+      "pid": 216838,
+      "model": "qwen35_9b",
+      "gpus": "0",
+      "batch": "real_cells",
+      "command": [
+        "python",
+        "adbench_llm_reference_v1/synthetic_benchmark_v2/queue_acceptance_jobs.py",
+        "--wait-pid",
+        "3911581",
+        "--model",
+        "qwen35_9b",
+        "--gpus",
+        "0",
+        "--batch",
+        "real_cells",
+        "--protocol-id",
+        "public_corrected_cells_v1"
+      ]
+    },
+    {
+      "pid": 216839,
+      "model": "deepseek_v2_lite_chat",
+      "gpus": "1,2",
+      "batch": "real_cells",
+      "command": [
+        "python",
+        "adbench_llm_reference_v1/synthetic_benchmark_v2/queue_acceptance_jobs.py",
+        "--wait-pid",
+        "3911584",
+        "--model",
+        "deepseek_v2_lite_chat",
+        "--gpus",
+        "1,2",
+        "--batch",
+        "real_cells",
+        "--protocol-id",
+        "public_corrected_cells_v1"
+      ]
+    },
+    {
+      "pid": 216840,
+      "model": "deepseek_v2_lite_chat",
+      "gpus": "0,3",
+      "batch": "structured",
+      "command": [
+        "python",
+        "adbench_llm_reference_v1/synthetic_benchmark_v2/queue_acceptance_jobs.py",
+        "--wait-pid",
+        "216837",
+        "--model",
+        "deepseek_v2_lite_chat",
+        "--gpus",
+        "0,3",
+        "--batch",
+        "structured",
+        "--protocol-id",
+        "known_outlier_structured_v1",
+        "--runner",
+        "annotate_acceptance_structured.py",
+        "--extra-wait-pid",
+        "216838"
+      ]
+    }
+  ]
+}

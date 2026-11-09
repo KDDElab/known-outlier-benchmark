@@ -1,0 +1,8 @@
+{
+  "estimator": "focus queries within source target; source targets within table pair; pairs within circuit; equal average over four fixed circuits",
+  "uncertainty": "2,000 resamples of table pairs within each fixed circuit; no claim of four circuits sampling a wider population",
+  "information": "all: LLM and joint-output surprisal see all outputs; focus: LLM and focus/joint surprisal see focus only; Gower uses inputs only in both conditions",
+  "new_inference": false,
+  "baseline_rerun": true,
+  "abstain_scores_zero": true
+}

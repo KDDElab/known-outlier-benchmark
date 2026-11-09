@@ -1,0 +1,35 @@
+{
+  "n_cases": 288,
+  "split": "test",
+  "top1_confidence_coverage": 0.75,
+  "n_top1_with_confidence": 216,
+  "top1_exact_support_minimal_hit_rate": 0.13425925925925927,
+  "mean_top1_confidence": 0.8495370370370373,
+  "brier_score_conditional_on_top1_output": 0.6340972222222224,
+  "ece_10_equal_width_bins_conditional_on_top1_output": 0.7152777777777777,
+  "template_cluster_bootstrap_95_ci": {
+    "top1_exact_hit_rate": [
+      0.06756107068607069,
+      0.20644579968714316
+    ],
+    "brier": [
+      0.5863053977272729,
+      0.678305819746377
+    ],
+    "ece_10_bins": [
+      0.6444949136332021,
+      0.7817161294549269
+    ]
+  },
+  "evidence_audit": {
+    "n_top1_evidence_strings": 216,
+    "explicit_category_identifier_or_date_tokens": 109,
+    "literal_token_grounding_rate": 1.0,
+    "unmatched_explicit_value_tokens": 0,
+    "unknown_feature_id_mentions": 0,
+    "unmatched_examples_for_human_review": [],
+    "scope": "literal visible-input matching only; not a semantic-faithfulness claim"
+  },
+  "seed": 20261106,
+  "bootstrap_replicates": 2000
+}

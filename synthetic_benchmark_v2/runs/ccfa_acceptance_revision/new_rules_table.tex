@@ -1,0 +1,21 @@
+\begin{table*}[t]
+\centering\scriptsize
+\caption{New-rule validation, averaged equally over 12 compositions. Queries have six fields; Gower searches all 63 subsets. Draws 0--2 independently sample 32 normal rows. Complete provides every normal tuple and declares completeness. Stable counts targets with an available, identical first set under all three draws.}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}|l|rr|rrr|rr|r|}
+\hline
+Method & \multicolumn{2}{c|}{New targets (48)} & \multicolumn{3}{c|}{Repeated draws (same 24)} & \multicolumn{2}{c|}{Complete population (24)} & Stable \\
+\cline{2-8}
+ & Exact & Hit@4 & Draw 0 Exact & Draw 1 Exact & Draw 2 Exact & Exact & Hit@4 & / 24 \\
+\hline
+Qwen & 0.167 & 0.229 & 0.208 & 0.125 & 0.042 & 0.125 & 0.167 & 2 \\
+DeepSeek & 0.042 & 0.104 & 0.042 & 0.042 & 0.000 & 0.000 & 0.000 & 6 \\
+Llama & 0.042 & 0.063 & 0.042 & 0.000 & 0.000 & 0.042 & 0.042 & 12 \\
+Gower-LOF & 0.542 & 0.729 & 0.542 & 0.542 & 0.458 & 0.583 & 0.833 & 12 \\
+Gower-kNN & 0.625 & 0.833 & 0.583 & 0.583 & 0.583 & 0.625 & 0.833 & 10 \\
+\hline
+\end{tabular*}
+\renewcommand{\arraystretch}{1.0}
+\label{tab:new-rules}
+\end{table*}

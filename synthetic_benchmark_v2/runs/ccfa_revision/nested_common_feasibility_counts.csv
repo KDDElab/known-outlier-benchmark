@@ -1,0 +1,4 @@
+method,n_panel,n_all_three_feasible
+qwen35_9b,96,94
+deepseek_v2_lite_chat,96,94
+llama31_8b_instruct,96,96

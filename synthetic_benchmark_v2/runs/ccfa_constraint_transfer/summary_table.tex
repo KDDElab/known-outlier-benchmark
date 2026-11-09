@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering\footnotesize
+\caption{Invoice constraints: 96 synthetic queries, four fixed relations. Equal-relation means retain every failure. Edit match compares the first set with the recorded edit; this provenance diagnostic is not an identifiable prediction target.}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}|l|rrrrr|}
+\hline
+Method & Exact@1 & Hit@4 & Jacc.@4 & Answered & \shortstack{Edit\\match} \\
+\hline
+Qwen & 0.198 & 0.198 & 0.535 & 0.969 & 0.104 \\
+DeepSeek & 0.021 & 0.073 & 0.348 & 0.875 & 0.000 \\
+Llama & 0.073 & 0.094 & 0.328 & 0.917 & 0.021 \\
+Gower-LOF & 0.000 & 0.115 & 0.390 & 1.000 & 0.010 \\
+Gower-kNN & 0.406 & 0.510 & 0.751 & 1.000 & 0.010 \\
+\hline
+\end{tabular*}
+\renewcommand{\arraystretch}{1.0}
+\label{tab:invoice}
+\end{table}

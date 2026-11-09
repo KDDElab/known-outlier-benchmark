@@ -1,0 +1,14 @@
+{
+  "same_ordered_feature_matrix": false,
+  "same_feature_row_multiset": false,
+  "shape": [
+    148,
+    18
+  ],
+  "ADBench_anomaly_count": 6,
+  "UCI_normal_count": 2,
+  "relationship": "Two named Lymphography protocol views with different encodings and normal-label definitions; exact row alignment was not established by the direct matrix comparison.",
+  "normal_label_definitions": "ADBench: official binary labels, 142 normal rows; UCI: source class 1 normal, two normal rows",
+  "UCI_source": "https://archive.ics.uci.edu/dataset/63/lymphography",
+  "ODDS_source_description": "https://shebuti.com/lymphography-dataset/"
+}

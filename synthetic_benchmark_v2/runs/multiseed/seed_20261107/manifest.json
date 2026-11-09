@@ -1,0 +1,125 @@
+{
+  "benchmark_id": "known_anomaly_subspace_benchmark_v2",
+  "replicate_seed": 20261107,
+  "prompt_revision": "compact_json_v1",
+  "prompt_output_constraints": "JSON only; each evidence field at most 20 words; no analysis or preamble",
+  "generator_sha256": "7578ff837aca5a75f3d35994f10094a3a848aa171eb89fc524c966bbb9a0bccd",
+  "generator_runtime": {
+    "python": "3.13.11",
+    "numpy": "2.5.2"
+  },
+  "seed": 20261107,
+  "cases_per_template": 12,
+  "n_templates": 40,
+  "templates_per_family": 5,
+  "n_families": 8,
+  "split_case_counts": {
+    "train": 96,
+    "dev": 96,
+    "test": 288
+  },
+  "split_template_counts": {
+    "train": 8,
+    "dev": 8,
+    "test": 24
+  },
+  "split_template_ids": {
+    "train": [
+      "cat_eq_c5_d6",
+      "cond_num_num",
+      "decoy_num_cat",
+      "num_ge_050",
+      "or_binary",
+      "pair_cat_binary",
+      "rel_num_gt",
+      "three_mixed"
+    ],
+    "dev": [
+      "cat_in_rare_pair",
+      "cond_binary_num",
+      "decoy_cat_num",
+      "num_le_025",
+      "or_num_cat",
+      "pair_num_cat_set",
+      "rel_num_gap",
+      "three_xor_mixed"
+    ],
+    "test": [
+      "cat_eq_c3_d4",
+      "cat_eq_c4_d5",
+      "cat_not_common",
+      "cond_cat_num_low",
+      "cond_cat_zero",
+      "cond_num_cat",
+      "decoy_binary",
+      "decoy_binary_zero",
+      "decoy_num_low",
+      "num_ge_075",
+      "num_le_050",
+      "num_outside_mid",
+      "or_binary_num",
+      "or_cat_num_low",
+      "or_two_categories",
+      "pair_binary_and",
+      "pair_cat_num",
+      "pair_num_edges",
+      "rel_binary_neq",
+      "rel_cat_neq",
+      "rel_sum",
+      "three_and",
+      "three_at_least_two",
+      "three_parity"
+    ]
+  },
+  "feature_counts": [
+    6,
+    12,
+    24
+  ],
+  "feature_types": [
+    "binary",
+    "categorical",
+    "datetime",
+    "identifier",
+    "numeric",
+    "ordinal"
+  ],
+  "reference_sizes": [
+    8,
+    16,
+    32
+  ],
+  "nuisance_profiles": [
+    "independent",
+    "high_cardinality_noise",
+    "noisy_proxy",
+    "deterministic_proxy_preserved",
+    "deterministic_proxy_broken",
+    "missingness_noise"
+  ],
+  "nuisance_profile_definitions": {
+    "independent": "independent low-cardinality noise fields",
+    "high_cardinality_noise": "independent 64-level categorical distractor",
+    "noisy_proxy": "one proxy field correlated with a mechanism field, with 0.2 or 0.4 flip probability",
+    "deterministic_proxy_preserved": "a deterministic copy of a mechanism field preserved in the target",
+    "deterministic_proxy_broken": "normal rows contain a deterministic copy, but the target proxy is not updated",
+    "missingness_noise": "one independent categorical distractor with 15% missingness"
+  },
+  "main_input_excludes_before_row": true,
+  "main_task_does_not_request_modified_feature_prediction": true,
+  "main_task_output_fields": [
+    "task_label",
+    "mechanism_feature_ids",
+    "explanations",
+    "abstain"
+  ],
+  "split_unit": "rule template group; no template id crosses splits",
+  "primary_explanation_gold": "minimal subspaces absent from complete clean population support",
+  "separate_procedural_gold": "rule-sufficient and minimal subspaces; mechanism and modified fields (modified fields are hidden provenance only for the unpaired primary task)",
+  "artifacts_sha256": {
+    "inputs.jsonl": "37a52eb5de8bd9977f6e90a4e7701c4bbf295b28ff15c0b143ad7aafebdabb1d",
+    "ground_truth.jsonl": "8911f8601158c69f66e4c2ec5fd119898eb76a4da481de5cfbaceca49efd66bc",
+    "case_manifest.jsonl": "b6b81a9d916cc343208daaaace860b3e61e7f1916a822c61892a866babf4d8e9",
+    "template_catalog.json": "1f009e732981984d0947676d61443fb8bc089aac048583f5f7d06f6ea134ebe4"
+  }
+}

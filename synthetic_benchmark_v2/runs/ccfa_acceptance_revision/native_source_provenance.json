@@ -1,0 +1,22 @@
+{
+  "upstream_commit": "925c96ec0abca1e4cfd934d486f1217623184c7f",
+  "source_url": "https://github.com/AIDALab-DIMES/M2OE",
+  "native_and_archived_python_sources_identical": true,
+  "files_sha256": {
+    "M2OE/__init__.py": "10ca3524950d26d8c1b954dbbad8005e46dcf95a2a3d7d4f843a2abb009c0861",
+    "M2OE/explainers/Explainer.py": "38316b72284057bf8656fbb21baa65b9d698fe3ece80ac25700588086b81a21f",
+    "M2OE/explainers/TabularExplainer.py": "f52abc47531643a61c4219dc468f3e51d9de0c87a60cb60e1a2a9d35952a8d89",
+    "M2OE/explainers/TabularGroupExplainer.py": "aa067ae73ae187b7f76fb7c4c8ea74546abb74a935a990cb5b0ad48db211ca7e",
+    "M2OE/explainers/TabularSequentialExplainer.py": "16ddeafa7361aa78079508cfd68ed5c263e2639348fe6baa8e9a5b6dffd3a63a",
+    "M2OE/explainers/__init__.py": "79aedf3580de93e513d44db74405f69dd382045e0784c327fa445d6278607b47",
+    "M2OE/models/AETabularMM.py": "ee777808429a4e3aa694650ca802139169f7286aea163db65d9f329b4720251f",
+    "M2OE/models/AETabularMM_Pref.py": "4cef8876fe22c10fd3293ead2263b2741eb678c67b243f64d4d2830459fe04d6",
+    "M2OE/models/AETabularMM_SC.py": "695eb380d5852569ce07034c3f5d9eaf9f260853d6fbe2cca0644024d45f38e1",
+    "M2OE/models/MaskingModel.py": "1916312a43d2a39f475620496fa51b4d0ccec54cdc225c53dc951ea30fbbbc17",
+    "M2OE/models/__init__.py": "e05c8b5e6485264b64c3c781f9905843bfe8314392220647160d210a3540b6d0",
+    "doc/conf.py": "268006e77e865659647ee672f329212a3ab099d788bfdb53614cf09611397259",
+    "setup.py": "089d6cee9028f9c400c1aa0841daf84e54deb6f4d134307f4dfac85aefdafd78"
+  },
+  "compatibility_diff_sha256": "e2cec9d28d195cbdbef5549b5ac557164da0c40258b3ef76e2d7fedba68841fe",
+  "scope": "The native positive control executed the same patched upstream Python files already included in the artifact; this checks source identity, not correctness of every upstream algorithm."
+}

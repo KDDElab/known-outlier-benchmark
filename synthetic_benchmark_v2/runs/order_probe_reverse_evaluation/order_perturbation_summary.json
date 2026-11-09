@@ -1,0 +1,94 @@
+{
+  "baseline_protocol_id": "known_anomaly_subspace_benchmark_v2_order_probe_original_v1",
+  "reverse_protocol_id": "known_anomaly_subspace_benchmark_v2_reverse_feature_and_reference_order_v1",
+  "n_cases": 96,
+  "n_templates": 24,
+  "cases_per_template": 4,
+  "original_structurally_valid": 95,
+  "reversed_structurally_valid": 95,
+  "original_nonvalid_or_missing_case_ids": [
+    "V2_0236"
+  ],
+  "reversed_nonvalid_or_missing_case_ids": [
+    "V2_0236"
+  ],
+  "both_valid_with_nonempty_top1_for_stability": 95,
+  "mean_top1_prediction_set_jaccard_when_both_valid": 0.33405635300372144,
+  "metrics": {
+    "support_any_minimal_hit": {
+      "original": 0.4791666666666667,
+      "reversed": 0.14583333333333334,
+      "paired_difference_reversed_minus_original": -0.3333333333333333,
+      "template_cluster_bootstrap_95_ci": [
+        -0.4270833333333333,
+        -0.23958333333333334
+      ]
+    },
+    "support_best_jaccard": {
+      "original": 0.661892361111111,
+      "reversed": 0.3268398268398269,
+      "paired_difference_reversed_minus_original": -0.33505253427128423,
+      "template_cluster_bootstrap_95_ci": [
+        -0.400851342667749,
+        -0.2662325261544012
+      ]
+    }
+  },
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20261106,
+  "runtime": {
+    "analysis_python": "3.13.11",
+    "analysis_numpy": "2.5.2",
+    "analysis_pandas": "3.0.5",
+    "original_inference": {
+      "protocol_id": "known_anomaly_subspace_benchmark_v2_order_probe_original_v1",
+      "run_id": "qwen35_9b_20261105T164110Z_74442484",
+      "event": "completed",
+      "model_id": "Qwen3.5-9B",
+      "checkpoint_transformers_version": "4.57.0.dev0",
+      "inference_transformers_version": "5.22.1",
+      "torch_version": "2.14.1+cu126",
+      "gpu": {
+        "device_name": "NVIDIA GeForce RTX 3090",
+        "visible_devices": "2"
+      },
+      "started_at_utc": "2026-11-05T16:41:11+00:00",
+      "completed_at_utc": "2026-11-05T17:00:50+00:00",
+      "elapsed_seconds": 1107.515,
+      "annotation_records_written": 96
+    },
+    "reverse_inference": {
+      "protocol_id": "known_anomaly_subspace_benchmark_v2_reverse_feature_and_reference_order_v1",
+      "run_id": "qwen35_9b_20261105T164130Z_b27f2751",
+      "event": "completed",
+      "model_id": "Qwen3.5-9B",
+      "checkpoint_transformers_version": "4.57.0.dev0",
+      "inference_transformers_version": "5.22.1",
+      "torch_version": "2.14.1+cu126",
+      "gpu": {
+        "device_name": "NVIDIA GeForce RTX 3090",
+        "visible_devices": "1"
+      },
+      "started_at_utc": "2026-11-05T16:41:31+00:00",
+      "completed_at_utc": "2026-11-05T16:54:49+00:00",
+      "elapsed_seconds": 746.906,
+      "annotation_records_written": 56
+    }
+  },
+  "sha256": {
+    "synthetic_benchmark_v2/runs/order_probe_original_inputs.jsonl": "b40280adbda8a38d1d7c91a9c1f9b02224a5945e16d7092c121d72b54ac0610f",
+    "synthetic_benchmark_v2/runs/order_probe_reverse_inputs.jsonl": "1ef7502ac4f3a9d38eae87949a7dc53b5a49506dd5f270016a4e25416133fc8f",
+    "synthetic_benchmark_v2/runs/annotations_qwen35_9b_order_probe_original.jsonl": "6d4e4d21b7d466297980cd405e814aefa6152400fc1f5045142f96e39a77ec34",
+    "synthetic_benchmark_v2/runs/annotations_qwen35_9b_order_probe_reverse.jsonl": "c6dae8cadee0f9b8b6112ceb03d60e066c30bfc02ebb74faba4eea1349e97855",
+    "synthetic_benchmark_v2/runs/order_probe_selection_manifest.json": "f01b79c8c04b244608190e1c27bb0f053179626ea2b6c8ef1b373f077fc56ad5",
+    "synthetic_benchmark_v2/ground_truth.jsonl": "4bd36c032d8f1530248bb0e50d5d1f91d3f08e5a5e5b95403375f62e440a8932",
+    "synthetic_benchmark_v2/case_manifest.jsonl": "e0905a5ee033d845b7d97537363f214af4b5a12ab1fabfac53bdbfb13b0c6b17",
+    "synthetic_benchmark_v2/evaluate_benchmark.py": "cea01adf8301aad075628d41ece2f8045ea6beb56c05867705ec6a0fbf7f7f0a",
+    "synthetic_benchmark_v2/analyze_order_perturbation_v2.py": "b0e658e4df9513c73ec82e7d1b999c71c8b84e9d1a1d14c81a0f19ba52033933",
+    "synthetic_benchmark_v2/runs/predictions_qwen35_9b_order_probe_original.jsonl": "4c6bdcc571f2104ace72d98707da5d4e668b91f8d1f9e29771662536beb9d567",
+    "synthetic_benchmark_v2/runs/predictions_qwen35_9b_order_probe_reverse.jsonl": "3d312e8383a7b6b26afc92844493834474f3181a466e96b06fa9fc44ce02ccf3",
+    "synthetic_benchmark_v2/runs/order_probe_original_evaluation/per_case.csv": "3e05e50693681ff41610112633ed26ed09886ff61665dafcd108db3b690fe83c",
+    "synthetic_benchmark_v2/runs/order_probe_reverse_evaluation/per_case.csv": "45ab7fbe243920ad871064411907c64f48e7fcd9be832644142e6655f7fcfbc2"
+  },
+  "interpretation": "Exploratory paired sensitivity on a seed-selected four-case-per-template subset to simultaneous feature-order and reference-row-order reversal; not separate row-only and column-only effects."
+}

@@ -1,0 +1,8 @@
+{
+  "state": "completed_and_merged",
+  "time_unix": 1794067474.2264042,
+  "records": 1055,
+  "canonical_sha256": "dbf7dc83f481f8fc375b916774d7e212fe704a4cd05809e2f831d7db835070e6",
+  "retained_prefix_records": 575,
+  "new_shard_records": 480
+}

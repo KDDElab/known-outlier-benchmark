@@ -1,0 +1,9 @@
+{
+  "n_cases": 96,
+  "source_protocol": "known_anomaly_subspace_benchmark_v2_order_probe_original_v1",
+  "source_selection_manifest_sha256": "f01b79c8c04b244608190e1c27bb0f053179626ea2b6c8ef1b373f077fc56ad5",
+  "variants": {
+    "field_order_only": "Reverse schema and within-row field order; preserve reference-row order.",
+    "reference_row_order_only": "Reverse only the outer normal-reference row order; preserve schema and within-row field order."
+  }
+}

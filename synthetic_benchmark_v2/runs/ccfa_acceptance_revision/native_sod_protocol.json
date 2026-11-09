@@ -1,0 +1,29 @@
+{
+  "frozen_at_utc": "2026-11-08T11:32:06.433854+00:00",
+  "seeds": [
+    29201,
+    29202,
+    29203,
+    29204,
+    29205,
+    29206,
+    29207,
+    29208,
+    29209,
+    29210,
+    29211,
+    29212,
+    29213,
+    29214,
+    29215,
+    29216,
+    29217,
+    29218,
+    29219,
+    29220
+  ],
+  "scenario": "200 normal continuous rows x20 independent zero-mean Gaussian fields; std0.01 on first3 fields, std1 on other17. Same held-out normal target and target with +1 on first3; no categorical expansion.",
+  "parameters": "Existing shared-neighbor SOD adapter, k20/reference10/alpha0.8. No tuning.",
+  "metrics": "Selected-subspace precision/recall/exact against three low-variance shifted fields; anomalous vs matched normal SOD distance.",
+  "code_sha256": "b344986c500e3f2052674f397694faef68254bb829a7415ab610ef3add883363"
+}

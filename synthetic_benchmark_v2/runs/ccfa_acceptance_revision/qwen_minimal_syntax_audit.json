@@ -1,0 +1,873 @@
+{
+  "n": 96,
+  "generated": 95,
+  "json_valid": 1,
+  "missing_final_candidate_brace": 94,
+  "limit_reached": 0,
+  "details": [
+    {
+      "case_id": "s20261106_minimal512_V2_0236",
+      "generated": false,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": false,
+      "output_tokens": null,
+      "limit_reached": false,
+      "error": "inference failed: ValueError: rendered input has 16480 tokens, exceeding 16384; input was not truncated"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0385",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 79,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 153 (char 152)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0437",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 59,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 125 (char 124)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0072",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 59,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 125 (char 124)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0169",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 59,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 125 (char 124)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0284",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 59,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 125 (char 124)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0016",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 84,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 160 (char 159)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0467",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 64,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 132 (char 131)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0195",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 59,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 125 (char 124)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0161",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 54,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 118 (char 117)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0091",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 59,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 125 (char 124)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0245",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 59,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 125 (char 124)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0076",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 104,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 188 (char 187)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0273",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 84,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 160 (char 159)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0326",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 49,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 111 (char 110)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0306",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 59,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 125 (char 124)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0416",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 59,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 125 (char 124)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0078",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 79,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 153 (char 152)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0137",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 64,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 132 (char 131)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0317",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 64,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 132 (char 131)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0062",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 54,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 118 (char 117)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0252",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 54,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 118 (char 117)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0336",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 54,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 118 (char 117)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0369",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 59,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 125 (char 124)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0219",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 64,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 132 (char 131)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0267",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 94,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 174 (char 173)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0272",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 99,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 181 (char 180)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0223",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 54,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 118 (char 117)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0165",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 59,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 125 (char 124)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0049",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 64,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 132 (char 131)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0325",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 49,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 111 (char 110)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0074",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 94,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 174 (char 173)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0085",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 74,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 146 (char 145)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0327",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 74,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 146 (char 145)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0454",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 69,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 139 (char 138)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0351",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 74,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 146 (char 145)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0095",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 74,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 146 (char 145)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0419",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 49,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 111 (char 110)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0395",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 74,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 146 (char 145)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0398",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 49,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 111 (char 110)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0263",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 74,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 146 (char 145)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0031",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 74,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 146 (char 145)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0439",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 94,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 174 (char 173)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0399",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 74,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 146 (char 145)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0261",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 49,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 111 (char 110)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0365",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 59,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 125 (char 124)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0129",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 74,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 146 (char 145)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0478",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 44,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 104 (char 103)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0058",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 44,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 104 (char 103)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0234",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 84,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 160 (char 159)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0337",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 44,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 104 (char 103)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0116",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 74,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 146 (char 145)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0178",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 44,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 104 (char 103)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0254",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 44,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 104 (char 103)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0177",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 49,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 111 (char 110)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0344",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 49,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 111 (char 110)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0042",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 49,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 111 (char 110)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0187",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 139,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 237 (char 236)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0136",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 59,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 125 (char 124)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0229",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 74,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 146 (char 145)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0318",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 44,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 104 (char 103)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0404",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 44,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 104 (char 103)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0450",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 44,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 104 (char 103)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0092",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 59,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 125 (char 124)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0090",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 49,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 111 (char 110)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0384",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 74,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 146 (char 145)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0270",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 134,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 230 (char 229)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0464",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 54,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 118 (char 117)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0012",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 44,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 104 (char 103)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0197",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 154,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 258 (char 257)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0191",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 49,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 111 (char 110)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0287",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 74,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 146 (char 145)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0331",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 65,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 101 (char 100)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0145",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 74,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 146 (char 145)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0112",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 44,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 104 (char 103)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0065",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 135,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 199 (char 198)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0125",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 49,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 111 (char 110)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0133",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 44,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 104 (char 103)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0221",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 74,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 146 (char 145)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0152",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 59,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 125 (char 124)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0455",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 44,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 104 (char 103)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0071",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 74,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 146 (char 145)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0007",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 74,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 146 (char 145)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0143",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 59,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 125 (char 124)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0171",
+      "generated": true,
+      "json_valid": true,
+      "single_missing_final_candidate_brace": false,
+      "output_tokens": 60,
+      "limit_reached": false,
+      "error": null
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0034",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 49,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 111 (char 110)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0032",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 59,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 125 (char 124)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0150",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 54,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 118 (char 117)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0184",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 44,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 104 (char 103)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0452",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 64,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 132 (char 131)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0180",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 54,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 118 (char 117)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0380",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 94,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 174 (char 173)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0433",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 59,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 125 (char 124)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0093",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 54,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 118 (char 117)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0470",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 49,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 111 (char 110)"
+    },
+    {
+      "case_id": "s20261106_minimal512_V2_0105",
+      "generated": true,
+      "json_valid": false,
+      "single_missing_final_candidate_brace": true,
+      "output_tokens": 94,
+      "limit_reached": false,
+      "error": "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 1 column 174 (char 173)"
+    }
+  ]
+}

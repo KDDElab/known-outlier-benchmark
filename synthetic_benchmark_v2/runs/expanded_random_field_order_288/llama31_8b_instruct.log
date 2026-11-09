@@ -1,0 +1,122 @@
+[llama31_8b_instruct] loading /data/yuguangya/ALLYOUNEED/llama/Llama-3.1-8B-Instruct; cases=1152; GPUs=2
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:08<43:14,  8.95s/it]Loading weights:   1%|          | 2/291 [00:23<1:00:03, 12.47s/it]Loading weights:   1%|▏         | 4/291 [00:24<23:11,  4.85s/it]  Loading weights:   2%|▏         | 5/291 [00:25<17:31,  3.68s/it]Loading weights:   2%|▏         | 6/291 [00:28<15:43,  3.31s/it]Loading weights:   3%|▎         | 10/291 [00:28<06:08,  1.31s/it]Loading weights:   4%|▍         | 11/291 [00:30<06:29,  1.39s/it]Loading weights:   5%|▍         | 14/291 [00:31<04:13,  1.09it/s]Loading weights:   5%|▌         | 15/291 [00:33<04:55,  1.07s/it]Loading weights:   7%|▋         | 19/291 [00:33<02:36,  1.74it/s]Loading weights:   7%|▋         | 20/291 [00:34<03:07,  1.44it/s]Loading weights:   8%|▊         | 23/291 [00:35<02:25,  1.84it/s]Loading weights:   8%|▊         | 24/291 [00:37<03:24,  1.31it/s]Loading weights:   9%|▊         | 25/291 [00:38<03:07,  1.42it/s]Loading weights:   9%|▉         | 26/291 [00:38<02:39,  1.66it/s]Loading weights:  10%|▉         | 28/291 [00:39<02:35,  1.69it/s]Loading weights:  11%|█         | 31/291 [00:40<01:52,  2.32it/s]Loading weights:  11%|█         | 32/291 [00:41<02:37,  1.64it/s]Loading weights:  11%|█▏        | 33/291 [00:43<03:51,  1.11it/s]Loading weights:  13%|█▎        | 37/291 [00:45<02:38,  1.60it/s]Loading weights:  14%|█▎        | 40/291 [00:45<01:57,  2.14it/s]Loading weights:  14%|█▍        | 41/291 [00:49<04:03,  1.03it/s]Loading weights:  16%|█▌        | 46/291 [00:50<02:22,  1.72it/s]Loading weights:  16%|█▌        | 47/291 [00:51<02:35,  1.57it/s]Loading weights:  17%|█▋        | 50/291 [00:53<02:16,  1.77it/s]Loading weights:  18%|█▊        | 51/291 [00:54<02:48,  1.43it/s]Loading weights:  19%|█▉        | 55/291 [00:55<01:41,  2.32it/s]Loading weights:  19%|█▉        | 56/291 [00:55<01:41,  2.30it/s]Loading weights:  20%|█▉        | 57/291 [00:56<02:06,  1.84it/s]Loading weights:  20%|██        | 59/291 [00:57<02:12,  1.75it/s]Loading weights:  21%|██        | 60/291 [00:59<02:50,  1.35it/s]Loading weights:  21%|██▏       | 62/291 [00:59<02:11,  1.74it/s]Loading weights:  23%|██▎       | 67/291 [01:00<01:14,  3.02it/s]Loading weights:  23%|██▎       | 68/291 [01:02<02:14,  1.66it/s]Loading weights:  25%|██▌       | 73/291 [01:03<01:26,  2.53it/s]Loading weights:  25%|██▌       | 74/291 [01:04<01:32,  2.34it/s]Loading weights:  26%|██▋       | 77/291 [01:05<01:27,  2.46it/s]Loading weights:  27%|██▋       | 78/291 [01:07<02:04,  1.71it/s]Loading weights:  27%|██▋       | 79/291 [01:07<02:09,  1.63it/s]Loading weights:  28%|██▊       | 82/291 [01:09<01:48,  1.93it/s]Loading weights:  29%|██▉       | 85/291 [01:09<01:15,  2.74it/s]Loading weights:  30%|██▉       | 86/291 [01:10<01:28,  2.31it/s]Loading weights:  30%|██▉       | 87/291 [01:10<01:38,  2.08it/s]Loading weights:  31%|███▏      | 91/291 [01:13<01:48,  1.85it/s]Loading weights:  33%|███▎      | 95/291 [01:14<01:20,  2.44it/s]Loading weights:  33%|███▎      | 96/291 [01:15<01:37,  1.99it/s]Loading weights:  33%|███▎      | 97/291 [01:15<01:38,  1.96it/s]Loading weights:  34%|███▍      | 100/291 [01:16<01:08,  2.81it/s]Loading weights:  35%|███▍      | 101/291 [01:16<01:09,  2.73it/s]Loading weights:  35%|███▌      | 102/291 [01:17<01:33,  2.03it/s]Loading weights:  36%|███▌      | 104/291 [01:18<01:37,  1.92it/s]Loading weights:  36%|███▌      | 105/291 [01:20<02:15,  1.38it/s]Loading weights:  37%|███▋      | 107/291 [01:21<01:48,  1.69it/s]Loading weights:  37%|███▋      | 109/291 [01:21<01:30,  2.01it/s]Loading weights:  38%|███▊      | 111/291 [01:23<01:41,  1.78it/s]Loading weights:  39%|███▉      | 114/291 [01:24<01:34,  1.86it/s]Loading weights:  41%|████      | 118/291 [01:26<01:25,  2.02it/s]Loading weights:  42%|████▏     | 121/291 [01:27<01:10,  2.42it/s]Loading weights:  42%|████▏     | 122/291 [01:28<01:27,  1.94it/s]Loading weights:  42%|████▏     | 123/291 [01:30<01:57,  1.43it/s]Loading weights:  43%|████▎     | 125/291 [01:30<01:24,  1.96it/s]Loading weights:  44%|████▎     | 127/291 [01:31<01:20,  2.04it/s]Loading weights:  44%|████▍     | 129/291 [01:32<01:22,  1.96it/s]Loading weights:  45%|████▌     | 131/291 [01:33<01:30,  1.76it/s]Loading weights:  45%|████▌     | 132/291 [01:34<01:46,  1.49it/s]Loading weights:  46%|████▌     | 133/291 [01:35<01:42,  1.54it/s]Loading weights:  47%|████▋     | 136/291 [01:36<01:15,  2.07it/s]Loading weights:  47%|████▋     | 138/291 [01:37<01:23,  1.83it/s]Loading weights:  48%|████▊     | 140/291 [01:38<01:26,  1.74it/s]Loading weights:  48%|████▊     | 141/291 [01:40<01:43,  1.45it/s]Loading weights:  49%|████▉     | 143/291 [01:40<01:12,  2.03it/s]Loading weights:  50%|████▉     | 145/291 [01:41<01:11,  2.05it/s]Loading weights:  51%|█████     | 148/291 [01:41<00:50,  2.84it/s]Loading weights:  51%|█████     | 149/291 [01:42<01:08,  2.07it/s]Loading weights:  52%|█████▏    | 150/291 [01:45<02:13,  1.06it/s]Loading weights:  53%|█████▎    | 154/291 [01:49<02:02,  1.11it/s]Loading weights:  54%|█████▍    | 158/291 [01:50<01:20,  1.66it/s]Loading weights:  55%|█████▍    | 159/291 [01:51<01:33,  1.41it/s]Loading weights:  55%|█████▍    | 160/291 [01:52<01:33,  1.40it/s]Loading weights:  55%|█████▌    | 161/291 [01:52<01:19,  1.63it/s]Loading weights:  56%|█████▌    | 163/291 [01:53<01:08,  1.86it/s]Loading weights:  57%|█████▋    | 165/291 [01:54<01:06,  1.89it/s]Loading weights:  57%|█████▋    | 167/291 [01:57<01:40,  1.23it/s]Loading weights:  58%|█████▊    | 169/291 [01:57<01:12,  1.67it/s]Loading weights:  59%|█████▉    | 172/291 [01:57<00:52,  2.27it/s]Loading weights:  59%|█████▉    | 173/291 [01:59<01:10,  1.66it/s]Loading weights:  60%|██████    | 175/291 [02:00<01:00,  1.90it/s]Loading weights:  60%|██████    | 176/291 [02:01<01:25,  1.34it/s]Loading weights:  61%|██████    | 177/291 [02:03<01:42,  1.11it/s]Loading weights:  62%|██████▏   | 181/291 [02:03<00:54,  2.00it/s]Loading weights:  63%|██████▎   | 182/291 [02:04<01:01,  1.79it/s]Loading weights:  63%|██████▎   | 184/291 [02:06<01:03,  1.69it/s]Loading weights:  64%|██████▎   | 185/291 [02:07<01:20,  1.32it/s]Loading weights:  64%|██████▍   | 186/291 [02:09<01:36,  1.08it/s]Loading weights:  65%|██████▌   | 190/291 [02:11<01:10,  1.42it/s]Loading weights:  66%|██████▋   | 193/291 [02:11<00:51,  1.89it/s]Loading weights:  67%|██████▋   | 194/291 [02:13<01:10,  1.37it/s]Loading weights:  67%|██████▋   | 195/291 [02:15<01:17,  1.23it/s]Loading weights:  67%|██████▋   | 196/291 [02:16<01:23,  1.14it/s]Loading weights:  68%|██████▊   | 199/291 [02:17<01:02,  1.48it/s]Loading weights:  69%|██████▊   | 200/291 [02:19<01:27,  1.04it/s]Loading weights:  70%|██████▉   | 203/291 [02:22<01:18,  1.12it/s]Loading weights:  70%|███████   | 204/291 [02:26<02:01,  1.40s/it]Loading weights:  71%|███████▏  | 208/291 [02:27<01:08,  1.20it/s]Loading weights:  72%|███████▏  | 209/291 [02:28<01:12,  1.14it/s]Loading weights:  73%|███████▎  | 211/291 [02:28<00:57,  1.40it/s]Loading weights:  73%|███████▎  | 212/291 [02:30<01:11,  1.10it/s]Loading weights:  73%|███████▎  | 213/291 [02:33<01:35,  1.22s/it]Loading weights:  75%|███████▍  | 217/291 [02:34<00:59,  1.24it/s]Loading weights:  76%|███████▌  | 220/291 [02:36<00:47,  1.50it/s]Loading weights:  76%|███████▌  | 221/291 [02:38<00:59,  1.17it/s]Loading weights:  76%|███████▋  | 222/291 [02:40<01:14,  1.08s/it]Loading weights:  78%|███████▊  | 226/291 [02:42<00:50,  1.29it/s]Loading weights:  78%|███████▊  | 227/291 [02:43<00:57,  1.12it/s]Loading weights:  79%|███████▉  | 230/291 [02:46<00:53,  1.14it/s]Loading weights:  80%|███████▉  | 232/291 [02:46<00:43,  1.36it/s]Loading weights:  81%|████████  | 235/291 [02:48<00:35,  1.56it/s]Loading weights:  81%|████████  | 236/291 [02:48<00:33,  1.63it/s]Loading weights:  82%|████████▏ | 238/291 [02:49<00:28,  1.88it/s]Loading weights:  82%|████████▏ | 239/291 [02:53<00:57,  1.10s/it]Loading weights:  84%|████████▍ | 244/291 [02:53<00:26,  1.80it/s]Loading weights:  84%|████████▍ | 245/291 [02:56<00:35,  1.28it/s]Loading weights:  85%|████████▌ | 248/291 [02:57<00:27,  1.57it/s]Loading weights:  86%|████████▌ | 249/291 [02:59<00:35,  1.18it/s]Loading weights:  86%|████████▌ | 250/291 [02:59<00:32,  1.27it/s]Loading weights:  87%|████████▋ | 253/291 [03:00<00:22,  1.65it/s]Loading weights:  88%|████████▊ | 256/291 [03:01<00:16,  2.08it/s]Loading weights:  88%|████████▊ | 257/291 [03:04<00:26,  1.31it/s]Loading weights:  89%|████████▊ | 258/291 [03:06<00:34,  1.04s/it]Loading weights:  89%|████████▉ | 259/291 [03:06<00:28,  1.13it/s]Loading weights:  90%|█████████ | 262/291 [03:07<00:16,  1.78it/s]Loading weights:  90%|█████████ | 263/291 [03:08<00:17,  1.59it/s]Loading weights:  91%|█████████ | 265/291 [03:08<00:12,  2.05it/s]Loading weights:  91%|█████████▏| 266/291 [03:10<00:19,  1.26it/s]Loading weights:  92%|█████████▏| 267/291 [03:13<00:28,  1.18s/it]Loading weights:  93%|█████████▎| 271/291 [03:14<00:13,  1.47it/s]Loading weights:  94%|█████████▍| 274/291 [03:15<00:09,  1.80it/s]Loading weights:  95%|█████████▍| 275/291 [03:17<00:11,  1.34it/s]Loading weights:  95%|█████████▍| 276/291 [03:18<00:13,  1.08it/s]Loading weights:  95%|█████████▌| 277/291 [03:19<00:11,  1.18it/s]Loading weights:  96%|█████████▌| 278/291 [03:19<00:09,  1.30it/s]Loading weights:  96%|█████████▌| 280/291 [03:20<00:06,  1.78it/s]Loading weights:  97%|█████████▋| 281/291 [03:21<00:05,  1.71it/s]Loading weights:  97%|█████████▋| 283/291 [03:21<00:03,  2.06it/s]Loading weights:  98%|█████████▊| 284/291 [03:23<00:05,  1.28it/s]Loading weights:  98%|█████████▊| 285/291 [03:25<00:06,  1.05s/it]Loading weights:  99%|█████████▉| 289/291 [03:25<00:00,  2.00it/s]Loading weights: 100%|█████████▉| 290/291 [03:26<00:00,  2.21it/s]Loading weights: 100%|██████████| 291/291 [03:26<00:00,  1.41it/s]
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer TokenizersBackend. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+[llama31_8b_instruct] 1/1152 case=order1001_V2_0004 parse=ok
+[llama31_8b_instruct] 10/1152 case=order1001_V2_0024 parse=ok
+[llama31_8b_instruct] 20/1152 case=order1001_V2_0043 parse=ok
+[llama31_8b_instruct] 30/1152 case=order1001_V2_0058 parse=ok
+[llama31_8b_instruct] 40/1152 case=order1001_V2_0074 parse=failed
+[llama31_8b_instruct] 50/1152 case=order1001_V2_0090 parse=ok
+[llama31_8b_instruct] 60/1152 case=order1001_V2_0105 parse=ok
+[llama31_8b_instruct] 70/1152 case=order1001_V2_0119 parse=ok
+[llama31_8b_instruct] 80/1152 case=order1001_V2_0133 parse=ok
+[llama31_8b_instruct] 90/1152 case=order1001_V2_0148 parse=ok
+[llama31_8b_instruct] 100/1152 case=order1001_V2_0168 parse=ok
+[llama31_8b_instruct] 110/1152 case=order1001_V2_0183 parse=ok
+[llama31_8b_instruct] 120/1152 case=order1001_V2_0200 parse=failed
+[llama31_8b_instruct] 130/1152 case=order1001_V2_0219 parse=ok
+[llama31_8b_instruct] 140/1152 case=order1001_V2_0235 parse=failed
+[llama31_8b_instruct] 150/1152 case=order1001_V2_0256 parse=ok
+[llama31_8b_instruct] 160/1152 case=order1001_V2_0273 parse=ok
+[llama31_8b_instruct] 170/1152 case=order1001_V2_0289 parse=failed
+[llama31_8b_instruct] 180/1152 case=order1001_V2_0309 parse=ok
+[llama31_8b_instruct] 190/1152 case=order1001_V2_0326 parse=ok
+[llama31_8b_instruct] 200/1152 case=order1001_V2_0340 parse=ok
+[llama31_8b_instruct] 210/1152 case=order1001_V2_0354 parse=ok
+[llama31_8b_instruct] 220/1152 case=order1001_V2_0368 parse=ok
+[llama31_8b_instruct] 230/1152 case=order1001_V2_0384 parse=ok
+[llama31_8b_instruct] 240/1152 case=order1001_V2_0399 parse=ok
+[llama31_8b_instruct] 250/1152 case=order1001_V2_0416 parse=ok
+[llama31_8b_instruct] 260/1152 case=order1001_V2_0432 parse=ok
+[llama31_8b_instruct] 270/1152 case=order1001_V2_0452 parse=ok
+[llama31_8b_instruct] 280/1152 case=order1001_V2_0467 parse=ok
+[llama31_8b_instruct] 290/1152 case=order1002_V2_0007 parse=ok
+[llama31_8b_instruct] 300/1152 case=order1002_V2_0031 parse=failed
+[llama31_8b_instruct] 310/1152 case=order1002_V2_0046 parse=ok
+[llama31_8b_instruct] 320/1152 case=order1002_V2_0062 parse=ok
+[llama31_8b_instruct] 330/1152 case=order1002_V2_0078 parse=ok
+[llama31_8b_instruct] 340/1152 case=order1002_V2_0092 parse=ok
+[llama31_8b_instruct] 350/1152 case=order1002_V2_0109 parse=failed
+[llama31_8b_instruct] 360/1152 case=order1002_V2_0122 parse=ok
+[llama31_8b_instruct] 370/1152 case=order1002_V2_0137 parse=ok
+[llama31_8b_instruct] 380/1152 case=order1002_V2_0152 parse=ok
+[llama31_8b_instruct] 390/1152 case=order1002_V2_0170 parse=failed
+[llama31_8b_instruct] 400/1152 case=order1002_V2_0185 parse=ok
+[llama31_8b_instruct] 410/1152 case=order1002_V2_0204 parse=ok
+[llama31_8b_instruct] 420/1152 case=order1002_V2_0223 parse=ok
+[llama31_8b_instruct] 430/1152 case=order1002_V2_0239 parse=ok
+[llama31_8b_instruct] 440/1152 case=order1002_V2_0261 parse=ok
+[llama31_8b_instruct] 450/1152 case=order1002_V2_0278 parse=failed
+[llama31_8b_instruct] 460/1152 case=order1002_V2_0291 parse=ok
+[llama31_8b_instruct] 470/1152 case=order1002_V2_0311 parse=failed
+[llama31_8b_instruct] 480/1152 case=order1002_V2_0328 parse=ok
+[llama31_8b_instruct] 490/1152 case=order1002_V2_0342 parse=ok
+[llama31_8b_instruct] 500/1152 case=order1002_V2_0357 parse=ok
+[llama31_8b_instruct] 510/1152 case=order1002_V2_0371 parse=ok
+[llama31_8b_instruct] 520/1152 case=order1002_V2_0388 parse=ok
+[llama31_8b_instruct] 530/1152 case=order1002_V2_0404 parse=ok
+[llama31_8b_instruct] 540/1152 case=order1002_V2_0419 parse=ok
+[llama31_8b_instruct] 550/1152 case=order1002_V2_0434 parse=ok
+[llama31_8b_instruct] 560/1152 case=order1002_V2_0454 parse=failed
+[llama31_8b_instruct] 570/1152 case=order1002_V2_0470 parse=failed
+[llama31_8b_instruct] 580/1152 case=order1003_V2_0010 parse=failed
+[llama31_8b_instruct] 590/1152 case=order1003_V2_0033 parse=ok
+[llama31_8b_instruct] 600/1152 case=order1003_V2_0049 parse=failed
+[llama31_8b_instruct] 610/1152 case=order1003_V2_0065 parse=ok
+[llama31_8b_instruct] 620/1152 case=order1003_V2_0080 parse=ok
+[llama31_8b_instruct] 630/1152 case=order1003_V2_0094 parse=ok
+[llama31_8b_instruct] 640/1152 case=order1003_V2_0112 parse=ok
+[llama31_8b_instruct] 650/1152 case=order1003_V2_0125 parse=ok
+[llama31_8b_instruct] 660/1152 case=order1003_V2_0139 parse=ok
+[llama31_8b_instruct] 670/1152 case=order1003_V2_0156 parse=ok
+[llama31_8b_instruct] 680/1152 case=order1003_V2_0172 parse=ok
+[llama31_8b_instruct] 690/1152 case=order1003_V2_0187 parse=ok
+[llama31_8b_instruct] 700/1152 case=order1003_V2_0207 parse=ok
+[llama31_8b_instruct] 710/1152 case=order1003_V2_0225 parse=ok
+[llama31_8b_instruct] 720/1152 case=order1003_V2_0245 parse=ok
+[llama31_8b_instruct] 730/1152 case=order1003_V2_0263 parse=failed
+[llama31_8b_instruct] 740/1152 case=order1003_V2_0281 parse=ok
+[llama31_8b_instruct] 750/1152 case=order1003_V2_0296 parse=ok
+[llama31_8b_instruct] 760/1152 case=order1003_V2_0315 parse=ok
+[llama31_8b_instruct] 770/1152 case=order1003_V2_0331 parse=ok
+[llama31_8b_instruct] 780/1152 case=order1003_V2_0345 parse=ok
+[llama31_8b_instruct] 790/1152 case=order1003_V2_0359 parse=ok
+[llama31_8b_instruct] 800/1152 case=order1003_V2_0375 parse=ok
+[llama31_8b_instruct] 810/1152 case=order1003_V2_0390 parse=failed
+[llama31_8b_instruct] 820/1152 case=order1003_V2_0406 parse=failed
+[llama31_8b_instruct] 830/1152 case=order1003_V2_0421 parse=ok
+[llama31_8b_instruct] 840/1152 case=order1003_V2_0438 parse=ok
+[llama31_8b_instruct] 850/1152 case=order1003_V2_0456 parse=ok
+[llama31_8b_instruct] 860/1152 case=order1003_V2_0473 parse=ok
+[llama31_8b_instruct] 870/1152 case=order1004_V2_0012 parse=failed
+[llama31_8b_instruct] 880/1152 case=order1004_V2_0035 parse=failed
+[llama31_8b_instruct] 890/1152 case=order1004_V2_0051 parse=failed
+[llama31_8b_instruct] 900/1152 case=order1004_V2_0068 parse=ok
+[llama31_8b_instruct] 910/1152 case=order1004_V2_0085 parse=ok
+[llama31_8b_instruct] 920/1152 case=order1004_V2_0097 parse=ok
+[llama31_8b_instruct] 930/1152 case=order1004_V2_0115 parse=ok
+[llama31_8b_instruct] 940/1152 case=order1004_V2_0128 parse=ok
+[llama31_8b_instruct] 950/1152 case=order1004_V2_0144 parse=ok
+[llama31_8b_instruct] 960/1152 case=order1004_V2_0158 parse=ok
+[llama31_8b_instruct] 970/1152 case=order1004_V2_0177 parse=ok
+[llama31_8b_instruct] 980/1152 case=order1004_V2_0195 parse=ok
+[llama31_8b_instruct] 990/1152 case=order1004_V2_0209 parse=failed
+[llama31_8b_instruct] 1000/1152 case=order1004_V2_0229 parse=ok
+[llama31_8b_instruct] 1010/1152 case=order1004_V2_0249 parse=failed
+[llama31_8b_instruct] 1020/1152 case=order1004_V2_0267 parse=failed
+[llama31_8b_instruct] 1030/1152 case=order1004_V2_0285 parse=ok
+[llama31_8b_instruct] 1040/1152 case=order1004_V2_0301 parse=ok
+[llama31_8b_instruct] 1050/1152 case=order1004_V2_0318 parse=ok
+[llama31_8b_instruct] 1060/1152 case=order1004_V2_0336 parse=ok
+[llama31_8b_instruct] 1070/1152 case=order1004_V2_0350 parse=ok
+[llama31_8b_instruct] 1080/1152 case=order1004_V2_0363 parse=failed
+[llama31_8b_instruct] 1090/1152 case=order1004_V2_0378 parse=ok
+[llama31_8b_instruct] 1100/1152 case=order1004_V2_0395 parse=ok
+[llama31_8b_instruct] 1110/1152 case=order1004_V2_0408 parse=ok
+[llama31_8b_instruct] 1120/1152 case=order1004_V2_0424 parse=ok
+[llama31_8b_instruct] 1130/1152 case=order1004_V2_0440 parse=ok
+[llama31_8b_instruct] 1140/1152 case=order1004_V2_0459 parse=ok
+[llama31_8b_instruct] 1150/1152 case=order1004_V2_0478 parse=ok
+[llama31_8b_instruct] 1152/1152 case=order1004_V2_0480 parse=ok
+[llama31_8b_instruct] completed; new records=1152

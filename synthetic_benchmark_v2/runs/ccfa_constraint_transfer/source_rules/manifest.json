@@ -1,0 +1,29 @@
+{
+  "access_date": "2026-11-08",
+  "sources": [
+    {
+      "rule": "PEPPOL-EN16931-R120",
+      "url": "https://docs.peppol.eu/poacc/billing/3.0/rules/ubl-peppol/PEPPOL-EN16931-R120/",
+      "file": "PEPPOL-EN16931-R120.html",
+      "sha256": "829056b91960f4cd94c309fd6fdda84a4a4d2073a5de246843e086a5295e89f7"
+    },
+    {
+      "rule": "BR-CO-13",
+      "url": "https://docs.peppol.eu/poacc/billing/3.0/rules/ubl-tc434/BR-CO-13/",
+      "file": "BR-CO-13.html",
+      "sha256": "c1660138ae7fe618b8aa19b866dbe9c14eab55a78801008e08b54e177af16a24"
+    },
+    {
+      "rule": "BR-CO-15",
+      "url": "https://docs.peppol.eu/poacc/billing/3.0/rules/ubl-tc434/BR-CO-15/",
+      "file": "BR-CO-15.html",
+      "sha256": "106dd7c97ed80cbaa10de382139c258a35bddc155a3ec6fcf48a391efdd7e39a"
+    },
+    {
+      "rule": "BR-CO-16",
+      "url": "https://docs.peppol.eu/poacc/billing/3.0/rules/ubl-tc434/BR-CO-16/",
+      "file": "BR-CO-16.html",
+      "sha256": "137e6aa3f4f033258889fdbe4a1c11afe1cc1427ae725448e068dfd0a011c579"
+    }
+  ]
+}

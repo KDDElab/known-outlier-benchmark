@@ -1,0 +1,41 @@
+{
+  "purpose": "Supplemental input-compatibility diagnostic; does not change population-support gold labels.",
+  "sample_absence_definition": "The candidate target projection appears in none of the visible normal reference rows.",
+  "interpretation": "Sample absence is necessary for a population-support-absent explanation under the clean-reference assumption, but is not sufficient to establish population-level minimality.",
+  "seeds": [
+    20261106,
+    20261107,
+    20261108
+  ],
+  "test_case_runs": 864,
+  "methods": [
+    "qwen35_9b",
+    "deepseek_v2_lite_chat",
+    "llama31_8b_instruct",
+    "gower_knn_subspace",
+    "gower_lof_subspace",
+    "rlax_reference_adaptation",
+    "top_univariate",
+    "sod_subspace_adaptation",
+    "cop_error_vector_adaptation",
+    "all_features"
+  ],
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20261118,
+  "bootstrap_unit": "Shared template IDs resampled once across seed-specific test splits; seed estimates are macro-averaged per replicate.",
+  "source_sha256": {
+    "20261106": {
+      "inputs": "1ed9aa89ac1f0212e080a38f0aa4179c7612565db8c05677b2d5f01c41895a7c",
+      "ground_truth": "4bd36c032d8f1530248bb0e50d5d1f91d3f08e5a5e5b95403375f62e440a8932"
+    },
+    "20261107": {
+      "inputs": "37a52eb5de8bd9977f6e90a4e7701c4bbf295b28ff15c0b143ad7aafebdabb1d",
+      "ground_truth": "8911f8601158c69f66e4c2ec5fd119898eb76a4da481de5cfbaceca49efd66bc"
+    },
+    "20261108": {
+      "inputs": "925b58455e629f939833d5cefed0a901acb1b8020f4c239b026f6e88cdc5ff2b",
+      "ground_truth": "a6f9326db3c14961b536f7bf2a7109b5f7f6e63bed604b3fd75373e306603e23"
+    }
+  },
+  "analysis_script_sha256": "3e5aabec0f655b9aaa351f5ec58d3047037a5efb4242c6caa796288ecb5512bf"
+}

@@ -1,0 +1,6 @@
+held_out_annotator_id,model_id,model_family,n_cases,n_valid_held_out_outputs,n_cases_with_nonempty_peer_consensus,peer_reference_coverage,mean_precision_vs_peer_consensus,mean_recall_vs_peer_consensus,mean_f1_vs_peer_consensus,mean_jaccard_vs_peer_consensus,interpretation
+deepseek_v2_lite_chat,DeepSeek-V2-Lite-Chat,DeepSeek,78,44,41,0.931818,0.463415,0.45935,0.419512,0.329675,agreement with peer weak reference; not accuracy
+gemma3_4b,Gemma-3-4B-it,Gemma,78,78,70,0.897436,0.514286,0.711905,0.580476,0.45881,agreement with peer weak reference; not accuracy
+llama31_8b_instruct,Llama-3.1-8B-Instruct,Llama,78,78,74,0.948718,0.459459,0.643018,0.515315,0.392793,agreement with peer weak reference; not accuracy
+phi4_mini,Phi-4-mini-instruct,Phi,78,72,68,0.944444,0.558824,0.685049,0.587605,0.467157,agreement with peer weak reference; not accuracy
+qwen35_9b,Qwen3.5-9B,Qwen,78,77,73,0.948052,0.415525,0.573059,0.457665,0.337215,agreement with peer weak reference; not accuracy

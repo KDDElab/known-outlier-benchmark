@@ -1,0 +1,44 @@
+{
+  "persistent_id": "doi:10.7910/DVN/W4FPPN",
+  "persistent_url": "https://doi.org/10.7910/DVN/W4FPPN",
+  "title": "Digital circuits dataset for anomaly detection + ground truth explanations",
+  "publisher": "Harvard Dataverse",
+  "dataset_version": 3,
+  "version_release_time": "2021-09-05T14:49:19Z",
+  "license": {
+    "name": "CC0 1.0",
+    "uri": "http://creativecommons.org/publicdomain/zero/1.0",
+    "iconUri": "https://licensebuttons.net/p/zero/1.0/88x31.png",
+    "rightsIdentifier": "CC0-1.0",
+    "rightsIdentifierScheme": "SPDX",
+    "schemeUri": "https://spdx.org/licenses/",
+    "languageCode": "en"
+  },
+  "circuits": [
+    "c17",
+    "74182",
+    "74283",
+    "74181"
+  ],
+  "dataverse_file_records": 150,
+  "archive_file_members": 150,
+  "truth_table_files": 80,
+  "anomalous_labeled_truth_tables": 64,
+  "original_truth_tables": 16,
+  "ground_truth_csv_files": 65,
+  "expected_paired_ground_truth_csv_files": 64,
+  "paired_ground_truth_csv_files": 64,
+  "unmatched_ground_truth_csv_paths": [
+    "Ground_Truth/c17/c17_modified_z3_nand2_to_xor2_ground_truth_0noise.csv"
+  ],
+  "missing_ground_truth_csv_paths": [],
+  "metadata_uncompressed_bytes": 1300233006,
+  "download_archive_bytes": 58847433,
+  "download_archive_sha256": "e1495d11e64bbff0a98edee9423f1025c54ec45c3a8b587c911528cbe9c20010",
+  "zip_crc_test": "passed",
+  "archive_member_size_matches": "150/150",
+  "direct_dataverse_md5_matches": "66/150",
+  "md5_note": "The 84 text/tab-separated-values members are Dataverse tab exports of original CSV uploads; their archive bytes are validated by ZIP CRC and recorded size. The Dataverse MD5 field is associated with the original uploaded file and is not directly comparable to the converted .tab member. All 65 CSV and the PDF members match recorded MD5.",
+  "annotation_status": "downloaded and inventoried; not yet included in the ADBench/UCI weak-annotation run",
+  "leakage_rule": "Do not expose Ground_Truth files, label column, modified-gate identity, or generator metadata to an evaluated model. Candidate explanations are input features only; outputs may be supplied as observed fields if the benchmark protocol preregisters this choice."
+}

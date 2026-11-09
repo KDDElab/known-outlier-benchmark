@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Peppol BIS Billing 3.0 - May 2026 Release | Rules | PEPPOL-EN16931-R120</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../../../css/structure.css"/>
+    
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <a class="navbar-brand" href="../../../">Peppol BIS Billing 3.0 - May 2026 Release</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div>
+
+    <ol class="breadcrumb">
+        <li><a href="../../../">Home</a></li>
+        <li><a href="../../../rules/">Rules</a></li>
+        <li><a href="../../../rules/ubl-peppol/">Rules for Peppol BIS 3.0 Billing</a></li>
+        <li class="active">PEPPOL-EN16931-R120</li>
+    </ol>
+
+    <div class="page-header">
+        <h1>PEPPOL-EN16931-R120</h1>
+    </div>
+
+    <dl class="dl-horizontal">
+        <dt>Message</dt>
+        <dd><p class="lead">Invoice line net amount MUST equal (Invoiced quantity * (Item net price/item price base quantity) + Sum of invoice line charge amount - sum of invoice line allowance amount</p></dd>
+
+        <dt>Context</dt>
+        <dd><code>cac:InvoiceLine | cac:CreditNoteLine</code></dd>
+
+        <dt>Test</dt>
+        <dd><code>u:slack($lineExtensionAmount, ($quantity * ($priceAmount div $baseQuantity)) + $chargesTotal - $allowancesTotal, 0.02)</code></dd>
+
+        
+
+        
+            <dt>Usage</dt>
+            <dd>
+                <div style="margin-bottom: 5pt;">
+                    <a href="syntax/ubl-invoice/cac-InvoiceLine/cbc-LineExtensionAmount/">
+    
+    
+    
+    /
+    
+    <a href="../../../syntax/ubl-invoice/">ubl:Invoice</a>
+
+    /
+    
+    <a href="../../../syntax/ubl-invoice/cac-InvoiceLine/">cac:InvoiceLine</a>
+
+    /
+    
+    <a href="../../../syntax/ubl-invoice/cac-InvoiceLine/cbc-LineExtensionAmount/">cbc:LineExtensionAmount</a>
+</a>
+                </div>
+                <div style="margin-bottom: 5pt;">
+                    <a href="syntax/ubl-creditnote/cac-CreditNoteLine/cbc-LineExtensionAmount/">
+    
+    
+    
+    /
+    
+    <a href="../../../syntax/ubl-creditnote/">ubl:CreditNote</a>
+
+    /
+    
+    <a href="../../../syntax/ubl-creditnote/cac-CreditNoteLine/">cac:CreditNoteLine</a>
+
+    /
+    
+    <a href="../../../syntax/ubl-creditnote/cac-CreditNoteLine/cbc-LineExtensionAmount/">cbc:LineExtensionAmount</a>
+</a>
+                </div>
+            </dd>
+        
+
+        
+    </dl>
+
+</div>
+</div>
+
+<script src="../../../js/jquery.js"></script>
+<script src="../../../js/bootstrap.js"></script>
+
+
+</body>
+</html>

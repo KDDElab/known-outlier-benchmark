@@ -1,0 +1,25 @@
+{
+  "method": "M2OE official TabularExplainer, choice outputs only",
+  "inputs_path": "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/inputs_panel.jsonl",
+  "n_cases": 96,
+  "split": "test",
+  "seed_base": 20261106,
+  "epochs": 30,
+  "batch_size": 16,
+  "neighbors": 30,
+  "elapsed_seconds": 673.3825230207294,
+  "encoding": "legacy_reference_clip",
+  "runner_sha256": "1169cdcb21fcb54d009ce6bd350bbf382221eb8e8a00ef2cd698c9e7c08aaa6b",
+  "ranking_note": "M\u00b2OE does not define a candidate ranking score; preserves official returned order and scores Hit@4/recall only descriptively.",
+  "source_repository_revision": "925c96ec0abca1e4cfd934d486f1217623184c7f",
+  "environment": {
+    "python": "3.13.11",
+    "tensorflow": "2.20.0",
+    "numpy": "2.5.4",
+    "scikit_learn": "1.9.1",
+    "mlxtend": "0.22.0"
+  },
+  "input_sha256": "35c50861be0d180a7e3af79422b6d258952a0b343c4c31bc5ff283db253b0656",
+  "predictions_sha256": "bf2b22eb23001a954776c4b3fac085637f6a434dc57241375c3cec27f9e89ccb",
+  "official_source_compatibility_patch": "Removed four unused tensorflow.python.keras.layers imports (ReLU, BatchNormalization) and tuple-wrapped four Keras Input shapes for TF 2.20/Keras 3; API compatibility only, no algorithm code changed."
+}

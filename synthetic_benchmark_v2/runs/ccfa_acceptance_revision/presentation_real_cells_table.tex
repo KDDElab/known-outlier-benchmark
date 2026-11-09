@@ -1,0 +1,25 @@
+\begin{table*}[t]
+\centering\scriptsize
+\caption{Public corrected-field inspection, mean $\pm$ SD. Source columns use 24 case scores; aggregate columns use three source means. Schema fixes singleton JSON decoding. Recall@3 covers recorded corrections. Inspections gives the first corrected field position within four suggestions; failure receives $d+1$ (6/9/10 fields). Retrieval failures score zero. Uniform entries describe analytic expectations and their heterogeneity.}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}|l|rrr|rrrr|}
+\hline
+Method & \multicolumn{3}{c|}{FieldHit@1 by source (24 each)} & \multicolumn{4}{c|}{Equal-source mean (72)} \\
+\cline{2-8}
+ & Flights & Beers & Rayyan & FieldHit@1 & FieldHit@3 & Recall@3 & Inspections \\
+\hline
+Qwen & $0.000\!\pm\!0.000$ & $0.125\!\pm\!0.338$ & $0.250\!\pm\!0.442$ & $0.125\!\pm\!0.125$ & $0.139\!\pm\!0.146$ & $0.098\!\pm\!0.088$ & $8.000\!\pm\!0.944$ \\
+Qwen (schema) & $0.667\!\pm\!0.482$ & $0.958\!\pm\!0.204$ & $0.333\!\pm\!0.482$ & $0.653\!\pm\!0.313$ & $0.833\!\pm\!0.253$ & $0.721\!\pm\!0.335$ & $2.819\!\pm\!2.651$ \\
+DeepSeek & $0.250\!\pm\!0.442$ & $0.083\!\pm\!0.282$ & $0.125\!\pm\!0.338$ & $0.153\!\pm\!0.087$ & $0.389\!\pm\!0.168$ & $0.286\!\pm\!0.162$ & $6.236\!\pm\!2.215$ \\
+DeepSeek (schema) & $0.250\!\pm\!0.442$ & $0.083\!\pm\!0.282$ & $0.167\!\pm\!0.381$ & $0.167\!\pm\!0.083$ & $0.403\!\pm\!0.173$ & $0.291\!\pm\!0.163$ & $6.097\!\pm\!2.160$ \\
+Llama & $0.042\!\pm\!0.204$ & $0.042\!\pm\!0.204$ & $0.083\!\pm\!0.282$ & $0.056\!\pm\!0.024$ & $0.153\!\pm\!0.105$ & $0.108\!\pm\!0.061$ & $8.028\!\pm\!1.850$ \\
+Llama (schema) & $0.208\!\pm\!0.415$ & $0.750\!\pm\!0.442$ & $0.250\!\pm\!0.442$ & $0.403\!\pm\!0.301$ & $0.750\!\pm\!0.144$ & $0.578\!\pm\!0.189$ & $3.181\!\pm\!1.646$ \\
+Gower-LOF & $0.000\!\pm\!0.000$ & $1.000\!\pm\!0.000$ & $0.208\!\pm\!0.415$ & $0.403\!\pm\!0.528$ & $0.597\!\pm\!0.364$ & $0.388\!\pm\!0.383$ & $3.750\!\pm\!2.567$ \\
+Gower-kNN & $0.042\!\pm\!0.204$ & $1.000\!\pm\!0.000$ & $0.167\!\pm\!0.381$ & $0.403\!\pm\!0.521$ & $0.708\!\pm\!0.260$ & $0.465\!\pm\!0.319$ & $3.681\!\pm\!2.730$ \\
+Uniform (expected) & $0.361\!\pm\!0.182$ & $0.227\!\pm\!0.101$ & $0.208\!\pm\!0.097$ & $0.265\!\pm\!0.083$ & $0.616\!\pm\!0.125$ & $0.378\!\pm\!0.107$ & $4.253\!\pm\!1.408$ \\
+\hline
+\end{tabular*}
+\renewcommand{\arraystretch}{1.0}
+\label{tab:real-cells}
+\end{table*}

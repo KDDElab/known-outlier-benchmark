@@ -1,0 +1,32 @@
+{
+  "track": "Harvard circuit zero-noise output-specific pilot",
+  "n_queries": 86,
+  "methods": [
+    "gower_knn",
+    "gower_lof",
+    "conditional_output_surprisal",
+    "joint_output_surprisal"
+  ],
+  "eligible_features_only": true,
+  "uses_target_and_normal_reference_inputs": true,
+  "gower_methods_use_outputs": false,
+  "conditional_output_surprisal_uses_focus_output": true,
+  "joint_output_surprisal_uses_all_outputs": true,
+  "joint_output_smoothing": "add-one categorical smoothing over 2**n_output_fields binary vectors",
+  "max_subset_order": 14,
+  "subset_search": "all nonempty eligible-input subsets for each query; no labels or gold-set sizes determine the search space",
+  "top_k": 4,
+  "neighbor_count": "min(3, n_references - 1)",
+  "distance": "mean binary Gower/Hamming mismatch",
+  "numpy_version": "2.5.2",
+  "python_version": "3.13.11",
+  "information_asymmetry": "Gower methods use input rows only; focus conditional surprisal uses input values and the focus output; joint conditional surprisal and LLMs use all observed outputs.",
+  "inputs_sha256": "2ffe1bb3e9db1781ef6cf9892807d84457e38904000f4e0baa5fea202ffe6045",
+  "runner_sha256": "307ee8f4862939e94f85f33ee3d5893bf6e609b8f9c3fabc5bed4c6e8af98652",
+  "prediction_sha256": {
+    "gower_knn": "7dc4488f3fbabf9ff004ef8c3a21c99395160b88ebd1c8f6e773ff2bbb3a5bee",
+    "gower_lof": "3590dcc294f61493a18a2e1f1e642c264a4c1769ffdaf362c25f6811d6b177ce",
+    "conditional_output_surprisal": "e01a4f43c73a21e3584970a8ac45b48fa2cd5482335d453e98af5b5b4c938b64",
+    "joint_output_surprisal": "080cf626af557764cd9b146adf130838125e2007830295564c1de229ad2c2eda"
+  }
+}

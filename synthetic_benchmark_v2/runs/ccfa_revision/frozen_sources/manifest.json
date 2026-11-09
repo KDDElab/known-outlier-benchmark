@@ -1,0 +1,41 @@
+{
+  "prepare_ccfa_revision.py": {
+    "sha256": "9534108ea528fd45d85eb9c49d65d772ca3dd0fde60b5a9ac2af13706271ddcb",
+    "matches_frozen_protocol": true,
+    "recovery": "exact inverse of recorded portability-only edits; digest verified against immutable protocol"
+  },
+  "run_gower_subspace_baseline.py": {
+    "sha256": "fc6a01fd7e673b9a552fbcc0da20187924b8e60cbd0d1a728fc813d4dbc72a31",
+    "matches_run_manifest": "gower/gower_subspace_baselines_manifest.json"
+  },
+  "run_sod_cop_adaptations_v2.py": {
+    "sha256": "08098c00cb5d02199efedbe489ae005e6f76f95d3507ed5c69b6223d67ab0e56",
+    "matches_run_manifest": "sod_cop/manifest.json"
+  },
+  "run_rlax_adaptation_v2.py": {
+    "sha256": "2d70071f7fb09d53de0f76b5ccf273635da98e58d8b363c5a61b4261e2aa8aa2",
+    "matches_run_manifest": "rlax/manifest.json"
+  },
+  "run_m2oe_baseline_v2.py": {
+    "sha256": "1169cdcb21fcb54d009ce6bd350bbf382221eb8e8a00ef2cd698c9e7c08aaa6b",
+    "matches_run_manifest": "m2oe/predictions_m2oe_choice.manifest.json"
+  },
+  "run_ccfa_beam_comparison.py": {
+    "sha256": "b40fd8c5c64524aa8abf90f46b8dd61a82712ad3cbf49b68e9a3f47edb1bfa5d",
+    "matches_run_manifest": "beam_comparison/manifest.json"
+  },
+  "annotate_v2_deepseek_execution.py": {
+    "sha256": "cf83453a0344d8749e91586f7f0497dc08018c0a625138ad2e0b7688fef68a5f",
+    "matches_run_id": "deepseek_v2_lite_chat_20261107T132519Z_d34906dc"
+  },
+  "annotate_shared.py": {
+    "sha256": "2b51caad857f1d1bea8f26cdc1ecb3b5191f996f9242fc5f1dfddc9eaa134a6a",
+    "source_snapshot": "adbench_llm_reference_v1/annotate.py",
+    "note": "Current source snapshot; per-run hashes retained separately."
+  },
+  "run_ccfa_batched_inference.py": {
+    "sha256": "16c91f56e3e57789fb7f75f6ad75979493a4713c7095412835a1381e74bbe8c0",
+    "source_snapshot": "adbench_llm_reference_v1/synthetic_benchmark_v2/run_ccfa_batched_inference.py",
+    "note": "Current source snapshot; per-run hashes retained separately."
+  }
+}

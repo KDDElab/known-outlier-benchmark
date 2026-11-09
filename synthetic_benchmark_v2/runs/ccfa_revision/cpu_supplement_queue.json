@@ -1,0 +1,278 @@
+{
+  "dev_selection": "24 cases: lexicographically first case in each of 8 seed-20261106 dev templates x 3 field sizes; independent of performance",
+  "development_isolation": "No new tuning on test outputs; dev sensitivity is conditional on seed-20261106 split; templates rotate across other splits",
+  "jobs": [
+    {
+      "name": "simple_20261106",
+      "command": [
+        "/opt/conda/bin/python",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/make_baselines_v2.py",
+        "--inputs-path",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/seed_20261106/inputs.jsonl",
+        "--ground-truth-path",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/seed_20261106/ground_truth.jsonl",
+        "--outdir",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/seed_20261106/simple",
+        "--replicates",
+        "100"
+      ],
+      "expected": "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/seed_20261106/simple/manifest.json"
+    },
+    {
+      "name": "simple_20261107",
+      "command": [
+        "/opt/conda/bin/python",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/make_baselines_v2.py",
+        "--inputs-path",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/seed_20261107/inputs.jsonl",
+        "--ground-truth-path",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/seed_20261107/ground_truth.jsonl",
+        "--outdir",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/seed_20261107/simple",
+        "--replicates",
+        "100"
+      ],
+      "expected": "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/seed_20261107/simple/manifest.json"
+    },
+    {
+      "name": "simple_20261108",
+      "command": [
+        "/opt/conda/bin/python",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/make_baselines_v2.py",
+        "--inputs-path",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/seed_20261108/inputs.jsonl",
+        "--ground-truth-path",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/seed_20261108/ground_truth.jsonl",
+        "--outdir",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/seed_20261108/simple",
+        "--replicates",
+        "100"
+      ],
+      "expected": "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/seed_20261108/simple/manifest.json"
+    },
+    {
+      "name": "sod_cop_legacy_panel",
+      "command": [
+        "/opt/conda/bin/python",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/run_sod_cop_adaptations_v2.py",
+        "--inputs-path",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/inputs_panel.jsonl",
+        "--outdir",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/sod_cop_legacy_panel",
+        "--encoding",
+        "legacy_reference_clip"
+      ],
+      "expected": "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/sod_cop_legacy_panel/manifest.json"
+    },
+    {
+      "name": "m2oe_legacy_panel",
+      "command": [
+        "/tmp/m2oe_tf_env/bin/python",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/run_m2oe_baseline_v2.py",
+        "--inputs-path",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/inputs_panel.jsonl",
+        "--output-path",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/m2oe_legacy_panel/predictions_m2oe_choice.jsonl",
+        "--encoding",
+        "legacy_reference_clip"
+      ],
+      "expected": "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/m2oe_legacy_panel/predictions_m2oe_choice.manifest.json"
+    },
+    {
+      "name": "rlax_dev_256_20261106",
+      "command": [
+        "/opt/conda/bin/python",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/run_rlax_adaptation_v2.py",
+        "--inputs-path",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/inputs_dev_budget.jsonl",
+        "--outdir",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/rlax_dev_256_20261106",
+        "--split",
+        "dev",
+        "--n-steps",
+        "256",
+        "--seed",
+        "20261106"
+      ],
+      "expected": "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/rlax_dev_256_20261106/manifest.json"
+    },
+    {
+      "name": "rlax_dev_256_20261117",
+      "command": [
+        "/opt/conda/bin/python",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/run_rlax_adaptation_v2.py",
+        "--inputs-path",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/inputs_dev_budget.jsonl",
+        "--outdir",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/rlax_dev_256_20261117",
+        "--split",
+        "dev",
+        "--n-steps",
+        "256",
+        "--seed",
+        "20261117"
+      ],
+      "expected": "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/rlax_dev_256_20261117/manifest.json"
+    },
+    {
+      "name": "rlax_dev_256_20261128",
+      "command": [
+        "/opt/conda/bin/python",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/run_rlax_adaptation_v2.py",
+        "--inputs-path",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/inputs_dev_budget.jsonl",
+        "--outdir",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/rlax_dev_256_20261128",
+        "--split",
+        "dev",
+        "--n-steps",
+        "256",
+        "--seed",
+        "20261128"
+      ],
+      "expected": "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/rlax_dev_256_20261128/manifest.json"
+    },
+    {
+      "name": "rlax_dev_1024_20261106",
+      "command": [
+        "/opt/conda/bin/python",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/run_rlax_adaptation_v2.py",
+        "--inputs-path",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/inputs_dev_budget.jsonl",
+        "--outdir",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/rlax_dev_1024_20261106",
+        "--split",
+        "dev",
+        "--n-steps",
+        "1024",
+        "--seed",
+        "20261106"
+      ],
+      "expected": "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/rlax_dev_1024_20261106/manifest.json"
+    },
+    {
+      "name": "rlax_dev_1024_20261117",
+      "command": [
+        "/opt/conda/bin/python",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/run_rlax_adaptation_v2.py",
+        "--inputs-path",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/inputs_dev_budget.jsonl",
+        "--outdir",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/rlax_dev_1024_20261117",
+        "--split",
+        "dev",
+        "--n-steps",
+        "1024",
+        "--seed",
+        "20261117"
+      ],
+      "expected": "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/rlax_dev_1024_20261117/manifest.json"
+    },
+    {
+      "name": "rlax_dev_1024_20261128",
+      "command": [
+        "/opt/conda/bin/python",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/run_rlax_adaptation_v2.py",
+        "--inputs-path",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/inputs_dev_budget.jsonl",
+        "--outdir",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/rlax_dev_1024_20261128",
+        "--split",
+        "dev",
+        "--n-steps",
+        "1024",
+        "--seed",
+        "20261128"
+      ],
+      "expected": "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/rlax_dev_1024_20261128/manifest.json"
+    },
+    {
+      "name": "rlax_dev_4096_20261106",
+      "command": [
+        "/opt/conda/bin/python",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/run_rlax_adaptation_v2.py",
+        "--inputs-path",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/inputs_dev_budget.jsonl",
+        "--outdir",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/rlax_dev_4096_20261106",
+        "--split",
+        "dev",
+        "--n-steps",
+        "4096",
+        "--seed",
+        "20261106"
+      ],
+      "expected": "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/rlax_dev_4096_20261106/manifest.json"
+    },
+    {
+      "name": "rlax_dev_4096_20261117",
+      "command": [
+        "/opt/conda/bin/python",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/run_rlax_adaptation_v2.py",
+        "--inputs-path",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/inputs_dev_budget.jsonl",
+        "--outdir",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/rlax_dev_4096_20261117",
+        "--split",
+        "dev",
+        "--n-steps",
+        "4096",
+        "--seed",
+        "20261117"
+      ],
+      "expected": "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/rlax_dev_4096_20261117/manifest.json"
+    },
+    {
+      "name": "rlax_dev_4096_20261128",
+      "command": [
+        "/opt/conda/bin/python",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/run_rlax_adaptation_v2.py",
+        "--inputs-path",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/inputs_dev_budget.jsonl",
+        "--outdir",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/rlax_dev_4096_20261128",
+        "--split",
+        "dev",
+        "--n-steps",
+        "4096",
+        "--seed",
+        "20261128"
+      ],
+      "expected": "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/rlax_dev_4096_20261128/manifest.json"
+    },
+    {
+      "name": "m2oe_dev_epochs30",
+      "command": [
+        "/tmp/m2oe_tf_env/bin/python",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/run_m2oe_baseline_v2.py",
+        "--inputs-path",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/inputs_dev_budget.jsonl",
+        "--split",
+        "dev",
+        "--epochs",
+        "30",
+        "--output-path",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/m2oe_dev_epochs30/predictions_m2oe_choice.jsonl"
+      ],
+      "expected": "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/m2oe_dev_epochs30/predictions_m2oe_choice.manifest.json"
+    },
+    {
+      "name": "m2oe_dev_epochs90",
+      "command": [
+        "/tmp/m2oe_tf_env/bin/python",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/run_m2oe_baseline_v2.py",
+        "--inputs-path",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/inputs_dev_budget.jsonl",
+        "--split",
+        "dev",
+        "--epochs",
+        "90",
+        "--output-path",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/m2oe_dev_epochs90/predictions_m2oe_choice.jsonl"
+      ],
+      "expected": "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/m2oe_dev_epochs90/predictions_m2oe_choice.manifest.json"
+    }
+  ],
+  "frozen_at_unix": 1794055269.633659,
+  "source_sha256": "0d756f9613991cace125566b4aacbf7a88dc305fa43bb37bfe36df2c4decccfe"
+}

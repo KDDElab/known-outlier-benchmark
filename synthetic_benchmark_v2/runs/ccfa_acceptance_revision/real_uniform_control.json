@@ -1,0 +1,12 @@
+{
+  "recorded_at_utc": "2026-11-08T12:18:38.257047+00:00",
+  "status": "descriptive analytic control added after observing unstructured model responses; not a tuned ranking method",
+  "definition": "Uniform permutation of d fields, return first min(4,d), with first found correction position and d+1 failure penalty. Report exact expected retrieval/cost over permutations, not Monte Carlo.",
+  "formulas": {
+    "P_no_hit_k": "choose(d-m,k)/choose(d,k)",
+    "FieldHit1": "m/d",
+    "Recall3": "min(3,d)/d",
+    "first_inspection": "sum_{j=1..min(4,d)} j * P_no_hit_(j-1) * m/(d-j+1) + (d+1)*P_no_hit_min(4,d)"
+  },
+  "limits": "Source correction counts enter expected scoring only, not any actual method. Offline baseline is not a user study."
+}

@@ -1,0 +1,160 @@
+Running synthetic_benchmark_v2/analyze_ccfa_revision.py
+Complete repaired main and panel summaries written
+Running synthetic_benchmark_v2/analyze_ccfa_supplements.py
+Development budget analysis and available encoding ablations completed
+Running synthetic_benchmark_v2/analyze_ccfa_labels_external.py
+Label relationships and 288 nested-reference audits completed
+Circuit existing raw outputs verified and rescored; baselines rerun under both contexts
+Natural-table ADBench 70 / UCI 8 split completed
+Running synthetic_benchmark_v2/analyze_ccfa_secondary.py
+/root/nas/SPELT-master/adbench_llm_reference_v1/artifact_release_revised/synthetic_benchmark_v2/analyze_ccfa_secondary.py:70: DtypeWarning: Columns (0: task_label_correct, 1: task_label_scored, 2: prediction_present, 3: mechanism_metric_applicable, 4: mechanism_exact, 5: interaction_case, 6: interaction_metric_applicable, 7: interaction_all_fields_hit) have mixed types. Specify dtype option on import or set low_memory=False.
+  data=pd.read_csv(OUT/'all_scores.csv')
+/opt/conda/lib/python3.13/site-packages/numpy/lib/_nanfunctions_impl.py:1573: RuntimeWarning: All-NaN slice encountered
+  return _nanquantile_unchecked(
+/opt/conda/lib/python3.13/site-packages/numpy/lib/_nanfunctions_impl.py:1573: RuntimeWarning: All-NaN slice encountered
+  return _nanquantile_unchecked(
+Secondary comparisons, invariance and feasibility analysis completed
+Running synthetic_benchmark_v2/analyze_ccfa_legacy_comparison.py
+Historical 2,592 responses rescored; descriptive revision deltas exported.
+Running synthetic_benchmark_v2/analyze_referee_revision.py
+ feature_count  reference_count   n  T
+             6                8 101 37
+             6               16  97 33
+             6               32  90 36
+            12                8  89 35
+            12               16  97 38
+            12               32 102 37
+            24                8  98 36
+            24               16  94 37
+            24               32  96 34
+               method                  metric  legacy_predictions_current_scoring  revised_predictions_current_scoring  revised_minus_legacy
+            qwen35_9b support_top1_sufficient                            0.707602                             0.536915             -0.170687
+            qwen35_9b    support_top1_minimal                            0.414108                             0.230629             -0.183480
+            qwen35_9b support_any_minimal_hit                            0.440424                             0.249269             -0.191155
+deepseek_v2_lite_chat support_top1_sufficient                            0.385234                             0.291301             -0.093933
+deepseek_v2_lite_chat    support_top1_minimal                            0.109284                             0.023026             -0.086257
+deepseek_v2_lite_chat support_any_minimal_hit                            0.127558                             0.038743             -0.088816
+  llama31_8b_instruct support_top1_sufficient                            0.392909                             0.182749             -0.210161
+  llama31_8b_instruct    support_top1_minimal                            0.148392                             0.031798             -0.116594
+  llama31_8b_instruct support_any_minimal_hit                            0.172149                             0.048611             -0.123538
+   gower_lof_subspace support_top1_sufficient                            0.551535                             0.537646             -0.013889
+   gower_lof_subspace    support_top1_minimal                            0.527412                             0.513523             -0.013889
+   gower_lof_subspace support_any_minimal_hit                            0.642909                             0.636696             -0.006213
+   gower_knn_subspace support_top1_sufficient                            0.609284                             0.608187             -0.001096
+   gower_knn_subspace    support_top1_minimal                            0.412281                             0.411184             -0.001096
+   gower_knn_subspace support_any_minimal_hit                            0.500731                             0.498538             -0.002193
+Running synthetic_benchmark_v2/analyze_constraint_transfer.py
+               method  support_top1_sufficient  support_top1_minimal  support_any_minimal_hit  support_best_jaccard  answered  direct_edit_exact_top1  structurally_valid
+deepseek_v2_lite_chat                 0.260417              0.020833                 0.072917              0.348189  0.875000                0.000000            0.937500
+   gower_knn_subspace                 0.510417              0.406250                 0.510417              0.750893  1.000000                0.010417            1.000000
+   gower_lof_subspace                 0.010417              0.000000                 0.114583              0.389757  1.000000                0.010417            1.000000
+  llama31_8b_instruct                 0.072917              0.072917                 0.093750              0.327604  0.916667                0.020833            0.916667
+            qwen35_9b                 0.510417              0.197917                 0.197917              0.535441  0.968750                0.104167            0.979167
+{
+  "qwen35_9b": {
+    "records": 96,
+    "input_or_inference_failures": 0,
+    "parse_failures": 2,
+    "output_cap_reached": 2
+  },
+  "deepseek_v2_lite_chat": {
+    "records": 96,
+    "input_or_inference_failures": 0,
+    "parse_failures": 6,
+    "output_cap_reached": 6
+  },
+  "llama31_8b_instruct": {
+    "records": 96,
+    "input_or_inference_failures": 0,
+    "parse_failures": 8,
+    "output_cap_reached": 6
+  }
+}
+Running synthetic_benchmark_v2/verify_ccfa_completion.py
+/root/nas/SPELT-master/adbench_llm_reference_v1/artifact_release_revised/synthetic_benchmark_v2/verify_ccfa_completion.py:36: DtypeWarning: Columns (0: task_label_correct, 1: task_label_scored, 2: prediction_present, 3: mechanism_metric_applicable, 4: mechanism_exact, 5: interaction_case, 6: interaction_metric_applicable, 7: interaction_all_fields_hit) have mixed types. Specify dtype option on import or set low_memory=False.
+  data=pd.read_csv(OUT/'all_scores.csv');eps=1e-12
+{
+  "status": "completed_measurements_verified",
+  "models": [
+    {
+      "model": "qwen35_9b",
+      "conditions": 1728,
+      "reused": 673,
+      "new": 1055,
+      "input_limit_cases": 17,
+      "new_file_sha256": "dbf7dc83f481f8fc375b916774d7e212fe704a4cd05809e2f831d7db835070e6",
+      "reused_file_sha256": "454349d0ec0c711ada1462654bc61e94fce6e9c06dd66b3b0f2eb737c49ba9fe"
+    },
+    {
+      "model": "deepseek_v2_lite_chat",
+      "conditions": 1728,
+      "reused": 673,
+      "new": 1055,
+      "input_limit_cases": 19,
+      "new_file_sha256": "b492c831d47db4aeb42c1b7b11edc49ccb873410b8951c4ddd24bdeb0df06214",
+      "reused_file_sha256": "922b62fdce3d9631dfa8c3360fc2f4871df9fc1aa6db43458180ab8d4d075ace"
+    },
+    {
+      "model": "llama31_8b_instruct",
+      "conditions": 1728,
+      "reused": 673,
+      "new": 1055,
+      "input_limit_cases": 0,
+      "new_file_sha256": "35562a4c8832d928b16623144da35f637f3116b6440d0c3e88897d24b874b09c",
+      "reused_file_sha256": "3220510be75a57513a05758d43bb4a47b25db419229299181aa3b1a970c88344"
+    }
+  ],
+  "main_methods": 12,
+  "main_paired_tests": 18,
+  "table_test_estimators_agree": true,
+  "metric_ordering_invariants": true,
+  "all_infeasible_inputs_preserved": true,
+  "matched_choice_budget_verified": true,
+  "gower_order_invariant_lists": 960,
+  "checkpoint_files_rehashed": 25,
+  "independent_machine_reproduction": false,
+  "primary_snapshot_preserved": true,
+  "intervention_test_family_sizes_verified": true,
+  "prediction_absence_decomposition_verified": true,
+  "audit_sha256": "ab83861748229f18d1bdf0471c83da45683087430031ed0ff789a959e1c59ef3"
+}
+Running synthetic_benchmark_v2/analyze_acceptance_revision.py
+{"complete": true, "completed_batches": 15, "total_batches": 15, "export": "/root/nas/SPELT-master/adbench_llm_reference_v1/artifact_release_revised/synthetic_benchmark_v2/runs/ccfa_acceptance_revision/summary.json"}
+Running synthetic_benchmark_v2/write_acceptance_tables.py
+exported prior, structured, new_rules, real_cells
+Running synthetic_benchmark_v2/verify_acceptance_revision.py
+{"protocol": "known_outlier_acceptance_diagnostics_v1", "prior_cases": 96, "output": "/tmp/known_outlier_reconstruction_mjp71rs3/prepare_acceptance_revision"}
+{"inputs": 120, "targets": 48, "populations": [32, 16, 28, 24, 24, 20, 20, 32, 32, 32, 20, 32]}
+structured inputs 96 brace pattern 94
+frozen 72 real corrected-cell cases
+frozen structured real-cell inputs 72
+{
+  "all_checks_passed": true,
+  "scope": "Input reconstruction, independent finite-label enumeration, unchanged original Gower rankings and prior-payload pairing; not a second-machine replication.",
+  "checks": {
+    "reconstructed_inputs_prior3.jsonl": "f5db753ffdfafb942780865d5b33121bd796e5a8cc3dbc699d82bf99b4b1ccd7",
+    "reconstructed_inputs_new_rules.jsonl": "f128bf209846c1310dba89379e2f3cce3e474aac44d812c4f801198623f1da54",
+    "reconstructed_ground_truth_new_rules.jsonl": "1c4a0b0e9abd513b9397115bca8b11ae1a6d2a0e728dbd01ced39fa7b7697ba9",
+    "reconstructed_populations_new_rules.jsonl": "6881786116e34b6122acc4586197607a4224684f551be8aa6ea5cd34ac0602c4",
+    "reconstructed_inputs_structured.jsonl": "bc2288dbcb573fd117e8a5acace0917e30833b91de8752961bdd03412e96a070",
+    "reconstructed_inputs_real_cells.jsonl": "ce5ebf0e3c6920e6716be86abaeba164895fcf885b75443a9f52996e41fb15ea",
+    "reconstructed_ground_truth_real_cells.jsonl": "c18e3b61556215ba3a27baf458f24c6f9897767f1d590d564f81bc3306c79430",
+    "reconstructed_inputs_real_cells_structured.jsonl": "37a997eef8c9e94269cf9f0a1f8a4695b0bf8b35c5356cd35e1fc844fee6c3b6",
+    "new_rule_labels_and_reference_membership": 120,
+    "invoice_knn_original_rankings": 96,
+    "invoice_lof_original_rankings": 96,
+    "main_d6_knn_original_rankings": 288,
+    "main_d6_lof_original_rankings": 288,
+    "prior_payload_pairs": 96,
+    "public_cell_identical_prompt_pairs": 72,
+    "independent_public_csv_labels_and_reference_exclusion": 72,
+    "beers_targets_with_ounces_canonicalization": 24,
+    "native_m2oe_field_and_patch_recomputation": 20
+  },
+  "runner_sha256": "d8ac06a75777afbb1b21a5d91bb3c65987e1b184448a23682ea0702f43e1676d"
+}
+Running figures/make_manuscript_figures.py
+Running figures/make_manuscript_result_figures.py
+Running figures/make_acceptance_figures.py
+Running synthetic_benchmark_v2/finalize_acceptance_manifest.py
+{"complete": true, "records": 1368, "batches": 15}

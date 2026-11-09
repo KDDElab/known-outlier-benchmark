@@ -1,0 +1,154 @@
+{
+  "pages": 13,
+  "page_words": [
+    750,
+    843,
+    729,
+    855,
+    847,
+    752,
+    661,
+    760,
+    796,
+    842,
+    579,
+    628,
+    975
+  ],
+  "figures": 6,
+  "tables": 6,
+  "references": 32,
+  "undefined_references": false,
+  "overfull_boxes": false,
+  "fonts_and_margins": "IEEEtran conference body defaults; scriptsize result tables with local row spacing",
+  "pdf_sha256": "9a2404be0b37525c6cb1c8880cb0326586ab8a9cd9426e45c6ba83ee7b9563fd",
+  "tex_sha256": "0503a4ebe51c1dffafa95e9afc0ddae0611496d940f47330392825675cfdff0a",
+  "completed_new_model_records": 1368,
+  "human_evidence_pending": true,
+  "public_artifact_url_pending": true,
+  "scope": "Same-assistant manuscript/evidence alignment and layout inspection; not an independent reviewer assessment.",
+  "last_semantic_clarification": "Continuous values: finite-sample exact-match absence distinguished from membership in a modeled population support.",
+  "last_visual_change": {
+    "scope": "Figure 1 adopts Figure 2 styling in one column, with the eight-field real target, glucose/BMI scatter, Qwen rank matrix, four-peer vote bars and strict-majority mask; caption explains selection colors and peer-agreement limits.",
+    "changed_pages": [
+      2
+    ],
+    "unchanged_pages_pixel_identical": [
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "changed_pages_visually_reviewed": true,
+    "new_experiment_runs": false,
+    "figure_2_render_unchanged": true,
+    "model_logos_unchanged": true,
+    "model_logo_sha256": {
+      "qwen_logo_user.png": "794b43dad06ab847ba1b27a791f6ccc393e16d12ec87898d7bc509476f8cdd7f",
+      "llama_logo_official.webp": "b202ff7373a9f14706f9cd4afd55cbb4c513e0f53763675dd93552693a623bf8",
+      "deepseek_logo_official.svg": "ac13bdc805820c46bf0faf053aa5d31f72b051794abfe1dd72a682f09de2966b"
+    },
+    "case_graphics": {
+      "case_id": "C0035",
+      "source_row_index": 259,
+      "total_rows": 768,
+      "plotted_rows_nonzero_glucose_bmi": 752,
+      "reference_rows": 12,
+      "target_values": [
+        11,
+        155,
+        76,
+        28,
+        150,
+        33.3,
+        1.353,
+        51
+      ],
+      "fields": [
+        "F001",
+        "F002",
+        "F003",
+        "F004",
+        "F005",
+        "F006",
+        "F007",
+        "F008"
+      ],
+      "qwen_ranked_fields": [
+        "F007",
+        "F002",
+        "F001"
+      ],
+      "peer_annotators": [
+        "deepseek_v2_lite_chat",
+        "gemma3_4b",
+        "llama31_8b_instruct",
+        "phi4_mini"
+      ],
+      "peer_votes": [
+        4,
+        3,
+        0,
+        0,
+        4,
+        0,
+        1,
+        0
+      ],
+      "peer_strict_majority": [
+        "F001",
+        "F002",
+        "F005"
+      ],
+      "jaccard": 0.5,
+      "field_level_gold_available": false,
+      "encodings": "Filled cells: selected fields, Qwen numerals: ranks, bars: peer counts; warm marks: differing selections.",
+      "source_sha256": {
+        "data/adbench/29_Pima.npz": "215454bb263a2f040945c9ea7bd7f06f1e89a61a3143bdb6f196e3887e801a7d",
+        "manifests/cases.csv": "991e3c6fb6ccc8840441ebe739a7587d39de8854b46fdb6d5239bfeaee8b77c2",
+        "runs/annotations.jsonl": "108debd65c4bf6b73ba0abbc2cdabcca7961bc11e839173932c445d05f3155e1",
+        "reports/leave_one_model_out_by_case.csv": "af6b84b5f51cc2d8c132f05a48a45ec0551578e6ace50dc732c8033ca0f8101e"
+      }
+    }
+  },
+  "page_accounting": {
+    "total_pages": 13,
+    "main_text_pages": 12,
+    "disclosure_starts_page": 13,
+    "excluded_reference_and_disclosure_pages": 1,
+    "main_text_within_limit": true,
+    "appendix": false
+  },
+  "all_13_pages_visually_reviewed": true,
+  "venue_policy": {
+    "venue": "ICDE",
+    "year": 2027,
+    "track": "EAB",
+    "stage": "submission",
+    "source": "https://icde2027.github.io/cf-research-papers.html",
+    "checked_date": "2026-11-09",
+    "maximum_main_text_pages": 12,
+    "exclusions": [
+      "references",
+      "AI-generated content declaration"
+    ],
+    "appendix_allowed": false,
+    "reproducibility_artifacts_required": true,
+    "public_repository": "https://github.com/KDDElab/known-outlier-benchmark",
+    "publication_status": "prepared_for_push"
+  },
+  "last_manuscript_revision": {
+    "scope": "12 main-text pages and excluded references/disclosure; substantive minimality, LOF and task-selection explanation; public artifact link and reproduction instructions",
+    "figures_unchanged": true,
+    "statistical_results_unchanged": true,
+    "new_model_inference": false,
+    "scoped_alignment": "Minimality witnesses follow the finite-support definition. LOF equations checked against run_gower_subspace_baseline.py lines 96–115 and bounded Gower distances. Interpretation preserves all prior comparison and evidence limits. Public availability awaits push verification."
+  }
+}

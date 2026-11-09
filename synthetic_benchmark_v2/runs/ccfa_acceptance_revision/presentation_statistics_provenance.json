@@ -1,0 +1,20 @@
+{
+  "source_sha256": {
+    "synthetic_benchmark_v2/runs/ccfa_revision/all_scores.csv": "bfe36ad651f1b09314a11bd94fd6f839d394647ae60631a1fb4dd71f10e0026e",
+    "synthetic_benchmark_v2/runs/ccfa_revision/main_summary.csv": "e8bd9637404ad68d37e63ee16ae68f85fe63b1c60e734adf10765543d5c627d8",
+    "synthetic_benchmark_v2/runs/ccfa_acceptance_revision/prior_per_case.csv": "b0aaa861988a19aba0276e7fdca0e5c4027cf54791dbf66ca4f2047e9b191d3b",
+    "synthetic_benchmark_v2/runs/ccfa_acceptance_revision/structured_per_case.csv": "490efddc88425e38af2a0af2b374164dbf4199942f8916ae38526698737c8384",
+    "synthetic_benchmark_v2/runs/ccfa_acceptance_revision/new_rules_per_case.csv": "32a146b3f1d2e3ba0fdc765d8b25a971d3d706ac536db21619a90504fbb4d622",
+    "synthetic_benchmark_v2/runs/ccfa_acceptance_revision/real_cells_per_case.csv": "727bb401be19203840017cd01fb84c5db154cd64027aa6c0a04d86f322979db2",
+    "synthetic_benchmark_v2/runs/ccfa_constraint_transfer/scores_per_case.csv": "e6cad6f0026ee6df3bbc9ee5705d4d5de009b01fed3a8babac3a90d60c873d91"
+  },
+  "source_code_sha256": "5b9b12fbfbadb0f8e928122bb065c0b2cfe52ca5ef9f0d60c597ae6b447b219f",
+  "sd_definition": "Sample SD across the named aggregation units; coverage-weighted unbiased SD for conditional main first-set size.",
+  "sd_is_run_to_run_uncertainty": false,
+  "original_mean_estimators_preserved": true,
+  "original_bootstrap_intervals_and_tests_preserved": true,
+  "new_inference": false,
+  "main_table_numeric_cells": 96,
+  "new_rule_numeric_cells": 35,
+  "real_cell_numeric_cells": 63
+}

@@ -1,0 +1,8 @@
+{
+  "pid": 4170958,
+  "command": "python adbench_llm_reference_v1/synthetic_benchmark_v2/run_ccfa_batched_inference.py --model qwen35_9b ",
+  "completed_records_before_signal": 575,
+  "reason": "Disjoint batch-size-one replicas after another model completed; preserve all completed outputs",
+  "signal": "SIGTERM",
+  "time_unix": 1794063234.20778
+}

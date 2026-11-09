@@ -1,0 +1,161 @@
+{
+  "track": "Harvard circuit zero-noise output-specific pilot",
+  "source_archive": "/root/nas/SPELT-master/adbench_llm_reference_v1/data/circuit/harvard_dataset_10.7910_DVN_W4FPPN.zip",
+  "source_archive_sha256": "e1495d11e64bbff0a98edee9423f1025c54ec45c3a8b587c911528cbe9c20010",
+  "selection_seed": 20261105,
+  "target_rows_per_table_pair": 4,
+  "reference_rows_per_query": 16,
+  "zero_noise_pairs": 16,
+  "sampled_target_rows": 64,
+  "output_specific_queries": 86,
+  "input_contains_labels_or_gate_metadata": false,
+  "outputs_in_context_but_not_candidates": true,
+  "candidate_features": "input columns only",
+  "score_unit": "target-row/focus-output query",
+  "pairs": [
+    {
+      "pair_id": 1,
+      "circuit": "74181",
+      "modified_table": "Truth_Tables/74181/74181_modified_o8_and4_to_nand4_0noise_in_labeled.tab",
+      "ground_truth_file": "Ground_Truth/74181/74181_modified_o8_and4_to_nand4_ground_truth_0noise.csv",
+      "labeled_anomalous_rows": 16384,
+      "sampled_target_rows": 4,
+      "output_specific_queries": 4
+    },
+    {
+      "pair_id": 2,
+      "circuit": "74181",
+      "modified_table": "Truth_Tables/74181/74181_modified_z32_nor2_to_or2_0noise_in_labeled.tab",
+      "ground_truth_file": "Ground_Truth/74181/74181_modified_z32_nor2_to_or2_ground_truth_0noise.csv",
+      "labeled_anomalous_rows": 16384,
+      "sampled_target_rows": 4,
+      "output_specific_queries": 9
+    },
+    {
+      "pair_id": 3,
+      "circuit": "74181",
+      "modified_table": "Truth_Tables/74181/74181_modified_z33_nor3_to_or3_0noise_in_labeled.tab",
+      "ground_truth_file": "Ground_Truth/74181/74181_modified_z33_nor3_to_or3_ground_truth_0noise.csv",
+      "labeled_anomalous_rows": 16384,
+      "sampled_target_rows": 4,
+      "output_specific_queries": 7
+    },
+    {
+      "pair_id": 4,
+      "circuit": "74181",
+      "modified_table": "Truth_Tables/74181/74181_modified_z6_and3_to_nand3_0noise_in_labeled.tab",
+      "ground_truth_file": "Ground_Truth/74181/74181_modified_z6_and3_to_nand3_ground_truth_0noise.csv",
+      "labeled_anomalous_rows": 14336,
+      "sampled_target_rows": 4,
+      "output_specific_queries": 12
+    },
+    {
+      "pair_id": 5,
+      "circuit": "74182",
+      "modified_table": "Truth_Tables/74182/74182_modified_o5_nor2_to_or2_0noise_in_labeled.tab",
+      "ground_truth_file": "Ground_Truth/74182/74182_modified_o5_nor2_to_or2_ground_truth_0noise.csv",
+      "labeled_anomalous_rows": 512,
+      "sampled_target_rows": 4,
+      "output_specific_queries": 4
+    },
+    {
+      "pair_id": 6,
+      "circuit": "74182",
+      "modified_table": "Truth_Tables/74182/74182_modified_z2_and4_to_nand4_0noise_in_labeled.tab",
+      "ground_truth_file": "Ground_Truth/74182/74182_modified_z2_and4_to_nand4_ground_truth_0noise.csv",
+      "labeled_anomalous_rows": 344,
+      "sampled_target_rows": 4,
+      "output_specific_queries": 4
+    },
+    {
+      "pair_id": 7,
+      "circuit": "74182",
+      "modified_table": "Truth_Tables/74182/74182_modified_z7_and4_to_nand4_0noise_in_labeled.tab",
+      "ground_truth_file": "Ground_Truth/74182/74182_modified_z7_and4_to_nand4_ground_truth_0noise.csv",
+      "labeled_anomalous_rows": 344,
+      "sampled_target_rows": 4,
+      "output_specific_queries": 4
+    },
+    {
+      "pair_id": 8,
+      "circuit": "74182",
+      "modified_table": "Truth_Tables/74182/74182_modified_z8_and3_to_nand3_0noise_in_labeled.tab",
+      "ground_truth_file": "Ground_Truth/74182/74182_modified_z8_and3_to_nand3_ground_truth_0noise.csv",
+      "labeled_anomalous_rows": 360,
+      "sampled_target_rows": 4,
+      "output_specific_queries": 4
+    },
+    {
+      "pair_id": 9,
+      "circuit": "74283",
+      "modified_table": "Truth_Tables/74283/74283_modified_o1_nor5_to_or5_0noise_in_labeled.tab",
+      "ground_truth_file": "Ground_Truth/74283/74283_modified_o1_nor5_to_or5_ground_truth_0noise.csv",
+      "labeled_anomalous_rows": 512,
+      "sampled_target_rows": 4,
+      "output_specific_queries": 4
+    },
+    {
+      "pair_id": 10,
+      "circuit": "74283",
+      "modified_table": "Truth_Tables/74283/74283_modified_z17_and5_to_nand5_0noise_in_labeled.tab",
+      "ground_truth_file": "Ground_Truth/74283/74283_modified_z17_and5_to_nand5_ground_truth_0noise.csv",
+      "labeled_anomalous_rows": 272,
+      "sampled_target_rows": 4,
+      "output_specific_queries": 4
+    },
+    {
+      "pair_id": 11,
+      "circuit": "74283",
+      "modified_table": "Truth_Tables/74283/74283_modified_z18_and2_to_nand2_0noise_in_labeled.tab",
+      "ground_truth_file": "Ground_Truth/74283/74283_modified_z18_and2_to_nand2_ground_truth_0noise.csv",
+      "labeled_anomalous_rows": 512,
+      "sampled_target_rows": 4,
+      "output_specific_queries": 4
+    },
+    {
+      "pair_id": 12,
+      "circuit": "74283",
+      "modified_table": "Truth_Tables/74283/74283_modified_z2_nand2_to_and2_0noise_in_labeled.tab",
+      "ground_truth_file": "Ground_Truth/74283/74283_modified_z2_nand2_to_and2_ground_truth_0noise.csv",
+      "labeled_anomalous_rows": 384,
+      "sampled_target_rows": 4,
+      "output_specific_queries": 6
+    },
+    {
+      "pair_id": 13,
+      "circuit": "c17",
+      "modified_table": "Truth_Tables/c17/c17_modified_o2_nand2_to_and2_0noise_in_labeled.tab",
+      "ground_truth_file": "Ground_Truth/c17/c17_modified_o2_nand2_to_and2_ground_truth_0noise.csv",
+      "labeled_anomalous_rows": 32,
+      "sampled_target_rows": 4,
+      "output_specific_queries": 4
+    },
+    {
+      "pair_id": 14,
+      "circuit": "c17",
+      "modified_table": "Truth_Tables/c17/c17_modified_z2_nand2_to_and2_0noise_in_labeled.tab",
+      "ground_truth_file": "Ground_Truth/c17/c17_modified_z2_nand2_to_and2_ground_truth_0noise.csv",
+      "labeled_anomalous_rows": 24,
+      "sampled_target_rows": 4,
+      "output_specific_queries": 5
+    },
+    {
+      "pair_id": 15,
+      "circuit": "c17",
+      "modified_table": "Truth_Tables/c17/c17_modified_z3_nand2_to_and2_0noise_in_labeled.tab",
+      "ground_truth_file": "Ground_Truth/c17/c17_modified_z3_nand2_to_and2_ground_truth_0noise.csv",
+      "labeled_anomalous_rows": 30,
+      "sampled_target_rows": 4,
+      "output_specific_queries": 7
+    },
+    {
+      "pair_id": 16,
+      "circuit": "c17",
+      "modified_table": "Truth_Tables/c17/c17_modified_z4_nand2_to_and2_0noise_in_labeled.tab",
+      "ground_truth_file": "Ground_Truth/c17/c17_modified_z4_nand2_to_and2_ground_truth_0noise.csv",
+      "labeled_anomalous_rows": 20,
+      "sampled_target_rows": 4,
+      "output_specific_queries": 4
+    }
+  ]
+}

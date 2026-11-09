@@ -1,0 +1,36 @@
+{
+  "n_cases": 288,
+  "split": "test",
+  "n_top1_predictions": 238,
+  "top1_confidence_coverage": 0.8263888888888888,
+  "n_top1_with_confidence": 238,
+  "top1_exact_support_minimal_hit_rate_all_top1": 0.17647058823529413,
+  "mean_top1_confidence": 0.8504201680672271,
+  "brier_score_conditional_on_top1_with_reported_confidence": 0.6044537815126052,
+  "ece_10_equal_width_bins_conditional_on_top1_with_reported_confidence": 0.6739495798319328,
+  "template_cluster_bootstrap_95_ci": {
+    "top1_exact_hit_rate_all_top1": [
+      0.09955726092089728,
+      0.2633800816157859
+    ],
+    "brier": [
+      0.5474846590403277,
+      0.6584153662971215
+    ],
+    "ece_10_bins": [
+      0.5920801630434782,
+      0.7502181852409638
+    ]
+  },
+  "evidence_audit": {
+    "n_top1_evidence_strings": 238,
+    "explicit_category_identifier_or_date_tokens": 87,
+    "literal_token_grounding_rate": 1.0,
+    "unmatched_explicit_value_tokens": 0,
+    "unknown_feature_id_mentions": 0,
+    "unmatched_examples_for_human_review": [],
+    "scope": "literal visible-input matching only; not a semantic-faithfulness claim"
+  },
+  "seed": 20261106,
+  "bootstrap_replicates": 2000
+}

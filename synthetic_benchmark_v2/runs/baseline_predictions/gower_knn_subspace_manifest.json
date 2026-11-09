@@ -1,0 +1,16 @@
+{
+  "names": [
+    "exhaustive_gower_knn_subspace",
+    "exhaustive_gower_lof_subspace"
+  ],
+  "split": "test",
+  "n_cases": 288,
+  "max_subspace_order": 3,
+  "top_k": 4,
+  "k_neighbors": "min(3, reference_count - 1)",
+  "distance": "mean per-feature Gower distance; numeric/ordinal/datetime range-scaled by references; categorical/binary/identifier mismatch; missingness mismatch",
+  "score": "(target kNN distance - median leave-one-out normal kNN distance) / (1.4826 * MAD), with standard-deviation and epsilon fallbacks",
+  "lof_score": "LOF novelty score computed from Gower kNN and reference-only local reachability densities",
+  "uses_test_labels": false,
+  "uses_only_prompt_fields": true
+}

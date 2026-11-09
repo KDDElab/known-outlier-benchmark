@@ -1,0 +1,8 @@
+{
+  "frozen_at_utc": "2026-11-08T11:34:46.898164+00:00",
+  "status": "Exploratory follow-up after invoice sweep revealed very large LOF scores; not a confirmatory new method.",
+  "inputs": "Same96 invoice queries,255 candidates,k3; no changed target/reference/schema.",
+  "decomposition": "Trace reference reachability means, density floor, target density and target-neighbor densities for first candidate and best-ranked gold candidate. Gold only selects explanation examples, never ranks predictions.",
+  "calibration": "Midrank percentile of target LOF among in-sample reference LOF scores in each subspace. Canonical size/ID ties unchanged. Reference LOF uses the same reference graph; not an independent calibration sample.",
+  "code_sha256": "e45870e44da83ae1171fd1f437a6351915127e8c4fab7a4bebde87b2bebca8a1"
+}

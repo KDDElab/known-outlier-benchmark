@@ -1,0 +1,18 @@
+{
+  "model": "qwen35_9b",
+  "prefix_records": 575,
+  "prefix_sha256": "135db6b8b5845aabf5c41c957e0b8ebdd0ba01fcb66e99cd274c1922d8ca4dc2",
+  "shard_sizes": [
+    240,
+    240
+  ],
+  "gpu_groups": [
+    "0",
+    "2"
+  ],
+  "partition": "Descending prompt_tokens + 10*output_cap, greedily balanced; independent of prediction outcomes",
+  "batch_size": 1,
+  "fidelity": "Six exact raw-text reproductions before official predictions on each replica",
+  "scheduler_sha256": "c0a7cb0f74a046fb0626baedea21c810ac43207d1c256806906b87e68678d8e0",
+  "runner_sha256": "29748bd393c3448e036d1b8e3c3fa053bc58712074a2f212e11b6cb0d2cec54e"
+}

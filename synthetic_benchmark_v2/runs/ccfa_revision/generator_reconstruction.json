@@ -1,0 +1,23 @@
+{
+  "source_sha256": "cb519c7083c887464e67e09194d1f8aca60526f6198532beb2c0a16439f692b9",
+  "seeds": [
+    {
+      "generator_seed": 20261106,
+      "display_seed": 1001,
+      "n_exact_prompt_matches": 480,
+      "labels_equal": true
+    },
+    {
+      "generator_seed": 20261107,
+      "display_seed": 2001,
+      "n_exact_prompt_matches": 480,
+      "labels_equal": true
+    },
+    {
+      "generator_seed": 20261108,
+      "display_seed": 3001,
+      "n_exact_prompt_matches": 480,
+      "labels_equal": true
+    }
+  ]
+}

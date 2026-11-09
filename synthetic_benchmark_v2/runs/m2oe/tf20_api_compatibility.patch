@@ -1,0 +1,98 @@
+diff --git a/M2OE/explainers/TabularExplainer.py b/M2OE/explainers/TabularExplainer.py
+index cc740a3..c6d5f17 100644
+--- a/M2OE/explainers/TabularExplainer.py
++++ b/M2OE/explainers/TabularExplainer.py
+@@ -137,16 +137,16 @@ class TabularExplainer(Explainer):
+               - If `binary=False`, entries are in `[0, 1]`.
+ 
+         """
++        sample = [tf.convert_to_tensor(value, dtype=tf.float32) for value in sample]
+         mask = self.exp_nn.MASK(sample)
+         choose = self.exp_nn.CHOOSE(sample)
+ 
+         if binary:
+-            choose = np.where(choose.numpy() > threshold, 1, 0)
++            choose = tf.where(choose > threshold, 1.0, 0.0)
+         else:
+-            choose = choose.numpy()
+-            choose = np.where(choose > threshold, choose, 0)
++            choose = tf.where(choose > threshold, choose, 0.0)
+         patches = self.exp_nn.MASKAPPLY([sample[0], mask, choose])
+-        choose = np.where(choose > threshold, 1, 0)
++        choose = np.where(choose.numpy() > threshold, 1, 0)
+ 
+         return patches.numpy(), choose
+     
+@@ -237,4 +237,4 @@ class TabularExplainer(Explainer):
+         # Explanation generation
+         exps = self._explanation_generation(out, rs, choose)
+         
+-        return exps
+\ No newline at end of file
++        return exps
+diff --git a/M2OE/explainers/TabularGroupExplainer.py b/M2OE/explainers/TabularGroupExplainer.py
+index 6e145c0..a5edf7f 100644
+--- a/M2OE/explainers/TabularGroupExplainer.py
++++ b/M2OE/explainers/TabularGroupExplainer.py
+@@ -1,6 +1,5 @@
+ from math import ceil
+ 
+-from tensorflow.python.keras.layers import ReLU, BatchNormalization
+ 
+ from .Explainer import Explainer
+ from .Explainer import _get_medoid
+diff --git a/M2OE/models/AETabularMM.py b/M2OE/models/AETabularMM.py
+index 7d8f769..fe2c6c6 100644
+--- a/M2OE/models/AETabularMM.py
++++ b/M2OE/models/AETabularMM.py
+@@ -1,6 +1,5 @@
+ from math import ceil
+ 
+-from tensorflow.python.keras.layers import ReLU, BatchNormalization
+ 
+ from .MaskingModel import MaskingModel
+ import tensorflow as tf
+@@ -96,8 +95,8 @@ class TabularMM(MaskingModel):
+         """
+         num_unit = in_shape * 4 
+ 
+-        input_o = Input(in_shape)
+-        input_i = Input(in_shape)
++        input_o = Input((in_shape,))
++        input_i = Input((in_shape,))
+         inputs = Concatenate()([input_o, input_i])
+ 
+         x1 = Dense(num_unit, activation='relu')(inputs)
+@@ -123,8 +122,8 @@ class TabularMM(MaskingModel):
+             Input dimensionality `D`.
+             
+         """
+-        inputs = [Input(in_shape, name='input_img'), Input(in_shape, name='input_mask'),
+-                  Input(in_shape, name='input_choice')] 
++        inputs = [Input((in_shape,), name='input_img'), Input((in_shape,), name='input_mask'),
++                  Input((in_shape,), name='input_choice')] 
+         mid_output = Multiply()([inputs[1], inputs[2]])
+ 
+         outputs = Add()([inputs[0], mid_output])
+diff --git a/M2OE/models/AETabularMM_Pref.py b/M2OE/models/AETabularMM_Pref.py
+index 2e84f02..dc15d36 100644
+--- a/M2OE/models/AETabularMM_Pref.py
++++ b/M2OE/models/AETabularMM_Pref.py
+@@ -1,6 +1,5 @@
+ from math import ceil
+ 
+-from tensorflow.python.keras.layers import ReLU, BatchNormalization
+ 
+ from .AETabularMM_SC import TabularMM_SC
+ import tensorflow as tf
+diff --git a/M2OE/models/AETabularMM_SC.py b/M2OE/models/AETabularMM_SC.py
+index ef4ba1a..ffbb1c7 100644
+--- a/M2OE/models/AETabularMM_SC.py
++++ b/M2OE/models/AETabularMM_SC.py
+@@ -1,6 +1,5 @@
+ from math import ceil
+ 
+-from tensorflow.python.keras.layers import ReLU, BatchNormalization
+ 
+ from .MaskingModel import MaskingModel
+ import tensorflow as tf

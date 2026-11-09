@@ -1,0 +1,449 @@
+% Submission draft. The author's affiliation and corresponding-author contact remain to be supplied.
+% EAB title and layout follow the supplied manuscript examples.
+\documentclass[conference]{IEEEtran}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,booktabs,multirow,xcolor,url,tabularx,array}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\title{[Experiment, Analysis, and Benchmark] Evaluating Language Models and Subspace Methods for Explaining Known Tabular Outliers}
+\author{\IEEEauthorblockN{Lili Guan}\\
+\IEEEauthorblockA{ORCID: \url{https://orcid.org/0000-0002-4464-9384}}}
+\begin{document}
+\bstctlcite{IEEEcompactreferences}
+\maketitle
+
+\begin{abstract}
+Explaining a flagged table row requires identifying a small set of fields for inspection. Large language models (LLMs) offer a common interface for heterogeneous tables, but row labels and injected edits do not specify every valid minimal explanation. We present a known-outlier benchmark that enumerates complete minimal-support labels and separates them from rule, mechanism, and edit targets. We compare three local LLMs with subspace methods on 864 test cases, then diagnose candidate priors, reference ambiguity, output validity, and workload transfer. A paired 96-target experiment explicitly gives LLMs the same three-field bound used by Gower search: Qwen reaches exact recovery of 0.292 and Gower-LOF 0.646. Twelve new rule compositions, repeated reference draws, and complete small populations test the frozen methods beyond the original templates. On 96 synthetic invoice queries, Gower-kNN reaches 0.406 while Gower-LOF reaches 0.000. Candidate-score traces and matched interventions implicate duplicate-sensitive density ratios and cross-subspace ranking in this reversal. JSON-schema decoding raises Qwen's exact recovery from 0.000 to 0.375 under the same minimal prompt; native controls assess adapter behavior. Finally, 72 public dirty/clean records supply auditable corrected-field targets, distinct from minimal explanations and peer agreement. The findings support conditional method comparisons and show why candidate priors, evidence coverage, and label semantics must be explicit in anomaly-explanation evaluation.
+\end{abstract}
+
+\begin{IEEEkeywords}
+data quality, anomaly explanation, feature subspaces, large language models, benchmark evaluation
+\end{IEEEkeywords}
+
+
+\section{Introduction}
+Investigating a data-quality alert requires deciding which fields to inspect. A value can be ordinary alone and unusual in combination with other attributes. An explanation should identify a small set of fields whose joint values distinguish the target from normal data. In \emph{known-outlier explanation}, a method receives a flagged row, its schema, and finite normal references, then ranks candidate feature subsets. Neither the upstream detector score nor the target's clean counterpart is supplied~\cite{li2024xadsurvey}.
+
+\textbf{Motivation for LLMs.} One prompt can describe field types, serialize mixed values, and request candidate subsets without fitting a model to each schema. An LLM can propose conditional or arithmetic relationships from normal examples without an explicit rule for each anomaly. This flexibility motivates evaluating it as an analyst's candidate generator. Recent work examines LLMs for table anomaly analysis, imperfect-table reasoning, and cleaning workflows~\cite{choudhury2025tabard,gu2025radar,li2025autodcworkflow}.
+
+Whether this interface produces reliable localization is the central question. Distance and density methods provide alternatives from the same observed values and references. LLMs must infer relations, select concise sets, and return usable answers. Opaque or neutral field names in the main benchmark limit this comparison to supplied values and references; domain-name benefits are untested there.
+
+\textbf{A concrete localization problem.} Consider the invoice in Figure~\ref{fig:framework}: net $25$, tax $1$, and gross $14$. The clean finite domain permits net values $\{10,15,20,25\}$, tax values $0$--$4$, and gross $=\text{net}+\text{tax}$. Both \{net, gross\} and \{tax, gross\} are minimal exclusions. Gross alone is supported by the clean triple $(10,4,14)$. Thus, naming the edited gross field, returning every invoice field, and recovering a minimal explanation are three different outcomes. A method sees the target and normal examples, while the evaluator retains all valid minimal alternatives.
+
+Real row labels rarely resolve this distinction. For Pima row 259 (Figure~\ref{fig:intro-sample-gap})~\cite{han2022adbench}, Qwen ranks F007, F002, and F001, while its four peers' majority selects \{F001, F002, F005\}. Jaccard agreement is 0.500, but neither selection is certified by the row label. We therefore separate population-minimal explanations, public cell corrections, and peer agreement in the evaluation.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/figure_intro_real_dataset.pdf}
+\caption{Pima query. (a) Target values and 752 rows with nonzero glucose/BMI; rings mark 12 references. (b) Filled cells show selections and Qwen ranks; bars count four peers. Majority requires $\geq$3 votes. Warm cells mark disagreement. Models see opaque IDs; peer agreement is not accuracy.}
+\label{fig:intro-sample-gap}
+\end{figure}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/figure2_overall_framework.pdf}
+\caption{Framework and invoice \texttt{constraint\_tax\_total\_000}. Top: shared queries with track-specific labels. Bottom: three of eight fields, two of 32 references, and recorded outputs. Masks encode F001--F008; filled support cells denote presence. (a) Gross 14 is absent from $R$, but present in $P$. (b) Net--gross pair $(25,14)$ is excluded. (c) LOF rank 2 is minimal. The lattice uses 20 clean triples. Names aid reading; purple arrows carry evaluator-only labels.}
+\label{fig:framework}
+\end{figure*}
+
+\textbf{Evaluation challenges.} Existing benchmarks supply row labels, perturbations, or selected explanatory fields~\cite{han2022adbench,choudhury2025tabard,gu2025radar,myrtakis2021comparative}. Minimal localization requires three further distinctions: several subsets can explain one target; absence from a sample need not imply population absence; and selecting every field can satisfy exclusion while giving little localization. Invalid or missing answers must also remain in the denominator.
+
+\textbf{Our benchmark.} We enumerate finite clean populations to obtain every inclusion-minimal support exclusion, recording rule, mechanism, and edit targets separately. Forty templates generate mixed-type tables with disjoint splits within each seed. We pair methods under a shared size prior, vary evidence on fixed targets, and examine the invoice ranking reversal. Twelve new compositions validate frozen methods. Public corrections, circuits, and peer agreement supply distinct external targets.
+
+We organize the evaluation around five questions: \textbf{RQ1}, how do finite references change the apparent minimal explanations? \textbf{RQ2}, how accurately do LLMs and subspace methods recover population-minimal sets? \textbf{RQ3}, how much do output validity and abstention affect usable answers? \textbf{RQ4}, how sensitive are predictions to field order and reference quantity? \textbf{RQ5}, which findings carry over to other workloads and label types?
+
+\textbf{Contributions and findings.} Our study provides:
+\begin{itemize}
+  \item \textbf{Explicit evaluation targets (Sections II--III).} Complete minimal-set labels separate descriptive support from hidden rule and edit information. Sample-minimal families differ from population labels in 862 of 864 test cases.
+  \item \textbf{Controlled method comparisons (Sections IV--V).} Paired size priors, complete small populations, repeated samples, and fixed structured decoding isolate specific comparison conditions. Twelve new compositions evaluate frozen methods beyond the original 38 test templates.
+  \item \textbf{Workload-dependent findings (Sections V--VI).} Invoice score traces explain contributors to a Gower-LOF ranking reversal. Public correction pairs add auditable field-inspection targets; native adapter controls, circuits, and peer agreement retain their distinct evaluation meanings.
+\end{itemize}
+
+
+
+
+\section{Task and Label Semantics}
+Given schema $T$ with fields $F=\{f_1,\ldots,f_d\}$, known outlier $x^*$, and normal references $R$, a method returns ranked subsets
+\[
+\widehat{\mathcal E}(x^*,R,T)=(S_1,\ldots,S_K),\qquad S_k\subseteq F,
+\]
+optionally with evidence, confidence, or abstention.
+
+Let $P_X$ denote the clean population and $\pi_S$ the projection onto $S$. A subset is \emph{support-sufficient} when $\pi_S(x^*)$ has no match in $P_X$. It is \emph{rule-sufficient} when every full domain assignment matching $x^*$ on $S$ satisfies the anomaly predicate. A sufficient subset is inclusion-minimal when no proper subset is sufficient. We retain the complete minimal families $\mathcal S_{\mathrm{support}}^{\min}$ and $\mathcal S_{\mathrm{rule}}^{\min}$; inclusion-minimal sets can differ in size. Separate provenance labels record directly edited fields $M_{\mathrm{direct}}$, all value changes $M_{\mathrm{value}}$ including propagation, and fields capable of affecting the anomaly rule $M_{\mathrm{rule}}$.
+
+\textbf{When support and rule labels coincide.} Let $\mathcal D$ be the disclosed Cartesian domain and $A$ the anomaly predicate. If $P_X=\{x\in\mathcal D:\neg A(x)\}$, absence of a clean completion is equivalent to every completion satisfying $A$. The two minimal families then coincide. Additional clean-population constraints can break this equivalence: a deterministic proxy can exclude clean completions without appearing in $A$. Section V gives an observed example.
+
+For $A(f_1)\lor B(f_2)$ with both terms true, either singleton can be minimal, whereas their union is redundant. Our primary label is population-minimal descriptive support; Table~\ref{tab:semantics} separates it from unobserved edit provenance.
+
+A population-absent projection is absent from $R$, but sampling can create additional absences. We keep population labels fixed and audit sample-minimal alternatives separately.
+
+\textbf{Checking an explanation.} For a clean row $r$, let $D(r)=\{f_j:r_j\ne x^*_j\}$ contain the fields on which it differs from the target. Then support sufficiency is equivalent to
+\[
+  S\cap D(r)\ne\varnothing\quad\text{for every }r\in P_X.
+\]
+Each normal row must therefore be distinguished by at least one selected field. To check minimality, remove each field $f$ from $S$ in turn. A minimal set has a normal witness matching $x^*$ on $S\setminus\{f\}$ for every such removal. These witnesses show why every selected field is necessary. Checking single-field removals suffices because absence is preserved when more fields are added. Replacing $P_X$ by $R$ gives the sample criterion, which has fewer rows to distinguish and can admit additional explanations.
+
+For the invoice in Figure~\ref{fig:framework}, gross 14 occurs with net 10 and tax 4, and net 25 occurs with other gross values. Both singletons thus have normal witnesses, whereas the pair $(25,14)$ has none. A large candidate containing this pair is sufficient but need not be minimal. This distinction also explains why a feature ranking alone cannot certify an explanation: its prefix length and the joint support of the selected values determine whether the candidate meets the task definition.
+
+\begin{table}[t]
+\centering\footnotesize
+\caption{Label semantics and identification from an unpaired query with finite normal references and no hidden generator.}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\columnwidth}{|l|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}p{1.65cm}|}
+\hline
+Label & Meaning and inferability & Use \\
+\hline
+Support & Minimal absent projections; finite references need not identify them & Primary \\
+Rule & Minimal subsets forcing anomaly; hidden predicate required & Alternative \\
+Mechanism & Fields affecting anomaly; hidden rule required & Relevance \\
+Direct edit & Recorded edits; hidden intervention history required & Provenance \\
+Value change & Changes including propagation; paired clean row required & Provenance \\
+\hline
+\end{tabularx}
+\renewcommand{\arraystretch}{1.0}
+\label{tab:semantics}
+\end{table}
+
+
+
+\section{Benchmark Construction}
+
+\subsection{Procedural benchmark}
+Each of three seeds generates 40 templates with 12 cases each, split into eight training, eight development, and 24 test templates. The combined 864 test cases cover 38 templates. Splits are disjoint within a seed, but development/test unions overlap across seeds. This version was reevaluated after inspecting earlier results. Bootstrap and multiplicity correction describe repeated evidence on 38 templates; they cannot remove that selection bias. The new-composition validation freezes methods before generating different rules.
+
+Eight families cover numeric marginals, categorical rarity, pairs, conditional groups, multiple valid sets, edit/mechanism differences, relational comparisons, and higher-order logic. Each seed tests three of five templates per family; pooled family summaries involve four or five templates and remain descriptive.
+
+Cases contain 6/12/24 fields and 8/16/32 references, with finite numeric, ordinal, binary, categorical, date-like, and identifier-like domains. Marginal factors are balanced; joint cells are not. Six nuisance profiles cover independent noise, a 64-category distractor, noisy and deterministic proxies, a pre-edit frozen proxy, and independent categorical missingness. Dates and identifiers are distractors. Complete profiles and joint case/template counts are in the artifact.
+
+The generator enumerates clean/anomalous role assignments, samples a hidden clean row and target, binds roles to random IDs, and adds distractors and references. Sufficient subsets are enumerated with deterministic proxy constraints, then nonminimal sets are removed. Independent distractors are marginalized. Changing individual roles checks rule relevance; direct and propagated changes are recorded separately. Rule IDs, logic, clean rows, and labels are withheld.
+
+An independent seeded permutation then determines schema, target, and reference column order, preserving values, labels, and field-name bindings. Identity permutations are allowed. Half the cases expose random neutral names. Separate display seeds prevent the role-binding prefix from becoming a fixed cue.
+
+
+
+\subsection{Standards-derived invoice constraints}
+An independent finite-domain workload instantiates four Peppol billing relations~\cite{peppol2026billing}: line net equals quantity times unit price plus charges minus allowances (R120, base quantity one); document net equals summed line nets plus charges minus allowances (BR-CO-13); gross equals net plus tax (BR-CO-15); and amount due equals gross minus paid plus rounding (BR-CO-16). These are synthetic integer amounts, not collected invoices or a full conformance test.
+
+We enumerate each normal relation, yielding 144, 144, 20, and 48 structured rows. One structured field of a clean row is changed to another value in its own clean marginal. We retain 24 distinct invalid targets per relation before model inference. Each of the 96 queries has eight opaque fields, independent categorical distractors, 32 sampled clean references, and independent display order. Complete population enumeration gives all minimal support alternatives, marginalizing independent distractors. The anomaly predicate is the complement of the normal relation, so support and rule labels coincide. Direct edits remain separate. Prompts and decoding are inherited without tuning on this workload; both Gower methods search all 255 nonempty subsets. Scores average targets within each relation and the four relations equally; they are descriptive for these fixed relations.
+
+
+\subsection{New compositions and complete evidence}
+We freeze the three checkpoints, original full prompt, parser, and decoding protocol before generating 48 targets from 12 new Boolean compositions. Each composition has four to six essential coordinates in six visible binary fields; the original generator's rules have at most three. The new rules include parity, disjoint conjunctions, conditional parity, a multiplexer, count balance, and majority-output consistency. Their complete 64-row truth tables are distinct. Four invalid targets per rule are selected with a fixed seed before inference. Both Gower methods search all 63 nonempty subsets, with the same four-answer budget as the models.
+
+Each target receives an independent 32-row sample with replacement. The first two targets per rule, fixed before inference, additionally receive two independent samples and the complete normal population. This gives 24 matched targets under three draws and complete evidence, or 120 inputs per method in total. Complete evidence contains every normal six-field tuple, including all nuisance combinations, and the prompt explicitly identifies it as complete. This condition changes evidence coverage and the completeness declaration together. The rules are newly designed after review, rather than externally curated blind tasks; model and protocol choices are not adjusted to their results.
+
+We average targets within each new rule and the 12 rules equally. Prespecified strata use minimum truth size (1--2, 3, 4--6), number of minimal alternatives (1, 2--4, 5 or more), and extra sample minima (0, 1--3, 4 or more). Repeated samples hold target, schema, display order, and population labels fixed. They measure sampling sensitivity without treating repeated observations as independent tasks.
+
+\subsection{External digital-circuit track}
+Sixteen zero-noise table pairs from four gate-negation circuits provide 64 targets and 86 focus-output queries. Each query has 16 clean references excluding its input vector and exposes all outputs or only the focus output. Gold input sets contain 1--12 fields; 47 exceed three. Controls search every nonempty input subset. These single-gate fault labels differ from support minimality; the artifact verifies changed-output alignment over 66,834 anomalous rows.
+
+\subsection{Real-table weak-reference track}
+Five model families annotate 70 queries from nine ADBench datasets and eight from UCI Lymphography~\cite{zwitter1988lymphography}. UCI treats source class 1 as normal (two rows); ADBench retains its binary labels (142 normal rows). Label meanings and pools remain separate. This track measures leave-one-model-out peer agreement and eligibility, without feature accuracy.
+
+\subsection{Public corrected-cell inspection}
+We add 72 queries from the public Flights, Beers, and Rayyan dirty/clean pairs released with Raha and Baran~\cite{mahdavi2019raha,mahdavi2020baran}. The source study describes Beers as manually cleaned and Rayyan as cleaned by its owners; Flights is supplied with reference corrections. We retain the original string values, align documented header-name variants, and remove record-index fields. Each dataset contributes 24 targets, with eight having one, two, or at least three corrected fields. Selection is fixed before prediction.
+
+Every method receives the same 32 corrected reference rows, excluding all held-out target rows. Flights also excludes other records of the query's flight. The target's corrected counterpart remains hidden. A fixed prompt requests up to four ranked singleton inspection targets; the two Gower controls rank singleton novelty with $k=3$. Raw strings use categorical mismatch distance. A paired fixed singleton JSON schema is added for all three models after observing malformed unconstrained outputs, retaining the same prompts and every query. These controls assess that representation and contract, without claiming comparison to specialized data-cleaning systems.
+
+Each corrected field is an acceptable inspection target, allowing several correct first choices. FieldHit@$k$ records whether the first $k$ suggestions contain one; recall measures the fraction of recorded corrections covered. These labels include canonical formatting changes. They are auditable field-level evidence, but do not enumerate alternative minimal support explanations. No new human disagreement or observed time-saving measurement is inferred from them.
+
+\section{Evaluation Protocol}
+Tables~\ref{tab:semantics} and~\ref{tab:protocol} distinguish label meanings, query units, and output budgets.
+
+\subsection{Models and output handling}
+Local Qwen3.5-9B, DeepSeek-V2-Lite-Chat, and Llama-3.1-8B-Instruct receive identical prompts and rows, with greedy decoding, a 16,384-token input cap without truncation, and 512 output tokens. Replicas use one/two/one 24-GB GPUs and a shared runtime. The direct prompt requests non-thinking mode where supported. Its full contract requires subsets, task label, mechanism fields, evidence, confidence, and abstention; malformed auxiliary fields can invalidate a usable subset. A separate fixed JSON-schema condition uses the minimal prompt.
+
+The parser normalizes tokenizer whitespace markers and extracts the first JSON object; raw text is preserved. Validity requires requested types and legal IDs. Strict compliance further requires JSON-only text, exact keys, and evidence of at most 20 words. An answer is valid, non-abstaining, with a nonempty candidate. Abstention suppresses attached candidates; failures and abstentions remain all-query misses. Faithfulness and confidence calibration are not assessed.
+
+\subsection{Real-table annotation protocol}
+The peer pilot supplies schema, normal summaries, target, and 12 references (two for UCI), withholding row IDs and labels. It requests three ranked IDs with directions and uncertainty. Eligibility requires a valid held-out answer, at least two valid non-abstaining peers, and a nonempty strict peer majority. Jaccard uses eligible queries; coverage retains all queries. ADBench and UCI remain separate.
+
+\subsection{Baselines}
+All primary methods receive the same target, schema, and reference rows. The all-feature control selects every field; a position control selects the first three displayed fields without reading values. The random control draws up to four subsets using the training split's label-size distribution and averages 100 seeds. The univariate control returns four singletons ranked by empirical rarity or, for numeric/ordinal fields, the larger of rarity and median deviation divided by $1.4826\,\mathrm{MAD}$.
+
+\textbf{Mixed-type rankers.} Main Gower-kNN and Gower-LOF enumerate 1--3-field subsets and return four candidates. Gower distance averages reference-range-scaled differences for numeric, ordinal, and date-like fields and mismatch distances for categorical, binary, and identifier fields; missing-value mismatches score one~\cite{gower1971similarity}. The kNN score compares the target's three-neighbor mean distance with reference leave-one-out distances. LOF uses reference-only density estimates~\cite{breunig2000lof}. Canonical IDs break ties independently of display. The original three-field bound uses generator knowledge and covers every main minimal label; the original model prompt did not state it. Accordingly, the original table is a comparison with an unequal size prior. Our paired experiment states the same one-to-three-field bound to each model. Invoice, new-composition, and circuit searches enumerate every nonempty subset.
+
+\textbf{Encoded adapters.} SOD, COP, and M\textsuperscript{2}OE share legal-domain scaling for numeric/ordinal/date values, one-hot encoding for other types, and a missing coordinate, without reference-range clipping. SOD selects a shared-neighbor subspace; COP maps local-PCA errors to fields~\cite{kriegel2009sod,kriegel2012cop}. M\textsuperscript{2}OE's official code receives TensorFlow/Keras compatibility edits~\cite{angiulli2024m2oe}. We evaluate its unordered field choices through Hit@3 and best Jaccard@3, separately from its repair mask. These are task adapters with disclosed settings.
+
+\textbf{Search adapters.} The paper-guided RLAX adaptation uses target/reference distances in a PPO margin reward, without hidden labels~\cite{amirato2026rlax}. Its main budget is 256 interactions and four PPO epochs; development diagnostics use 1,024/4,096 interactions and three seeds. The Beam-Gower-LOF supplement retains 100 best pairs, expands to triples, and returns four candidates~\cite{myrtakis2021comparative}. A size-matched exhaustive pair/triple control distinguishes pruning from singleton exclusion. These are disclosed adaptations, with no convergence or speed advantage claimed.
+
+\textbf{Circuit controls.} Searches return four candidates from all subsets of up to 14 inputs. Binary Gower uses input rows; conditional focus-output surprisal uses the named output, and joint-output surprisal all visible outputs. No control sees fault labels. Scores average queries within targets, targets within pairs, pairs within circuits, then four circuits equally. Intervals resample pairs within fixed circuits, without unseen-circuit generalization.
+
+
+\subsection{Paired prior and configuration diagnostics}
+\textbf{Shared prior.} The 96-target panel receives one additional instruction: every minimal explanation has at most three fields, and the output may contain at most four distinct subsets of one to three legal fields. Targets, reference rows, field order, auxiliary tasks, checkpoints, and decoding remain fixed. We apply the same candidate-size rule to both original and informed responses: an oversized or empty candidate invalidates the shared-contract answer; fields are never truncated. Repeated sets collapse in their original order. Original unrestricted scores remain separately available. For all 288 six-field main cases, we also compare Gower search over 41 subsets of size at most three with all 63 subsets, keeping scores and tie rules fixed.
+
+\textbf{Structured output.} On the same 96 targets, the original minimal prompt is paired with a fixed JSON-schema token filter~\cite{lmfe2026}. The schema permits zero to four candidate objects, legal IDs, and an abstention flag. It supplies no three-field prior. The original parser still rejects repeated IDs. Chat templates, supplied examples, EOS settings, and tokenizer-defined input feasibility are audited. Both conditions retain the 512-token budget, strict parsing, and all-query denominator; no malformed archived response receives repair credit.
+
+\textbf{Native controls.} SOD is checked on 20 continuous Gaussian problems with three low-variance shifted coordinates. M\textsuperscript{2}OE is checked on its repository's continuous example: a $100\times20$ uniform matrix with zero-based coordinates 4--6 of one row set to 2, across ten fixed seeds and 30/300 epochs. We retain selected fields and counterfactual patches, measuring relative reduction of distance outside the unit cube. These controls test native behavior separately from mixed-type population-minimal labels.
+
+\subsection{Research questions and metrics}
+Support Exact@1 and Hit@4 are primary; sufficiency, Jaccard, rule-label scores, size, and validity are secondary. For predictions $\widehat{\mathcal E}=(S_1,\ldots,S_4)$ and minimal alternatives $\mathcal G$:
+\begin{align}
+\mathrm{Suff@1} &= \mathbb{I}\!\left[\exists G\in\mathcal G: G\subseteq S_1\right], \\
+\mathrm{Exact@1} &= \mathbb{I}[S_1\in\mathcal G], \\
+\mathrm{Hit@4} &= \mathbb{I}\!\left[\exists k\leq4: S_k\in\mathcal G\right], \\
+\mathrm{Jaccard@4} &= \max_{k\leq4,\,G\in\mathcal G}
+\frac{|S_k\cap G|}{|S_k\cup G|}.
+\end{align}
+
+Invalid, missing, empty, and abstained outputs score zero; duplicate candidates add no credit. Support and rule scores remain separate. First-candidate size $|S_1|/d$ and conditional quality use answered queries; size is undefined otherwise.
+
+\textbf{Aggregation.} Cases are averaged within seed--template cells, available seeds within each template, and finally the 38 templates equally. Tables and paired effects share this estimator; differences use unrounded scores. Result tables report mean $\pm$ sample SD across the stated units. SD describes their heterogeneity, not repeated-run variability or mean uncertainty; conditional size uses answer-coverage weights. We retain per-seed summaries, report 95\% percentile intervals from 2,000 template-bootstrap replicates, and use 20,000 paired sign flips. Sign-flip tests assume null symmetry of template differences; methods are not randomly assigned. The primary Holm family contains 18 tests: three models against two Gower rankers, plus three model pairs, on two endpoints. Separate families cover M\textsuperscript{2}OE choices (six), encoder changes (six), Beam (two), circuit context (nine), and the new prior intervention (three models by two endpoints). Diagnostic sweeps, new-rule strata, and public correction scores are descriptive.
+
+\textbf{Matched interventions.} The panel contains all 96 first-split test cases with 32 references, four per template, selected independently of outcomes. Role-aware front/back displays move all generator roles, including incidental decoys, and compare with independent random order. Four independent random permutations separately assess top-one stability; Gower supplies an order-invariant control. Nested 8/16/32-reference sets preserve targets, columns, gold, and shared-row order. Output conditions compare the full contract at 512/1,024 tokens and a minimal subset-and-abstention contract at 512; the latter also removes auxiliary tasks and is not a pure formatting change.
+
+Position, reference, and output effects have separate Holm families of 12, 18, and 12 endpoint tests. Input-limit failures remain misses; tokenizer-defined common-feasible subsets supplement reference comparisons without outcome-based selection. Reuse requires exact prompt hashes and matching decoding settings. This is exploratory version reevaluation after inspecting earlier results, not preregistered confirmation. Confidence calibration is omitted because the prompt does not define the event represented by confidence.
+
+\subsection{Finite-reference support audit}
+We enumerate one- to three-field subsets. A set is sample-absent if no reference matches the target projection, and sample-minimal if no proper subset is absent. Comparison with population labels audits evidence availability; it does not assume a method uses literal absence. Intervals and field/reference-count groups are retained in the artifact.
+
+\section{Results}
+\subsection{RQ1: Finite-reference support ambiguity}
+\textbf{Finding 1: finite samples create extra explanations.} Sample-minimal and population-minimal families match in only 2 of 864 cases; the other 862 contain extra minima. Template-weighted means are 60.935 extra subsets and 0.863 population-minimum retention. These are evidence diagnostics; field/reference groups and intervals remain in the artifact.
+
+The audit searches 41/298/2,324 subsets at 6/12/24 fields. Adding references can remove a false-absence singleton and expose larger minima. A true minimum stays absent; once every proper subset has a match, nested additions preserve its minimality. Retention is nondecreasing, but extra-minimum counts need not decrease. This is not a recovery impossibility bound.
+
+Qwen's first set is sample-absent with frequency 0.873 but population-minimal with frequency 0.231; the gap comprises 0.336 population-insufficient and 0.306 sufficient nonminimal selections. Gower-LOF's corresponding fractions are 0.734/0.514/0.197/0.024. These observable categories do not identify error causes.
+
+Qwen's Exact@1 falls from 0.382 to 0.117 across 1--10 versus $>50$ extra-minimum bins; LOF changes from 0.552 to 0.484. Field count and construction confound this gradient. The new-rule diagnostic adds complete evidence and paired draws.
+
+
+
+\subsection{RQ2: Localization against an expanded baseline suite}
+\input{synthetic_benchmark_v2/runs/ccfa_acceptance_revision/presentation_main_table.tex}
+
+\begin{table}[t]
+\centering\scriptsize
+\caption{Evaluation units and evidence. Localization returns four subsets; corrected-field inspection uses singletons; peer annotations return three IDs. Candidate ranges are specified in the text.}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\columnwidth}{|l|>{\raggedright\arraybackslash}X|c|l|}
+\hline
+Track & Targets / groups & Refs. & Label \\
+\hline
+Original & 864 / 38 templates & 8--32 & Minimal support \\
+New rules & 48 / 12 compositions & 16--32 & Minimal support \\
+Invoices & 96 / four relations & 32 & Minimal support \\
+Corrections & 72 / three sources & 32 & Corrected fields \\
+Circuits & 64 / four circuits & 16 & Fault input sets \\
+Peer pilot & 70+8 / source groups & 12/2 & Agreement \\
+\hline
+\end{tabularx}
+\renewcommand{\arraystretch}{1.0}
+\label{tab:protocol}
+\end{table}
+
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/figure_acceptance_primary_intervals.pdf}
+\caption{Original main protocol, 864 cases. (a) Macro means with 95\% template-bootstrap intervals, conditional on the frozen display. (b) The 38 template means: median, interquartile box, 1.5-IQR whiskers, and outliers. Gower retains its original three-field prior; Figure~\ref{fig:prior} aligns that prior.}
+\label{fig:pareto}
+\end{figure}
+
+\textbf{Finding 2: sufficiency and minimal recovery differ.} Qwen and Gower-LOF have Suff@1 of 0.537 and 0.538, without an equivalence claim; Exact@1 is 0.231 versus 0.514 (Table~\ref{tab:main}). Qwen selects a larger first-set fraction, 0.228 versus 0.131. SOD's high sufficiency similarly coexists with zero exact recovery and a 0.577 field fraction.
+
+All 12 model--Gower endpoint contrasts favor the ranker after Holm correction ($p<0.003$). Qwen exceeds the other models ($p<0.001$); DeepSeek--Llama differences are unsupported ($p=0.415$). LOF exceeds Qwen in every seed. These tests retain the original priors; they do not isolate the size-prior effect. Per-seed details and historical rescoring are archived.
+
+At a common three-choice cap, Qwen/DeepSeek/Llama achieve Hit@3 of 0.249/0.033/0.048 and Jaccard@3 of 0.456/0.186/0.213; M\textsuperscript{2}OE gives 0.000 and 0.204. All Hit contrasts and Qwen's Jaccard contrast pass six-test Holm correction ($p<0.001$); the other Jaccard contrasts do not. Thus, the unordered comparison does not support a uniform model advantage.
+
+\textbf{Encoding and budgets.} Domain encoding preserves all 12,096 main-query feature instances. On 96 targets, its M\textsuperscript{2}OE/SOD/COP Jaccard gains over reference clipping do not pass six-test Holm correction. M\textsuperscript{2}OE answers every main case, and 30/90 development epochs both give zero Hit. RLAX's development Exact@1 is 0.500/0.528/0.528 at 256/1,024/4,096 interactions. These logged checks do not establish convergence.
+
+\textbf{Native behavior and adaptation limits.} On the continuous M\textsuperscript{2}OE example, the 30-epoch setting exactly recovers the three injected fields in 7 of 10 seeds. Mean choice precision/recall is 1.000/0.900, and the best returned patch reduces distance outside the unit cube by 0.827 on average. At 300 epochs, exact recovery is 0 of 10, recall is 0.600, and reduction is 0.375. More optimization is therefore not a demonstrated remedy for this loss configuration. These results establish useful native field selection and repair, while leaving the mixed-type minimal-support mismatch unresolved.
+
+SOD includes all three shifted low-variance fields in all 20 native cases, with mean precision 0.389; every anomaly score exceeds its matched normal score. Extra fields leave exact recovery at zero, consistent with low-variance subspace selection rather than inclusion-minimal recovery. Native and mixed-type endpoints differ; zero benchmark recovery alone does not establish implementation failure.
+
+\subsection{RQ2: Shared size prior and unrestricted small search}
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/figure_acceptance_shared_prior.pdf}
+\caption{Shared size prior: 96 targets, 24-template means. Both LLM conditions enforce one-to-three-field outputs without truncation; hatched bars also state the prior in the prompt. Gower searches the same candidate space.}
+\label{fig:prior}
+\end{figure}
+
+Under the shared candidate rule (Figure~\ref{fig:prior}), Qwen/DeepSeek/Llama change Exact@1 from 0.313/0.031/0.042 to 0.292/0.010/0.073; Gower-LOF/kNN score 0.646/0.594. Informed-prompt Hit@4 is 0.333/0.031/0.094. The size instruction does not reverse this ordering. None of six paired changes passes Holm correction (all adjusted $p=1.000$); the 24-template panel has limited power and establishes no equivalence.
+
+The extra instruction changes tokenizer feasibility: Qwen/DeepSeek retain 94/92 commonly feasible targets. Their informed-prompt Exact@1 is 0.306/0.014 under equal-template weighting; Llama retains all 96. Thus, input-length rejections do not account for the ordering. Size violations remain errors rather than being repaired into compliant predictions.
+
+Across 288 six-field cases, expanding from 41 bounded subsets to all 63 changes LOF Exact@1 from 0.550 to 0.544, with Hit@4 fixed at 0.677; kNN changes from 0.467/0.640 to 0.442/0.589. The prior helps kNN more here. Exhaustive-search effects at 12 or 24 fields remain unmeasured.
+
+\subsection{Label relationships and a concrete alternative}
+Support and rule families coincide in 653 of 864 cases. All 211 differences occur with deterministic proxies. On those cases, changing only the scoring label reduces Qwen's Exact@1 from 0.275 to 0.137, and Gower-LOF's from 0.487 to 0.191.
+
+In \texttt{s20261106\_main\_V2\_0012}, the rule requires $F011>0.5$ and $F007\in\{c4,c5\}$, while $F008$ copies $F007$ in normal data and at the target. The rule minimum is \{F007,F011\}; support also accepts \{F008,F011\}. The target has $F011=1$ and $F007=F008=c4$. An edit to F007 propagates to F008. Rule-only scoring rejects the proxy alternative, whereas scoring all changed fields rewards a redundant set. This recorded case motivates separate support, rule, and provenance targets.
+
+\subsection{RQ3: Output validity and contract burden}
+We separate input/inference failures, JSON/schema errors, abstentions, empty outputs, and answers. Output-cap events alone do not establish that extra tokens improve localization.
+
+Main schema validity is 0.993/0.831/0.821 for Qwen/DeepSeek/Llama; coverage is 0.992/0.731/0.821, and strict compliance 0.990/0.364/0.671. Structural validity, compliance, and delivery differ particularly for DeepSeek.
+
+Making every unanswered main query correct, with existing answers fixed, bounds Exact@1 by $\mathrm{Exact@1}+1-\mathrm{Answered}$: 0.239/0.292/0.211, below LOF's 0.514. A new contract can also change existing answers, so this bound does not cover that intervention.
+
+Doubling the output cap raises DeepSeek/Llama coverage from 0.604/0.854 to 0.635/0.938; Llama's Hit@4 changes from 0.063 to 0.073. No endpoint contrast passes Holm correction. Extra capacity alone does not explain the gap.
+
+Under the minimal contract, Qwen has one input-limit failure, 94 JSON decoding failures, and one answer. None of its 95 generations reaches 512 tokens. Each decoding failure lacks a candidate-object closing brace before the array closes, despite a valid supplied example. This post-hoc syntax diagnostic gives no repair credit. Llama's coverage falls to 0.333; 63 responses use arrays instead of candidate objects. DeepSeek's coverage falls to 0.365, with Exact@1 of 0.000 and Hit@4 of 0.010. Only Qwen's minimal-contract losses pass the 12-test Holm correction ($p<0.002$). These effects concern this specific reduced prompt.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/figure_acceptance_structured_output.pdf}
+\caption{Fixed JSON decoding on the same 96 queries: equal-template means for validity and recovery. Both conditions use the minimal prompt, 512-token budget, and no three-field prior. Invalid, missing, and abstained answers remain recovery failures.}
+\label{fig:structured}
+\end{figure}
+
+\textbf{Fixed structured decoding.} All 95 input-feasible Qwen responses become parseable; one query exceeds the cap. Exact@1 rises from 0.000 to 0.375 and Hit@4 from 0.010 to 0.531 (Figure~\ref{fig:structured}). Llama reaches validity 1.000 and Exact@1 0.031. DeepSeek reaches validity 0.875 and coverage 0.375 with unchanged recovery; nine responses remain incomplete at the output cap. The audit covers rendered prompts, the valid example, chat templates, and EOS settings. Qwen's gain identifies a contract interaction, not a general JSON inability. Scores use new generations without repairing old outputs.
+
+
+\subsection{RQ4: Position and reference evidence}
+Across four random displays of 96 targets, Qwen/DeepSeek/Llama have conditional top-one agreement of 0.256/0.067/0.169, with pair availability 0.969/0.490/0.830. Gower lists are unchanged. Qwen's Exact@1 spans 0.240--0.313, complementing intervals conditional on one display.
+
+Role-aware front/random/back displays deliberately expose hidden role placement. Qwen's Hit@4 is 0.521/0.333/0.229; front-to-random reduces Exact@1 by 0.198 and Hit@4 by 0.188 (both Holm $p=0.027$). Other contrasts do not pass correction.
+
+With nested 8/16/32 references, population-minimal retention is 0.703/0.849/0.911. Qwen's Hit@4 rises 0.177/0.250/0.333 and LOF's 0.469/0.615/0.719. Only Qwen's 32-versus-eight gains pass Holm correction (Exact/Hit $p=0.008/0.013$); commonly feasible inputs preserve this pattern. These use one draw per target; the next diagnostic repeats draws.
+
+\subsection{New-rule validation and evidence diagnosis}
+\input{synthetic_benchmark_v2/runs/ccfa_acceptance_revision/presentation_new_rules_table.tex}
+
+On 48 targets from the 12 new compositions, Gower-kNN and Gower-LOF achieve Exact@1 of 0.625 and 0.542; Qwen reaches 0.167 and the other two models 0.042 (Table~\ref{tab:new-rules}). All 360 model queries fit the input cap. This new-rule evidence supports the ordering on a different, small Boolean workload, without retroactively making the original templates independent of development.
+
+\textbf{Repeated and complete evidence.} On the same 24 targets, kNN exceeds LOF and both exceed each model in all three draws. First sets agree across draws on only 2 Qwen targets, versus 10 for kNN and 12 for Llama; Llama's low recovery shows that stability is not accuracy. Extra minima average 1.542/1.208/1.000 and vanish with complete evidence. Complete tuples raise kNN/LOF Exact@1 from 0.583/0.542 to 0.625/0.583, but lower Qwen from 0.208 to 0.125: evidence availability does not ensure its effective use.
+
+A descriptive error partition separates unavailable answers, nonminimal population exclusions, sample-only exclusions, and subsets already supported by visible rows. With complete evidence, Qwen returns 11 nonminimal exclusions and 10 supported subsets in 24 cases; Llama returns 23 supported subsets. DeepSeek has four abstentions and 20 supported subsets. These errors persist when support ambiguity is removed. For finite draw 0, kNN instead has five sample-only exclusions and LOF two. Such errors are consistent with missing evidence, but do not prove that any individual error was unavoidable. The diagnostic separates observable failure types without identifying a universal reasoning-error rate.
+
+\textbf{Difficulty strata.} Minimum truth sizes 1--2/3/4--6 contain 20/12/16 targets. Qwen's Exact@1 is 0.250/0.167/0.063, compared with kNN's 0.850/0.917/0.125; neither DeepSeek nor Llama recovers a first set in the largest bin. For 0/1--3/4-or-more extra sample minima (17/24/7 targets), Qwen scores 0.229/0.121/0.083, kNN 0.792/0.591/0.500, and LOF 0.729/0.424/0.500. For 1/2--4/5-or-more valid alternatives (25/20/3 targets), Qwen scores 0.114/0.271/0.500 and kNN 0.682/0.708/0.000. The final bin is particularly small. All strata use equal weight among represented rules; they mix rule families and establish no causal effect of ambiguity. Full five-method strata and error partitions are in the artifact.
+
+\subsection{RQ5: Standards-derived constraint transfer}
+
+On four invoice relations (Figure~\ref{fig:invoice-mechanism}(a)--(c)), kNN reaches Exact@1/Hit@4 of 0.406/0.510, versus Qwen's 0.198/0.198 and LOF's 0.000/0.115: LOF loses its main-benchmark lead. All 288 model queries fit; schema failures and abstentions remain misses. These comparisons are descriptive.
+
+Every target has one recorded edit, but support minima have at least two fields; eight queries include a four-field alternative, and five have only four-field minima. Exact support and edit matches are therefore disjoint. Qwen's edit-match rate is 0.104, versus 0.010 for each Gower method. This shows the consequence of choosing a label, without establishing edit identification. The following matched score diagnostics separate candidate range, distractors, and neighborhood behavior within these same invoices.
+
+\textbf{Why does LOF lose its lead?} We rerun all 96 targets with candidate caps 1/2/3/4/8 and neighbor counts 1/3/5/10. With $k=3$, restricting search from eight fields to three leaves LOF Exact@1 at 0.000; kNN changes from 0.406 to 0.438. All LOF first choices already contain at most three fields. Thus, larger winning subsets do not explain its zero exact recovery. At $k=1/3/5/10$, LOF Exact@1 is 0.021/0.000/0.063/0.021, compared with kNN's 0.240/0.406/0.396/0.292 (Figure~\ref{fig:invoice-mechanism}).
+
+The raw candidate scores reveal a different mechanism. Every winning LOF subset has a target neighbor whose mean reachability distance is below the implementation's $10^{-9}$ floor; 88 of 96 winners include a distractor. The corresponding neighbor density reaches $10^9$. Since the target score averages neighbor densities relative to target density, discrete duplicate groups can produce scores between $1.85\times10^7$ and $5.00\times10^8$. These density contrasts need not identify a population-absent projection.
+
+\textbf{From neighborhoods to candidate order.} In a candidate subspace $S$, write $N_k(u)$ for the selected reference neighbors and $d_k(v)$ for the reference $k$-distance. The adapter computes
+\begin{align}
+ a_S(u)&=\frac{1}{k}\sum_{v\in N_k(u)}\max\{d_S(u,v),d_k(v)\},\\
+ \ell_S(u)&=\frac{1}{\max\{a_S(u),\epsilon\}},\qquad\epsilon=10^{-9},\\
+ \mathrm{LOF}_S(x^*)&=\frac{k^{-1}\sum_{v\in N_k(x^*)}\ell_S(v)}{\ell_S(x^*)}.
+\end{align}
+Reference neighborhoods exclude the row itself; the target does not enter reference density estimates. The implementation also floors the final denominator. Gower distances in these finite inputs keep that additional floor inactive. Duplicate projections can make a neighbor's reachability mean zero, so its density is set by $\epsilon$. The target may still have positive mean reachability because its other selected neighbors are farther away. Its ratio can consequently be large even when one reference exactly matches the target projection. Existence of a match determines support; neighborhood multiplicity and distances determine the density ratio. Searching many projections then compares scores whose magnitudes depend on different duplicate patterns. This mechanism motivates the matched deduplication and score-calibration diagnostics below.
+
+For \texttt{constraint\_line\_net\_000}, the distractor pair \{F002,F003\} occurs in the references, yet scores $1.67\times10^8$; the highest-ranked valid minimum \{F001,F004,F008\} scores 3.033. In the motivating tax case, supported singleton F005 scores $3.33\times10^8$, above valid pair \{F004,F008\} at $2.89\times10^8$. These are recorded scores, not inferred implementation errors.
+
+Two diagnostic interventions support this account. Removing distractors using hidden role information increases LOF Exact@1 to 0.219; deduplicating normal projections separately in each candidate subspace increases it to 0.240. The former is an oracle restriction, and the latter changes empirical density weights. A subsequent exploratory calibration ranks each target LOF by its percentile among reference LOF scores in that subspace; it also reaches 0.240, with Hit@4 of 0.323. Reference scores share the fitted neighborhood graph, so this is not independent calibration. None replaces the original baseline. Together, these results identify duplicate-sensitive density magnitudes and cross-subspace ranking as contributors in this workload; they do not imply that arithmetic anomalies generally defeat LOF.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/figure_acceptance_invoice_mechanism.pdf}
+\caption{Invoice performance and mechanism diagnostics on the same 96 targets. (a)--(c) Equal-relation means over four relations; DSeek denotes DeepSeek and LOF/kNN denote Gower methods. (d) Neighbor-count sweep over all 255 candidates. (e) LOF at $k=3$: original, cap three, oracle role-only fields, unique projections, and exploratory percentile calibration. (f) Recorded line-net case 000 scores; green is a valid minimum and hatched sets have normal support ($F1=F001$, etc.). No intervention replaces the original baseline.}
+\label{fig:invoice-mechanism}
+\end{figure*}
+
+\subsection{RQ5: Peer agreement and circuit pilots}
+The peer pilot retains 390 outputs, including 349 valid non-abstentions. On 40 ADBench queries answered by all five models, pairwise Jaccard ranges from 0.213 to 0.520. UCI has only one common-valid query. These are agreement measurements, without field truth.
+
+With all circuit outputs visible, Qwen/DeepSeek/Llama achieve Jaccard@4 of 0.349/0.109/0.038, versus 0.456/0.428 for input-only Gower-kNN/LOF. Qwen's Hit@4 is 0.016; the others retrieve no exact set. Only Qwen's advantage over its focus-only condition passes nine-test Holm correction ($p=0.047$). Full surprisal controls, coverage, and context comparisons remain in the artifact; four circuits limit generalization.
+
+\subsection{RQ5: Auditable corrected-field inspection}
+\input{synthetic_benchmark_v2/runs/ccfa_acceptance_revision/presentation_real_cells_table.tex}
+
+Public corrections give a different result under structured decoding (Table~\ref{tab:real-cells}). Qwen's FieldHit@1 rises from 0.125 to 0.653 and Llama's from 0.056 to 0.403; both Gower controls score 0.403. DeepSeek changes little, from 0.153 to 0.167, with schema validity 1.000 but answer coverage 0.611. Qwen's schema condition covers 0.721 of recorded corrections within three suggestions. Its mean first-correction inspection score is 2.819, versus 3.681 for kNN and 4.253 for an analytic uniform ordering with the same cap and failure penalty. This is an offline ranking comparison, not measured analyst effort.
+
+Source differences matter. Both Gower controls select a corrected field first in all 24 Beers queries, where every target includes an ounces-format change; one recorded correction is \texttt{12.0 ounce} to \texttt{12}. On Flights, Qwen's schema condition reaches FieldHit@1 of 0.667, versus kNN's 0.042. Published targets include actual-departure changes such as 11:06 to 11:05, whose correctness need not be inferable from other flights. Source row indices and before/after values make these labels auditable, but conventions and evidence insufficiency remain. A blank two-rater packet supports subsequent review; no new annotator agreement or user benefit is claimed.
+
+\section{Discussion}
+\textbf{Comparing candidate generators.} Report sufficiency, exact recovery, size, and coverage together. Candidate universes also matter: Beam and exhaustive pair/triple search have identical Exact@1 of 0.122 and Hit@4 of 0.199/0.203; main Gower additionally searches singletons. Shared priors and matched candidate ranges make such comparisons interpretable. Structured decoding and repeated references further show that answer delivery and prediction stability do not ensure correct localization.
+
+\textbf{Choosing a comparison for deployment.} A workflow must specify what an analyst will accept. Population-minimal recovery targets jointly unusual combinations without redundant fields; FieldHit targets fields subsequently corrected by a data owner. In our invoices, the edited gross field is not itself a minimal support explanation. Pooling the tracks into one accuracy would obscure this difference and could change the method ordering simply by changing the mixture of labels.
+
+Match candidate budgets and evidence before selecting a generator. Gower search leads on the tested shared-prior and new-rule support workloads, but the invoice reversal requires inspecting density scores in projections containing duplicates. For LLMs, compare the prompt, decoding constraint, parser, and abstention rule as one configuration. Qwen's structured public-correction result supports further evaluation for inspection; the observed ordering does not establish the performance of an unconstrained prompt or another checkpoint.
+
+\textbf{Selecting a score for discrete subspaces.} Inspect duplicates, reachability floors, and score magnitudes before comparing density ratios across projections. kNN is more effective on these invoices; oracle distractor removal and deduplication explain part of LOF's loss. Deduplication changes empirical weights and is not a universal correction.
+
+\textbf{Discrete scope.} For independently sampled continuous values, finite references almost surely lack an exact match to a new normal value. An extension needs an explicit support model or declared scales, tolerance neighborhoods, and a local mass threshold; these choices change the labels. Native adapter checks do not validate that extension. Invoices use exact integer arithmetic; public corrections follow source conventions, including formatting.
+
+\section{Related Work}
+Table~\ref{tab:related-work} groups neighboring work by its primary explanation or evaluation target.
+
+\begin{table*}[t]
+\centering\scriptsize
+\caption{Neighboring evaluation targets. Checkmarks denote primary targets, not exhaustive software capabilities. ``Fault'' includes integrity errors and injected faults; ``Support'' means population-minimal descriptive support.}
+\setlength{\tabcolsep}{3.3pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\textwidth}{|c|>{\raggedright\arraybackslash}p{1.75cm}|>{\raggedright\arraybackslash}X|c|c|c|c|c|c|}
+\hline
+\multirow{2}{*}{Category} & \multirow{2}{*}{Task / idea} & \multirow{2}{*}{Representative work} & \multicolumn{6}{c|}{Primary object of evaluation or explanation} \\
+\cline{4-9}
+ & & & Row & Score & Subspace & Group & Fault & Support \\
+\hline
+Model & Score attribution & Shapley explanation; CAIT~\cite{kluttermann2024shapley,mok2025cait} & -- & $\checkmark$ & -- & -- & -- & -- \\
+\hline
+\multirow{5}{*}{Data} & Subspace analysis & LookOut, SOD, COP~\cite{gupta2018lookout,kriegel2009sod,kriegel2012cop} & -- & -- & $\checkmark$ & -- & -- & -- \\
+\cline{2-9}
+ & Field choices and repair mask & M\textsuperscript{2}OE~\cite{angiulli2024m2oe} & -- & -- & $\checkmark$ & -- & -- & -- \\
+\cline{2-9}
+ & Ranked subspace search & RLAX~\cite{amirato2026rlax} & -- & -- & $\checkmark$ & -- & -- & -- \\
+\cline{2-9}
+ & Aggregate diagnosis & Adtributor, iDice, HotSpot, Squeeze~\cite{bhagwan2014adtributor,lin2016idice,sun2018hotspot,li2019squeeze} & -- & -- & -- & $\checkmark$ & -- & -- \\
+\cline{2-9}
+ & Data cleaning & HoloClean; AutoDCWorkflow~\cite{rekatsinas2017holoclean,li2025autodcworkflow} & -- & -- & -- & -- & $\checkmark$ & -- \\
+\hline
+\multirow{4}{*}{Evaluation} & Anomaly benchmarks & ADBench, TABARD, RADAR~\cite{han2022adbench,choudhury2025tabard,gu2025radar} & $\checkmark$ & -- & -- & -- & $\checkmark$ & -- \\
+\cline{2-9}
+ & Relevant-subspace evaluation & Myrtakis et al.: Beam, RefOut, LookOut, HiCS~\cite{myrtakis2021comparative} & -- & -- & $\checkmark$ & -- & -- & -- \\
+\cline{2-9}
+ & Fault-label studies & Gate-negation circuit explanations~\cite{antwarg2024groundtruth} & -- & -- & $\checkmark$ & -- & $\checkmark$ & -- \\
+\cline{2-9}
+ & Minimal-set benchmark & This study: known outlier + finite references & -- & -- & $\checkmark$ & -- & -- & $\checkmark$ \\
+\hline
+\end{tabularx}
+\renewcommand{\arraystretch}{1.0}
+\label{tab:related-work}
+\end{table*}
+
+
+\subsection{Table anomaly benchmarks and explanations}
+Surveys distinguish instance descriptions from detector-score explanations~\cite{panjei2022survey,li2024xadsurvey}. Score-attribution methods~\cite{mok2025cait,kluttermann2024shapley}, subspace search~\cite{myrtakis2021comparative,amirato2026rlax}, aggregate diagnosis~\cite{wu2013scorpion,bhagwan2014adtributor,lin2016idice,sun2018hotspot,li2019squeeze}, and integrity repair~\cite{chu2013holistic,rekatsinas2017holoclean,chen2025autotest} explain different objects. Our labels make these distinctions explicit for one flagged row.
+
+\textbf{Recent table evaluations.} TABARD evaluates anomaly types and prompts on perturbed real tables~\cite{choudhury2025tabard}; RADAR tests table-query reasoning under introduced data artifacts~\cite{gu2025radar}. AnTBench separates explicit detection from spontaneous anomaly awareness in table QA~\cite{wei2026antbench}. SEC-FinTables supplies financial inconsistency tasks and cell annotations~\cite{ke2026secfintables}. Our query instead fixes the anomalous row and scores all minimal-support alternatives from finite normal evidence. Shared priors, complete populations, and score traces diagnose comparison validity. Public corrected-field inspection is closer to these granular data-quality tasks and is evaluated separately.
+
+\textbf{Closest evaluation predecessor.} Myrtakis et al.~\cite{myrtakis2021comparative} compare Beam, RefOut, LookOut, and HiCS on real/synthetic data with relevant-subspace labels, Recall, and MAP. Our increment is the complete family of inclusion-minimal population-support exclusions under finite visible references, with separate rule and provenance labels. The proxy example shows a concrete difference. Gate-negation fault labels form a separate circuit setting~\cite{antwarg2024groundtruth}.
+
+Beam searches varying dimensions; RefOut pools projections at a requested dimension~\cite{myrtakis2021comparative}. We implement only a Beam adapter. M\textsuperscript{2}OE jointly supplies fields and repairs~\cite{angiulli2024m2oe}; native checks measure both, since field-choice scores alone omit part of its objective.
+
+\section{Artifact and Reproducibility}
+The source and experimental materials are publicly available at \url{https://github.com/KDDElab/known-outlier-benchmark}. The repository contains generators, frozen inputs and labels, raw outputs, scores, figures, manuscript sources, dependency records, and a file-hash manifest. Its release archive provides the same materials for direct download. No private service is required to inspect predictions or recompute the reported scores.
+
+Inference uses Transformers 5.22.1, PyTorch 2.14.1+cu126, bf16, RTX 3090 GPUs, and batch size one. Frozen protocols record seeds, input/checkpoint/tokenizer hashes, and decoding settings. Structured decoding pins LM Format Enforcer 0.11.3 and its compatibility shim. Exact-prompt reuse requires matching runtime and decoding records.
+
+The archive retains 5,184 original model-condition records, 288 invoice records, and 1,368 revision records. Analysis reconstructs scores; fresh inference is separate. Figure~\ref{fig:intro-sample-gap} uses recorded Pima values and responses. Historical rescoring and execution corrections retain their provenance.
+
+\textbf{Recomputing the published results.} The README orders the commands that parse raw responses, reconstruct per-case metrics and aggregations, regenerate tables and figures, and compile this manuscript. Malformed outputs and abstentions remain included. Prefix and shard logs document interrupted execution; merged manifests identify the scored records, avoiding duplicate counting. Candidate-score traces, complete small populations, public before/after values, and reference identities support inspection of the mechanisms in Section V.
+
+\textbf{Regenerating inputs and predictions.} Generator entry points accept separate output directories; reconstruction records compare frozen inputs and labels by hash. Fresh inference requires upstream checkpoints and tokenizers. The repository supplies download sources and original weight, configuration, tokenizer, and chat-template fingerprints; weights are not duplicated in Git. Baseline adapters, budgets, compatible M\textsuperscript{2}OE source, and upstream licenses are included. The archived rebuild was performed on the original host and does not establish independent-machine or bitwise inference reproducibility.
+
+\section{Limitations}
+\textbf{Generator coverage.} Temporal anomalies and MAR/MNAR missingness are untested. Split rotation and reevaluation limit original test independence. The 12 new compositions follow method freezing but remain a small, researcher-designed Boolean workload.
+
+\textbf{Evidence and labels.} Population truth can exceed visible evidence. Three draws and complete populations on 24 targets do not establish an information-theoretic error bound or cover arbitrary distributions. Support--rule differences concentrate in deterministic proxies.
+
+\textbf{Methods and budgets.} Fixed checkpoints, prompts, and adapters define the comparison; development budgets do not establish convergence. Beam excludes singletons. Different tokenizers and GPU allocations preclude speed or cost rankings.
+
+\textbf{External validity.} Four invoice relations and four circuits limit transfer. Peer agreement lacks feature truth; public corrections include canonicalization and lack disagreement records. Native M\textsuperscript{2}OE patches receive only a geometric check. Independent minimal-explanation judgments and observed analyst usefulness remain untested.
+
+\textbf{Reproducibility scope.} Fresh inference depends on checkpoints, tokenizers, kernels, and hardware. Opaque IDs do not exclude pretraining exposure. Public model access and upstream licenses remain those of the original providers.
+
+\section{Conclusion}
+Minimal anomaly explanation requires explicit candidate priors, evidence conditions, and label semantics. Gower rankers lead the shared-prior and new-rule support comparisons, while duplicate-sensitive density scores help explain the invoice reversal. Complete populations expose errors beyond missing reference evidence. Structured decoding substantially improves Qwen's localization and changes corrected-field comparisons, showing that these findings belong to particular configurations and tasks. Public corrections provide auditable inspection targets; independently reviewed minimal explanations and observed analyst usefulness remain open.
+
+\label{page:main-end}
+\clearpage
+\section*{Acknowledgments and AI Use Disclosure}
+OpenAI Codex assisted with benchmark and evaluation code, experiments, analyses in Sections IV--VI, Figures 1--6, tables, and English drafting. The author is responsible for verifying the archived measurements, claims, citations, and code.
+
+\bibliographystyle{IEEEtran}
+\bibliography{phase_d_references}
+\end{document}

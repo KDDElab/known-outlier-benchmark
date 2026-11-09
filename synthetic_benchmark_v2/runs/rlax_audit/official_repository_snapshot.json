@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/AIDALab-DIMES/RLAX",
+  "commit": "a6fcceca50ca64d8558fec31ef2dff5c34474e39",
+  "tracked_files": [
+    "LICENSE",
+    "README.md"
+  ],
+  "executable_source_present": false,
+  "audit_note": "No executable source was present in this checked-out snapshot; no RLAX result is claimed."
+}

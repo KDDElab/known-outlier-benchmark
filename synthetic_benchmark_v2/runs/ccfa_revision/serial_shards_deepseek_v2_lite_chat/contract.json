@@ -1,0 +1,18 @@
+{
+  "model": "deepseek_v2_lite_chat",
+  "prefix_records": 578,
+  "prefix_sha256": "fad4fcea1bbcbf8a1fbf356a2a3c89965c0a3c8c4b7c7f781fc2e519ffc3f6d1",
+  "shard_sizes": [
+    238,
+    239
+  ],
+  "gpu_groups": [
+    "1,3",
+    "0,2"
+  ],
+  "partition": "Descending prompt_tokens + 10*output_cap, greedily balanced; independent of prediction outcomes",
+  "batch_size": 1,
+  "fidelity": "Six exact raw-text reproductions before official predictions on each replica",
+  "scheduler_sha256": "c0a7cb0f74a046fb0626baedea21c810ac43207d1c256806906b87e68678d8e0",
+  "runner_sha256": "29748bd393c3448e036d1b8e3c3fa053bc58712074a2f212e11b6cb0d2cec54e"
+}

@@ -1,0 +1,38 @@
+{
+  "protocol_id": "known_outlier_standard_constraints_v1",
+  "frozen_at_utc": "2026-11-08T05:34:04.007635+00:00",
+  "purpose": "Test complete support-minimal evaluation beyond the original rule generator, using four externally specified arithmetic relations.",
+  "source": "Peppol BIS Billing 3.0, May 2026 release; four rule URLs recorded per population.",
+  "scope": "Synthetic finite-domain amounts; base quantity fixed to one; two line amounts in document-net relation; optional amounts present; integer units avoid rounding ambiguity. This is not natural invoice data or complete Peppol conformance.",
+  "target_sampling": "Shuffle all single-field edits of clean rows using values in the corresponding clean marginal; take first 24 distinct invalid targets per relation. No model outputs used.",
+  "reference_sampling": "32 iid clean role assignments with replacement; distractors independently sampled.",
+  "gold": "Enumerate every projection of the complete clean relation; marginalize independent distractors. Rule anomaly is the complement of that relation, so rule and support labels coincide.",
+  "edit_provenance": "Exactly one recorded field was changed; this is scored separately and is not assumed identifiable from unpaired input.",
+  "n_cases": 96,
+  "n_relations": 4,
+  "cases_per_relation": 24,
+  "fields": 8,
+  "references": 32,
+  "data_seed": 47017,
+  "display_seed": 8309,
+  "models": [
+    "qwen35_9b",
+    "deepseek_v2_lite_chat",
+    "llama31_8b_instruct"
+  ],
+  "model_protocol": "Unchanged full main prompt prefix, greedy batch one, 16384 input cap, 512 output cap; no tuning or retries conditional on correctness.",
+  "baselines": "Gower-kNN and Gower-LOF use the existing implementation, enumerate all 255 nonempty subsets of the eight visible fields and return four candidates. No hidden size cap.",
+  "metrics": [
+    "support_exact_at_1",
+    "support_hit_at_4",
+    "support_best_jaccard_at_4",
+    "answered",
+    "direct_edit_exact_at_1"
+  ],
+  "aggregation": "Equal case means within each of four relations, then equal relation mean. Descriptive fixed-workload comparison; no new significance family or unseen-domain confidence claim.",
+  "frozen_inputs_sha256": "e18c99333e5a711cb5efd2549715a41fe8b33c697bde64a8835f1bac016b2f60",
+  "frozen_gold_sha256": "796605781de3f7400710c15a7ed6ab60281ed2afecf615fc27132f5230b5b003",
+  "frozen_populations_sha256": "cd6f8c459781f8b406473f88df3ba7cc59f8a8c70e7d1905615a154f8fb313de",
+  "generator_sha256": "c09f3c99a1250c702d9fef4e2b0fa2eef3c9910e85518314eb33a5badf592f94",
+  "prompt_source_sha256": "4d34a6309068f15ea92394d190bf117bd69f64904e0352aaa02f178881acafa1"
+}

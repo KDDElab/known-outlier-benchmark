@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+/reproduced/
+/models/
+/artifact_release_revised/
+/artifact_release_staging/
+/known_outlier_ccfa_revision.tar.gz
+/known_outlier_ccfa_revision.sha256
+/phase_d_manuscript_draft.aux
+/phase_d_manuscript_draft.bbl
+/phase_d_manuscript_draft.blg
+/phase_d_manuscript_draft.log
+/phase_d_manuscript_draft.out

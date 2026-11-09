@@ -1,0 +1,1 @@
+{"case_id": "V2_0004", "task_label": "unknown", "mechanism_feature_ids": [], "mechanism_metric_applicable": false, "explanations": [{"features": ["F001", "F002", "F005", "F006"], "evidence": "M²OE choice subspace mapped from continuous encoded dimensions.", "confidence": 0.5}], "abstain": false}

@@ -1,0 +1,40 @@
+{
+  "source": "runs/order_probe_original_inputs.jsonl",
+  "source_sha256": "b40280adbda8a38d1d7c91a9c1f9b02224a5945e16d7092c121d72b54ac0610f",
+  "python_version": "3.13.11",
+  "python_implementation": "CPython",
+  "platform": "Linux-6.8.0-90-generic-x86_64-with-glibc2.39",
+  "n_cases_per_permutation": 96,
+  "n_templates": 24,
+  "ground_truth_96_sha256": "cb8584ae3d1846850870e6863ce927d1513be508550dedb3cbb03c54693ff15f",
+  "seeds": [
+    20261121,
+    20261122,
+    20261123,
+    20261124
+  ],
+  "transformation": "For each case independently, shuffle schema fields and target/reference object key order with a deterministic seed; preserve all values, row order, task text, and labels.",
+  "variants": {
+    "20261121": {
+      "path": "inputs_20261121.jsonl",
+      "sha256": "09d0b5230a05ef3d0b1670a096a6b8a411cbcc4a02cf6f80fef5242e8c5b56af",
+      "protocol_id": "known_anomaly_subspace_v2_random_field_order_20261121"
+    },
+    "20261122": {
+      "path": "inputs_20261122.jsonl",
+      "sha256": "916c77cf1194eba19bdd9afaa56760a1e7124317c52e011ce129e8766f5c9cb6",
+      "protocol_id": "known_anomaly_subspace_v2_random_field_order_20261122"
+    },
+    "20261123": {
+      "path": "inputs_20261123.jsonl",
+      "sha256": "a37a8adc8723dcc73945c3142dd936019a20d5e5eb53edfcb6e40efdd132dcb4",
+      "protocol_id": "known_anomaly_subspace_v2_random_field_order_20261123"
+    },
+    "20261124": {
+      "path": "inputs_20261124.jsonl",
+      "sha256": "66425f9add476b1db502871de1c23212b2009c75bd135a2e4ec93d10b6f0c573",
+      "protocol_id": "known_anomaly_subspace_v2_random_field_order_20261124"
+    }
+  },
+  "generator_sha256": "fef1eab64b3cfe7255417ed054c03c839db22e571906ea256ad53b4736ff95b2"
+}

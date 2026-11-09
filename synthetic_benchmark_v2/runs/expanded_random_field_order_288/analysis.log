@@ -1,0 +1,391 @@
+{
+  "outdir": "/root/nas/SPELT-master/adbench_llm_reference_v1/artifact_release_staging/synthetic_benchmark_v2/runs/expanded_random_field_order_288/evaluation_qwen35_9b",
+  "summary": {
+    "all": {
+      "n_cases": 1152,
+      "n_structurally_valid": 1141,
+      "structured_output_rate": 0.9904513888888888,
+      "task_label_coverage": 0.9904513888888888,
+      "mechanism_metric_coverage": 0.9904513888888888,
+      "abstention_rate_on_valid_predictions": 0.0008764241893076249,
+      "task_label_accuracy_on_valid_predictions": 0.21735319894829097,
+      "mechanism_feature_metrics": {
+        "micro_precision": 0.3278276481149013,
+        "micro_recall": 0.456271864067966,
+        "micro_f1": 0.3815294609277058,
+        "macro_case_f1": 0.42545875976200254,
+        "exact_set_accuracy": 0.1446099912357581
+      },
+      "interaction_case_count": 720,
+      "interaction_scored_case_count": 717,
+      "interaction_metric_coverage": 0.9958333333333333,
+      "interaction_all_fields_recovery_rate": 0.03486750348675035,
+      "support_top1_sufficiency_rate": 0.4887152777777778,
+      "support_top1_minimal_exact_hit_rate": 0.2387152777777778,
+      "support_any_minimal_hit_at_4": 0.2595486111111111,
+      "support_mean_recall_at_4": 0.23900462962962962,
+      "support_mean_reciprocal_rank": 0.24746817129629628,
+      "support_mean_best_jaccard": 0.4493740923428423,
+      "rule_top1_sufficiency_rate": 0.4427083333333333,
+      "rule_top1_minimal_exact_hit_rate": 0.2048611111111111,
+      "rule_any_minimal_hit_at_4": 0.2387152777777778,
+      "mean_predicted_subspace_fraction": 0.21958990651475313
+    },
+    "train": {
+      "n_cases": 0,
+      "n_structurally_valid": 0,
+      "structured_output_rate": null,
+      "task_label_coverage": null,
+      "mechanism_metric_coverage": null,
+      "abstention_rate_on_valid_predictions": null,
+      "task_label_accuracy_on_valid_predictions": null,
+      "mechanism_feature_metrics": {
+        "micro_precision": 0.0,
+        "micro_recall": 0.0,
+        "micro_f1": 0.0,
+        "macro_case_f1": null,
+        "exact_set_accuracy": null
+      },
+      "interaction_case_count": 0,
+      "interaction_scored_case_count": 0,
+      "interaction_metric_coverage": null,
+      "interaction_all_fields_recovery_rate": null,
+      "support_top1_sufficiency_rate": null,
+      "support_top1_minimal_exact_hit_rate": null,
+      "support_any_minimal_hit_at_4": null,
+      "support_mean_recall_at_4": null,
+      "support_mean_reciprocal_rank": null,
+      "support_mean_best_jaccard": null,
+      "rule_top1_sufficiency_rate": null,
+      "rule_top1_minimal_exact_hit_rate": null,
+      "rule_any_minimal_hit_at_4": null,
+      "mean_predicted_subspace_fraction": null
+    },
+    "dev": {
+      "n_cases": 0,
+      "n_structurally_valid": 0,
+      "structured_output_rate": null,
+      "task_label_coverage": null,
+      "mechanism_metric_coverage": null,
+      "abstention_rate_on_valid_predictions": null,
+      "task_label_accuracy_on_valid_predictions": null,
+      "mechanism_feature_metrics": {
+        "micro_precision": 0.0,
+        "micro_recall": 0.0,
+        "micro_f1": 0.0,
+        "macro_case_f1": null,
+        "exact_set_accuracy": null
+      },
+      "interaction_case_count": 0,
+      "interaction_scored_case_count": 0,
+      "interaction_metric_coverage": null,
+      "interaction_all_fields_recovery_rate": null,
+      "support_top1_sufficiency_rate": null,
+      "support_top1_minimal_exact_hit_rate": null,
+      "support_any_minimal_hit_at_4": null,
+      "support_mean_recall_at_4": null,
+      "support_mean_reciprocal_rank": null,
+      "support_mean_best_jaccard": null,
+      "rule_top1_sufficiency_rate": null,
+      "rule_top1_minimal_exact_hit_rate": null,
+      "rule_any_minimal_hit_at_4": null,
+      "mean_predicted_subspace_fraction": null
+    },
+    "test": {
+      "n_cases": 1152,
+      "n_structurally_valid": 1141,
+      "structured_output_rate": 0.9904513888888888,
+      "task_label_coverage": 0.9904513888888888,
+      "mechanism_metric_coverage": 0.9904513888888888,
+      "abstention_rate_on_valid_predictions": 0.0008764241893076249,
+      "task_label_accuracy_on_valid_predictions": 0.21735319894829097,
+      "mechanism_feature_metrics": {
+        "micro_precision": 0.3278276481149013,
+        "micro_recall": 0.456271864067966,
+        "micro_f1": 0.3815294609277058,
+        "macro_case_f1": 0.42545875976200254,
+        "exact_set_accuracy": 0.1446099912357581
+      },
+      "interaction_case_count": 720,
+      "interaction_scored_case_count": 717,
+      "interaction_metric_coverage": 0.9958333333333333,
+      "interaction_all_fields_recovery_rate": 0.03486750348675035,
+      "support_top1_sufficiency_rate": 0.4887152777777778,
+      "support_top1_minimal_exact_hit_rate": 0.2387152777777778,
+      "support_any_minimal_hit_at_4": 0.2595486111111111,
+      "support_mean_recall_at_4": 0.23900462962962962,
+      "support_mean_reciprocal_rank": 0.24746817129629628,
+      "support_mean_best_jaccard": 0.4493740923428423,
+      "rule_top1_sufficiency_rate": 0.4427083333333333,
+      "rule_top1_minimal_exact_hit_rate": 0.2048611111111111,
+      "rule_any_minimal_hit_at_4": 0.2387152777777778,
+      "mean_predicted_subspace_fraction": 0.21958990651475313
+    }
+  }
+}
+{
+  "outdir": "/root/nas/SPELT-master/adbench_llm_reference_v1/artifact_release_staging/synthetic_benchmark_v2/runs/expanded_random_field_order_288/evaluation_deepseek_v2_lite_chat",
+  "summary": {
+    "all": {
+      "n_cases": 1152,
+      "n_structurally_valid": 931,
+      "structured_output_rate": 0.8081597222222222,
+      "task_label_coverage": 0.8081597222222222,
+      "mechanism_metric_coverage": 0.8081597222222222,
+      "abstention_rate_on_valid_predictions": 0.12137486573576799,
+      "task_label_accuracy_on_valid_predictions": 0.12459720730397422,
+      "mechanism_feature_metrics": {
+        "micro_precision": 0.1563214884855879,
+        "micro_recall": 0.6288343558282209,
+        "micro_f1": 0.25039697080737755,
+        "macro_case_f1": 0.2778729330647128,
+        "exact_set_accuracy": 0.0053705692803437165
+      },
+      "interaction_case_count": 720,
+      "interaction_scored_case_count": 578,
+      "interaction_metric_coverage": 0.8027777777777778,
+      "interaction_all_fields_recovery_rate": 0.00865051903114187,
+      "support_top1_sufficiency_rate": 0.3072916666666667,
+      "support_top1_minimal_exact_hit_rate": 0.035590277777777776,
+      "support_any_minimal_hit_at_4": 0.06163194444444445,
+      "support_mean_recall_at_4": 0.04762731481481482,
+      "support_mean_reciprocal_rank": 0.046223958333333336,
+      "support_mean_best_jaccard": 0.23767118368795495,
+      "rule_top1_sufficiency_rate": 0.2786458333333333,
+      "rule_top1_minimal_exact_hit_rate": 0.0234375,
+      "rule_any_minimal_hit_at_4": 0.04774305555555555,
+      "mean_predicted_subspace_fraction": 0.3778083601861797
+    },
+    "train": {
+      "n_cases": 0,
+      "n_structurally_valid": 0,
+      "structured_output_rate": null,
+      "task_label_coverage": null,
+      "mechanism_metric_coverage": null,
+      "abstention_rate_on_valid_predictions": null,
+      "task_label_accuracy_on_valid_predictions": null,
+      "mechanism_feature_metrics": {
+        "micro_precision": 0.0,
+        "micro_recall": 0.0,
+        "micro_f1": 0.0,
+        "macro_case_f1": null,
+        "exact_set_accuracy": null
+      },
+      "interaction_case_count": 0,
+      "interaction_scored_case_count": 0,
+      "interaction_metric_coverage": null,
+      "interaction_all_fields_recovery_rate": null,
+      "support_top1_sufficiency_rate": null,
+      "support_top1_minimal_exact_hit_rate": null,
+      "support_any_minimal_hit_at_4": null,
+      "support_mean_recall_at_4": null,
+      "support_mean_reciprocal_rank": null,
+      "support_mean_best_jaccard": null,
+      "rule_top1_sufficiency_rate": null,
+      "rule_top1_minimal_exact_hit_rate": null,
+      "rule_any_minimal_hit_at_4": null,
+      "mean_predicted_subspace_fraction": null
+    },
+    "dev": {
+      "n_cases": 0,
+      "n_structurally_valid": 0,
+      "structured_output_rate": null,
+      "task_label_coverage": null,
+      "mechanism_metric_coverage": null,
+      "abstention_rate_on_valid_predictions": null,
+      "task_label_accuracy_on_valid_predictions": null,
+      "mechanism_feature_metrics": {
+        "micro_precision": 0.0,
+        "micro_recall": 0.0,
+        "micro_f1": 0.0,
+        "macro_case_f1": null,
+        "exact_set_accuracy": null
+      },
+      "interaction_case_count": 0,
+      "interaction_scored_case_count": 0,
+      "interaction_metric_coverage": null,
+      "interaction_all_fields_recovery_rate": null,
+      "support_top1_sufficiency_rate": null,
+      "support_top1_minimal_exact_hit_rate": null,
+      "support_any_minimal_hit_at_4": null,
+      "support_mean_recall_at_4": null,
+      "support_mean_reciprocal_rank": null,
+      "support_mean_best_jaccard": null,
+      "rule_top1_sufficiency_rate": null,
+      "rule_top1_minimal_exact_hit_rate": null,
+      "rule_any_minimal_hit_at_4": null,
+      "mean_predicted_subspace_fraction": null
+    },
+    "test": {
+      "n_cases": 1152,
+      "n_structurally_valid": 931,
+      "structured_output_rate": 0.8081597222222222,
+      "task_label_coverage": 0.8081597222222222,
+      "mechanism_metric_coverage": 0.8081597222222222,
+      "abstention_rate_on_valid_predictions": 0.12137486573576799,
+      "task_label_accuracy_on_valid_predictions": 0.12459720730397422,
+      "mechanism_feature_metrics": {
+        "micro_precision": 0.1563214884855879,
+        "micro_recall": 0.6288343558282209,
+        "micro_f1": 0.25039697080737755,
+        "macro_case_f1": 0.2778729330647128,
+        "exact_set_accuracy": 0.0053705692803437165
+      },
+      "interaction_case_count": 720,
+      "interaction_scored_case_count": 578,
+      "interaction_metric_coverage": 0.8027777777777778,
+      "interaction_all_fields_recovery_rate": 0.00865051903114187,
+      "support_top1_sufficiency_rate": 0.3072916666666667,
+      "support_top1_minimal_exact_hit_rate": 0.035590277777777776,
+      "support_any_minimal_hit_at_4": 0.06163194444444445,
+      "support_mean_recall_at_4": 0.04762731481481482,
+      "support_mean_reciprocal_rank": 0.046223958333333336,
+      "support_mean_best_jaccard": 0.23767118368795495,
+      "rule_top1_sufficiency_rate": 0.2786458333333333,
+      "rule_top1_minimal_exact_hit_rate": 0.0234375,
+      "rule_any_minimal_hit_at_4": 0.04774305555555555,
+      "mean_predicted_subspace_fraction": 0.3778083601861797
+    }
+  }
+}
+{
+  "outdir": "/root/nas/SPELT-master/adbench_llm_reference_v1/artifact_release_staging/synthetic_benchmark_v2/runs/expanded_random_field_order_288/evaluation_llama31_8b_instruct",
+  "summary": {
+    "all": {
+      "n_cases": 1152,
+      "n_structurally_valid": 948,
+      "structured_output_rate": 0.8229166666666666,
+      "task_label_coverage": 0.8229166666666666,
+      "mechanism_metric_coverage": 0.8229166666666666,
+      "abstention_rate_on_valid_predictions": 0.0,
+      "task_label_accuracy_on_valid_predictions": 0.1350210970464135,
+      "mechanism_feature_metrics": {
+        "micro_precision": 0.2845702082221036,
+        "micro_recall": 0.3185893604303646,
+        "micro_f1": 0.30062041737168643,
+        "macro_case_f1": 0.295112517580872,
+        "exact_set_accuracy": 0.05168776371308017
+      },
+      "interaction_case_count": 720,
+      "interaction_scored_case_count": 604,
+      "interaction_metric_coverage": 0.8388888888888889,
+      "interaction_all_fields_recovery_rate": 0.07450331125827815,
+      "support_top1_sufficiency_rate": 0.2144097222222222,
+      "support_top1_minimal_exact_hit_rate": 0.06163194444444445,
+      "support_any_minimal_hit_at_4": 0.0798611111111111,
+      "support_mean_recall_at_4": 0.06032986111111111,
+      "support_mean_reciprocal_rank": 0.0691550925925926,
+      "support_mean_best_jaccard": 0.24522569444444445,
+      "rule_top1_sufficiency_rate": 0.1831597222222222,
+      "rule_top1_minimal_exact_hit_rate": 0.03993055555555555,
+      "rule_any_minimal_hit_at_4": 0.06076388888888889,
+      "mean_predicted_subspace_fraction": 0.1994696436943272
+    },
+    "train": {
+      "n_cases": 0,
+      "n_structurally_valid": 0,
+      "structured_output_rate": null,
+      "task_label_coverage": null,
+      "mechanism_metric_coverage": null,
+      "abstention_rate_on_valid_predictions": null,
+      "task_label_accuracy_on_valid_predictions": null,
+      "mechanism_feature_metrics": {
+        "micro_precision": 0.0,
+        "micro_recall": 0.0,
+        "micro_f1": 0.0,
+        "macro_case_f1": null,
+        "exact_set_accuracy": null
+      },
+      "interaction_case_count": 0,
+      "interaction_scored_case_count": 0,
+      "interaction_metric_coverage": null,
+      "interaction_all_fields_recovery_rate": null,
+      "support_top1_sufficiency_rate": null,
+      "support_top1_minimal_exact_hit_rate": null,
+      "support_any_minimal_hit_at_4": null,
+      "support_mean_recall_at_4": null,
+      "support_mean_reciprocal_rank": null,
+      "support_mean_best_jaccard": null,
+      "rule_top1_sufficiency_rate": null,
+      "rule_top1_minimal_exact_hit_rate": null,
+      "rule_any_minimal_hit_at_4": null,
+      "mean_predicted_subspace_fraction": null
+    },
+    "dev": {
+      "n_cases": 0,
+      "n_structurally_valid": 0,
+      "structured_output_rate": null,
+      "task_label_coverage": null,
+      "mechanism_metric_coverage": null,
+      "abstention_rate_on_valid_predictions": null,
+      "task_label_accuracy_on_valid_predictions": null,
+      "mechanism_feature_metrics": {
+        "micro_precision": 0.0,
+        "micro_recall": 0.0,
+        "micro_f1": 0.0,
+        "macro_case_f1": null,
+        "exact_set_accuracy": null
+      },
+      "interaction_case_count": 0,
+      "interaction_scored_case_count": 0,
+      "interaction_metric_coverage": null,
+      "interaction_all_fields_recovery_rate": null,
+      "support_top1_sufficiency_rate": null,
+      "support_top1_minimal_exact_hit_rate": null,
+      "support_any_minimal_hit_at_4": null,
+      "support_mean_recall_at_4": null,
+      "support_mean_reciprocal_rank": null,
+      "support_mean_best_jaccard": null,
+      "rule_top1_sufficiency_rate": null,
+      "rule_top1_minimal_exact_hit_rate": null,
+      "rule_any_minimal_hit_at_4": null,
+      "mean_predicted_subspace_fraction": null
+    },
+    "test": {
+      "n_cases": 1152,
+      "n_structurally_valid": 948,
+      "structured_output_rate": 0.8229166666666666,
+      "task_label_coverage": 0.8229166666666666,
+      "mechanism_metric_coverage": 0.8229166666666666,
+      "abstention_rate_on_valid_predictions": 0.0,
+      "task_label_accuracy_on_valid_predictions": 0.1350210970464135,
+      "mechanism_feature_metrics": {
+        "micro_precision": 0.2845702082221036,
+        "micro_recall": 0.3185893604303646,
+        "micro_f1": 0.30062041737168643,
+        "macro_case_f1": 0.295112517580872,
+        "exact_set_accuracy": 0.05168776371308017
+      },
+      "interaction_case_count": 720,
+      "interaction_scored_case_count": 604,
+      "interaction_metric_coverage": 0.8388888888888889,
+      "interaction_all_fields_recovery_rate": 0.07450331125827815,
+      "support_top1_sufficiency_rate": 0.2144097222222222,
+      "support_top1_minimal_exact_hit_rate": 0.06163194444444445,
+      "support_any_minimal_hit_at_4": 0.0798611111111111,
+      "support_mean_recall_at_4": 0.06032986111111111,
+      "support_mean_reciprocal_rank": 0.0691550925925926,
+      "support_mean_best_jaccard": 0.24522569444444445,
+      "rule_top1_sufficiency_rate": 0.1831597222222222,
+      "rule_top1_minimal_exact_hit_rate": 0.03993055555555555,
+      "rule_any_minimal_hit_at_4": 0.06076388888888889,
+      "mean_predicted_subspace_fraction": 0.1994696436943272
+    }
+  }
+}
+                model  random_order_seed   n  valid_rate  Sufficiency@1  Exact@1    Hit@4  Best Jaccard@4  Rule sufficiency@1  Rule exact@1  Rule Hit@4  Compactness       order
+           Qwen3.5-9B                  0 288    0.989583       0.687500 0.437500 0.454861        0.643316            0.645833      0.406250    0.423611     0.203850    Original
+DeepSeek-V2-Lite-Chat                  0 288    0.788194       0.437500 0.121528 0.142361        0.313938            0.413194      0.114583    0.135417     0.394686    Original
+Llama-3.1-8B-Instruct                  0 288    0.819444       0.416667 0.180556 0.211806        0.407986            0.402778      0.166667    0.194444     0.197387    Original
+DeepSeek-V2-Lite-Chat               1001 288    0.798611       0.309028 0.020833 0.038194        0.216706            0.284722      0.020833    0.031250     0.396347 Random 1001
+DeepSeek-V2-Lite-Chat               1002 288    0.777778       0.312500 0.045139 0.072917        0.240759            0.270833      0.024306    0.055556     0.367746 Random 1002
+DeepSeek-V2-Lite-Chat               1003 288    0.805556       0.274306 0.027778 0.052083        0.224424            0.239583      0.013889    0.031250     0.368804 Random 1003
+DeepSeek-V2-Lite-Chat               1004 288    0.850694       0.333333 0.048611 0.083333        0.268796            0.319444      0.034722    0.072917     0.378132 Random 1004
+Llama-3.1-8B-Instruct               1001 288    0.826389       0.187500 0.038194 0.062500        0.238137            0.163194      0.027778    0.052083     0.200178 Random 1001
+Llama-3.1-8B-Instruct               1002 288    0.822917       0.250000 0.083333 0.097222        0.262153            0.204861      0.045139    0.072917     0.199074 Random 1002
+Llama-3.1-8B-Instruct               1003 288    0.829861       0.215278 0.069444 0.083333        0.239294            0.180556      0.045139    0.055556     0.198193 Random 1003
+Llama-3.1-8B-Instruct               1004 288    0.812500       0.204861 0.055556 0.076389        0.241319            0.184028      0.041667    0.062500     0.200454 Random 1004
+           Qwen3.5-9B               1001 288    0.993056       0.527778 0.243056 0.277778        0.476476            0.468750      0.208333    0.256944     0.217087 Random 1001
+           Qwen3.5-9B               1002 288    0.989583       0.500000 0.246528 0.263889        0.444994            0.458333      0.211806    0.243056     0.218921 Random 1002
+           Qwen3.5-9B               1003 288    0.989583       0.465278 0.218750 0.232639        0.434838            0.413194      0.173611    0.208333     0.225962 Random 1003
+           Qwen3.5-9B               1004 288    0.989583       0.461806 0.246528 0.263889        0.441188            0.430556      0.225694    0.246528     0.216399 Random 1004

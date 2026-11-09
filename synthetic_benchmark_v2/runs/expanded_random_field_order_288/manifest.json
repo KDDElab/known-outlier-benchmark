@@ -1,0 +1,57 @@
+{
+  "source_inputs": "artifact_release_staging/synthetic_benchmark_v2/inputs.jsonl",
+  "source_ground_truth": "artifact_release_staging/synthetic_benchmark_v2/ground_truth.jsonl",
+  "n_cases_per_order": 288,
+  "n_orders": 4,
+  "n_case_runs_per_model": 1152,
+  "order_seeds": [
+    1001,
+    1002,
+    1003,
+    1004
+  ],
+  "models": {
+    "qwen35_9b": "Qwen3.5-9B",
+    "deepseek_v2_lite_chat": "DeepSeek-V2-Lite-Chat",
+    "llama31_8b_instruct": "Llama-3.1-8B-Instruct"
+  },
+  "transform": "For each case, uniformly shuffle feature-schema order and target/reference-row object key order; preserve values, reference-row order, task text, and labels.",
+  "inputs_sha256": "ff59bd2f6796b9e75ffd8b4475079f5e2d58959ce0d7e9034880393608cdb81c",
+  "ground_truth_sha256": "9b0a69905049e778051b6c7ef38871b57ba67d8e8e1b0948b9109c9937f10633",
+  "generator_sha256": "f06c91f5dbeb1db6f4120e7b02b3e1f4b185229fc91222c391a4f90ef687c49a",
+  "analysis": {
+    "analysis_code_sha256": "42fad66df7ed7a0c3469768ad94350eb0eb5c14e919545e731164f5bce855a40",
+    "scoring_code_sha256": "cea01adf8301aad075628d41ece2f8045ea6beb56c05867705ec6a0fbf7f7f0a",
+    "per_case_scores_sha256": "41bc46b1379b995866b4b0804236a26f15a42e1ffd08f26cd39ad5ac9faa90ab",
+    "summary_sha256": "99b8a3c1bbc26c2fb499f5bd6fde514fd2d83c8785a4af6f8d5b4a59f7567536",
+    "metrics": [
+      "Sufficiency@1",
+      "Exact@1",
+      "Hit@4",
+      "Best Jaccard@4",
+      "Rule sufficiency@1",
+      "Rule exact@1",
+      "Rule Hit@4",
+      "Compactness"
+    ],
+    "compactness_basis": "conditional on structurally valid outputs, matching the main table",
+    "unit": "288 cases from one held-out generator seed; four independent field-order permutations per case; invalid outputs count as misses for support/rule outcomes. The complete main-table metric set is summarized by order.",
+    "random_order_tests_sha256": "6a26041f0f1cbab9875c64b4c21b0728fe87296804eb36c108e6ea5b540dac8e",
+    "pairwise_test_code_sha256": "68718a878c5e8ae59dc1f720fa0f07848f5cba841f13f81e36db457155cef3b8",
+    "bootstrap_seed": 1005,
+    "template_cluster_bootstrap_replicates": 2000,
+    "within_case_order_resampling": "four independently seeded field permutations sampled with replacement within each selected case",
+    "baseline_reference_lines": "canonical-order baseline scores shown for context only; non-LLM baselines were not rerun under field permutations, and no order-invariance claim is made",
+    "sign_flip_draws": 20000,
+    "holm_family_size": 21,
+    "inferential_metrics": [
+      "support_top1_sufficient",
+      "support_top1_minimal",
+      "support_any_minimal_hit",
+      "support_best_jaccard",
+      "rule_top1_sufficient",
+      "rule_top1_minimal",
+      "rule_any_minimal_hit"
+    ]
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "seeds": [
+    20261106,
+    20261107,
+    20261108
+  ],
+  "models": [
+    "qwen35_9b",
+    "deepseek_v2_lite_chat",
+    "llama31_8b_instruct"
+  ],
+  "common_inference_runtime": {
+    "transformers": "5.22.1",
+    "pytorch": "2.14.1+cu126",
+    "gpu": "NVIDIA RTX 3090"
+  },
+  "selection_rule": "one annotation per expected test case under the frozen protocol; invalid model outputs remain included as misses",
+  "runs": {
+    "20261106": {
+      "qwen35_9b": {
+        "protocol_id": "known_anomaly_subspace_v2_seed_20261106_rt522",
+        "annotation_file": "runs/multiseed/seed_20261106_rt522/annotations_qwen35_9b.jsonl",
+        "annotation_sha256": "e5519bc376418f1cd584c3b3b22140aa8f643b712d9bccd19c61a3dfa7dcf537",
+        "n_test_cases": 288,
+        "n_valid_structured": 285,
+        "n_parse_or_inference_errors": 3,
+        "mean_latency_seconds": 11.657482986111113,
+        "authoritative_run_ids": [
+          "qwen35_9b_20261106T083821Z_418a2669"
+        ],
+        "matching_completed_run_events": 1,
+        "run_log_sha256": "cac3575f3e1fc7e52826ba49553e92d9ebe47dec34b036ac38c25c37ed9d23bd"
+      },
+      "deepseek_v2_lite_chat": {
+        "protocol_id": "known_anomaly_subspace_v2_seed_20261106_rt522",
+        "annotation_file": "runs/multiseed/seed_20261106_rt522/annotations_deepseek_v2_lite_chat.jsonl",
+        "annotation_sha256": "0b82e7e06245b422633a7ac28bd174c724e690dd00d4db014d09fa5399464e34",
+        "n_test_cases": 288,
+        "n_valid_structured": 227,
+        "n_parse_or_inference_errors": 61,
+        "mean_latency_seconds": 17.348080555555555,
+        "authoritative_run_ids": [
+          "deepseek_v2_lite_chat_20261106T090659Z_fa535a28"
+        ],
+        "matching_completed_run_events": 1,
+        "run_log_sha256": "cac3575f3e1fc7e52826ba49553e92d9ebe47dec34b036ac38c25c37ed9d23bd"
+      },
+      "llama31_8b_instruct": {
+        "protocol_id": "known_anomaly_subspace_v2_seed_20261106_rt522",
+        "annotation_file": "runs/multiseed/seed_20261106_rt522/annotations_llama31_8b_instruct.jsonl",
+        "annotation_sha256": "c822631c5c02ae812e0bb715659f8a27edefbb8b88301ad18f049173ebfe68dd",
+        "n_test_cases": 288,
+        "n_valid_structured": 236,
+        "n_parse_or_inference_errors": 52,
+        "mean_latency_seconds": 6.9619687500000005,
+        "authoritative_run_ids": [
+          "llama31_8b_instruct_20261106T075407Z_060e3d81"
+        ],
+        "matching_completed_run_events": 1,
+        "run_log_sha256": "cac3575f3e1fc7e52826ba49553e92d9ebe47dec34b036ac38c25c37ed9d23bd"
+      }
+    },
+    "20261107": {
+      "qwen35_9b": {
+        "protocol_id": "known_anomaly_subspace_v2_seed_20261107",
+        "annotation_file": "runs/multiseed/seed_20261107/annotations_qwen35_9b.jsonl",
+        "annotation_sha256": "37a2644605607924c60363259ccaecc81f957e94c1c10ed0300bb306a02396f9",
+        "n_test_cases": 288,
+        "n_valid_structured": 286,
+        "n_parse_or_inference_errors": 2,
+        "mean_latency_seconds": 12.367090625,
+        "authoritative_run_ids": [
+          "qwen35_9b_20261106T061421Z_343c364a"
+        ],
+        "matching_completed_run_events": 1,
+        "run_log_sha256": "0d8b7d4065eb61962b24ebcf42d0bf4c6bde19e02df03eef520480b9c46ed08a"
+      },
+      "deepseek_v2_lite_chat": {
+        "protocol_id": "known_anomaly_subspace_v2_seed_20261107",
+        "annotation_file": "runs/multiseed/seed_20261107/annotations_deepseek_v2_lite_chat.jsonl",
+        "annotation_sha256": "a9dd1a402dec60eb282567c0459c369085ec010ac13d4eb0bbc7d532ab41fc0b",
+        "n_test_cases": 288,
+        "n_valid_structured": 238,
+        "n_parse_or_inference_errors": 50,
+        "mean_latency_seconds": 17.244675694444442,
+        "authoritative_run_ids": [
+          "deepseek_v2_lite_chat_20261106T061421Z_0956b503"
+        ],
+        "matching_completed_run_events": 1,
+        "run_log_sha256": "0d8b7d4065eb61962b24ebcf42d0bf4c6bde19e02df03eef520480b9c46ed08a"
+      },
+      "llama31_8b_instruct": {
+        "protocol_id": "known_anomaly_subspace_v2_seed_20261107",
+        "annotation_file": "runs/multiseed/seed_20261107/annotations_llama31_8b_instruct.jsonl",
+        "annotation_sha256": "8e06a46b880db111e664bc2d57942edb35f1fc060230547d8cc80b7bcfbb05c8",
+        "n_test_cases": 288,
+        "n_valid_structured": 232,
+        "n_parse_or_inference_errors": 56,
+        "mean_latency_seconds": 7.530813194444445,
+        "authoritative_run_ids": [
+          "llama31_8b_instruct_20261106T061421Z_5eef6444"
+        ],
+        "matching_completed_run_events": 1,
+        "run_log_sha256": "0d8b7d4065eb61962b24ebcf42d0bf4c6bde19e02df03eef520480b9c46ed08a"
+      }
+    },
+    "20261108": {
+      "qwen35_9b": {
+        "protocol_id": "known_anomaly_subspace_v2_seed_20261108",
+        "annotation_file": "runs/multiseed/seed_20261108/annotations_qwen35_9b.jsonl",
+        "annotation_sha256": "543bfd93aa7e22f9da94032b523eca82419387a6d98b71a47e4280301781969a",
+        "n_test_cases": 288,
+        "n_valid_structured": 285,
+        "n_parse_or_inference_errors": 3,
+        "mean_latency_seconds": 11.920068055555555,
+        "authoritative_run_ids": [
+          "qwen35_9b_20261106T073933Z_dd70aa84"
+        ],
+        "matching_completed_run_events": 1,
+        "run_log_sha256": "bde0198e8ed6ac2333f954ff47aa8571a9a25973f1b6d65cdb7c9263e4b12b40"
+      },
+      "deepseek_v2_lite_chat": {
+        "protocol_id": "known_anomaly_subspace_v2_seed_20261108",
+        "annotation_file": "runs/multiseed/seed_20261108/annotations_deepseek_v2_lite_chat.jsonl",
+        "annotation_sha256": "e4de6a07b822e2fff1631a355da0705de391c2e2bfab056dd1db45e50a55ae63",
+        "n_test_cases": 288,
+        "n_valid_structured": 231,
+        "n_parse_or_inference_errors": 57,
+        "mean_latency_seconds": 17.556190277777777,
+        "authoritative_run_ids": [
+          "deepseek_v2_lite_chat_20261106T074014Z_782ce382"
+        ],
+        "matching_completed_run_events": 1,
+        "run_log_sha256": "bde0198e8ed6ac2333f954ff47aa8571a9a25973f1b6d65cdb7c9263e4b12b40"
+      },
+      "llama31_8b_instruct": {
+        "protocol_id": "known_anomaly_subspace_v2_seed_20261108",
+        "annotation_file": "runs/multiseed/seed_20261108/annotations_llama31_8b_instruct.jsonl",
+        "annotation_sha256": "72c270db4335a683d205afa598a50553ed8db9ff393acd96b7d3c8b7be714b86",
+        "n_test_cases": 288,
+        "n_valid_structured": 238,
+        "n_parse_or_inference_errors": 50,
+        "mean_latency_seconds": 7.11418125,
+        "authoritative_run_ids": [
+          "llama31_8b_instruct_20261106T071802Z_76e70133"
+        ],
+        "matching_completed_run_events": 1,
+        "run_log_sha256": "bde0198e8ed6ac2333f954ff47aa8571a9a25973f1b6d65cdb7c9263e4b12b40"
+      }
+    }
+  },
+  "excluded_runs": [
+    {
+      "file": "runs/multiseed/seed_20261108/annotations_llama31_8b_instruct_gpu0_oom.jsonl",
+      "sha256": "d11d8f512365fa1208cbda9b9ceb0de7557c5c3b6d8b898cae83b27aaa9a8895",
+      "n_cases": 288,
+      "n_valid_structured": 0,
+      "n_inference_or_parse_errors": 288,
+      "reason": "excluded failed GPU run; all records contain inference errors and the matched GPU-2 rerun is authoritative"
+    }
+  ],
+  "validator_sha256": "4de4be5f2e7627ade69dc144786d7b97614ef50f18d927f0f64224c722cfc459"
+}

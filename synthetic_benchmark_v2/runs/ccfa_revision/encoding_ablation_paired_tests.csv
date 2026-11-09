@@ -1,0 +1,7 @@
+left,right,metric,difference,lo,hi,p_raw,n_templates,n_pairs,method,p_holm
+schema_domain_v1,legacy_reference_clip,support_any_minimal_hit,0.0,0.0,0.0,1.0,24,96,m2oe_choice,1.0
+schema_domain_v1,legacy_reference_clip,support_best_jaccard,0.02449156746031746,0.006262090773809525,0.04532707093253967,0.02249887505624719,24,96,m2oe_choice,0.13499325033748313
+schema_domain_v1,legacy_reference_clip,support_any_minimal_hit,0.0,0.0,0.0,1.0,24,96,sod_subspace_adaptation,1.0
+schema_domain_v1,legacy_reference_clip,support_best_jaccard,0.007708524114774114,0.0,0.020617750305250305,0.2506874656267187,24,96,sod_subspace_adaptation,1.0
+schema_domain_v1,legacy_reference_clip,support_any_minimal_hit,0.020833333333333332,0.0,0.052083333333333336,0.4966751662416879,24,96,cop_error_vector_adaptation,1.0
+schema_domain_v1,legacy_reference_clip,support_best_jaccard,0.026041666666666668,0.005377604166666666,0.05399739583333331,0.031148442577871107,24,96,cop_error_vector_adaptation,0.15574221288935552

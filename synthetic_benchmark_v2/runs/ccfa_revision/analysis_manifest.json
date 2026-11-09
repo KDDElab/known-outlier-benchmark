@@ -1,0 +1,31 @@
+{
+  "complete": true,
+  "n_frozen_conditions_per_model": 1728,
+  "n_main_cases": 864,
+  "n_templates": 38,
+  "estimator": "case mean within seed/template; available-seed mean within template; equal template mean",
+  "interval": "2,000 template bootstrap replicates; conditional measures use numerator/coverage within each draw",
+  "tests": "20,000 paired template sign flips, Holm main 18; order 12; references 18; output 12 as separate questions",
+  "scorer_sha256": "3c1874dd21f26f7474938c1be42cad3192c88aef41ebc429c86817bc1a6f02a2",
+  "analysis_sha256": "a979dfaf19c6ebf2559f00a265e6c9092e3a52d94c4706cb34fe45d841817ebf",
+  "inputs_sha256": "2335293c557bc3451ab2425125ae319d0363da7214aa68726a1dcb8a6d564d24",
+  "parser_sha256": "fafee6146239a7088553f5410f941c2cebc8d183524f6ae28cb75280796e8e18",
+  "raw_annotation_sha256": {
+    "/root/nas/SPELT-master/adbench_llm_reference_v1/artifact_release_revised/synthetic_benchmark_v2/runs/ccfa_revision/reused_qwen35_9b.jsonl": "454349d0ec0c711ada1462654bc61e94fce6e9c06dd66b3b0f2eb737c49ba9fe",
+    "/root/nas/SPELT-master/adbench_llm_reference_v1/artifact_release_revised/synthetic_benchmark_v2/runs/ccfa_revision/new_qwen35_9b.jsonl": "dbf7dc83f481f8fc375b916774d7e212fe704a4cd05809e2f831d7db835070e6",
+    "/root/nas/SPELT-master/adbench_llm_reference_v1/artifact_release_revised/synthetic_benchmark_v2/runs/ccfa_revision/reused_deepseek_v2_lite_chat.jsonl": "922b62fdce3d9631dfa8c3360fc2f4871df9fc1aa6db43458180ab8d4d075ace",
+    "/root/nas/SPELT-master/adbench_llm_reference_v1/artifact_release_revised/synthetic_benchmark_v2/runs/ccfa_revision/new_deepseek_v2_lite_chat.jsonl": "b492c831d47db4aeb42c1b7b11edc49ccb873410b8951c4ddd24bdeb0df06214",
+    "/root/nas/SPELT-master/adbench_llm_reference_v1/artifact_release_revised/synthetic_benchmark_v2/runs/ccfa_revision/reused_llama31_8b_instruct.jsonl": "3220510be75a57513a05758d43bb4a47b25db419229299181aa3b1a970c88344",
+    "/root/nas/SPELT-master/adbench_llm_reference_v1/artifact_release_revised/synthetic_benchmark_v2/runs/ccfa_revision/new_llama31_8b_instruct.jsonl": "35562a4c8832d928b16623144da35f637f3116b6440d0c3e88897d24b874b09c"
+  },
+  "gold_sha256": "f68c3b014de8c041b727d8af05484dd3a55f029c118de4476c8185ce3861baa3",
+  "table_sha256": "c7b6ad915732e81fe9d304973e89f63f7d09e83d9f8932560ed2c34f1a18ed00",
+  "source_predictions": {
+    "gower_knn_subspace": "0073d0a10829e47f13695756acea381a49667711f965e69af341391bbcfff3e9",
+    "gower_lof_subspace": "67427d9a7f2009a89876e4fabbe802dff020541cb99a13a900b738015fd5e629",
+    "sod_subspace_adaptation": "b20480ff3d2b03608e001fc865f8dac06f7b6088f174a9be31f6d0af30cc1f51",
+    "cop_error_vector_adaptation": "969b2e10434fd3bff169732fe1d4de457bd783a9043388992e839d6518897cc6",
+    "rlax_reference_adaptation": "991c83c4c1e306679f64b87bb3a21873dfc43173ea34919d4ecadd06e736c818",
+    "m2oe_choice": "02c75132ec3180516f514517704d474dce77958b4ab5cdfed80ae94c30131606"
+  }
+}

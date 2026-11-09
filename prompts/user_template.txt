@@ -1,0 +1,13 @@
+The exact per-case prompts are preserved in runs/input_payloads.jsonl.
+Every user message includes:
+
+- an instruction that the benchmark has already marked X_STAR as anomalous;
+- the feature schema, including opaque IDs for ADBench columns or UCI field
+  names and category descriptions for the raw UCI Lymphography table;
+- summary statistics or category counts computed only from the normal pool;
+- a deterministic sample of 12 normal reference rows;
+- the target row X_STAR, with the source row index and anomaly label omitted.
+
+No table name, source row index, hidden class, or hidden y column is sent to a
+model. The source label is used only by the local preparation script to build
+the normal reference pool and select target rows.

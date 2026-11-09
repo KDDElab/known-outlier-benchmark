@@ -1,0 +1,18 @@
+{
+  "name": "simple_20261107",
+  "returncode": 0,
+  "wall_seconds": 3.3630528450012207,
+  "expected_exists": true,
+  "command": [
+    "/opt/conda/bin/python",
+    "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/make_baselines_v2.py",
+    "--inputs-path",
+    "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/seed_20261107/inputs.jsonl",
+    "--ground-truth-path",
+    "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/seed_20261107/ground_truth.jsonl",
+    "--outdir",
+    "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/seed_20261107/simple",
+    "--replicates",
+    "100"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "method": "M2OE official TabularExplainer, choice outputs only",
+  "inputs_path": "<PROJECT_ROOT>/synthetic_benchmark_v2/inputs.jsonl",
+  "n_cases": 1,
+  "split": "test",
+  "seed_base": 20261106,
+  "epochs": 30,
+  "batch_size": 16,
+  "neighbors": 30,
+  "elapsed_seconds": 3.502640886232257,
+  "encoding": "numeric/ordinal/date reference-fitted min-max; categorical/binary/identifier one-hot; explicit missing indicator",
+  "ranking_note": "M\u00b2OE does not define a candidate ranking score; preserves official returned order and scores Hit@4/recall only descriptively.",
+  "source_repository_revision": "925c96ec0abca1e4cfd934d486f1217623184c7f",
+  "tensorflow": "2.20.0",
+  "numpy": "2.5.4",
+  "official_source_compatibility_patch": "Removed four unused tensorflow.python.keras.layers imports (ReLU, BatchNormalization) and tuple-wrapped four Keras Input shapes for TF 2.20/Keras 3; API compatibility only, no algorithm code changed."
+}

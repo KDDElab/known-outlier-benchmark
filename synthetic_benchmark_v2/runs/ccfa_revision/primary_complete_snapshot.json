@@ -1,0 +1,27 @@
+{
+  "scope": "All primary cohorts complete; DeepSeek auxiliary conditions still running",
+  "n_main_cases_per_model": 864,
+  "n_templates": 38,
+  "files": {
+    "main_table.csv": "c7b6ad915732e81fe9d304973e89f63f7d09e83d9f8932560ed2c34f1a18ed00",
+    "main_paired_tests.csv": "1d37e725979b4375301d47b1d0350e6bea0fc6d1141e0fc75bea512a15729067"
+  },
+  "main_raw_sha256": {
+    "qwen35_9b": "d95a6c9ee2f7bbef1d2312928e79f99c5d5729fda6d2ab0704ad627194c89b77",
+    "deepseek_v2_lite_chat": "386ceb9d2ed50c51b784e90c0b5a1924cd63169a985ad8483c403ab79924aa6c",
+    "llama31_8b_instruct": "0ba1565552da54d1bdb66b96508879d8637bc0b413bc4f8ebdfa820ef7e29de4"
+  },
+  "delivery_accounting_formula": "Exact@1 + 1 - answered; unanswered queries made correct, existing answers held fixed",
+  "delivery_accounting": {
+    "qwen35_9b": 0.23903508771929816,
+    "deepseek_v2_lite_chat": 0.2916666666666665,
+    "llama31_8b_instruct": 0.2112573099415206
+  },
+  "secondary_files": {
+    "matched_three_per_case.csv": "dcd9b70c2a19db681fa1a0badcab23e5ce828651a3132aa024635b125df05715",
+    "matched_three_summary.csv": "02911dde2218b5ee9f81f057ecbe9cfffc5e8f3c94daec480bfe2452b4df05ee",
+    "matched_three_tests.csv": "206fdedb3906f774e0509cb42f1da81bfdce6e9dbf562456fd59993fa912e288",
+    "prediction_support_provenance_per_case.csv": "d549ae70259c4129807886fdd956ac01dd497cb28f04297611343daea6437240",
+    "prediction_support_provenance_summary.csv": "065a989dda8e59cdabd748863b0fcf5b0806b7c7397b4d4d324eb3f60ed9d60b"
+  }
+}

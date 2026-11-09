@@ -1,0 +1,404 @@
+{
+  "seeds": [
+    20261106,
+    20261107,
+    20261108
+  ],
+  "models": [
+    "qwen35_9b",
+    "deepseek_v2_lite_chat",
+    "llama31_8b_instruct"
+  ],
+  "confidence_target": "exact support-minimal top-one retrieval among valid structured predictions",
+  "confidence_metrics_conditioning": "Brier/ECE use cases with a valid top-one prediction and reported confidence; coverage is reported separately",
+  "evidence_scope": "literal visible-input matching only; not semantic or causal faithfulness",
+  "bootstrap_replicates_per_seed": 2000,
+  "bootstrap_seed": 20261106,
+  "runner_sha256": "593aae133e17226f19890c7b30053373b90e190696902f9451e05f15e6234305",
+  "audits": {
+    "20261106": {
+      "qwen35_9b": {
+        "audit_path": "runs/multiseed/seed_20261106_rt522/confidence_evidence_qwen35_9b.json",
+        "annotation_sha256": "e5519bc376418f1cd584c3b3b22140aa8f643b712d9bccd19c61a3dfa7dcf537",
+        "prediction_sha256": "b6d13705972215688510bba3fefe2ccde5d88db245aa65f3e5896b15d0138625",
+        "audit_sha256": "152af77aebd68693cd9a3a7acbde18397a2e54de45c7c7c775b4cd2c2b2fb57b",
+        "summary": {
+          "n_cases": 288,
+          "split": "test",
+          "n_top1_predictions": 285,
+          "top1_confidence_coverage": 0.9895833333333334,
+          "n_top1_with_confidence": 285,
+          "top1_exact_support_minimal_hit_rate_all_top1": 0.4421052631578947,
+          "mean_top1_confidence": 0.9505263157894736,
+          "brier_score_conditional_on_top1_with_reported_confidence": 0.5000701754385966,
+          "ece_10_equal_width_bins_conditional_on_top1_with_reported_confidence": 0.508421052631579,
+          "template_cluster_bootstrap_95_ci": {
+            "top1_exact_hit_rate_all_top1": [
+              0.3333333333333333,
+              0.5493045150334632
+            ],
+            "brier": [
+              0.39425901356761567,
+              0.596055841307815
+            ],
+            "ece_10_bins": [
+              0.3932453386963388,
+              0.6147905175810108
+            ]
+          },
+          "evidence_audit": {
+            "n_top1_evidence_strings": 285,
+            "explicit_category_identifier_or_date_tokens": 165,
+            "literal_token_grounding_rate": 1.0,
+            "unmatched_explicit_value_tokens": 0,
+            "unknown_feature_id_mentions": 0,
+            "unmatched_examples_for_human_review": [],
+            "scope": "literal visible-input matching only; not a semantic-faithfulness claim"
+          },
+          "seed": 20261106,
+          "bootstrap_replicates": 2000
+        }
+      },
+      "deepseek_v2_lite_chat": {
+        "audit_path": "runs/multiseed/seed_20261106_rt522/confidence_evidence_deepseek_v2_lite_chat.json",
+        "annotation_sha256": "0b82e7e06245b422633a7ac28bd174c724e690dd00d4db014d09fa5399464e34",
+        "prediction_sha256": "0a2f22d710eab2b42b9fcb876c73559a09f3f1ea446ccb9735d2227312cc4389",
+        "audit_sha256": "c868e36319700b988859b0a8dc5f7996acb453ba3fc42f70538aeb15c4638991",
+        "summary": {
+          "n_cases": 288,
+          "split": "test",
+          "n_top1_predictions": 227,
+          "top1_confidence_coverage": 0.7881944444444444,
+          "n_top1_with_confidence": 227,
+          "top1_exact_support_minimal_hit_rate_all_top1": 0.15418502202643172,
+          "mean_top1_confidence": 0.8548458149779736,
+          "brier_score_conditional_on_top1_with_reported_confidence": 0.6311784140969164,
+          "ece_10_equal_width_bins_conditional_on_top1_with_reported_confidence": 0.7006607929515418,
+          "template_cluster_bootstrap_95_ci": {
+            "top1_exact_hit_rate_all_top1": [
+              0.08256880733944955,
+              0.23405432122010913
+            ],
+            "brier": [
+              0.5788034722222224,
+              0.6797551449831876
+            ],
+            "ece_10_bins": [
+              0.6217305866717298,
+              0.7734218275075988
+            ]
+          },
+          "evidence_audit": {
+            "n_top1_evidence_strings": 227,
+            "explicit_category_identifier_or_date_tokens": 116,
+            "literal_token_grounding_rate": 1.0,
+            "unmatched_explicit_value_tokens": 0,
+            "unknown_feature_id_mentions": 0,
+            "unmatched_examples_for_human_review": [],
+            "scope": "literal visible-input matching only; not a semantic-faithfulness claim"
+          },
+          "seed": 20261106,
+          "bootstrap_replicates": 2000
+        }
+      },
+      "llama31_8b_instruct": {
+        "audit_path": "runs/multiseed/seed_20261106_rt522/confidence_evidence_llama31_8b_instruct.json",
+        "annotation_sha256": "c822631c5c02ae812e0bb715659f8a27edefbb8b88301ad18f049173ebfe68dd",
+        "prediction_sha256": "59c2e54eb0fee6b4b8e5530597779afe8667b1a3273bb3573c729e4fc2b63e2a",
+        "audit_sha256": "bdb0b3059b670c25b886f76e411a98c98ed7915b079502ef1d41507c2658d2c1",
+        "summary": {
+          "n_cases": 288,
+          "split": "test",
+          "n_top1_predictions": 236,
+          "top1_confidence_coverage": 0.8194444444444444,
+          "n_top1_with_confidence": 236,
+          "top1_exact_support_minimal_hit_rate_all_top1": 0.22033898305084745,
+          "mean_top1_confidence": 0.8008474576271186,
+          "brier_score_conditional_on_top1_with_reported_confidence": 0.5056779661016951,
+          "ece_10_equal_width_bins_conditional_on_top1_with_reported_confidence": 0.5805084745762712,
+          "template_cluster_bootstrap_95_ci": {
+            "top1_exact_hit_rate_all_top1": [
+              0.1277254102302676,
+              0.3133172912888106
+            ],
+            "brier": [
+              0.4526566257083842,
+              0.5591026595744683
+            ],
+            "ece_10_bins": [
+              0.4921350413223142,
+              0.6705525293546395
+            ]
+          },
+          "evidence_audit": {
+            "n_top1_evidence_strings": 236,
+            "explicit_category_identifier_or_date_tokens": 44,
+            "literal_token_grounding_rate": 1.0,
+            "unmatched_explicit_value_tokens": 0,
+            "unknown_feature_id_mentions": 0,
+            "unmatched_examples_for_human_review": [],
+            "scope": "literal visible-input matching only; not a semantic-faithfulness claim"
+          },
+          "seed": 20261106,
+          "bootstrap_replicates": 2000
+        }
+      }
+    },
+    "20261107": {
+      "qwen35_9b": {
+        "audit_path": "runs/multiseed/seed_20261107/confidence_evidence_qwen35_9b.json",
+        "annotation_sha256": "37a2644605607924c60363259ccaecc81f957e94c1c10ed0300bb306a02396f9",
+        "prediction_sha256": "9232656405178a1cb5660f43b74fef00a6d3e4915cb7ec5da8b447c367b412cf",
+        "audit_sha256": "744d53556f04f5c8c84231129dbf6f257999b893b32175c4f994a8197ce73e83",
+        "summary": {
+          "n_cases": 288,
+          "split": "test",
+          "n_top1_predictions": 286,
+          "top1_confidence_coverage": 0.9930555555555556,
+          "n_top1_with_confidence": 286,
+          "top1_exact_support_minimal_hit_rate_all_top1": 0.43006993006993005,
+          "mean_top1_confidence": 0.9519230769230769,
+          "brier_score_conditional_on_top1_with_reported_confidence": 0.5138199300699301,
+          "ece_10_equal_width_bins_conditional_on_top1_with_reported_confidence": 0.5218531468531468,
+          "template_cluster_bootstrap_95_ci": {
+            "top1_exact_hit_rate_all_top1": [
+              0.32514649984162175,
+              0.5368421052631579
+            ],
+            "brier": [
+              0.4175858828671329,
+              0.6109126742160275
+            ],
+            "ece_10_bins": [
+              0.4150262237762237,
+              0.6298268690017726
+            ]
+          },
+          "evidence_audit": {
+            "n_top1_evidence_strings": 286,
+            "explicit_category_identifier_or_date_tokens": 126,
+            "literal_token_grounding_rate": 1.0,
+            "unmatched_explicit_value_tokens": 0,
+            "unknown_feature_id_mentions": 0,
+            "unmatched_examples_for_human_review": [],
+            "scope": "literal visible-input matching only; not a semantic-faithfulness claim"
+          },
+          "seed": 20261106,
+          "bootstrap_replicates": 2000
+        }
+      },
+      "deepseek_v2_lite_chat": {
+        "audit_path": "runs/multiseed/seed_20261107/confidence_evidence_deepseek_v2_lite_chat.json",
+        "annotation_sha256": "a9dd1a402dec60eb282567c0459c369085ec010ac13d4eb0bbc7d532ab41fc0b",
+        "prediction_sha256": "b2059b1ab92b1d2a4b030e45f40d00fd2012ade75d5d6d6d3ddba03bedc99aa5",
+        "audit_sha256": "392511d38be4b0a500d555917676c47b064c22cda32f62ebd70ff47fffa110c8",
+        "summary": {
+          "n_cases": 288,
+          "split": "test",
+          "n_top1_predictions": 238,
+          "top1_confidence_coverage": 0.8263888888888888,
+          "n_top1_with_confidence": 238,
+          "top1_exact_support_minimal_hit_rate_all_top1": 0.17647058823529413,
+          "mean_top1_confidence": 0.8504201680672271,
+          "brier_score_conditional_on_top1_with_reported_confidence": 0.6044537815126052,
+          "ece_10_equal_width_bins_conditional_on_top1_with_reported_confidence": 0.6739495798319328,
+          "template_cluster_bootstrap_95_ci": {
+            "top1_exact_hit_rate_all_top1": [
+              0.09955726092089728,
+              0.2633800816157859
+            ],
+            "brier": [
+              0.5474846590403277,
+              0.6584153662971215
+            ],
+            "ece_10_bins": [
+              0.5920801630434782,
+              0.7502181852409638
+            ]
+          },
+          "evidence_audit": {
+            "n_top1_evidence_strings": 238,
+            "explicit_category_identifier_or_date_tokens": 87,
+            "literal_token_grounding_rate": 1.0,
+            "unmatched_explicit_value_tokens": 0,
+            "unknown_feature_id_mentions": 0,
+            "unmatched_examples_for_human_review": [],
+            "scope": "literal visible-input matching only; not a semantic-faithfulness claim"
+          },
+          "seed": 20261106,
+          "bootstrap_replicates": 2000
+        }
+      },
+      "llama31_8b_instruct": {
+        "audit_path": "runs/multiseed/seed_20261107/confidence_evidence_llama31_8b_instruct.json",
+        "annotation_sha256": "8e06a46b880db111e664bc2d57942edb35f1fc060230547d8cc80b7bcfbb05c8",
+        "prediction_sha256": "d12ed5552f691a3131990721470b5f81c94fe591bbbdd5f3c9ce1192ce6f2e9b",
+        "audit_sha256": "743de4e89906b361eb1a75d3965d19bfdbb5a60e76e8bf11b4aac0181339cb33",
+        "summary": {
+          "n_cases": 288,
+          "split": "test",
+          "n_top1_predictions": 232,
+          "top1_confidence_coverage": 0.8055555555555556,
+          "n_top1_with_confidence": 232,
+          "top1_exact_support_minimal_hit_rate_all_top1": 0.15086206896551724,
+          "mean_top1_confidence": 0.8047413793103451,
+          "brier_score_conditional_on_top1_with_reported_confidence": 0.5545258620689657,
+          "ece_10_equal_width_bins_conditional_on_top1_with_reported_confidence": 0.6538793103448277,
+          "template_cluster_bootstrap_95_ci": {
+            "top1_exact_hit_rate_all_top1": [
+              0.0804999821211471,
+              0.22952362987859243
+            ],
+            "brier": [
+              0.5073107142857145,
+              0.5950885704874838
+            ],
+            "ece_10_bins": [
+              0.5743633335708179,
+              0.7230434782608695
+            ]
+          },
+          "evidence_audit": {
+            "n_top1_evidence_strings": 232,
+            "explicit_category_identifier_or_date_tokens": 35,
+            "literal_token_grounding_rate": 1.0,
+            "unmatched_explicit_value_tokens": 0,
+            "unknown_feature_id_mentions": 0,
+            "unmatched_examples_for_human_review": [],
+            "scope": "literal visible-input matching only; not a semantic-faithfulness claim"
+          },
+          "seed": 20261106,
+          "bootstrap_replicates": 2000
+        }
+      }
+    },
+    "20261108": {
+      "qwen35_9b": {
+        "audit_path": "runs/multiseed/seed_20261108/confidence_evidence_qwen35_9b.json",
+        "annotation_sha256": "543bfd93aa7e22f9da94032b523eca82419387a6d98b71a47e4280301781969a",
+        "prediction_sha256": "b619439932d622eef2c72ff23b1d1538ebaa82dceb8e047bda01f82c7af06143",
+        "audit_sha256": "65c45ab1b66230ae057051bf33b069c2ff9828b5b16a4871e796d140161d5ef8",
+        "summary": {
+          "n_cases": 288,
+          "split": "test",
+          "n_top1_predictions": 285,
+          "top1_confidence_coverage": 0.9895833333333334,
+          "n_top1_with_confidence": 285,
+          "top1_exact_support_minimal_hit_rate_all_top1": 0.41403508771929826,
+          "mean_top1_confidence": 0.9521052631578948,
+          "brier_score_conditional_on_top1_with_reported_confidence": 0.5275877192982457,
+          "ece_10_equal_width_bins_conditional_on_top1_with_reported_confidence": 0.5380701754385965,
+          "template_cluster_bootstrap_95_ci": {
+            "top1_exact_hit_rate_all_top1": [
+              0.31448258455325595,
+              0.5191671251298978
+            ],
+            "brier": [
+              0.43765036031042126,
+              0.6166041651223128
+            ],
+            "ece_10_bins": [
+              0.4392395756115642,
+              0.6367704168958983
+            ]
+          },
+          "evidence_audit": {
+            "n_top1_evidence_strings": 285,
+            "explicit_category_identifier_or_date_tokens": 146,
+            "literal_token_grounding_rate": 1.0,
+            "unmatched_explicit_value_tokens": 0,
+            "unknown_feature_id_mentions": 0,
+            "unmatched_examples_for_human_review": [],
+            "scope": "literal visible-input matching only; not a semantic-faithfulness claim"
+          },
+          "seed": 20261106,
+          "bootstrap_replicates": 2000
+        }
+      },
+      "deepseek_v2_lite_chat": {
+        "audit_path": "runs/multiseed/seed_20261108/confidence_evidence_deepseek_v2_lite_chat.json",
+        "annotation_sha256": "e4de6a07b822e2fff1631a355da0705de391c2e2bfab056dd1db45e50a55ae63",
+        "prediction_sha256": "2cf47af587c59c2f32d74d8e810f9b7ba1bd255767d1a86d41d95471ef43b5f8",
+        "audit_sha256": "aa2ea21986f7e460c38fdf8208583d0f6d4b54952fcc1559a6ca112eb9ec0769",
+        "summary": {
+          "n_cases": 288,
+          "split": "test",
+          "n_top1_predictions": 231,
+          "top1_confidence_coverage": 0.8020833333333334,
+          "n_top1_with_confidence": 231,
+          "top1_exact_support_minimal_hit_rate_all_top1": 0.1341991341991342,
+          "mean_top1_confidence": 0.8515151515151517,
+          "brier_score_conditional_on_top1_with_reported_confidence": 0.6420129870129873,
+          "ece_10_equal_width_bins_conditional_on_top1_with_reported_confidence": 0.7173160173160176,
+          "template_cluster_bootstrap_95_ci": {
+            "top1_exact_hit_rate_all_top1": [
+              0.06720551052279318,
+              0.20763124587277126
+            ],
+            "brier": [
+              0.5829112975269897,
+              0.6937612225383429
+            ],
+            "ece_10_bins": [
+              0.6337394514767933,
+              0.7883697838446685
+            ]
+          },
+          "evidence_audit": {
+            "n_top1_evidence_strings": 231,
+            "explicit_category_identifier_or_date_tokens": 131,
+            "literal_token_grounding_rate": 1.0,
+            "unmatched_explicit_value_tokens": 0,
+            "unknown_feature_id_mentions": 0,
+            "unmatched_examples_for_human_review": [],
+            "scope": "literal visible-input matching only; not a semantic-faithfulness claim"
+          },
+          "seed": 20261106,
+          "bootstrap_replicates": 2000
+        }
+      },
+      "llama31_8b_instruct": {
+        "audit_path": "runs/multiseed/seed_20261108/confidence_evidence_llama31_8b_instruct.json",
+        "annotation_sha256": "72c270db4335a683d205afa598a50553ed8db9ff393acd96b7d3c8b7be714b86",
+        "prediction_sha256": "a5d968f6051a0a69b08800b12d0e085aa8e5a8512eea7126e6629728cd1f5dd9",
+        "audit_sha256": "f2ef3b4d40568db2d326f6e7dddefcb56368ab1dbf432e3eb2b6019ff65841c5",
+        "summary": {
+          "n_cases": 288,
+          "split": "test",
+          "n_top1_predictions": 238,
+          "top1_confidence_coverage": 0.8263888888888888,
+          "n_top1_with_confidence": 238,
+          "top1_exact_support_minimal_hit_rate_all_top1": 0.18487394957983194,
+          "mean_top1_confidence": 0.8063025210084034,
+          "brier_score_conditional_on_top1_with_reported_confidence": 0.5370168067226893,
+          "ece_10_equal_width_bins_conditional_on_top1_with_reported_confidence": 0.6214285714285714,
+          "template_cluster_bootstrap_95_ci": {
+            "top1_exact_hit_rate_all_top1": [
+              0.10479210176571102,
+              0.27235772357723576
+            ],
+            "brier": [
+              0.48739321160563,
+              0.5821121491149653
+            ],
+            "ece_10_bins": [
+              0.5360207002862807,
+              0.69837341670675
+            ]
+          },
+          "evidence_audit": {
+            "n_top1_evidence_strings": 238,
+            "explicit_category_identifier_or_date_tokens": 49,
+            "literal_token_grounding_rate": 1.0,
+            "unmatched_explicit_value_tokens": 0,
+            "unknown_feature_id_mentions": 0,
+            "unmatched_examples_for_human_review": [],
+            "scope": "literal visible-input matching only; not a semantic-faithfulness claim"
+          },
+          "seed": 20261106,
+          "bootstrap_replicates": 2000
+        }
+      }
+    }
+  }
+}

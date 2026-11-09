@@ -1,0 +1,65 @@
+[deepseek_v2_lite_chat] loading /data/yuguangya/ALLYOUNEED/deepseek/DeepSeek-V2-Lite-Chat; cases=1055; GPUs=1,3
+[transformers] `tokenizer_class` is `LlamaTokenizerFast` but `tokenizer.json` is ByteLevel; loading `TokenizersBackend`. Set `tokenizer_class` to `TokenizersBackend` in `tokenizer_config.json`.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/351 [00:00<?, ?it/s]Loading weights:   0%|          | 1/351 [00:02<16:48,  2.88s/it]Loading weights:   2%|▏         | 6/351 [00:03<02:12,  2.60it/s]Loading weights:   3%|▎         | 12/351 [00:03<00:57,  5.94it/s]Loading weights:   4%|▍         | 15/351 [00:08<03:24,  1.64it/s]Loading weights:   8%|▊         | 27/351 [00:13<02:38,  2.04it/s]Loading weights:   8%|▊         | 29/351 [00:14<02:35,  2.07it/s]Loading weights:  11%|█▏        | 40/351 [00:19<02:37,  1.97it/s]Loading weights:  12%|█▏        | 41/351 [00:20<02:37,  1.97it/s]Loading weights:  15%|█▌        | 53/351 [00:25<02:12,  2.25it/s]Loading weights:  15%|█▌        | 54/351 [00:25<02:15,  2.19it/s]Loading weights:  19%|█▉        | 66/351 [00:29<01:46,  2.68it/s]Loading weights:  19%|█▉        | 67/351 [00:29<01:48,  2.61it/s]Loading weights:  23%|██▎       | 79/351 [00:32<01:22,  3.30it/s]Loading weights:  23%|██▎       | 80/351 [00:32<01:26,  3.13it/s]Loading weights:  26%|██▌       | 92/351 [00:35<01:11,  3.61it/s]Loading weights:  26%|██▋       | 93/351 [00:36<01:19,  3.26it/s]Loading weights:  30%|██▉       | 105/351 [00:38<01:02,  3.94it/s]Loading weights:  30%|███       | 106/351 [00:39<01:06,  3.70it/s]Loading weights:  34%|███▎      | 118/351 [00:42<01:01,  3.82it/s]Loading weights:  34%|███▍      | 119/351 [00:42<01:01,  3.75it/s]Loading weights:  37%|███▋      | 131/351 [00:47<01:08,  3.19it/s]Loading weights:  38%|███▊      | 132/351 [00:47<01:13,  2.97it/s]Loading weights:  41%|████      | 144/351 [00:51<01:06,  3.10it/s]Loading weights:  41%|████▏     | 145/351 [00:52<01:15,  2.72it/s]Loading weights:  45%|████▍     | 157/351 [00:55<00:59,  3.25it/s]Loading weights:  45%|████▌     | 158/351 [00:56<01:06,  2.91it/s]Loading weights:  48%|████▊     | 170/351 [01:00<01:01,  2.94it/s]Loading weights:  49%|████▊     | 171/351 [01:01<01:10,  2.56it/s]Loading weights:  52%|█████▏    | 183/351 [01:06<01:04,  2.60it/s]Loading weights:  52%|█████▏    | 184/351 [01:06<01:02,  2.68it/s]Loading weights:  56%|█████▌    | 196/351 [01:11<00:57,  2.71it/s]Loading weights:  56%|█████▌    | 197/351 [01:11<01:00,  2.55it/s]Loading weights:  60%|█████▉    | 209/351 [01:15<00:49,  2.87it/s]Loading weights:  60%|█████▉    | 210/351 [01:16<00:50,  2.77it/s]Loading weights:  63%|██████▎   | 222/351 [01:20<00:46,  2.80it/s]Loading weights:  64%|██████▎   | 223/351 [01:21<00:51,  2.48it/s]Loading weights:  67%|██████▋   | 235/351 [01:24<00:40,  2.86it/s]Loading weights:  67%|██████▋   | 236/351 [01:25<00:44,  2.61it/s]Loading weights:  71%|███████   | 248/351 [01:29<00:36,  2.82it/s]Loading weights:  71%|███████   | 249/351 [01:30<00:38,  2.67it/s]Loading weights:  74%|███████▍  | 261/351 [01:34<00:31,  2.83it/s]Loading weights:  75%|███████▍  | 262/351 [01:35<00:35,  2.54it/s]Loading weights:  78%|███████▊  | 274/351 [01:38<00:25,  3.02it/s]Loading weights:  78%|███████▊  | 275/351 [01:39<00:25,  2.95it/s]Loading weights:  82%|████████▏ | 287/351 [01:43<00:21,  2.97it/s]Loading weights:  82%|████████▏ | 288/351 [01:44<00:24,  2.53it/s]Loading weights:  85%|████████▌ | 300/351 [01:48<00:18,  2.73it/s]Loading weights:  86%|████████▌ | 301/351 [01:49<00:19,  2.63it/s]Loading weights:  86%|████████▌ | 302/351 [01:49<00:18,  2.64it/s]Loading weights:  89%|████████▉ | 313/351 [01:53<00:14,  2.59it/s]Loading weights:  89%|████████▉ | 314/351 [01:54<00:13,  2.65it/s]Loading weights:  91%|█████████ | 320/351 [01:54<00:07,  3.93it/s]Loading weights:  93%|█████████▎| 326/351 [01:58<00:09,  2.52it/s]Loading weights:  93%|█████████▎| 327/351 [02:00<00:12,  1.95it/s]Loading weights:  97%|█████████▋| 339/351 [02:03<00:04,  2.79it/s]Loading weights:  97%|█████████▋| 340/351 [02:03<00:03,  2.83it/s]Loading weights: 100%|██████████| 351/351 [02:03<00:00,  2.84it/s]
+[deepseek_v2_lite_chat] 1/1055 case=s20261107_main_V2_0001 parse=ok
+[deepseek_v2_lite_chat] 10/1055 case=s20261107_main_V2_0019 parse=ok
+[deepseek_v2_lite_chat] 20/1055 case=s20261107_main_V2_0036 parse=ok
+[deepseek_v2_lite_chat] 30/1055 case=s20261107_main_V2_0054 parse=ok
+[deepseek_v2_lite_chat] 40/1055 case=s20261107_main_V2_0070 parse=ok
+[deepseek_v2_lite_chat] 50/1055 case=s20261107_main_V2_0086 parse=ok
+[W1107 21:40:16.653019155 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 788529152 bytes (free: 443613184, total: 25298141184).
+[W1107 21:40:17.038013564 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 1 while trying to allocate 788529152 bytes (free: 269549568, total: 25298141184).
+[deepseek_v2_lite_chat] 60/1055 case=s20261107_main_V2_0106 parse=ok
+[deepseek_v2_lite_chat] 70/1055 case=s20261107_main_V2_0125 parse=ok
+[deepseek_v2_lite_chat] 80/1055 case=s20261107_main_V2_0140 parse=ok
+[deepseek_v2_lite_chat] 90/1055 case=s20261107_main_V2_0152 parse=failed
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (16617 > 16384). Running this sequence through the model will result in indexing errors
+[deepseek_v2_lite_chat] 100/1055 case=s20261107_main_V2_0166 parse=failed
+[deepseek_v2_lite_chat] 110/1055 case=s20261107_main_V2_0185 parse=ok
+[deepseek_v2_lite_chat] 120/1055 case=s20261107_main_V2_0199 parse=ok
+[deepseek_v2_lite_chat] 130/1055 case=s20261107_main_V2_0218 parse=ok
+[deepseek_v2_lite_chat] 140/1055 case=s20261107_main_V2_0231 parse=ok
+[deepseek_v2_lite_chat] 150/1055 case=s20261107_main_V2_0247 parse=ok
+[deepseek_v2_lite_chat] 160/1055 case=s20261107_main_V2_0268 parse=ok
+[deepseek_v2_lite_chat] 170/1055 case=s20261107_main_V2_0285 parse=failed
+[deepseek_v2_lite_chat] 180/1055 case=s20261107_main_V2_0309 parse=ok
+[deepseek_v2_lite_chat] 190/1055 case=s20261107_main_V2_0323 parse=ok
+[deepseek_v2_lite_chat] 200/1055 case=s20261107_main_V2_0341 parse=ok
+[deepseek_v2_lite_chat] 210/1055 case=s20261107_main_V2_0359 parse=ok
+[deepseek_v2_lite_chat] 220/1055 case=s20261107_main_V2_0375 parse=failed
+[deepseek_v2_lite_chat] 230/1055 case=s20261107_main_V2_0388 parse=ok
+[deepseek_v2_lite_chat] 240/1055 case=s20261107_main_V2_0403 parse=ok
+[deepseek_v2_lite_chat] 250/1055 case=s20261107_main_V2_0418 parse=failed
+[deepseek_v2_lite_chat] 260/1055 case=s20261107_main_V2_0436 parse=failed
+[deepseek_v2_lite_chat] 270/1055 case=s20261107_main_V2_0449 parse=failed
+[deepseek_v2_lite_chat] 280/1055 case=s20261107_main_V2_0466 parse=ok
+[deepseek_v2_lite_chat] 290/1055 case=s20261108_main_V2_0002 parse=ok
+[deepseek_v2_lite_chat] 300/1055 case=s20261108_main_V2_0019 parse=ok
+[deepseek_v2_lite_chat] 310/1055 case=s20261108_main_V2_0035 parse=ok
+[deepseek_v2_lite_chat] 320/1055 case=s20261108_main_V2_0052 parse=ok
+[deepseek_v2_lite_chat] 330/1055 case=s20261108_main_V2_0069 parse=ok
+[deepseek_v2_lite_chat] 340/1055 case=s20261108_main_V2_0084 parse=ok
+[deepseek_v2_lite_chat] 350/1055 case=s20261108_main_V2_0100 parse=ok
+[deepseek_v2_lite_chat] 360/1055 case=s20261108_main_V2_0119 parse=ok
+[deepseek_v2_lite_chat] 370/1055 case=s20261108_main_V2_0133 parse=ok
+[deepseek_v2_lite_chat] 380/1055 case=s20261108_main_V2_0151 parse=failed
+[deepseek_v2_lite_chat] 390/1055 case=s20261108_main_V2_0171 parse=failed
+[deepseek_v2_lite_chat] 400/1055 case=s20261108_main_V2_0188 parse=ok
+[deepseek_v2_lite_chat] 410/1055 case=s20261108_main_V2_0199 parse=failed
+[deepseek_v2_lite_chat] 420/1055 case=s20261108_main_V2_0216 parse=ok
+[deepseek_v2_lite_chat] 430/1055 case=s20261108_main_V2_0234 parse=ok
+[deepseek_v2_lite_chat] 440/1055 case=s20261108_main_V2_0260 parse=ok
+[deepseek_v2_lite_chat] 450/1055 case=s20261108_main_V2_0277 parse=ok
+[deepseek_v2_lite_chat] 460/1055 case=s20261108_main_V2_0292 parse=ok
+[deepseek_v2_lite_chat] 470/1055 case=s20261108_main_V2_0313 parse=ok
+[deepseek_v2_lite_chat] 480/1055 case=s20261108_main_V2_0326 parse=ok
+[deepseek_v2_lite_chat] 490/1055 case=s20261108_main_V2_0342 parse=ok
+[deepseek_v2_lite_chat] 500/1055 case=s20261108_main_V2_0355 parse=ok
+[deepseek_v2_lite_chat] 510/1055 case=s20261108_main_V2_0370 parse=ok
+[deepseek_v2_lite_chat] 520/1055 case=s20261108_main_V2_0394 parse=ok
+[deepseek_v2_lite_chat] 530/1055 case=s20261108_main_V2_0408 parse=ok
+[deepseek_v2_lite_chat] 540/1055 case=s20261108_main_V2_0426 parse=failed
+[deepseek_v2_lite_chat] 550/1055 case=s20261108_main_V2_0442 parse=ok
+[deepseek_v2_lite_chat] 560/1055 case=s20261108_main_V2_0458 parse=ok
+[deepseek_v2_lite_chat] 570/1055 case=s20261108_main_V2_0473 parse=ok

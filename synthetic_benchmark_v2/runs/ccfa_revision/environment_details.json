@@ -1,0 +1,16 @@
+{
+  "scope": "Host and analysis environment captured during the completed-main/ongoing-auxiliary revision",
+  "python_version": "3.13.11",
+  "python_implementation": "CPython",
+  "platform": "Linux-6.8.0-90-generic-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "pymupdf_version": "2.0",
+  "gpu_inventory": [
+    "0, NVIDIA GeForce RTX 3090, 590.48.01, 24576 MiB",
+    "1, NVIDIA GeForce RTX 3090, 590.48.01, 24576 MiB",
+    "2, NVIDIA GeForce RTX 3090, 590.48.01, 24576 MiB",
+    "3, NVIDIA GeForce RTX 3090, 590.48.01, 24576 MiB"
+  ],
+  "inference_runtime": "See runtime_versions.json and per-replica run logs; no independent environment recreation is claimed.",
+  "pdflatex_version": "pdfTeX 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian)"
+}

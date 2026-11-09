@@ -1,0 +1,6 @@
+annotator_id,model_id,model_family,n_cases,n_latest_outputs,n_schema_valid_outputs,n_parse_or_inference_failures,n_outputs_with_explicit_normalization,n_abstentions,n_valid_nonabstaining_outputs,schema_valid_rate
+deepseek_v2_lite_chat,DeepSeek-V2-Lite-Chat,DeepSeek,78,78,44,34,0,0,44,0.564103
+gemma3_4b,Gemma-3-4B-it,Gemma,78,78,78,0,3,0,78,1.0
+llama31_8b_instruct,Llama-3.1-8B-Instruct,Llama,78,78,78,0,0,0,78,1.0
+phi4_mini,Phi-4-mini-instruct,Phi,78,78,72,6,0,0,72,0.923077
+qwen35_9b,Qwen3.5-9B,Qwen,78,78,78,0,0,1,77,1.0

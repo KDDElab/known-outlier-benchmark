@@ -1,0 +1,74 @@
+{
+  "protocol_id": "known_anomaly_subspace_v2_seed_20261106_rt522_extra_model_family_v1",
+  "seed": 20261106,
+  "models": [
+    "phi4_mini"
+  ],
+  "n_test_cases": 288,
+  "status": "descriptive single-seed family-sensitivity cohort; excluded from three-seed confirmatory contrasts",
+  "runtime": {
+    "transformers": "5.22.1",
+    "pytorch": "2.14.1+cu126",
+    "gpu": "NVIDIA RTX 3090"
+  },
+  "runner_sha256": "56178acb2623645834adf67351b4a4131cc6f1a293babb4cca08a360e8d258c5",
+  "evaluator_sha256": "cea01adf8301aad075628d41ece2f8045ea6beb56c05867705ec6a0fbf7f7f0a",
+  "results": {
+    "phi4_mini": {
+      "n_test_cases": 288,
+      "n_valid_structured": 271,
+      "annotation_sha256": "34a2699d4f6f5a0e3610b6da5de1256a9652cdcd47e2f59ff77a3ffc3a542a61",
+      "prediction_sha256": "68bc86244556abaf5609f1c4fc0977d33e39d5351eecbbfbd0b774cb9221920b",
+      "run_log_sha256": "98c3f45dcea6ba94ddf0258aa07952e0a9c3f8304564654958ed902f5231e4e8",
+      "template_cluster_bootstrap_95_ci": {
+        "support_sufficiency_at_1": [
+          0.32977430555555554,
+          0.5625
+        ],
+        "support_minimal_exact_at_1": [
+          0.08680555555555555,
+          0.1875
+        ],
+        "support_Hit_at_4": [
+          0.1076388888888889,
+          0.21536458333333286
+        ],
+        "support_best_Jaccard": [
+          0.3049435013046446,
+          0.445112871417369
+        ]
+      },
+      "bootstrap_replicates": 2000,
+      "summary": {
+        "n_cases": 288,
+        "n_structurally_valid": 271,
+        "structured_output_rate": 0.9409722222222222,
+        "task_label_coverage": 0.9409722222222222,
+        "mechanism_metric_coverage": 0.9409722222222222,
+        "abstention_rate_on_valid_predictions": 0.02952029520295203,
+        "task_label_accuracy_on_valid_predictions": 0.14760147601476015,
+        "mechanism_feature_metrics": {
+          "micro_precision": 0.17807308970099667,
+          "micro_recall": 0.5654008438818565,
+          "micro_f1": 0.27084386053562404,
+          "macro_case_f1": 0.35842150973717257,
+          "exact_set_accuracy": 0.06642066420664207
+        },
+        "interaction_case_count": 180,
+        "interaction_scored_case_count": 180,
+        "interaction_metric_coverage": 1.0,
+        "interaction_all_fields_recovery_rate": 0.05555555555555555,
+        "support_top1_sufficiency_rate": 0.4409722222222222,
+        "support_top1_minimal_exact_hit_rate": 0.13541666666666666,
+        "support_any_minimal_hit_at_4": 0.1597222222222222,
+        "support_mean_recall_at_4": 0.14537037037037037,
+        "support_mean_reciprocal_rank": 0.14699074074074076,
+        "support_mean_best_jaccard": 0.3755591496040665,
+        "rule_top1_sufficiency_rate": 0.4236111111111111,
+        "rule_top1_minimal_exact_hit_rate": 0.13194444444444445,
+        "rule_any_minimal_hit_at_4": 0.1527777777777778,
+        "mean_predicted_subspace_fraction": 0.25052531775317755
+      }
+    }
+  }
+}

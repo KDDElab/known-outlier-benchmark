@@ -1,0 +1,38 @@
+{
+  "frozen_at_utc": "2026-11-08T11:32:08.738801+00:00",
+  "source": "https://github.com/AIDALab-DIMES/M2OE",
+  "source_revision": "925c96ec0abca1e4cfd934d486f1217623184c7f",
+  "scenario": "README example: 100x20 uniform[0,1) float32 matrix, row0 dimensions4,5,6 replaced by2, row0 target and other99 normal references. Ten fixed seeds.",
+  "seeds": [
+    19031,
+    19032,
+    19033,
+    19034,
+    19035,
+    19036,
+    19037,
+    19038,
+    19039,
+    19040
+  ],
+  "epochs": [
+    30,
+    300
+  ],
+  "other_parameters": {
+    "loss_weights": [
+      1.0,
+      1.2,
+      0.3
+    ],
+    "lr": 0.001,
+    "bs": 16,
+    "neighbors": 30,
+    "num_tries": 3,
+    "threshold": 0.5
+  },
+  "metrics": "Exact/precision/recall of emitted choices against injected fields; any-choice recovery separately; patch distance outside unit cube and nearest-reference distance. These are native recovery/repair diagnostics, not finite-support minimal truth.",
+  "environment": "CPU TensorFlow existing isolated /tmp/m2oe_tf_env with existing compatibility source /tmp/icde_m2oe_tf20; no mixed-type encoding.",
+  "runner_sha256": "1b337bc22f6cb502d396f10bc18a119b741ea160c320ff50a4ef447fc2ba8f1e",
+  "tensorflow": "2.20.0"
+}

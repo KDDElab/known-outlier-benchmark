@@ -1,0 +1,16 @@
+{
+  "name": "sod_cop_legacy_panel",
+  "returncode": 0,
+  "wall_seconds": 2.5386910438537598,
+  "expected_exists": true,
+  "command": [
+    "/opt/conda/bin/python",
+    "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/run_sod_cop_adaptations_v2.py",
+    "--inputs-path",
+    "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/inputs_panel.jsonl",
+    "--outdir",
+    "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/sod_cop_legacy_panel",
+    "--encoding",
+    "legacy_reference_clip"
+  ]
+}

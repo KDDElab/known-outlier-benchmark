@@ -1,0 +1,11 @@
+{
+  "condition": "focus_output_only",
+  "n_queries": 86,
+  "input_fields": "all eligible binary input columns",
+  "output_fields": "the known focus output only",
+  "system_prompt": "identical to all-output condition; only user payload visibility changes",
+  "ground_truth_used_in_prompt": false,
+  "source_inputs_sha256": "2ffe1bb3e9db1781ef6cf9892807d84457e38904000f4e0baa5fea202ffe6045",
+  "focus_only_inputs_sha256": "05c753fd44d037f37efa29da28d27bb46705de5d5a4006ed80aeb35245f80d80",
+  "case_ids_match_all_output_condition": true
+}

@@ -1,0 +1,25 @@
+{
+  "all_checks_passed": true,
+  "scope": "Input reconstruction, independent finite-label enumeration, unchanged original Gower rankings and prior-payload pairing; not a second-machine replication.",
+  "checks": {
+    "reconstructed_inputs_prior3.jsonl": "f5db753ffdfafb942780865d5b33121bd796e5a8cc3dbc699d82bf99b4b1ccd7",
+    "reconstructed_inputs_new_rules.jsonl": "f128bf209846c1310dba89379e2f3cce3e474aac44d812c4f801198623f1da54",
+    "reconstructed_ground_truth_new_rules.jsonl": "1c4a0b0e9abd513b9397115bca8b11ae1a6d2a0e728dbd01ced39fa7b7697ba9",
+    "reconstructed_populations_new_rules.jsonl": "6881786116e34b6122acc4586197607a4224684f551be8aa6ea5cd34ac0602c4",
+    "reconstructed_inputs_structured.jsonl": "bc2288dbcb573fd117e8a5acace0917e30833b91de8752961bdd03412e96a070",
+    "reconstructed_inputs_real_cells.jsonl": "ce5ebf0e3c6920e6716be86abaeba164895fcf885b75443a9f52996e41fb15ea",
+    "reconstructed_ground_truth_real_cells.jsonl": "c18e3b61556215ba3a27baf458f24c6f9897767f1d590d564f81bc3306c79430",
+    "reconstructed_inputs_real_cells_structured.jsonl": "37a997eef8c9e94269cf9f0a1f8a4695b0bf8b35c5356cd35e1fc844fee6c3b6",
+    "new_rule_labels_and_reference_membership": 120,
+    "invoice_knn_original_rankings": 96,
+    "invoice_lof_original_rankings": 96,
+    "main_d6_knn_original_rankings": 288,
+    "main_d6_lof_original_rankings": 288,
+    "prior_payload_pairs": 96,
+    "public_cell_identical_prompt_pairs": 72,
+    "independent_public_csv_labels_and_reference_exclusion": 72,
+    "beers_targets_with_ounces_canonicalization": 24,
+    "native_m2oe_field_and_patch_recomputation": 20
+  },
+  "runner_sha256": "d8ac06a75777afbb1b21a5d91bb3c65987e1b184448a23682ea0702f43e1676d"
+}

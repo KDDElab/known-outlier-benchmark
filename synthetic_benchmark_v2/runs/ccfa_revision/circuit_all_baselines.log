@@ -1,0 +1,34 @@
+{
+  "track": "Harvard circuit zero-noise output-specific pilot",
+  "n_queries": 86,
+  "methods": [
+    "gower_knn",
+    "gower_lof",
+    "conditional_output_surprisal",
+    "joint_output_surprisal"
+  ],
+  "eligible_features_only": true,
+  "uses_target_and_normal_reference_inputs": true,
+  "gower_methods_use_outputs": false,
+  "conditional_output_surprisal_uses_focus_output": true,
+  "joint_output_surprisal_uses_all_outputs": true,
+  "joint_output_smoothing": "add-one categorical smoothing over 2**n_output_fields binary vectors",
+  "max_subset_order": 14,
+  "subset_search": "all nonempty eligible-input subsets for each query; no labels or gold-set sizes determine the search space",
+  "top_k": 4,
+  "neighbor_count": "min(3, n_references - 1)",
+  "distance": "mean binary Gower/Hamming mismatch",
+  "numpy_version": "2.5.2",
+  "python_version": "3.13.11",
+  "information_asymmetry": "Gower methods use input rows only; focus conditional surprisal uses input values and the focus output; joint conditional surprisal and LLMs use all observed outputs.",
+  "inputs_sha256": "2ffe1bb3e9db1781ef6cf9892807d84457e38904000f4e0baa5fea202ffe6045",
+  "inputs_path": "/root/nas/SPELT-master/adbench_llm_reference_v1/circuit_track/inputs_zero_noise_pilot.jsonl",
+  "tie_break": "descending score, ascending size, lexicographically sorted feature IDs",
+  "runner_sha256": "9eb4638d44bad7f16c4597ed7a52c395976f0bc24ac58cfb40c6fe1543406fe2",
+  "prediction_sha256": {
+    "gower_knn": "0679b1a58914690ba1868370a60bd0ba7f6641360f76a0d7bd3ac964ae91eb7f",
+    "gower_lof": "3e1f39c66e3361ffbd23dc554a8cb3efa0cab219b7d97a873c0b4d1be901e364",
+    "conditional_output_surprisal": "ebae6ea13bef849bed427e803794a35b3e0ee8aa0489ef5fc9eba966a5510d23",
+    "joint_output_surprisal": "74c00f274e9586fb3e5c3530cfd832fd6327f0ef199d7068cbb77b2166461ae8"
+  }
+}

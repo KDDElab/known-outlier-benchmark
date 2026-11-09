@@ -1,0 +1,821 @@
+{
+  "n_cases_per_variant": 96,
+  "n_templates": 24,
+  "n_random_permutations": 4,
+  "permutation_seeds": [
+    20261121,
+    20261122,
+    20261123,
+    20261124
+  ],
+  "inference_environment": {
+    "python_version": "3.13.11",
+    "python_implementation": "CPython",
+    "platform": "Linux-6.8.0-90-generic-x86_64-with-glibc2.39"
+  },
+  "analysis_environment": {
+    "python_version": "3.13.11",
+    "numpy_version": "2.5.2",
+    "pandas_version": "3.0.5"
+  },
+  "baseline_protocol": "known_anomaly_subspace_benchmark_v2_order_probe_original_v1",
+  "metrics": {
+    "support_any_minimal_hit": {
+      "baseline_mean": 0.4791666666666667,
+      "mean_over_four_random_permutations": 0.1953125,
+      "permutation_range": [
+        0.14583333333333334,
+        0.23958333333333334
+      ],
+      "mean_paired_difference_random_minus_baseline": -0.2838541666666667,
+      "paired_template_cluster_bootstrap_95_ci": [
+        -0.3723958333333333,
+        -0.203125
+      ]
+    },
+    "support_best_jaccard": {
+      "baseline_mean": 0.661892361111111,
+      "mean_over_four_random_permutations": 0.4070186613155363,
+      "permutation_range": [
+        0.3679976851851852,
+        0.432559598965849
+      ],
+      "mean_paired_difference_random_minus_baseline": -0.2548736997955749,
+      "paired_template_cluster_bootstrap_95_ci": [
+        -0.30866743607954544,
+        -0.1999073839210558
+      ]
+    }
+  },
+  "variants": {
+    "20261121": {
+      "n_structurally_valid": 95,
+      "metrics": {
+        "support_any_minimal_hit": 0.23958333333333334,
+        "support_best_jaccard": 0.432559598965849
+      }
+    },
+    "20261122": {
+      "n_structurally_valid": 94,
+      "metrics": {
+        "support_any_minimal_hit": 0.14583333333333334,
+        "support_best_jaccard": 0.3679976851851852
+      }
+    },
+    "20261123": {
+      "n_structurally_valid": 95,
+      "metrics": {
+        "support_any_minimal_hit": 0.20833333333333334,
+        "support_best_jaccard": 0.4307291666666666
+      }
+    },
+    "20261124": {
+      "n_structurally_valid": 93,
+      "metrics": {
+        "support_any_minimal_hit": 0.1875,
+        "support_best_jaccard": 0.39678819444444446
+      }
+    }
+  },
+  "run_metadata": {
+    "20261121": [
+      {
+        "event": "started",
+        "protocol_id": "known_anomaly_subspace_v2_random_field_order_20261121",
+        "run_id": "qwen35_9b_20261106T121506Z_91f61063",
+        "annotator_id": "qwen35_9b",
+        "model_id": "Qwen3.5-9B",
+        "model_family": "Qwen",
+        "model_path": "<LOCAL_MODEL_ROOT>/Qwen3.5/Qwen3.5-9B",
+        "model_type": "qwen3_5",
+        "runner_code_sha256": "63d3edc08675974769988426768eb1d09753000fc752ca5af2464e4930444188",
+        "checkpoint_transformers_version": "4.57.0.dev0",
+        "inference_transformers_version": "5.22.1",
+        "torch_version": "2.14.1+cu126",
+        "decoding": {
+          "temperature": 0.0,
+          "do_sample": false,
+          "num_beams": 1,
+          "max_input_tokens": 16384,
+          "max_new_tokens": 512,
+          "input_truncation": false
+        },
+        "split": "test",
+        "n_cases": 96,
+        "gpu": {
+          "device_name": "NVIDIA GeForce RTX 3090",
+          "visible_devices": "0"
+        },
+        "model_files": {
+          "config": {
+            "name": "config.json",
+            "bytes": 3126,
+            "sha256": "d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05"
+          },
+          "weights": [
+            {
+              "name": "model.safetensors-00001-of-00004.safetensors",
+              "bytes": 5276436216,
+              "sha256": "db6f444b43d318c92f360a13a25561a6a65b10c0631b8ed305a426dbaa6c380e"
+            },
+            {
+              "name": "model.safetensors-00002-of-00004.safetensors",
+              "bytes": 5335161512,
+              "sha256": "31c7d7e2dd5d207840b31cc59083c8f4c4718959149e0358c0364052bb9a0330"
+            },
+            {
+              "name": "model.safetensors-00003-of-00004.safetensors",
+              "bytes": 5368717440,
+              "sha256": "7ec36ba3a4176a44c3c0876ad80c56a2f70c84bf008d82e9501df642f17dadec"
+            },
+            {
+              "name": "model.safetensors-00004-of-00004.safetensors",
+              "bytes": 3325995712,
+              "sha256": "b62b0c4cd7e44edee103ee8f4fe225f246d5e768e07bfd5f25b63a8aa1fdd0c6"
+            }
+          ],
+          "tokenizer_files": [
+            {
+              "name": "chat_template.jinja",
+              "bytes": 7756,
+              "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+            },
+            {
+              "name": "merges.txt",
+              "bytes": 3353259,
+              "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+            },
+            {
+              "name": "tokenizer.json",
+              "bytes": 12807982,
+              "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "bytes": 16710,
+              "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+            },
+            {
+              "name": "vocab.json",
+              "bytes": 6722759,
+              "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+            }
+          ]
+        },
+        "started_at_utc": "2026-11-06T12:15:06+00:00"
+      },
+      {
+        "event": "completed",
+        "protocol_id": "known_anomaly_subspace_v2_random_field_order_20261121",
+        "run_id": "qwen35_9b_20261106T121506Z_91f61063",
+        "annotator_id": "qwen35_9b",
+        "model_id": "Qwen3.5-9B",
+        "model_family": "Qwen",
+        "model_path": "<LOCAL_MODEL_ROOT>/Qwen3.5/Qwen3.5-9B",
+        "model_type": "qwen3_5",
+        "runner_code_sha256": "63d3edc08675974769988426768eb1d09753000fc752ca5af2464e4930444188",
+        "checkpoint_transformers_version": "4.57.0.dev0",
+        "inference_transformers_version": "5.22.1",
+        "torch_version": "2.14.1+cu126",
+        "decoding": {
+          "temperature": 0.0,
+          "do_sample": false,
+          "num_beams": 1,
+          "max_input_tokens": 16384,
+          "max_new_tokens": 512,
+          "input_truncation": false
+        },
+        "split": "test",
+        "n_cases": 96,
+        "gpu": {
+          "device_name": "NVIDIA GeForce RTX 3090",
+          "visible_devices": "0"
+        },
+        "model_files": {
+          "config": {
+            "name": "config.json",
+            "bytes": 3126,
+            "sha256": "d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05"
+          },
+          "weights": [
+            {
+              "name": "model.safetensors-00001-of-00004.safetensors",
+              "bytes": 5276436216,
+              "sha256": "db6f444b43d318c92f360a13a25561a6a65b10c0631b8ed305a426dbaa6c380e"
+            },
+            {
+              "name": "model.safetensors-00002-of-00004.safetensors",
+              "bytes": 5335161512,
+              "sha256": "31c7d7e2dd5d207840b31cc59083c8f4c4718959149e0358c0364052bb9a0330"
+            },
+            {
+              "name": "model.safetensors-00003-of-00004.safetensors",
+              "bytes": 5368717440,
+              "sha256": "7ec36ba3a4176a44c3c0876ad80c56a2f70c84bf008d82e9501df642f17dadec"
+            },
+            {
+              "name": "model.safetensors-00004-of-00004.safetensors",
+              "bytes": 3325995712,
+              "sha256": "b62b0c4cd7e44edee103ee8f4fe225f246d5e768e07bfd5f25b63a8aa1fdd0c6"
+            }
+          ],
+          "tokenizer_files": [
+            {
+              "name": "chat_template.jinja",
+              "bytes": 7756,
+              "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+            },
+            {
+              "name": "merges.txt",
+              "bytes": 3353259,
+              "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+            },
+            {
+              "name": "tokenizer.json",
+              "bytes": 12807982,
+              "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "bytes": 16710,
+              "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+            },
+            {
+              "name": "vocab.json",
+              "bytes": 6722759,
+              "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+            }
+          ]
+        },
+        "started_at_utc": "2026-11-06T12:15:06+00:00",
+        "dtype": "torch.bfloat16",
+        "loaded_model_type": "qwen3_5",
+        "completed_at_utc": "2026-11-06T12:36:21+00:00",
+        "elapsed_seconds": 1234.387,
+        "annotation_records_written": 96,
+        "total_annotation_records_in_file": 96
+      }
+    ],
+    "20261122": [
+      {
+        "event": "started",
+        "protocol_id": "known_anomaly_subspace_v2_random_field_order_20261122",
+        "run_id": "qwen35_9b_20261106T122212Z_5c6218a1",
+        "annotator_id": "qwen35_9b",
+        "model_id": "Qwen3.5-9B",
+        "model_family": "Qwen",
+        "model_path": "<LOCAL_MODEL_ROOT>/Qwen3.5/Qwen3.5-9B",
+        "model_type": "qwen3_5",
+        "runner_code_sha256": "63d3edc08675974769988426768eb1d09753000fc752ca5af2464e4930444188",
+        "checkpoint_transformers_version": "4.57.0.dev0",
+        "inference_transformers_version": "5.22.1",
+        "torch_version": "2.14.1+cu126",
+        "decoding": {
+          "temperature": 0.0,
+          "do_sample": false,
+          "num_beams": 1,
+          "max_input_tokens": 16384,
+          "max_new_tokens": 512,
+          "input_truncation": false
+        },
+        "split": "test",
+        "n_cases": 96,
+        "gpu": {
+          "device_name": "NVIDIA GeForce RTX 3090",
+          "visible_devices": "1"
+        },
+        "model_files": {
+          "config": {
+            "name": "config.json",
+            "bytes": 3126,
+            "sha256": "d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05"
+          },
+          "weights": [
+            {
+              "name": "model.safetensors-00001-of-00004.safetensors",
+              "bytes": 5276436216,
+              "sha256": "db6f444b43d318c92f360a13a25561a6a65b10c0631b8ed305a426dbaa6c380e"
+            },
+            {
+              "name": "model.safetensors-00002-of-00004.safetensors",
+              "bytes": 5335161512,
+              "sha256": "31c7d7e2dd5d207840b31cc59083c8f4c4718959149e0358c0364052bb9a0330"
+            },
+            {
+              "name": "model.safetensors-00003-of-00004.safetensors",
+              "bytes": 5368717440,
+              "sha256": "7ec36ba3a4176a44c3c0876ad80c56a2f70c84bf008d82e9501df642f17dadec"
+            },
+            {
+              "name": "model.safetensors-00004-of-00004.safetensors",
+              "bytes": 3325995712,
+              "sha256": "b62b0c4cd7e44edee103ee8f4fe225f246d5e768e07bfd5f25b63a8aa1fdd0c6"
+            }
+          ],
+          "tokenizer_files": [
+            {
+              "name": "chat_template.jinja",
+              "bytes": 7756,
+              "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+            },
+            {
+              "name": "merges.txt",
+              "bytes": 3353259,
+              "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+            },
+            {
+              "name": "tokenizer.json",
+              "bytes": 12807982,
+              "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "bytes": 16710,
+              "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+            },
+            {
+              "name": "vocab.json",
+              "bytes": 6722759,
+              "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+            }
+          ]
+        },
+        "started_at_utc": "2026-11-06T12:22:12+00:00"
+      },
+      {
+        "event": "completed",
+        "protocol_id": "known_anomaly_subspace_v2_random_field_order_20261122",
+        "run_id": "qwen35_9b_20261106T122212Z_5c6218a1",
+        "annotator_id": "qwen35_9b",
+        "model_id": "Qwen3.5-9B",
+        "model_family": "Qwen",
+        "model_path": "<LOCAL_MODEL_ROOT>/Qwen3.5/Qwen3.5-9B",
+        "model_type": "qwen3_5",
+        "runner_code_sha256": "63d3edc08675974769988426768eb1d09753000fc752ca5af2464e4930444188",
+        "checkpoint_transformers_version": "4.57.0.dev0",
+        "inference_transformers_version": "5.22.1",
+        "torch_version": "2.14.1+cu126",
+        "decoding": {
+          "temperature": 0.0,
+          "do_sample": false,
+          "num_beams": 1,
+          "max_input_tokens": 16384,
+          "max_new_tokens": 512,
+          "input_truncation": false
+        },
+        "split": "test",
+        "n_cases": 96,
+        "gpu": {
+          "device_name": "NVIDIA GeForce RTX 3090",
+          "visible_devices": "1"
+        },
+        "model_files": {
+          "config": {
+            "name": "config.json",
+            "bytes": 3126,
+            "sha256": "d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05"
+          },
+          "weights": [
+            {
+              "name": "model.safetensors-00001-of-00004.safetensors",
+              "bytes": 5276436216,
+              "sha256": "db6f444b43d318c92f360a13a25561a6a65b10c0631b8ed305a426dbaa6c380e"
+            },
+            {
+              "name": "model.safetensors-00002-of-00004.safetensors",
+              "bytes": 5335161512,
+              "sha256": "31c7d7e2dd5d207840b31cc59083c8f4c4718959149e0358c0364052bb9a0330"
+            },
+            {
+              "name": "model.safetensors-00003-of-00004.safetensors",
+              "bytes": 5368717440,
+              "sha256": "7ec36ba3a4176a44c3c0876ad80c56a2f70c84bf008d82e9501df642f17dadec"
+            },
+            {
+              "name": "model.safetensors-00004-of-00004.safetensors",
+              "bytes": 3325995712,
+              "sha256": "b62b0c4cd7e44edee103ee8f4fe225f246d5e768e07bfd5f25b63a8aa1fdd0c6"
+            }
+          ],
+          "tokenizer_files": [
+            {
+              "name": "chat_template.jinja",
+              "bytes": 7756,
+              "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+            },
+            {
+              "name": "merges.txt",
+              "bytes": 3353259,
+              "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+            },
+            {
+              "name": "tokenizer.json",
+              "bytes": 12807982,
+              "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "bytes": 16710,
+              "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+            },
+            {
+              "name": "vocab.json",
+              "bytes": 6722759,
+              "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+            }
+          ]
+        },
+        "started_at_utc": "2026-11-06T12:22:12+00:00",
+        "dtype": "torch.bfloat16",
+        "loaded_model_type": "qwen3_5",
+        "completed_at_utc": "2026-11-06T12:43:35+00:00",
+        "elapsed_seconds": 1238.179,
+        "annotation_records_written": 96,
+        "total_annotation_records_in_file": 96
+      }
+    ],
+    "20261123": [
+      {
+        "event": "started",
+        "protocol_id": "known_anomaly_subspace_v2_random_field_order_20261123",
+        "run_id": "qwen35_9b_20261106T122212Z_9da4cbd3",
+        "annotator_id": "qwen35_9b",
+        "model_id": "Qwen3.5-9B",
+        "model_family": "Qwen",
+        "model_path": "<LOCAL_MODEL_ROOT>/Qwen3.5/Qwen3.5-9B",
+        "model_type": "qwen3_5",
+        "runner_code_sha256": "63d3edc08675974769988426768eb1d09753000fc752ca5af2464e4930444188",
+        "checkpoint_transformers_version": "4.57.0.dev0",
+        "inference_transformers_version": "5.22.1",
+        "torch_version": "2.14.1+cu126",
+        "decoding": {
+          "temperature": 0.0,
+          "do_sample": false,
+          "num_beams": 1,
+          "max_input_tokens": 16384,
+          "max_new_tokens": 512,
+          "input_truncation": false
+        },
+        "split": "test",
+        "n_cases": 96,
+        "gpu": {
+          "device_name": "NVIDIA GeForce RTX 3090",
+          "visible_devices": "2"
+        },
+        "model_files": {
+          "config": {
+            "name": "config.json",
+            "bytes": 3126,
+            "sha256": "d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05"
+          },
+          "weights": [
+            {
+              "name": "model.safetensors-00001-of-00004.safetensors",
+              "bytes": 5276436216,
+              "sha256": "db6f444b43d318c92f360a13a25561a6a65b10c0631b8ed305a426dbaa6c380e"
+            },
+            {
+              "name": "model.safetensors-00002-of-00004.safetensors",
+              "bytes": 5335161512,
+              "sha256": "31c7d7e2dd5d207840b31cc59083c8f4c4718959149e0358c0364052bb9a0330"
+            },
+            {
+              "name": "model.safetensors-00003-of-00004.safetensors",
+              "bytes": 5368717440,
+              "sha256": "7ec36ba3a4176a44c3c0876ad80c56a2f70c84bf008d82e9501df642f17dadec"
+            },
+            {
+              "name": "model.safetensors-00004-of-00004.safetensors",
+              "bytes": 3325995712,
+              "sha256": "b62b0c4cd7e44edee103ee8f4fe225f246d5e768e07bfd5f25b63a8aa1fdd0c6"
+            }
+          ],
+          "tokenizer_files": [
+            {
+              "name": "chat_template.jinja",
+              "bytes": 7756,
+              "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+            },
+            {
+              "name": "merges.txt",
+              "bytes": 3353259,
+              "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+            },
+            {
+              "name": "tokenizer.json",
+              "bytes": 12807982,
+              "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "bytes": 16710,
+              "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+            },
+            {
+              "name": "vocab.json",
+              "bytes": 6722759,
+              "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+            }
+          ]
+        },
+        "started_at_utc": "2026-11-06T12:22:12+00:00"
+      },
+      {
+        "event": "completed",
+        "protocol_id": "known_anomaly_subspace_v2_random_field_order_20261123",
+        "run_id": "qwen35_9b_20261106T122212Z_9da4cbd3",
+        "annotator_id": "qwen35_9b",
+        "model_id": "Qwen3.5-9B",
+        "model_family": "Qwen",
+        "model_path": "<LOCAL_MODEL_ROOT>/Qwen3.5/Qwen3.5-9B",
+        "model_type": "qwen3_5",
+        "runner_code_sha256": "63d3edc08675974769988426768eb1d09753000fc752ca5af2464e4930444188",
+        "checkpoint_transformers_version": "4.57.0.dev0",
+        "inference_transformers_version": "5.22.1",
+        "torch_version": "2.14.1+cu126",
+        "decoding": {
+          "temperature": 0.0,
+          "do_sample": false,
+          "num_beams": 1,
+          "max_input_tokens": 16384,
+          "max_new_tokens": 512,
+          "input_truncation": false
+        },
+        "split": "test",
+        "n_cases": 96,
+        "gpu": {
+          "device_name": "NVIDIA GeForce RTX 3090",
+          "visible_devices": "2"
+        },
+        "model_files": {
+          "config": {
+            "name": "config.json",
+            "bytes": 3126,
+            "sha256": "d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05"
+          },
+          "weights": [
+            {
+              "name": "model.safetensors-00001-of-00004.safetensors",
+              "bytes": 5276436216,
+              "sha256": "db6f444b43d318c92f360a13a25561a6a65b10c0631b8ed305a426dbaa6c380e"
+            },
+            {
+              "name": "model.safetensors-00002-of-00004.safetensors",
+              "bytes": 5335161512,
+              "sha256": "31c7d7e2dd5d207840b31cc59083c8f4c4718959149e0358c0364052bb9a0330"
+            },
+            {
+              "name": "model.safetensors-00003-of-00004.safetensors",
+              "bytes": 5368717440,
+              "sha256": "7ec36ba3a4176a44c3c0876ad80c56a2f70c84bf008d82e9501df642f17dadec"
+            },
+            {
+              "name": "model.safetensors-00004-of-00004.safetensors",
+              "bytes": 3325995712,
+              "sha256": "b62b0c4cd7e44edee103ee8f4fe225f246d5e768e07bfd5f25b63a8aa1fdd0c6"
+            }
+          ],
+          "tokenizer_files": [
+            {
+              "name": "chat_template.jinja",
+              "bytes": 7756,
+              "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+            },
+            {
+              "name": "merges.txt",
+              "bytes": 3353259,
+              "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+            },
+            {
+              "name": "tokenizer.json",
+              "bytes": 12807982,
+              "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "bytes": 16710,
+              "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+            },
+            {
+              "name": "vocab.json",
+              "bytes": 6722759,
+              "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+            }
+          ]
+        },
+        "started_at_utc": "2026-11-06T12:22:12+00:00",
+        "dtype": "torch.bfloat16",
+        "loaded_model_type": "qwen3_5",
+        "completed_at_utc": "2026-11-06T12:44:44+00:00",
+        "elapsed_seconds": 1307.048,
+        "annotation_records_written": 96,
+        "total_annotation_records_in_file": 96
+      }
+    ],
+    "20261124": [
+      {
+        "event": "started",
+        "protocol_id": "known_anomaly_subspace_v2_random_field_order_20261124",
+        "run_id": "qwen35_9b_20261106T122212Z_55c23223",
+        "annotator_id": "qwen35_9b",
+        "model_id": "Qwen3.5-9B",
+        "model_family": "Qwen",
+        "model_path": "<LOCAL_MODEL_ROOT>/Qwen3.5/Qwen3.5-9B",
+        "model_type": "qwen3_5",
+        "runner_code_sha256": "63d3edc08675974769988426768eb1d09753000fc752ca5af2464e4930444188",
+        "checkpoint_transformers_version": "4.57.0.dev0",
+        "inference_transformers_version": "5.22.1",
+        "torch_version": "2.14.1+cu126",
+        "decoding": {
+          "temperature": 0.0,
+          "do_sample": false,
+          "num_beams": 1,
+          "max_input_tokens": 16384,
+          "max_new_tokens": 512,
+          "input_truncation": false
+        },
+        "split": "test",
+        "n_cases": 96,
+        "gpu": {
+          "device_name": "NVIDIA GeForce RTX 3090",
+          "visible_devices": "3"
+        },
+        "model_files": {
+          "config": {
+            "name": "config.json",
+            "bytes": 3126,
+            "sha256": "d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05"
+          },
+          "weights": [
+            {
+              "name": "model.safetensors-00001-of-00004.safetensors",
+              "bytes": 5276436216,
+              "sha256": "db6f444b43d318c92f360a13a25561a6a65b10c0631b8ed305a426dbaa6c380e"
+            },
+            {
+              "name": "model.safetensors-00002-of-00004.safetensors",
+              "bytes": 5335161512,
+              "sha256": "31c7d7e2dd5d207840b31cc59083c8f4c4718959149e0358c0364052bb9a0330"
+            },
+            {
+              "name": "model.safetensors-00003-of-00004.safetensors",
+              "bytes": 5368717440,
+              "sha256": "7ec36ba3a4176a44c3c0876ad80c56a2f70c84bf008d82e9501df642f17dadec"
+            },
+            {
+              "name": "model.safetensors-00004-of-00004.safetensors",
+              "bytes": 3325995712,
+              "sha256": "b62b0c4cd7e44edee103ee8f4fe225f246d5e768e07bfd5f25b63a8aa1fdd0c6"
+            }
+          ],
+          "tokenizer_files": [
+            {
+              "name": "chat_template.jinja",
+              "bytes": 7756,
+              "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+            },
+            {
+              "name": "merges.txt",
+              "bytes": 3353259,
+              "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+            },
+            {
+              "name": "tokenizer.json",
+              "bytes": 12807982,
+              "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "bytes": 16710,
+              "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+            },
+            {
+              "name": "vocab.json",
+              "bytes": 6722759,
+              "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+            }
+          ]
+        },
+        "started_at_utc": "2026-11-06T12:22:12+00:00"
+      },
+      {
+        "event": "completed",
+        "protocol_id": "known_anomaly_subspace_v2_random_field_order_20261124",
+        "run_id": "qwen35_9b_20261106T122212Z_55c23223",
+        "annotator_id": "qwen35_9b",
+        "model_id": "Qwen3.5-9B",
+        "model_family": "Qwen",
+        "model_path": "<LOCAL_MODEL_ROOT>/Qwen3.5/Qwen3.5-9B",
+        "model_type": "qwen3_5",
+        "runner_code_sha256": "63d3edc08675974769988426768eb1d09753000fc752ca5af2464e4930444188",
+        "checkpoint_transformers_version": "4.57.0.dev0",
+        "inference_transformers_version": "5.22.1",
+        "torch_version": "2.14.1+cu126",
+        "decoding": {
+          "temperature": 0.0,
+          "do_sample": false,
+          "num_beams": 1,
+          "max_input_tokens": 16384,
+          "max_new_tokens": 512,
+          "input_truncation": false
+        },
+        "split": "test",
+        "n_cases": 96,
+        "gpu": {
+          "device_name": "NVIDIA GeForce RTX 3090",
+          "visible_devices": "3"
+        },
+        "model_files": {
+          "config": {
+            "name": "config.json",
+            "bytes": 3126,
+            "sha256": "d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05"
+          },
+          "weights": [
+            {
+              "name": "model.safetensors-00001-of-00004.safetensors",
+              "bytes": 5276436216,
+              "sha256": "db6f444b43d318c92f360a13a25561a6a65b10c0631b8ed305a426dbaa6c380e"
+            },
+            {
+              "name": "model.safetensors-00002-of-00004.safetensors",
+              "bytes": 5335161512,
+              "sha256": "31c7d7e2dd5d207840b31cc59083c8f4c4718959149e0358c0364052bb9a0330"
+            },
+            {
+              "name": "model.safetensors-00003-of-00004.safetensors",
+              "bytes": 5368717440,
+              "sha256": "7ec36ba3a4176a44c3c0876ad80c56a2f70c84bf008d82e9501df642f17dadec"
+            },
+            {
+              "name": "model.safetensors-00004-of-00004.safetensors",
+              "bytes": 3325995712,
+              "sha256": "b62b0c4cd7e44edee103ee8f4fe225f246d5e768e07bfd5f25b63a8aa1fdd0c6"
+            }
+          ],
+          "tokenizer_files": [
+            {
+              "name": "chat_template.jinja",
+              "bytes": 7756,
+              "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+            },
+            {
+              "name": "merges.txt",
+              "bytes": 3353259,
+              "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+            },
+            {
+              "name": "tokenizer.json",
+              "bytes": 12807982,
+              "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+            },
+            {
+              "name": "tokenizer_config.json",
+              "bytes": 16710,
+              "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+            },
+            {
+              "name": "vocab.json",
+              "bytes": 6722759,
+              "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+            }
+          ]
+        },
+        "started_at_utc": "2026-11-06T12:22:12+00:00",
+        "dtype": "torch.bfloat16",
+        "loaded_model_type": "qwen3_5",
+        "completed_at_utc": "2026-11-06T12:44:12+00:00",
+        "elapsed_seconds": 1274.498,
+        "annotation_records_written": 96,
+        "total_annotation_records_in_file": 96
+      }
+    ]
+  },
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20261125,
+  "uncertainty_unit": "24 template clusters; per-case scores averaged across four random permutations before paired cluster resampling",
+  "interpretation": "Exploratory single-checkpoint sensitivity; four transformations of the same 96 cases do not create independent case samples or establish broad prompt robustness.",
+  "sha256": {
+    "synthetic_benchmark_v2/runs/random_field_order_probe/manifest.json": "bc3708f05bad2435e8338c27957ff321faa6095086c7affea979f38766f785f0",
+    "synthetic_benchmark_v2/runs/random_field_order_probe/ground_truth_96.jsonl": "cb8584ae3d1846850870e6863ce927d1513be508550dedb3cbb03c54693ff15f",
+    "synthetic_benchmark_v2/evaluate_benchmark.py": "cea01adf8301aad075628d41ece2f8045ea6beb56c05867705ec6a0fbf7f7f0a",
+    "synthetic_benchmark_v2/analyze_random_field_order_probes_v2.py": "06b22c714878ad974d2aaa52c8ffc00e6a482f606a49036d542c8245f2db4f28",
+    "synthetic_benchmark_v2/runs/order_probe_original_evaluation/per_case.csv": "3e05e50693681ff41610112633ed26ed09886ff61665dafcd108db3b690fe83c",
+    "synthetic_benchmark_v2/runs/random_field_order_probe/annotations_qwen35_9b_20261121.jsonl": "c95006f3c4b3f71fc745ceabe695c3fa4faea9af86ca369d259756ff2292ccc2",
+    "synthetic_benchmark_v2/runs/random_field_order_probe/model_runs.jsonl": "7ae3b230b5404b5fb25515c04459d5a2621b39e5d6caef25a704ebefab31b844",
+    "synthetic_benchmark_v2/runs/random_field_order_probe/predictions_qwen35_9b_20261121.jsonl": "c086c425ec4b7fbfa73e799f8548e92726c20a46b35d2dcc072dcf44735ecf7b",
+    "synthetic_benchmark_v2/runs/random_field_order_probe/evaluation_qwen35_9b_20261121/per_case.csv": "9710c4a4d9ccfe9e203d9097f224a9698d25f20e71a31206b756825e82f2c758",
+    "synthetic_benchmark_v2/runs/random_field_order_probe/annotations_qwen35_9b_20261122.jsonl": "8ec0ac0ccabe22d7c333b3aa251d3d6a324c7e4aa84dd4117bc5b8614e184906",
+    "synthetic_benchmark_v2/runs/random_field_order_probe/model_runs_20261122.jsonl": "7ed18b2ca06e1541dd3ea67b9750cac86f9d5a0ff7d8db113c4ac61e64d7afb8",
+    "synthetic_benchmark_v2/runs/random_field_order_probe/predictions_qwen35_9b_20261122.jsonl": "95cd5cc4fc2256d2b1857e7b5866b5f82b9196bc598d4c4ac919650946301be8",
+    "synthetic_benchmark_v2/runs/random_field_order_probe/evaluation_qwen35_9b_20261122/per_case.csv": "98a7eab2a84c7ab64e287634a67ebbad73972d8af9c5a19806059e4e424a1973",
+    "synthetic_benchmark_v2/runs/random_field_order_probe/annotations_qwen35_9b_20261123.jsonl": "ea6a7df92e3b371fd0562b8570d2b7947b85904a5d48017bf33f84a43170b072",
+    "synthetic_benchmark_v2/runs/random_field_order_probe/model_runs_20261123.jsonl": "d9f429f970fe6d0e3607c17e084396189ea1f73f6d0198faa202356c76857aca",
+    "synthetic_benchmark_v2/runs/random_field_order_probe/predictions_qwen35_9b_20261123.jsonl": "b94b5c60910443d4efb2ad84f14b2ff4d3a24be86aa075157a2a1682d49965ab",
+    "synthetic_benchmark_v2/runs/random_field_order_probe/evaluation_qwen35_9b_20261123/per_case.csv": "bafd2be6abe96366a2cb04d2a5113d82445d5930870f0de47016f86c3cf5effe",
+    "synthetic_benchmark_v2/runs/random_field_order_probe/annotations_qwen35_9b_20261124.jsonl": "06babaf8d1c0889c4db46df22376cc955226b4e573851e64127e34acd4e6e9f5",
+    "synthetic_benchmark_v2/runs/random_field_order_probe/model_runs_20261124.jsonl": "30993692724aafe95b9b1430bafa4acc85271d5f1ad61f07eee87145cbf5bb0b",
+    "synthetic_benchmark_v2/runs/random_field_order_probe/predictions_qwen35_9b_20261124.jsonl": "8faf0e320f4d61e3fb22d30861accce798c31755a58be9f3070b2c54dd430173",
+    "synthetic_benchmark_v2/runs/random_field_order_probe/evaluation_qwen35_9b_20261124/per_case.csv": "d05a4a197a4de6ab3cbfcb25a7d533a0498c8553ee2711757afbe5a552362fa8"
+  }
+}

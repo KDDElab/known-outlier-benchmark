@@ -1,0 +1,71 @@
+{
+  "protocol_id": "adbench_uci_llm_reference_v1",
+  "created_date": "2026-11-04",
+  "adbench_source": "https://github.com/Minqi824/ADBench/tree/main/adbench/datasets/Classical",
+  "adbench_files": [
+    {
+      "name": "14_glass.npz",
+      "sha256": "aa7a8db1d475ba01a10488af454bc15220a3d5951b010b03b7020567d8152cdc",
+      "bytes": 10755
+    },
+    {
+      "name": "15_Hepatitis.npz",
+      "sha256": "4a87a2f7d8013e5bfde63294fae61ec7a612322de72f338a7f9491749025ad98",
+      "bytes": 1644
+    },
+    {
+      "name": "21_Lymphography.npz",
+      "sha256": "dad977b04f4ea65b78ccd0e9f76b45175bad605165b37e63f3cc177845e67037",
+      "bytes": 1895
+    },
+    {
+      "name": "29_Pima.npz",
+      "sha256": "215454bb263a2f040945c9ea7bd7f06f1e89a61a3143bdb6f196e3887e801a7d",
+      "bytes": 11023
+    },
+    {
+      "name": "37_Stamps.npz",
+      "sha256": "99fe739447284f613fa54bf2dccdb51c5120175ce6260adec6dad77576c42509",
+      "bytes": 20569
+    },
+    {
+      "name": "39_vertebral.npz",
+      "sha256": "0816286f92b96fe6867664a41a031ac7228dcfbf1a5feefe50ca3883b2e9073d",
+      "bytes": 4868
+    },
+    {
+      "name": "42_WBC.npz",
+      "sha256": "650f9dcb129248f67a291be0974f533ef259fcbde50fce5c8ad2a1cb2652d03b",
+      "bytes": 1444
+    },
+    {
+      "name": "45_wine.npz",
+      "sha256": "d5ad8965d92cc57122fe1e6572bb301adbaf795b3e166d187ae00a704d8f6e20",
+      "bytes": 4072
+    },
+    {
+      "name": "4_breastw.npz",
+      "sha256": "4f37ce07dbc25ddad8178fdc6d664ab46d2d0000ee28c2787c3c7ff3c03ef9f6",
+      "bytes": 3023
+    }
+  ],
+  "uci_lymphography": {
+    "url": "https://archive.ics.uci.edu/static/public/63/lymphography.zip",
+    "sha256": "082ff211040ad7dc2122e92441aa3eee494ab6496fecdcd86a440fe863ee5b6f",
+    "bytes": 2980,
+    "license": "CC BY 4.0",
+    "doi": "10.24432/C54598",
+    "normal_class_codes": [
+      1
+    ],
+    "anomaly_class_codes": [
+      2,
+      3,
+      4
+    ],
+    "normal_reference_pool_rows": 2
+  },
+  "sample_seed": 20261104,
+  "adbench_query_cap_per_dataset": 8,
+  "normal_examples_per_query": 12
+}

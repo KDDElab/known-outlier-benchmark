@@ -1,0 +1,10 @@
+method,metric,contrast,difference,lo,hi,p_raw,n_pairs,p_holm
+qwen35_9b,exact_at_1,all_minus_focus,0.015625,0.0,0.046875,1.0,16,1.0
+qwen35_9b,hit_at_4,all_minus_focus,0.0,0.0,0.0,1.0,16,1.0
+qwen35_9b,best_jaccard_at_4,all_minus_focus,0.09298368731962481,0.057808836129148625,0.12527617835723304,0.005249737513124344,16,0.0472476376181191
+deepseek_v2_lite_chat,exact_at_1,all_minus_focus,0.0,0.0,0.0,1.0,16,1.0
+deepseek_v2_lite_chat,hit_at_4,all_minus_focus,0.0,0.0,0.0,1.0,16,1.0
+deepseek_v2_lite_chat,best_jaccard_at_4,all_minus_focus,-0.05914224664224664,-0.14732320522359582,0.03031786572802197,0.23708814559272037,16,1.0
+llama31_8b_instruct,exact_at_1,all_minus_focus,0.0,0.0,0.0,1.0,16,1.0
+llama31_8b_instruct,hit_at_4,all_minus_focus,-0.01953125,-0.05078125,0.0,0.5027248637568121,16,1.0
+llama31_8b_instruct,best_jaccard_at_4,all_minus_focus,-0.047054883773633774,-0.10572089947089947,-0.004523283429533432,0.16359182040897954,16,1.0

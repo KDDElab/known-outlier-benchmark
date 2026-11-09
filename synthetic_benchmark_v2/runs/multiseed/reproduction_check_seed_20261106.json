@@ -1,0 +1,22 @@
+{
+  "seed": 20261106,
+  "generator": "generate_benchmark.py --seed 20261106 --outdir /tmp/v2_repro_check",
+  "artifacts": {
+    "inputs.jsonl": {
+      "sha256": "1ed9aa89ac1f0212e080a38f0aa4179c7612565db8c05677b2d5f01c41895a7c",
+      "reproduced_identically": true
+    },
+    "ground_truth.jsonl": {
+      "sha256": "4bd36c032d8f1530248bb0e50d5d1f91d3f08e5a5e5b95403375f62e440a8932",
+      "reproduced_identically": true
+    },
+    "case_manifest.jsonl": {
+      "sha256": "e0905a5ee033d845b7d97537363f214af4b5a12ab1fabfac53bdbfb13b0c6b17",
+      "reproduced_identically": true
+    },
+    "template_catalog.json": {
+      "sha256": "1f009e732981984d0947676d61443fb8bc089aac048583f5f7d06f6ea134ebe4",
+      "reproduced_identically": true
+    }
+  }
+}

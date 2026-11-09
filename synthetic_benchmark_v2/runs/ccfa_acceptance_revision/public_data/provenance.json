@@ -1,0 +1,38 @@
+{
+  "commit": "7be1334b8c7bbdac3f47ef514fb3e1e8c5fc181c",
+  "source": "https://github.com/BigDaMa/raha",
+  "files": [
+    {
+      "name": "beers_dirty.csv",
+      "url": "https://raw.githubusercontent.com/BigDaMa/raha/7be1334b8c7bbdac3f47ef514fb3e1e8c5fc181c/datasets/beers/dirty.csv",
+      "sha256": "7110bf4931a9445a1675e544d6c996817c739136239f8a2b02e088c7ec0a1f68"
+    },
+    {
+      "name": "beers_clean.csv",
+      "url": "https://raw.githubusercontent.com/BigDaMa/raha/7be1334b8c7bbdac3f47ef514fb3e1e8c5fc181c/datasets/beers/clean.csv",
+      "sha256": "373227df59ad197e154dd5149125789e415019535c7223355e9486ee1b3b93de"
+    },
+    {
+      "name": "flights_dirty.csv",
+      "url": "https://raw.githubusercontent.com/BigDaMa/raha/7be1334b8c7bbdac3f47ef514fb3e1e8c5fc181c/datasets/flights/dirty.csv",
+      "sha256": "1b5c1afa10aa0e7c20fd7e14d05c56772715b2771aa0f5fa67ed1709e1eecd46"
+    },
+    {
+      "name": "flights_clean.csv",
+      "url": "https://raw.githubusercontent.com/BigDaMa/raha/7be1334b8c7bbdac3f47ef514fb3e1e8c5fc181c/datasets/flights/clean.csv",
+      "sha256": "0acfcfd8985b06fdd363965c9e8d9522c43e7589a93d79ae7dc311e1c37fdf3b"
+    },
+    {
+      "name": "rayyan_dirty.csv",
+      "url": "https://raw.githubusercontent.com/BigDaMa/raha/7be1334b8c7bbdac3f47ef514fb3e1e8c5fc181c/datasets/rayyan/dirty.csv",
+      "sha256": "7e25e6db262b0c72ca2d9735d5959599cf5a582e1c705459507c7b45d0d1d174"
+    },
+    {
+      "name": "rayyan_clean.csv",
+      "url": "https://raw.githubusercontent.com/BigDaMa/raha/7be1334b8c7bbdac3f47ef514fb3e1e8c5fc181c/datasets/rayyan/clean.csv",
+      "sha256": "23159f43c0706782388ed8957ad0c74eb7b88bc98f34d65bd49296e186d4673f"
+    }
+  ],
+  "paper": "https://doi.org/10.1145/3299869.3324956",
+  "provenance_passage": "Raha section 6.1: Beers scraped and manually cleaned; Rayyan cleaned by dataset owners; Flights obtained with ground truth from previous research. No new human labels."
+}

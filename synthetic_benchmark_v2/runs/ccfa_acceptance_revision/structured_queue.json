@@ -1,0 +1,17 @@
+[
+  {
+    "model": "qwen35_9b",
+    "pid": 3912965,
+    "gpus": "0"
+  },
+  {
+    "model": "deepseek_v2_lite_chat",
+    "pid": 3912966,
+    "gpus": "1,2"
+  },
+  {
+    "model": "llama31_8b_instruct",
+    "pid": 3912967,
+    "gpus": "3"
+  }
+]

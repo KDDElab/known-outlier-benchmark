@@ -1,0 +1,8 @@
+{
+  "pid": 2304606,
+  "command": "/opt/conda/bin/python /root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/annotate_v2.py --model deepseek_v2_lite_chat --inputs-path /root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/pending_deepseek_v2_lite_chat.jsonl --annotations-path /root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/new_deepseek_v2_lite_chat.jsonl --run-log-path /root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/model_runs_deepseek_v2_lite_chat.jsonl --protocol-id known_outlier_ccfa_repaired_v1 --resume ",
+  "completed_records_before_signal": 578,
+  "reason": "Disjoint batch-size-one replicas after another model completed; preserve all completed outputs",
+  "signal": "SIGTERM",
+  "time_unix": 1794067487.3787901
+}

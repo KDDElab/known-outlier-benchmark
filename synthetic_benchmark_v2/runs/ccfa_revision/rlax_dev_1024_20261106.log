@@ -1,0 +1,38 @@
+RLAX adaptation 24/24 case=s20261106_main_V2_0297
+{
+  "n_cases": 24,
+  "split": "dev",
+  "method": "Independent paper-guided RLAX mixed-type single-positive adaptation; per-case PPO with subspace-margin-delta reward; MDR and policy feature orderings; top four distinct prefix subsets ranked by AUC minus alpha*|S|/d.",
+  "reference_protocol": "Each case's normal reference sample is deterministically split into disjoint X for kNN density scores and E_neg inlier examples; target is E_pos; k=min(3, |X|).",
+  "encoding": "numeric/ordinal/date reference min-max with squared numeric differences and an in-field missingness mismatch penalty; categorical/binary/identifier dimensions use 0/1 mismatch, all under per-field Euclidean aggregation; no test labels are used.",
+  "paper_url": "https://doi.org/10.1007/s10994-026-07182-z",
+  "official_repository_url": "https://github.com/AIDALab-DIMES/RLAX",
+  "official_repository_snapshot": "Checked-out main commit a6fcceca50ca64d8558fec31ef2dff5c34474e39 contains README.md and LICENSE only; this is an independent adaptation, not canonical implementation.",
+  "scorer_schema_adapter": "task_label=unknown, mechanism_feature_ids=[], mechanism_metric_applicable=false, abstain=false; confidence=0.5 and fixed evidence are required-format placeholders only and are not interpreted as calibrated method outputs.",
+  "hyperparameters": {
+    "seed": 20261106,
+    "n_steps_per_case": 1024,
+    "ppo_epochs": 4,
+    "policy_architecture": "2x64 Tanh actor-critic",
+    "learning_rate": 0.0003,
+    "gamma": 0.95,
+    "gae_lambda": 0.95,
+    "clip_range": 0.2,
+    "batch_size": 64,
+    "max_gradient_norm": 0.5,
+    "negative_reward_patience": 3,
+    "alpha_gain": 0.5,
+    "distance": "Euclidean over encoded original-field dimensions",
+    "k_neighbors": "min(3, |X|)"
+  },
+  "elapsed_seconds": 18.538204496726394,
+  "optimization_accounting": {
+    "interactions_per_query": 1024,
+    "rollout_batches_per_query": 1,
+    "minibatch_updates_per_query": 64,
+    "initial_policy": "fresh per query",
+    "datetime_encoding": "days, reference scaled without clipping"
+  },
+  "inputs_sha256": "2a4a44b2c0bac60a1e7e1ff36a5c0f91d2de19e164009b2e34d67f3d59f2e801",
+  "runner_sha256": "2d70071f7fb09d53de0f76b5ccf273635da98e58d8b363c5a61b4261e2aa8aa2"
+}

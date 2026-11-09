@@ -1,0 +1,135 @@
+{
+  "candidate_budget": 3,
+  "comparison": "unordered set of the LLM's first three ranked candidates versus all M\u00b2OE choices up to three",
+  "M2OE_ordering_assumption": "none; choices are evaluated without ranking",
+  "label_use": "test labels are used only by the evaluator, not by truncation or candidate selection",
+  "per_seed": {
+    "20261106": {
+      "inputs_sha256": "1ed9aa89ac1f0212e080a38f0aa4179c7612565db8c05677b2d5f01c41895a7c",
+      "ground_truth_sha256": "4bd36c032d8f1530248bb0e50d5d1f91d3f08e5a5e5b95403375f62e440a8932",
+      "methods": {
+        "qwen35_9b": {
+          "n_rows": 288,
+          "n_unique_case_ids": 288,
+          "choice_count_min": 0,
+          "choice_count_max": 4,
+          "choice_count_mean": 2.46875,
+          "source_sha256": "b6d13705972215688510bba3fefe2ccde5d88db245aa65f3e5896b15d0138625",
+          "truncated_sha256": "a56960711a6aa086c035849f1cd16d453ebac9b0fb6269294eb49ecfd2b168bd"
+        },
+        "deepseek_v2_lite_chat": {
+          "n_rows": 288,
+          "n_unique_case_ids": 288,
+          "choice_count_min": 0,
+          "choice_count_max": 4,
+          "choice_count_mean": 2.03125,
+          "source_sha256": "0a2f22d710eab2b42b9fcb876c73559a09f3f1ea446ccb9735d2227312cc4389",
+          "truncated_sha256": "b503c1336b515291327168d57bae5399ca5106854b76cd29e77ec52721289e41"
+        },
+        "llama31_8b_instruct": {
+          "n_rows": 288,
+          "n_unique_case_ids": 288,
+          "choice_count_min": 0,
+          "choice_count_max": 4,
+          "choice_count_mean": 1.8263888888888888,
+          "source_sha256": "59c2e54eb0fee6b4b8e5530597779afe8667b1a3273bb3573c729e4fc2b63e2a",
+          "truncated_sha256": "471c9c9edd780dbb286ddb7481eec619e9251b8cc5038b93d574872c51d7110b"
+        },
+        "m2oe_choice": {
+          "n_rows": 288,
+          "n_unique_case_ids": 288,
+          "choice_count_min": 1,
+          "choice_count_max": 2,
+          "choice_count_mean": 1.03125,
+          "source_sha256": "846e3a70190982c21fa413138d046aeb3c9d3ed88b079d3b570d0b4f3b0c1d81",
+          "truncated_sha256": "846e3a70190982c21fa413138d046aeb3c9d3ed88b079d3b570d0b4f3b0c1d81"
+        }
+      }
+    },
+    "20261107": {
+      "inputs_sha256": "37a52eb5de8bd9977f6e90a4e7701c4bbf295b28ff15c0b143ad7aafebdabb1d",
+      "ground_truth_sha256": "8911f8601158c69f66e4c2ec5fd119898eb76a4da481de5cfbaceca49efd66bc",
+      "methods": {
+        "qwen35_9b": {
+          "n_rows": 288,
+          "n_unique_case_ids": 288,
+          "choice_count_min": 0,
+          "choice_count_max": 4,
+          "choice_count_mean": 2.5520833333333335,
+          "source_sha256": "9232656405178a1cb5660f43b74fef00a6d3e4915cb7ec5da8b447c367b412cf",
+          "truncated_sha256": "d7fee7ef7489ce59120b25d8f0a2cad7bb43988da0363414d647f6578e69a5f9"
+        },
+        "deepseek_v2_lite_chat": {
+          "n_rows": 288,
+          "n_unique_case_ids": 288,
+          "choice_count_min": 0,
+          "choice_count_max": 4,
+          "choice_count_mean": 2.3055555555555554,
+          "source_sha256": "b2059b1ab92b1d2a4b030e45f40d00fd2012ade75d5d6d6d3ddba03bedc99aa5",
+          "truncated_sha256": "f749379e44d1fd0224b3c52615d92e60f070d002c5dd8d98e0f131a54a94a1f1"
+        },
+        "llama31_8b_instruct": {
+          "n_rows": 288,
+          "n_unique_case_ids": 288,
+          "choice_count_min": 0,
+          "choice_count_max": 4,
+          "choice_count_mean": 1.9791666666666667,
+          "source_sha256": "d12ed5552f691a3131990721470b5f81c94fe591bbbdd5f3c9ce1192ce6f2e9b",
+          "truncated_sha256": "2d49af3ecb83587330da6d94e28001f3b169b7b2a92536a6045582003800ecca"
+        },
+        "m2oe_choice": {
+          "n_rows": 288,
+          "n_unique_case_ids": 288,
+          "choice_count_min": 1,
+          "choice_count_max": 3,
+          "choice_count_mean": 1.0590277777777777,
+          "source_sha256": "5b3a44d4e102bd0d1735236922b2ba4ca5ee142377a88f59f6ad7e92bc753475",
+          "truncated_sha256": "5b3a44d4e102bd0d1735236922b2ba4ca5ee142377a88f59f6ad7e92bc753475"
+        }
+      }
+    },
+    "20261108": {
+      "inputs_sha256": "925b58455e629f939833d5cefed0a901acb1b8020f4c239b026f6e88cdc5ff2b",
+      "ground_truth_sha256": "a6f9326db3c14961b536f7bf2a7109b5f7f6e63bed604b3fd75373e306603e23",
+      "methods": {
+        "qwen35_9b": {
+          "n_rows": 288,
+          "n_unique_case_ids": 288,
+          "choice_count_min": 0,
+          "choice_count_max": 4,
+          "choice_count_mean": 2.5694444444444446,
+          "source_sha256": "b619439932d622eef2c72ff23b1d1538ebaa82dceb8e047bda01f82c7af06143",
+          "truncated_sha256": "6cfa03bdc7043ecbd1a79c9fc39a03e424aef03da51c03461ffcfb0c2d17aac2"
+        },
+        "deepseek_v2_lite_chat": {
+          "n_rows": 288,
+          "n_unique_case_ids": 288,
+          "choice_count_min": 0,
+          "choice_count_max": 4,
+          "choice_count_mean": 2.0902777777777777,
+          "source_sha256": "2cf47af587c59c2f32d74d8e810f9b7ba1bd255767d1a86d41d95471ef43b5f8",
+          "truncated_sha256": "73f8ff071b583c152b7514ce12c61b16f5504c8da77da20a0187680325269684"
+        },
+        "llama31_8b_instruct": {
+          "n_rows": 288,
+          "n_unique_case_ids": 288,
+          "choice_count_min": 0,
+          "choice_count_max": 4,
+          "choice_count_mean": 1.8715277777777777,
+          "source_sha256": "a5d968f6051a0a69b08800b12d0e085aa8e5a8512eea7126e6629728cd1f5dd9",
+          "truncated_sha256": "3f3e384aa41177b1d12a91416f3900a30478914b89566e9107bb2107f4892b60"
+        },
+        "m2oe_choice": {
+          "n_rows": 288,
+          "n_unique_case_ids": 288,
+          "choice_count_min": 1,
+          "choice_count_max": 3,
+          "choice_count_mean": 1.0416666666666667,
+          "source_sha256": "bf292f8abc967e679ef7b3dba54ddc8328189158a605da13fbad5591c8dc54e1",
+          "truncated_sha256": "bf292f8abc967e679ef7b3dba54ddc8328189158a605da13fbad5591c8dc54e1"
+        }
+      }
+    }
+  },
+  "script_sha256": "c7f2401ad55ff2748d5224418705cd63ad43a723dbf71fda59acfc13b6893f16"
+}

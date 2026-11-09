@@ -1,0 +1,23 @@
+{
+  "protocol_id": "public_corrected_cells_structured_v1",
+  "frozen_at_utc": "2026-11-08T12:16:49.388729+00:00",
+  "status": "Additional descriptive paired condition, fixed after observing malformed unconstrained public-cell outputs; not a preregistered comparison.",
+  "comparison": "All 72 original public-cell queries, all three models; identical prompts, references, targets, schemas, order, 512-token cap and greedy decoding. Original strict results retained.",
+  "schema": "The previously fixed LM Format Enforcer schema, with each candidate features array restricted to exactly one legal ID, matching the existing prompt. Zero to four candidate objects; abstain boolean. Original parser unchanged; repeated candidate IDs deduplicated in both conditions.",
+  "selection": "No case selection, prompt tuning, repaired-output credit or model-specific configuration.",
+  "metrics": "Same FieldHit@1/3, Recall@3, answer availability and offline first-corrected-field inspection position as the original public-cell protocol; no significance family.",
+  "n_cases": 72,
+  "models": [
+    "qwen35_9b",
+    "deepseek_v2_lite_chat",
+    "llama31_8b_instruct"
+  ],
+  "inputs_sha256": "37a997eef8c9e94269cf9f0a1f8a4695b0bf8b35c5356cd35e1fc844fee6c3b6",
+  "source_inputs_sha256": "ce5ebf0e3c6920e6716be86abaeba164895fcf885b75443a9f52996e41fb15ea",
+  "files": {
+    "annotate_v2.py": "fafee6146239a7088553f5410f941c2cebc8d183524f6ae28cb75280796e8e18",
+    "annotate_acceptance_structured.py": "14516aa0f777fd199ba34100ca12a3aecd90dce5d532c7282a333d7e6fd66cdd",
+    "annotate_acceptance_real_structured.py": "88a8b5f6879439466f179a05b9489c93382557923a7f86c43156bf234af0aeae",
+    "prepare_acceptance_real_structured.py": "dc669f2c710b2d79704e2e1370597c077f0df4bd1e1cdd3261a0dbad35ef19a9"
+  }
+}

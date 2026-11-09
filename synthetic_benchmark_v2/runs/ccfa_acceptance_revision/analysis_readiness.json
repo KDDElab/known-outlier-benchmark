@@ -1,0 +1,87 @@
+{
+  "prior3/qwen35_9b": {
+    "required": 96,
+    "observed": 96,
+    "complete": true
+  },
+  "prior3/deepseek_v2_lite_chat": {
+    "required": 96,
+    "observed": 96,
+    "complete": true
+  },
+  "prior3/llama31_8b_instruct": {
+    "required": 96,
+    "observed": 96,
+    "complete": true
+  },
+  "new_rules/qwen35_9b": {
+    "required": 120,
+    "observed": 120,
+    "complete": true
+  },
+  "new_rules/deepseek_v2_lite_chat": {
+    "required": 120,
+    "observed": 120,
+    "complete": true
+  },
+  "new_rules/llama31_8b_instruct": {
+    "required": 120,
+    "observed": 120,
+    "complete": true
+  },
+  "structured/qwen35_9b": {
+    "required": 96,
+    "observed": 96,
+    "complete": true
+  },
+  "structured/deepseek_v2_lite_chat": {
+    "required": 96,
+    "observed": 96,
+    "complete": true
+  },
+  "structured/llama31_8b_instruct": {
+    "required": 96,
+    "observed": 96,
+    "complete": true
+  },
+  "real_cells/qwen35_9b": {
+    "required": 72,
+    "observed": 72,
+    "complete": true
+  },
+  "real_cells/deepseek_v2_lite_chat": {
+    "required": 72,
+    "observed": 72,
+    "complete": true
+  },
+  "real_cells/llama31_8b_instruct": {
+    "required": 72,
+    "observed": 72,
+    "complete": true
+  },
+  "real_cells_structured/qwen35_9b": {
+    "required": 72,
+    "observed": 72,
+    "complete": true
+  },
+  "real_cells_structured/deepseek_v2_lite_chat": {
+    "required": 72,
+    "observed": 72,
+    "complete": true
+  },
+  "real_cells_structured/llama31_8b_instruct": {
+    "required": 72,
+    "observed": 72,
+    "complete": true
+  },
+  "native_m2oe": {
+    "observed": 20,
+    "required": 20,
+    "complete": true
+  },
+  "native_sod": {
+    "observed": 20,
+    "required": 20,
+    "complete": true
+  }
+}

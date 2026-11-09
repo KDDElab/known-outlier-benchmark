@@ -1,0 +1,18 @@
+{
+  "benchmark_protocol": "known_anomaly_subspace_benchmark_v2_compact_json_v1",
+  "split": "test",
+  "n_cases": 288,
+  "random_replicates": 100,
+  "random_seed_base": 20261106,
+  "random_size_pool_source": "training split reference_support_sufficient_minimal_subspaces only",
+  "univariate_score": "max(empirical rarity, absolute median deviation / (1.4826*MAD)); nonnumeric uses empirical rarity",
+  "oracle_methods": [
+    "reference_support_minimal",
+    "rule_minimal"
+  ],
+  "inputs_path": "<PROJECT_ROOT>/synthetic_benchmark_v2/inputs.jsonl",
+  "ground_truth_path": "<PROJECT_ROOT>/synthetic_benchmark_v2/ground_truth.jsonl",
+  "inputs_sha256": "1ed9aa89ac1f0212e080a38f0aa4179c7612565db8c05677b2d5f01c41895a7c",
+  "ground_truth_sha256": "4bd36c032d8f1530248bb0e50d5d1f91d3f08e5a5e5b95403375f62e440a8932",
+  "runner_sha256": "4342ce27f013f0b70c6b8b8d720039d865e5858424c43c65f8e085dcfb88781d"
+}

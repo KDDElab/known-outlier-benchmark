@@ -1,0 +1,1440 @@
+[
+  {
+    "task_label": "numeric_marginal",
+    "template_id": "num_ge_075",
+    "roles": {
+      "signal": {
+        "type": "numeric",
+        "values": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      }
+    },
+    "rule": {
+      "op": "ge",
+      "role": "signal",
+      "value": 0.75
+    },
+    "rule_description": "one numeric value is at or above a threshold",
+    "decoy_role": null
+  },
+  {
+    "task_label": "numeric_marginal",
+    "template_id": "num_ge_050",
+    "roles": {
+      "signal": {
+        "type": "numeric",
+        "values": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      }
+    },
+    "rule": {
+      "op": "ge",
+      "role": "signal",
+      "value": 0.5
+    },
+    "rule_description": "one numeric value is at or above a threshold",
+    "decoy_role": null
+  },
+  {
+    "task_label": "numeric_marginal",
+    "template_id": "num_le_025",
+    "roles": {
+      "signal": {
+        "type": "numeric",
+        "values": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      }
+    },
+    "rule": {
+      "op": "le",
+      "role": "signal",
+      "value": 0.25
+    },
+    "rule_description": "one numeric value is at or below a threshold",
+    "decoy_role": null
+  },
+  {
+    "task_label": "numeric_marginal",
+    "template_id": "num_le_050",
+    "roles": {
+      "signal": {
+        "type": "numeric",
+        "values": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      }
+    },
+    "rule": {
+      "op": "le",
+      "role": "signal",
+      "value": 0.5
+    },
+    "rule_description": "one numeric value is at or below a threshold",
+    "decoy_role": null
+  },
+  {
+    "task_label": "numeric_marginal",
+    "template_id": "num_outside_mid",
+    "roles": {
+      "signal": {
+        "type": "ordinal",
+        "values": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    "rule": {
+      "op": "or",
+      "children": [
+        {
+          "op": "lt",
+          "role": "signal",
+          "value": 1
+        },
+        {
+          "op": "gt",
+          "role": "signal",
+          "value": 3
+        }
+      ]
+    },
+    "rule_description": "one ordinal value is outside an interval",
+    "decoy_role": null
+  },
+  {
+    "task_label": "categorical_rare",
+    "template_id": "cat_eq_c3_d4",
+    "roles": {
+      "signal": {
+        "type": "categorical",
+        "values": [
+          "c0",
+          "c1",
+          "c2",
+          "c3"
+        ]
+      }
+    },
+    "rule": {
+      "op": "eq",
+      "role": "signal",
+      "value": "c3"
+    },
+    "rule_description": "one category value is anomalous",
+    "decoy_role": null
+  },
+  {
+    "task_label": "categorical_rare",
+    "template_id": "cat_eq_c4_d5",
+    "roles": {
+      "signal": {
+        "type": "categorical",
+        "values": [
+          "c0",
+          "c1",
+          "c2",
+          "c3",
+          "c4"
+        ]
+      }
+    },
+    "rule": {
+      "op": "eq",
+      "role": "signal",
+      "value": "c4"
+    },
+    "rule_description": "one category value is anomalous",
+    "decoy_role": null
+  },
+  {
+    "task_label": "categorical_rare",
+    "template_id": "cat_eq_c5_d6",
+    "roles": {
+      "signal": {
+        "type": "categorical",
+        "values": [
+          "c0",
+          "c1",
+          "c2",
+          "c3",
+          "c4",
+          "c5"
+        ]
+      }
+    },
+    "rule": {
+      "op": "eq",
+      "role": "signal",
+      "value": "c5"
+    },
+    "rule_description": "one category value is anomalous",
+    "decoy_role": null
+  },
+  {
+    "task_label": "categorical_rare",
+    "template_id": "cat_in_rare_pair",
+    "roles": {
+      "signal": {
+        "type": "categorical",
+        "values": [
+          "c0",
+          "c1",
+          "c2",
+          "c3",
+          "c4"
+        ]
+      }
+    },
+    "rule": {
+      "op": "in",
+      "role": "signal",
+      "value": [
+        "c3",
+        "c4"
+      ]
+    },
+    "rule_description": "one of a pair of category values is anomalous",
+    "decoy_role": null
+  },
+  {
+    "task_label": "categorical_rare",
+    "template_id": "cat_not_common",
+    "roles": {
+      "signal": {
+        "type": "categorical",
+        "values": [
+          "c0",
+          "c1",
+          "c2",
+          "c3",
+          "c4"
+        ]
+      }
+    },
+    "rule": {
+      "op": "not_in",
+      "role": "signal",
+      "value": [
+        "c0",
+        "c1",
+        "c2"
+      ]
+    },
+    "rule_description": "a category outside the common subset is anomalous",
+    "decoy_role": null
+  },
+  {
+    "task_label": "pairwise_interaction",
+    "template_id": "pair_binary_and",
+    "roles": {
+      "left": {
+        "type": "binary",
+        "values": [
+          0,
+          1
+        ]
+      },
+      "right": {
+        "type": "binary",
+        "values": [
+          0,
+          1
+        ]
+      }
+    },
+    "rule": {
+      "op": "and",
+      "children": [
+        {
+          "op": "eq",
+          "role": "left",
+          "value": 1
+        },
+        {
+          "op": "eq",
+          "role": "right",
+          "value": 1
+        }
+      ]
+    },
+    "rule_description": "two binary conditions must hold together",
+    "decoy_role": null
+  },
+  {
+    "task_label": "pairwise_interaction",
+    "template_id": "pair_num_edges",
+    "roles": {
+      "left": {
+        "type": "numeric",
+        "values": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "right": {
+        "type": "numeric",
+        "values": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      }
+    },
+    "rule": {
+      "op": "and",
+      "children": [
+        {
+          "op": "ge",
+          "role": "left",
+          "value": 0.75
+        },
+        {
+          "op": "le",
+          "role": "right",
+          "value": 0.25
+        }
+      ]
+    },
+    "rule_description": "two numeric conditions must hold together",
+    "decoy_role": null
+  },
+  {
+    "task_label": "pairwise_interaction",
+    "template_id": "pair_cat_num",
+    "roles": {
+      "left": {
+        "type": "categorical",
+        "values": [
+          "c0",
+          "c1",
+          "c2",
+          "c3"
+        ]
+      },
+      "right": {
+        "type": "numeric",
+        "values": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      }
+    },
+    "rule": {
+      "op": "and",
+      "children": [
+        {
+          "op": "eq",
+          "role": "left",
+          "value": "c2"
+        },
+        {
+          "op": "ge",
+          "role": "right",
+          "value": 0.75
+        }
+      ]
+    },
+    "rule_description": "a category and a numeric condition must hold together",
+    "decoy_role": null
+  },
+  {
+    "task_label": "pairwise_interaction",
+    "template_id": "pair_cat_binary",
+    "roles": {
+      "left": {
+        "type": "categorical",
+        "values": [
+          "c0",
+          "c1",
+          "c2",
+          "c3",
+          "c4"
+        ]
+      },
+      "right": {
+        "type": "binary",
+        "values": [
+          0,
+          1
+        ]
+      }
+    },
+    "rule": {
+      "op": "and",
+      "children": [
+        {
+          "op": "eq",
+          "role": "left",
+          "value": "c4"
+        },
+        {
+          "op": "eq",
+          "role": "right",
+          "value": 0
+        }
+      ]
+    },
+    "rule_description": "a category and a binary condition must hold together",
+    "decoy_role": null
+  },
+  {
+    "task_label": "pairwise_interaction",
+    "template_id": "pair_num_cat_set",
+    "roles": {
+      "left": {
+        "type": "numeric",
+        "values": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "right": {
+        "type": "categorical",
+        "values": [
+          "c0",
+          "c1",
+          "c2",
+          "c3",
+          "c4",
+          "c5"
+        ]
+      }
+    },
+    "rule": {
+      "op": "and",
+      "children": [
+        {
+          "op": "gt",
+          "role": "left",
+          "value": 0.5
+        },
+        {
+          "op": "in",
+          "role": "right",
+          "value": [
+            "c4",
+            "c5"
+          ]
+        }
+      ]
+    },
+    "rule_description": "numeric and categorical conditions must hold together",
+    "decoy_role": null
+  },
+  {
+    "task_label": "conditional_group",
+    "template_id": "cond_binary_num",
+    "roles": {
+      "context": {
+        "type": "binary",
+        "values": [
+          0,
+          1
+        ]
+      },
+      "signal": {
+        "type": "numeric",
+        "values": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      }
+    },
+    "rule": {
+      "op": "and",
+      "children": [
+        {
+          "op": "eq",
+          "role": "context",
+          "value": 1
+        },
+        {
+          "op": "ge",
+          "role": "signal",
+          "value": 0.75
+        }
+      ]
+    },
+    "rule_description": "a numeric value is anomalous in one binary context",
+    "decoy_role": null
+  },
+  {
+    "task_label": "conditional_group",
+    "template_id": "cond_cat_zero",
+    "roles": {
+      "context": {
+        "type": "categorical",
+        "values": [
+          "c0",
+          "c1",
+          "c2",
+          "c3"
+        ]
+      },
+      "signal": {
+        "type": "binary",
+        "values": [
+          0,
+          1
+        ]
+      }
+    },
+    "rule": {
+      "op": "and",
+      "children": [
+        {
+          "op": "eq",
+          "role": "context",
+          "value": "c2"
+        },
+        {
+          "op": "eq",
+          "role": "signal",
+          "value": 0
+        }
+      ]
+    },
+    "rule_description": "a zero signal is anomalous in one category group",
+    "decoy_role": null
+  },
+  {
+    "task_label": "conditional_group",
+    "template_id": "cond_num_cat",
+    "roles": {
+      "context": {
+        "type": "numeric",
+        "values": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "signal": {
+        "type": "categorical",
+        "values": [
+          "c0",
+          "c1",
+          "c2",
+          "c3",
+          "c4"
+        ]
+      }
+    },
+    "rule": {
+      "op": "and",
+      "children": [
+        {
+          "op": "le",
+          "role": "context",
+          "value": 0.25
+        },
+        {
+          "op": "eq",
+          "role": "signal",
+          "value": "c4"
+        }
+      ]
+    },
+    "rule_description": "a category is anomalous in one numeric context",
+    "decoy_role": null
+  },
+  {
+    "task_label": "conditional_group",
+    "template_id": "cond_cat_num_low",
+    "roles": {
+      "context": {
+        "type": "categorical",
+        "values": [
+          "c0",
+          "c1",
+          "c2",
+          "c3",
+          "c4",
+          "c5"
+        ]
+      },
+      "signal": {
+        "type": "numeric",
+        "values": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      }
+    },
+    "rule": {
+      "op": "and",
+      "children": [
+        {
+          "op": "eq",
+          "role": "context",
+          "value": "c5"
+        },
+        {
+          "op": "le",
+          "role": "signal",
+          "value": 0.25
+        }
+      ]
+    },
+    "rule_description": "a low numeric value is anomalous in one category group",
+    "decoy_role": null
+  },
+  {
+    "task_label": "conditional_group",
+    "template_id": "cond_num_num",
+    "roles": {
+      "context": {
+        "type": "numeric",
+        "values": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "signal": {
+        "type": "numeric",
+        "values": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      }
+    },
+    "rule": {
+      "op": "and",
+      "children": [
+        {
+          "op": "ge",
+          "role": "context",
+          "value": 0.75
+        },
+        {
+          "op": "eq",
+          "role": "signal",
+          "value": 0.5
+        }
+      ]
+    },
+    "rule_description": "a numeric value is anomalous under a numeric context",
+    "decoy_role": null
+  },
+  {
+    "task_label": "multiple_valid",
+    "template_id": "or_binary",
+    "roles": {
+      "left": {
+        "type": "binary",
+        "values": [
+          0,
+          1
+        ]
+      },
+      "right": {
+        "type": "binary",
+        "values": [
+          0,
+          1
+        ]
+      }
+    },
+    "rule": {
+      "op": "or",
+      "children": [
+        {
+          "op": "eq",
+          "role": "left",
+          "value": 1
+        },
+        {
+          "op": "eq",
+          "role": "right",
+          "value": 1
+        }
+      ]
+    },
+    "rule_description": "either of two fields independently signals anomaly",
+    "decoy_role": null
+  },
+  {
+    "task_label": "multiple_valid",
+    "template_id": "or_num_cat",
+    "roles": {
+      "left": {
+        "type": "numeric",
+        "values": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "right": {
+        "type": "categorical",
+        "values": [
+          "c0",
+          "c1",
+          "c2",
+          "c3",
+          "c4"
+        ]
+      }
+    },
+    "rule": {
+      "op": "or",
+      "children": [
+        {
+          "op": "ge",
+          "role": "left",
+          "value": 0.75
+        },
+        {
+          "op": "eq",
+          "role": "right",
+          "value": "c4"
+        }
+      ]
+    },
+    "rule_description": "either numeric or categorical evidence is sufficient",
+    "decoy_role": null
+  },
+  {
+    "task_label": "multiple_valid",
+    "template_id": "or_cat_num_low",
+    "roles": {
+      "left": {
+        "type": "categorical",
+        "values": [
+          "c0",
+          "c1",
+          "c2",
+          "c3"
+        ]
+      },
+      "right": {
+        "type": "numeric",
+        "values": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      }
+    },
+    "rule": {
+      "op": "or",
+      "children": [
+        {
+          "op": "eq",
+          "role": "left",
+          "value": "c3"
+        },
+        {
+          "op": "le",
+          "role": "right",
+          "value": 0.25
+        }
+      ]
+    },
+    "rule_description": "either categorical or numeric evidence is sufficient",
+    "decoy_role": null
+  },
+  {
+    "task_label": "multiple_valid",
+    "template_id": "or_two_categories",
+    "roles": {
+      "left": {
+        "type": "categorical",
+        "values": [
+          "c0",
+          "c1",
+          "c2",
+          "c3",
+          "c4"
+        ]
+      },
+      "right": {
+        "type": "categorical",
+        "values": [
+          "c0",
+          "c1",
+          "c2",
+          "c3",
+          "c4"
+        ]
+      }
+    },
+    "rule": {
+      "op": "or",
+      "children": [
+        {
+          "op": "eq",
+          "role": "left",
+          "value": "c4"
+        },
+        {
+          "op": "eq",
+          "role": "right",
+          "value": "c4"
+        }
+      ]
+    },
+    "rule_description": "either of two category values is sufficient",
+    "decoy_role": null
+  },
+  {
+    "task_label": "multiple_valid",
+    "template_id": "or_binary_num",
+    "roles": {
+      "left": {
+        "type": "binary",
+        "values": [
+          0,
+          1
+        ]
+      },
+      "right": {
+        "type": "numeric",
+        "values": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      }
+    },
+    "rule": {
+      "op": "or",
+      "children": [
+        {
+          "op": "eq",
+          "role": "left",
+          "value": 0
+        },
+        {
+          "op": "ge",
+          "role": "right",
+          "value": 0.75
+        }
+      ]
+    },
+    "rule_description": "either binary or numeric evidence is sufficient",
+    "decoy_role": null
+  },
+  {
+    "task_label": "modified_vs_mechanism",
+    "template_id": "decoy_binary",
+    "roles": {
+      "signal": {
+        "type": "binary",
+        "values": [
+          0,
+          1
+        ]
+      },
+      "decoy": {
+        "type": "binary",
+        "values": [
+          0,
+          1
+        ]
+      }
+    },
+    "rule": {
+      "op": "eq",
+      "role": "signal",
+      "value": 1
+    },
+    "rule_description": "one field governs the rule while an incidental field also changes",
+    "decoy_role": "decoy"
+  },
+  {
+    "task_label": "modified_vs_mechanism",
+    "template_id": "decoy_num_cat",
+    "roles": {
+      "signal": {
+        "type": "numeric",
+        "values": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "decoy": {
+        "type": "categorical",
+        "values": [
+          "c0",
+          "c1",
+          "c2",
+          "c3",
+          "c4"
+        ]
+      }
+    },
+    "rule": {
+      "op": "ge",
+      "role": "signal",
+      "value": 0.75
+    },
+    "rule_description": "one field governs the rule while an incidental category also changes",
+    "decoy_role": "decoy"
+  },
+  {
+    "task_label": "modified_vs_mechanism",
+    "template_id": "decoy_cat_num",
+    "roles": {
+      "signal": {
+        "type": "categorical",
+        "values": [
+          "c0",
+          "c1",
+          "c2",
+          "c3",
+          "c4"
+        ]
+      },
+      "decoy": {
+        "type": "numeric",
+        "values": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      }
+    },
+    "rule": {
+      "op": "eq",
+      "role": "signal",
+      "value": "c4"
+    },
+    "rule_description": "one category governs the rule while an incidental number also changes",
+    "decoy_role": "decoy"
+  },
+  {
+    "task_label": "modified_vs_mechanism",
+    "template_id": "decoy_binary_zero",
+    "roles": {
+      "signal": {
+        "type": "binary",
+        "values": [
+          0,
+          1
+        ]
+      },
+      "decoy": {
+        "type": "categorical",
+        "values": [
+          "c0",
+          "c1",
+          "c2",
+          "c3"
+        ]
+      }
+    },
+    "rule": {
+      "op": "eq",
+      "role": "signal",
+      "value": 0
+    },
+    "rule_description": "one field governs the rule while an incidental category also changes",
+    "decoy_role": "decoy"
+  },
+  {
+    "task_label": "modified_vs_mechanism",
+    "template_id": "decoy_num_low",
+    "roles": {
+      "signal": {
+        "type": "numeric",
+        "values": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "decoy": {
+        "type": "binary",
+        "values": [
+          0,
+          1
+        ]
+      }
+    },
+    "rule": {
+      "op": "le",
+      "role": "signal",
+      "value": 0.25
+    },
+    "rule_description": "one numeric field governs the rule while an incidental flag also changes",
+    "decoy_role": "decoy"
+  },
+  {
+    "task_label": "relational",
+    "template_id": "rel_binary_neq",
+    "roles": {
+      "left": {
+        "type": "binary",
+        "values": [
+          0,
+          1
+        ]
+      },
+      "right": {
+        "type": "binary",
+        "values": [
+          0,
+          1
+        ]
+      }
+    },
+    "rule": {
+      "op": "neq_roles",
+      "role": "left",
+      "other": "right"
+    },
+    "rule_description": "two field values disagree",
+    "decoy_role": null
+  },
+  {
+    "task_label": "relational",
+    "template_id": "rel_cat_neq",
+    "roles": {
+      "left": {
+        "type": "categorical",
+        "values": [
+          "c0",
+          "c1",
+          "c2",
+          "c3"
+        ]
+      },
+      "right": {
+        "type": "categorical",
+        "values": [
+          "c0",
+          "c1",
+          "c2",
+          "c3"
+        ]
+      }
+    },
+    "rule": {
+      "op": "neq_roles",
+      "role": "left",
+      "other": "right"
+    },
+    "rule_description": "two category values disagree",
+    "decoy_role": null
+  },
+  {
+    "task_label": "relational",
+    "template_id": "rel_num_gt",
+    "roles": {
+      "left": {
+        "type": "ordinal",
+        "values": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "right": {
+        "type": "ordinal",
+        "values": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    "rule": {
+      "op": "gt_roles",
+      "role": "left",
+      "other": "right"
+    },
+    "rule_description": "one ordinal field exceeds another",
+    "decoy_role": null
+  },
+  {
+    "task_label": "relational",
+    "template_id": "rel_num_gap",
+    "roles": {
+      "left": {
+        "type": "numeric",
+        "values": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "right": {
+        "type": "numeric",
+        "values": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      }
+    },
+    "rule": {
+      "op": "abs_diff_gt",
+      "role": "left",
+      "value": 0.5,
+      "other": "right"
+    },
+    "rule_description": "two numeric fields differ by more than a threshold",
+    "decoy_role": null
+  },
+  {
+    "task_label": "relational",
+    "template_id": "rel_sum",
+    "roles": {
+      "left": {
+        "type": "numeric",
+        "values": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      },
+      "right": {
+        "type": "numeric",
+        "values": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      }
+    },
+    "rule": {
+      "op": "sum_ge",
+      "role": "left",
+      "value": 1.25,
+      "other": "right"
+    },
+    "rule_description": "a relation over two numeric fields exceeds a threshold",
+    "decoy_role": null
+  },
+  {
+    "task_label": "higher_order",
+    "template_id": "three_parity",
+    "roles": {
+      "a": {
+        "type": "binary",
+        "values": [
+          0,
+          1
+        ]
+      },
+      "b": {
+        "type": "binary",
+        "values": [
+          0,
+          1
+        ]
+      },
+      "c": {
+        "type": "binary",
+        "values": [
+          0,
+          1
+        ]
+      }
+    },
+    "rule": {
+      "op": "parity",
+      "children": [
+        {
+          "op": "eq",
+          "role": "a",
+          "value": 1
+        },
+        {
+          "op": "eq",
+          "role": "b",
+          "value": 1
+        },
+        {
+          "op": "eq",
+          "role": "c",
+          "value": 1
+        }
+      ]
+    },
+    "rule_description": "odd parity across three binary fields is anomalous",
+    "decoy_role": null
+  },
+  {
+    "task_label": "higher_order",
+    "template_id": "three_and",
+    "roles": {
+      "a": {
+        "type": "binary",
+        "values": [
+          0,
+          1
+        ]
+      },
+      "b": {
+        "type": "binary",
+        "values": [
+          0,
+          1
+        ]
+      },
+      "c": {
+        "type": "binary",
+        "values": [
+          0,
+          1
+        ]
+      }
+    },
+    "rule": {
+      "op": "and",
+      "children": [
+        {
+          "op": "eq",
+          "role": "a",
+          "value": 1
+        },
+        {
+          "op": "eq",
+          "role": "b",
+          "value": 1
+        },
+        {
+          "op": "eq",
+          "role": "c",
+          "value": 1
+        }
+      ]
+    },
+    "rule_description": "three binary conditions must all hold",
+    "decoy_role": null
+  },
+  {
+    "task_label": "higher_order",
+    "template_id": "three_at_least_two",
+    "roles": {
+      "a": {
+        "type": "binary",
+        "values": [
+          0,
+          1
+        ]
+      },
+      "b": {
+        "type": "binary",
+        "values": [
+          0,
+          1
+        ]
+      },
+      "c": {
+        "type": "binary",
+        "values": [
+          0,
+          1
+        ]
+      }
+    },
+    "rule": {
+      "op": "at_least",
+      "children": [
+        {
+          "op": "eq",
+          "role": "a",
+          "value": 1
+        },
+        {
+          "op": "eq",
+          "role": "b",
+          "value": 1
+        },
+        {
+          "op": "eq",
+          "role": "c",
+          "value": 1
+        }
+      ],
+      "k": 2
+    },
+    "rule_description": "at least two of three binary conditions must hold",
+    "decoy_role": null
+  },
+  {
+    "task_label": "higher_order",
+    "template_id": "three_mixed",
+    "roles": {
+      "a": {
+        "type": "categorical",
+        "values": [
+          "c0",
+          "c1",
+          "c2",
+          "c3"
+        ]
+      },
+      "b": {
+        "type": "binary",
+        "values": [
+          0,
+          1
+        ]
+      },
+      "c": {
+        "type": "ordinal",
+        "values": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    "rule": {
+      "op": "and",
+      "children": [
+        {
+          "op": "eq",
+          "role": "a",
+          "value": "c3"
+        },
+        {
+          "op": "eq",
+          "role": "b",
+          "value": 1
+        },
+        {
+          "op": "ge",
+          "role": "c",
+          "value": 3
+        }
+      ]
+    },
+    "rule_description": "a category, a binary flag, and an ordinal condition interact",
+    "decoy_role": null
+  },
+  {
+    "task_label": "higher_order",
+    "template_id": "three_xor_mixed",
+    "roles": {
+      "a": {
+        "type": "binary",
+        "values": [
+          0,
+          1
+        ]
+      },
+      "b": {
+        "type": "categorical",
+        "values": [
+          "c0",
+          "c1",
+          "c2",
+          "c3",
+          "c4"
+        ]
+      },
+      "c": {
+        "type": "numeric",
+        "values": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ]
+      }
+    },
+    "rule": {
+      "op": "parity",
+      "children": [
+        {
+          "op": "eq",
+          "role": "a",
+          "value": 1
+        },
+        {
+          "op": "eq",
+          "role": "b",
+          "value": "c4"
+        },
+        {
+          "op": "ge",
+          "role": "c",
+          "value": 0.75
+        }
+      ]
+    },
+    "rule_description": "odd parity across mixed-type conditions is anomalous",
+    "decoy_role": null
+  }
+]

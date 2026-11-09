@@ -1,0 +1,71 @@
+{
+  "revision": "925c96ec0abca1e4cfd934d486f1217623184c7f",
+  "compatibility_patch": "../../m2oe/tf20_api_compatibility.patch",
+  "files": [
+    {
+      "file": "M2OE/__init__.py",
+      "sha256": "10ca3524950d26d8c1b954dbbad8005e46dcf95a2a3d7d4f843a2abb009c0861",
+      "matches_executed_source": true
+    },
+    {
+      "file": "M2OE/explainers/Explainer.py",
+      "sha256": "38316b72284057bf8656fbb21baa65b9d698fe3ece80ac25700588086b81a21f",
+      "matches_executed_source": true
+    },
+    {
+      "file": "M2OE/explainers/TabularExplainer.py",
+      "sha256": "f52abc47531643a61c4219dc468f3e51d9de0c87a60cb60e1a2a9d35952a8d89",
+      "matches_executed_source": true
+    },
+    {
+      "file": "M2OE/explainers/TabularGroupExplainer.py",
+      "sha256": "aa067ae73ae187b7f76fb7c4c8ea74546abb74a935a990cb5b0ad48db211ca7e",
+      "matches_executed_source": true
+    },
+    {
+      "file": "M2OE/explainers/TabularSequentialExplainer.py",
+      "sha256": "16ddeafa7361aa78079508cfd68ed5c263e2639348fe6baa8e9a5b6dffd3a63a",
+      "matches_executed_source": true
+    },
+    {
+      "file": "M2OE/explainers/__init__.py",
+      "sha256": "79aedf3580de93e513d44db74405f69dd382045e0784c327fa445d6278607b47",
+      "matches_executed_source": true
+    },
+    {
+      "file": "M2OE/models/AETabularMM.py",
+      "sha256": "ee777808429a4e3aa694650ca802139169f7286aea163db65d9f329b4720251f",
+      "matches_executed_source": true
+    },
+    {
+      "file": "M2OE/models/AETabularMM_Pref.py",
+      "sha256": "4cef8876fe22c10fd3293ead2263b2741eb678c67b243f64d4d2830459fe04d6",
+      "matches_executed_source": true
+    },
+    {
+      "file": "M2OE/models/AETabularMM_SC.py",
+      "sha256": "695eb380d5852569ce07034c3f5d9eaf9f260853d6fbe2cca0644024d45f38e1",
+      "matches_executed_source": true
+    },
+    {
+      "file": "M2OE/models/MaskingModel.py",
+      "sha256": "1916312a43d2a39f475620496fa51b4d0ccec54cdc225c53dc951ea30fbbbc17",
+      "matches_executed_source": true
+    },
+    {
+      "file": "M2OE/models/__init__.py",
+      "sha256": "e05c8b5e6485264b64c3c781f9905843bfe8314392220647160d210a3540b6d0",
+      "matches_executed_source": true
+    },
+    {
+      "file": "doc/conf.py",
+      "sha256": "268006e77e865659647ee672f329212a3ab099d788bfdb53614cf09611397259",
+      "matches_executed_source": true
+    },
+    {
+      "file": "setup.py",
+      "sha256": "089d6cee9028f9c400c1aa0841daf84e54deb6f4d134307f4dfac85aefdafd78",
+      "matches_executed_source": true
+    }
+  ]
+}

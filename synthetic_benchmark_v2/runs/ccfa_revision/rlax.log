@@ -1,0 +1,73 @@
+RLAX adaptation 24/864 case=s20261106_main_V2_0049
+RLAX adaptation 48/864 case=s20261106_main_V2_0087
+RLAX adaptation 72/864 case=s20261106_main_V2_0122
+RLAX adaptation 96/864 case=s20261106_main_V2_0158
+RLAX adaptation 120/864 case=s20261106_main_V2_0200
+RLAX adaptation 144/864 case=s20261106_main_V2_0245
+RLAX adaptation 168/864 case=s20261106_main_V2_0287
+RLAX adaptation 192/864 case=s20261106_main_V2_0328
+RLAX adaptation 216/864 case=s20261106_main_V2_0363
+RLAX adaptation 240/864 case=s20261106_main_V2_0399
+RLAX adaptation 264/864 case=s20261106_main_V2_0438
+RLAX adaptation 288/864 case=s20261106_main_V2_0480
+RLAX adaptation 312/864 case=s20261107_main_V2_0042
+RLAX adaptation 336/864 case=s20261107_main_V2_0082
+RLAX adaptation 360/864 case=s20261107_main_V2_0128
+RLAX adaptation 384/864 case=s20261107_main_V2_0161
+RLAX adaptation 408/864 case=s20261107_main_V2_0199
+RLAX adaptation 432/864 case=s20261107_main_V2_0238
+RLAX adaptation 456/864 case=s20261107_main_V2_0282
+RLAX adaptation 480/864 case=s20261107_main_V2_0329
+RLAX adaptation 504/864 case=s20261107_main_V2_0370
+RLAX adaptation 528/864 case=s20261107_main_V2_0403
+RLAX adaptation 552/864 case=s20261107_main_V2_0442
+RLAX adaptation 576/864 case=s20261107_main_V2_0479
+RLAX adaptation 600/864 case=s20261108_main_V2_0038
+RLAX adaptation 624/864 case=s20261108_main_V2_0079
+RLAX adaptation 648/864 case=s20261108_main_V2_0119
+RLAX adaptation 672/864 case=s20261108_main_V2_0158
+RLAX adaptation 696/864 case=s20261108_main_V2_0197
+RLAX adaptation 720/864 case=s20261108_main_V2_0238
+RLAX adaptation 744/864 case=s20261108_main_V2_0285
+RLAX adaptation 768/864 case=s20261108_main_V2_0326
+RLAX adaptation 792/864 case=s20261108_main_V2_0359
+RLAX adaptation 816/864 case=s20261108_main_V2_0405
+RLAX adaptation 840/864 case=s20261108_main_V2_0445
+RLAX adaptation 864/864 case=s20261108_main_V2_0480
+{
+  "n_cases": 864,
+  "split": "test",
+  "method": "Independent paper-guided RLAX mixed-type single-positive adaptation; per-case PPO with subspace-margin-delta reward; MDR and policy feature orderings; top four distinct prefix subsets ranked by AUC minus alpha*|S|/d.",
+  "reference_protocol": "Each case's normal reference sample is deterministically split into disjoint X for kNN density scores and E_neg inlier examples; target is E_pos; k=min(3, |X|).",
+  "encoding": "numeric/ordinal/date reference min-max with squared numeric differences and an in-field missingness mismatch penalty; categorical/binary/identifier dimensions use 0/1 mismatch, all under per-field Euclidean aggregation; no test labels are used.",
+  "paper_url": "https://doi.org/10.1007/s10994-026-07182-z",
+  "official_repository_url": "https://github.com/AIDALab-DIMES/RLAX",
+  "official_repository_snapshot": "Checked-out main commit a6fcceca50ca64d8558fec31ef2dff5c34474e39 contains README.md and LICENSE only; this is an independent adaptation, not canonical implementation.",
+  "scorer_schema_adapter": "task_label=unknown, mechanism_feature_ids=[], mechanism_metric_applicable=false, abstain=false; confidence=0.5 and fixed evidence are required-format placeholders only and are not interpreted as calibrated method outputs.",
+  "hyperparameters": {
+    "seed": 20261106,
+    "n_steps_per_case": 256,
+    "ppo_epochs": 4,
+    "policy_architecture": "2x64 Tanh actor-critic",
+    "learning_rate": 0.0003,
+    "gamma": 0.95,
+    "gae_lambda": 0.95,
+    "clip_range": 0.2,
+    "batch_size": 64,
+    "max_gradient_norm": 0.5,
+    "negative_reward_patience": 3,
+    "alpha_gain": 0.5,
+    "distance": "Euclidean over encoded original-field dimensions",
+    "k_neighbors": "min(3, |X|)"
+  },
+  "elapsed_seconds": 209.6498940512538,
+  "optimization_accounting": {
+    "interactions_per_query": 256,
+    "rollout_batches_per_query": 1,
+    "minibatch_updates_per_query": 16,
+    "initial_policy": "fresh per query",
+    "datetime_encoding": "days, reference scaled without clipping"
+  },
+  "inputs_sha256": "4d34a6309068f15ea92394d190bf117bd69f64904e0352aaa02f178881acafa1",
+  "runner_sha256": "2d70071f7fb09d53de0f76b5ccf273635da98e58d8b363c5a61b4261e2aa8aa2"
+}

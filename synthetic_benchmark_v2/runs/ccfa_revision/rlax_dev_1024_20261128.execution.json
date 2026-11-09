@@ -1,0 +1,20 @@
+{
+  "name": "rlax_dev_1024_20261128",
+  "returncode": 0,
+  "wall_seconds": 27.14551019668579,
+  "expected_exists": true,
+  "command": [
+    "/opt/conda/bin/python",
+    "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/run_rlax_adaptation_v2.py",
+    "--inputs-path",
+    "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/inputs_dev_budget.jsonl",
+    "--outdir",
+    "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/rlax_dev_1024_20261128",
+    "--split",
+    "dev",
+    "--n-steps",
+    "1024",
+    "--seed",
+    "20261128"
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "at_utc": "2026-11-08T12:17:01.928738+00:00",
+  "stopped_waiting_supervisor": 216840,
+  "inference_interrupted": false,
+  "new_queues": [
+    {
+      "pid": 224485,
+      "command": [
+        "/opt/conda/bin/python",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/queue_acceptance_jobs.py",
+        "--wait-pid",
+        "216837",
+        "--model",
+        "llama31_8b_instruct",
+        "--gpus",
+        "3",
+        "--batch",
+        "real_cells_structured",
+        "--runner",
+        "annotate_acceptance_real_structured.py",
+        "--protocol-id",
+        "public_corrected_cells_structured_v1"
+      ]
+    },
+    {
+      "pid": 224486,
+      "command": [
+        "/opt/conda/bin/python",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/queue_acceptance_jobs.py",
+        "--wait-pid",
+        "216838",
+        "--model",
+        "qwen35_9b",
+        "--gpus",
+        "0",
+        "--batch",
+        "real_cells_structured",
+        "--runner",
+        "annotate_acceptance_real_structured.py",
+        "--protocol-id",
+        "public_corrected_cells_structured_v1"
+      ]
+    },
+    {
+      "pid": 224487,
+      "command": [
+        "/opt/conda/bin/python",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/queue_acceptance_jobs.py",
+        "--wait-pid",
+        "216839",
+        "--model",
+        "deepseek_v2_lite_chat",
+        "--gpus",
+        "1,2",
+        "--batch",
+        "real_cells_structured",
+        "--runner",
+        "annotate_acceptance_real_structured.py",
+        "--protocol-id",
+        "public_corrected_cells_structured_v1"
+      ]
+    },
+    {
+      "pid": 224488,
+      "command": [
+        "/opt/conda/bin/python",
+        "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/queue_acceptance_jobs.py",
+        "--wait-pid",
+        "224485",
+        "--model",
+        "deepseek_v2_lite_chat",
+        "--gpus",
+        "0,3",
+        "--batch",
+        "structured",
+        "--runner",
+        "annotate_acceptance_structured.py",
+        "--protocol-id",
+        "known_outlier_structured_v1",
+        "--extra-wait-pid",
+        "224486"
+      ]
+    }
+  ]
+}

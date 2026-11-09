@@ -1,0 +1,43 @@
+{
+  "protocol_id": "known_outlier_acceptance_diagnostics_v1",
+  "frozen_at_utc": "2026-11-08T11:19:13.625536+00:00",
+  "review_scope": [
+    "shared size prior",
+    "complete/replicated reference evidence",
+    "invoice rank reversal",
+    "new rule compositions",
+    "structured output and adapters",
+    "auditable real cells"
+  ],
+  "prior_pairing": "All 96 existing outcome-independent first-seed test targets with 32 references; same rows, field order, full output contract, checkpoints, greedy batch one, 16384 input and 512 output limits; add only an explicit size/candidate rule.",
+  "prior_rules": {
+    "max_candidate_size": 3,
+    "max_distinct_candidates": 4,
+    "oversized_or_empty_subsets": "invalid shared-contract output, all-query miss; additionally report cap compliance separately",
+    "duplicates": "collapse repeated candidates in first-occurrence order; no re-ranking"
+  },
+  "prior_comparison": "Paired with original full-contract 512-token records and same cap-3 Gower predictions. No posthoc truncation of LLM sets. All 96 targets remain in denominators; tokenizer-defined common-feasible subset is secondary.",
+  "gower_small_width": "All 288 six-field main cases: compare cap 3 versus all 63 nonempty subsets, same references and k=3.",
+  "invoice_mechanism": "All 96 frozen invoice targets: max-order 1/2/3/4/8, k=1/3/5/10, distractors retained/removed (oracle diagnostic only). Record target-reference zero distances, duplicate projections, ties, raw scores and gold ranks. Add within-subspace reference-rank calibration as a diagnostic, not a renamed original baseline.",
+  "reference_diagnostics": "A separately frozen small finite-domain, complete-population workload and repeated iid reference samples for the same targets, preserving order/schema/gold; definitions and counts must freeze before outputs. Distinguish full visible population from a projection with distractors marginalized.",
+  "new_rules": "Freeze model/prompt/parser/scoring versions before inference on new rule compositions. No method tuning on their outputs. Newly designed after review, not independently externally curated; report limited independence accurately.",
+  "structured_output": "Keep original full/minimal results. Add a fixed constrained-output protocol on the 96 matched targets, with full raw logs and separate parse coverage/content metrics. Freeze schema and decoder before outputs; no repair conditioned on correctness.",
+  "statistics": "Primary paired prior endpoints Exact@1/Hit@4; 24-template aggregation, 2000 template bootstraps, 20000 paired sign flips; six model-by-endpoint tests form one Holm family. Diagnostic sweeps descriptive; no selection of best setting as a new main result.",
+  "source_panel_sha256": "35c50861be0d180a7e3af79422b6d258952a0b343c4c31bc5ff283db253b0656",
+  "inputs_prior3_sha256": "f5db753ffdfafb942780865d5b33121bd796e5a8cc3dbc699d82bf99b4b1ccd7",
+  "frozen_method_code_sha256": {
+    "annotate_v2.py": "fafee6146239a7088553f5410f941c2cebc8d183524f6ae28cb75280796e8e18",
+    "run_gower_subspace_baseline.py": "fc6a01fd7e673b9a552fbcc0da20187924b8e60cbd0d1a728fc813d4dbc72a31",
+    "evaluate_benchmark.py": "3c1874dd21f26f7474938c1be42cad3192c88aef41ebc429c86817bc1a6f02a2",
+    "run_sod_cop_adaptations_v2.py": "08098c00cb5d02199efedbe489ae005e6f76f95d3507ed5c69b6223d67ab0e56",
+    "run_m2oe_baseline_v2.py": "1169cdcb21fcb54d009ce6bd350bbf382221eb8e8a00ef2cd698c9e7c08aaa6b"
+  },
+  "frozen_loader_sha256": "2b51caad857f1d1bea8f26cdc1ecb3b5191f996f9242fc5f1dfddc9eaa134a6a",
+  "generator_sha256": "a5f446b2e0c6d38d44e3b55e7e8ab8251fb449bfd5437176b1595ae9e48df95d",
+  "models": [
+    "qwen35_9b",
+    "deepseek_v2_lite_chat",
+    "llama31_8b_instruct"
+  ],
+  "human_annotations": "No participant annotations or time-saving outcomes may be fabricated; public reviewed cell corrections are a separate target from minimal support."
+}

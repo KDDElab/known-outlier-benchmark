@@ -1,0 +1,6 @@
+held_out_model_id,n_queries,n_dataset_clusters,n_valid_held_out_outputs,n_lomo_eligible,peer_reference_coverage,peer_reference_coverage_ci95_low,peer_reference_coverage_ci95_high,mean_jaccard_on_eligible,mean_jaccard_ci95_low,mean_jaccard_ci95_high,bootstrap_seed,bootstrap_replicates
+DeepSeek-V2-Lite-Chat,78,10,44,41,0.931818,0.806452,1.000000,0.329675,0.220325,0.433743,20261106,10000
+Gemma-3-4B-it,78,10,78,70,0.897436,0.782051,0.975000,0.458810,0.350521,0.549524,20261106,10000
+Llama-3.1-8B-Instruct,78,10,78,74,0.948718,0.887500,1.000000,0.392793,0.283989,0.503682,20261106,10000
+Phi-4-mini-instruct,78,10,72,68,0.944444,0.855072,1.000000,0.467157,0.386555,0.535648,20261106,10000
+Qwen3.5-9B,78,10,77,73,0.948052,0.891855,1.000000,0.337215,0.267892,0.396396,20261106,10000

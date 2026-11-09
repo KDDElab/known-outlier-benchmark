@@ -1,0 +1,26 @@
+{
+  "protocol_id": "known_outlier_new_compositions_v1",
+  "frozen_at_utc": "2026-11-08T11:27:47.175959+00:00",
+  "design": "12 new Boolean compositions with 4-6 essential roles in six visible binary fields. Original generator rules have at most three essential roles. These are newly designed after review, not externally blind data.",
+  "targets": "4 uniformly shuffled unique invalid full rows per rule, chosen before inference; 48 targets, no outcome filtering.",
+  "reference_pairs": "First 2 targets per rule (24) have three independent with-replacement 32-row draws and one complete population. All 48 have draw0; total 120 inputs.",
+  "complete_condition": "All six-field normal tuples, including all nuisance combinations, explicitly identified as complete in the prompt. This estimates complete-information performance, combining more rows and a completeness declaration.",
+  "frozen_methods": "Original three checkpoints, original full prompt, strict parser, greedy 512-token decode and input cap16384; Gower all63 subsets k3. No method selection/tuning on these outputs.",
+  "novelty_check": "Distinct 64-bit normal truth tables; every named rule has >=4 essential coordinates. Does not claim external curation or independence from all researcher design choices.",
+  "endpoints": "Exact@1/Hit@4, all-query denominator, equal weight per new rule; draw0 all48 is new-rule result. 24-target paired evidence table compares draw0/1/2/complete; report target-level answer instability and method ordering for each draw.",
+  "strata": "Minimum truth size 1-2/3/4-6; number of valid minimal sets 1/2-4/5+; extra sample minima 0/1-3/4+. Report empty bins, no posthoc boundary tuning.",
+  "seed": 882031,
+  "n_inputs": 120,
+  "n_targets": 48,
+  "n_templates": 12,
+  "code_hashes": {
+    "annotate_v2.py": "fafee6146239a7088553f5410f941c2cebc8d183524f6ae28cb75280796e8e18",
+    "run_gower_subspace_baseline.py": "fc6a01fd7e673b9a552fbcc0da20187924b8e60cbd0d1a728fc813d4dbc72a31",
+    "prepare_acceptance_new_rules.py": "0b6843368357b0e7f03ef3b422788ac563e7e042f8f6c95d7bc902c0daf30242"
+  },
+  "files": {
+    "inputs_new_rules.jsonl": "f128bf209846c1310dba89379e2f3cce3e474aac44d812c4f801198623f1da54",
+    "ground_truth_new_rules.jsonl": "1c4a0b0e9abd513b9397115bca8b11ae1a6d2a0e728dbd01ced39fa7b7697ba9",
+    "populations_new_rules.jsonl": "6881786116e34b6122acc4586197607a4224684f551be8aa6ea5cd34ac0602c4"
+  }
+}

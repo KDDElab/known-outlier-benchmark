@@ -1,0 +1,17 @@
+{
+  "n_cases": 288,
+  "split": "test",
+  "encoding": "numeric/ordinal/date reference-fitted min-max; categorical/binary/identifier one-hot; explicit missing indicator",
+  "sod": "PyOD SOD 1.1.3 shared-nearest-neighbor reference selection and alpha=0.8 variance-threshold subspace; implementation translated from official BSD-licensed source; target + sampled normals only",
+  "sod_source_url": "https://github.com/yzhao062/pyod/blob/1.1.3/pyod/models/sod.py",
+  "cop": "Kriegel et al. COP local-PCA error-vector adaptation; nearest sampled normals, ordinary (non-robust) PCA due small reference count; chi-square tail criterion over estimable dimensions; field ranking by grouped squared error-vector norm",
+  "cop_source_doi": "10.1109/ICDM.2012.21",
+  "comparability": "task-specific mixed-type adapters, not claims of canonical full-method reproduction; use outputs as explanatory candidate sets",
+  "elapsed_seconds": 28.279355369508266,
+  "inputs_sha256": "1ed9aa89ac1f0212e080a38f0aa4179c7612565db8c05677b2d5f01c41895a7c",
+  "runner_sha256": "02847ee6433de4daa145ac7c49d7560b68368bef2134706155aab38412fb208d",
+  "prediction_sha256": {
+    "sod_subspace_adaptation": "e5b013b1929eaf62ce754676f1ae27bb7e3588ff6bcddaa35ad8c9ff136a1ae3",
+    "cop_error_vector_adaptation": "a71f0bc698c68ddba24d66c748a277e483e4b226a3749617baa2ebd89b024d92"
+  }
+}

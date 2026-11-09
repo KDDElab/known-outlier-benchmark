@@ -1,0 +1,3 @@
+method,n_candidate_sets,mean_fields_per_candidate,median_fields_per_candidate,p25_fields_per_candidate,p75_fields_per_candidate,min_fields_per_candidate,max_fields_per_candidate
+sod_subspace_adaptation,864,7.550925925925926,6.5,4.0,12.0,1,15
+cop_error_vector_adaptation,3445,2.4969521044992744,2.0,1.0,3.0,1,4

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Peppol BIS Billing 3.0 - May 2026 Release | Rules | BR-CO-15</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../../../css/structure.css"/>
+    
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <a class="navbar-brand" href="../../../">Peppol BIS Billing 3.0 - May 2026 Release</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div>
+
+    <ol class="breadcrumb">
+        <li><a href="../../../">Home</a></li>
+        <li><a href="../../../rules/">Rules</a></li>
+        <li><a href="../../../rules/ubl-tc434/">EN16931  model bound to UBL</a></li>
+        <li class="active">BR-CO-15</li>
+    </ol>
+
+    <div class="page-header">
+        <h1>BR-CO-15</h1>
+    </div>
+
+    <dl class="dl-horizontal">
+        <dt>Message</dt>
+        <dd><p class="lead">Invoice total amount with VAT (BT-112) = Invoice total amount without VAT (BT-109) + Invoice total VAT amount (BT-110).</p></dd>
+
+        <dt>Context</dt>
+        <dd><code>/ubl:Invoice | /cn:CreditNote</code></dd>
+
+        <dt>Test</dt>
+        <dd><code>every $Currency in cbc:DocumentCurrencyCode satisfies (count(cac:TaxTotal/xs:decimal(cbc:TaxAmount[@currencyID=$Currency])) eq 1) and (cac:LegalMonetaryTotal/xs:decimal(cbc:TaxInclusiveAmount) = round( (cac:LegalMonetaryTotal/xs:decimal(cbc:TaxExclusiveAmount) + cac:TaxTotal/xs:decimal(cbc:TaxAmount[@currencyID=$Currency])) * 10 * 10) div 100)</code></dd>
+
+        
+
+        
+            <dt>Usage</dt>
+            <dd>
+                <div style="margin-bottom: 5pt;">
+                    <a href="syntax/ubl-invoice/cac-LegalMonetaryTotal/cbc-TaxInclusiveAmount/">
+    
+    
+    
+    /
+    
+    <a href="../../../syntax/ubl-invoice/">ubl:Invoice</a>
+
+    /
+    
+    <a href="../../../syntax/ubl-invoice/cac-LegalMonetaryTotal/">cac:LegalMonetaryTotal</a>
+
+    /
+    
+    <a href="../../../syntax/ubl-invoice/cac-LegalMonetaryTotal/cbc-TaxInclusiveAmount/">cbc:TaxInclusiveAmount</a>
+</a>
+                </div>
+                <div style="margin-bottom: 5pt;">
+                    <a href="syntax/ubl-creditnote/cac-LegalMonetaryTotal/cbc-TaxInclusiveAmount/">
+    
+    
+    
+    /
+    
+    <a href="../../../syntax/ubl-creditnote/">ubl:CreditNote</a>
+
+    /
+    
+    <a href="../../../syntax/ubl-creditnote/cac-LegalMonetaryTotal/">cac:LegalMonetaryTotal</a>
+
+    /
+    
+    <a href="../../../syntax/ubl-creditnote/cac-LegalMonetaryTotal/cbc-TaxInclusiveAmount/">cbc:TaxInclusiveAmount</a>
+</a>
+                </div>
+            </dd>
+        
+
+        
+    </dl>
+
+</div>
+</div>
+
+<script src="../../../js/jquery.js"></script>
+<script src="../../../js/bootstrap.js"></script>
+
+
+</body>
+</html>

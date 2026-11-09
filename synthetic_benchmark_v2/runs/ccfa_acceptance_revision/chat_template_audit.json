@@ -1,0 +1,41 @@
+[
+  {
+    "model": "qwen35_9b",
+    "tokenizer_class": "Qwen3_5Tokenizer",
+    "eos_token_id_used": 248046,
+    "eos_token": "<|im_end|>",
+    "pad_token_id": 248044,
+    "generation_config_stop_strings": null,
+    "generation_config_max_time": null,
+    "example_valid_json": true,
+    "example_survives_chat_render": true,
+    "chat_template_sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+    "generation": "Original runner passes tokenizer EOS, no custom stopping criteria, greedy512; archived failed minimal outputs end before512. Actual EOS token IDs were not saved in those old records."
+  },
+  {
+    "model": "deepseek_v2_lite_chat",
+    "tokenizer_class": "TokenizersBackend",
+    "eos_token_id_used": 100001,
+    "eos_token": "<\uff5cend\u2581of\u2581sentence\uff5c>",
+    "pad_token_id": 100001,
+    "generation_config_stop_strings": null,
+    "generation_config_max_time": null,
+    "example_valid_json": true,
+    "example_survives_chat_render": true,
+    "chat_template_sha256": "8aeba567270fa9a8d5372caf4b04affea947c4421d96adc01e3ff94021b0ae8e",
+    "generation": "Original runner passes tokenizer EOS, no custom stopping criteria, greedy512; archived failed minimal outputs end before512. Actual EOS token IDs were not saved in those old records."
+  },
+  {
+    "model": "llama31_8b_instruct",
+    "tokenizer_class": "TokenizersBackend",
+    "eos_token_id_used": 128009,
+    "eos_token": "<|eot_id|>",
+    "pad_token_id": 128009,
+    "generation_config_stop_strings": null,
+    "generation_config_max_time": null,
+    "example_valid_json": true,
+    "example_survives_chat_render": true,
+    "chat_template_sha256": "b48c47f6443892716176eb200bf4ef108f64e06ca26ed0fa8ebc0a4b3992fcb2",
+    "generation": "Original runner passes tokenizer EOS, no custom stopping criteria, greedy512; archived failed minimal outputs end before512. Actual EOS token IDs were not saved in those old records."
+  }
+]

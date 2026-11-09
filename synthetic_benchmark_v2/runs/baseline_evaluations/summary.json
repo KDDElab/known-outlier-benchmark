@@ -1,0 +1,493 @@
+{
+  "all_features": {
+    "n_cases": 288,
+    "n_structurally_valid": 288,
+    "structured_output_rate": 1.0,
+    "task_label_coverage": 0.0,
+    "mechanism_metric_coverage": 0.0,
+    "abstention_rate_on_valid_predictions": 0.0,
+    "task_label_accuracy_on_valid_predictions": null,
+    "mechanism_feature_metrics": {
+      "micro_precision": 0.0,
+      "micro_recall": 0.0,
+      "micro_f1": 0.0,
+      "macro_case_f1": null,
+      "exact_set_accuracy": null
+    },
+    "interaction_case_count": 180,
+    "interaction_scored_case_count": 0,
+    "interaction_metric_coverage": 0.0,
+    "interaction_all_fields_recovery_rate": null,
+    "support_top1_sufficiency_rate": 1.0,
+    "support_top1_minimal_exact_hit_rate": 0.0,
+    "support_any_minimal_hit_at_4": 0.0,
+    "support_mean_recall_at_4": 0.0,
+    "support_mean_reciprocal_rank": 0.0,
+    "support_mean_best_jaccard": 0.15480324074074073,
+    "rule_top1_sufficiency_rate": 1.0,
+    "rule_top1_minimal_exact_hit_rate": 0.0,
+    "rule_any_minimal_hit_at_4": 0.0,
+    "mean_predicted_subspace_fraction": 1.0,
+    "template_cluster_ci95": {
+      "structured_output_rate": {
+        "estimate": 1.0,
+        "ci95_low": 1.0,
+        "ci95_high": 1.0,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_top1_sufficiency_rate": {
+        "estimate": 1.0,
+        "ci95_low": 1.0,
+        "ci95_high": 1.0,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_top1_minimal_exact_hit_rate": {
+        "estimate": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_any_minimal_hit_at_4": {
+        "estimate": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_mean_recall_at_4": {
+        "estimate": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_mean_reciprocal_rank": {
+        "estimate": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_mean_best_jaccard": {
+        "estimate": 0.15480324074074073,
+        "ci95_low": 0.13049768518518517,
+        "ci95_high": 0.18229166666666666,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "mean_predicted_subspace_fraction": {
+        "estimate": 1.0,
+        "ci95_low": 1.0,
+        "ci95_high": 1.0,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      }
+    },
+    "template_cluster_ci95_method": "resample 24 templates with replacement; retain all cases per sampled template"
+  },
+  "top_univariate": {
+    "n_cases": 288,
+    "n_structurally_valid": 288,
+    "structured_output_rate": 1.0,
+    "task_label_coverage": 0.0,
+    "mechanism_metric_coverage": 0.0,
+    "abstention_rate_on_valid_predictions": 0.0,
+    "task_label_accuracy_on_valid_predictions": null,
+    "mechanism_feature_metrics": {
+      "micro_precision": 0.0,
+      "micro_recall": 0.0,
+      "micro_f1": 0.0,
+      "macro_case_f1": null,
+      "exact_set_accuracy": null
+    },
+    "interaction_case_count": 180,
+    "interaction_scored_case_count": 0,
+    "interaction_metric_coverage": 0.0,
+    "interaction_all_fields_recovery_rate": null,
+    "support_top1_sufficiency_rate": 0.1527777777777778,
+    "support_top1_minimal_exact_hit_rate": 0.1527777777777778,
+    "support_any_minimal_hit_at_4": 0.3923611111111111,
+    "support_mean_recall_at_4": 0.3813657407407407,
+    "support_mean_reciprocal_rank": 0.2482638888888889,
+    "support_mean_best_jaccard": 0.5601851851851852,
+    "rule_top1_sufficiency_rate": 0.1388888888888889,
+    "rule_top1_minimal_exact_hit_rate": 0.1388888888888889,
+    "rule_any_minimal_hit_at_4": 0.3854166666666667,
+    "mean_predicted_subspace_fraction": 0.09722222222222222,
+    "template_cluster_ci95": {
+      "structured_output_rate": {
+        "estimate": 1.0,
+        "ci95_low": 1.0,
+        "ci95_high": 1.0,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_top1_sufficiency_rate": {
+        "estimate": 0.1527777777777778,
+        "ci95_low": 0.07291666666666667,
+        "ci95_high": 0.2465277777777778,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_top1_minimal_exact_hit_rate": {
+        "estimate": 0.1527777777777778,
+        "ci95_low": 0.06944444444444445,
+        "ci95_high": 0.24305555555555555,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_any_minimal_hit_at_4": {
+        "estimate": 0.3923611111111111,
+        "ci95_low": 0.21875,
+        "ci95_high": 0.5486111111111112,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_mean_recall_at_4": {
+        "estimate": 0.3813657407407407,
+        "ci95_low": 0.2170138888888889,
+        "ci95_high": 0.53125,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_mean_reciprocal_rank": {
+        "estimate": 0.2482638888888889,
+        "ci95_low": 0.13802083333333334,
+        "ci95_high": 0.37123842592592593,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_mean_best_jaccard": {
+        "estimate": 0.5601851851851852,
+        "ci95_low": 0.45370370370370366,
+        "ci95_high": 0.6637731481481481,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "mean_predicted_subspace_fraction": {
+        "estimate": 0.09722222222222221,
+        "ci95_low": 0.09722222222222222,
+        "ci95_high": 0.09722222222222222,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      }
+    },
+    "template_cluster_ci95_method": "resample 24 templates with replacement; retain all cases per sampled template"
+  },
+  "oracle_reference_support": {
+    "n_cases": 288,
+    "n_structurally_valid": 288,
+    "structured_output_rate": 1.0,
+    "task_label_coverage": 0.0,
+    "mechanism_metric_coverage": 0.0,
+    "abstention_rate_on_valid_predictions": 0.0,
+    "task_label_accuracy_on_valid_predictions": null,
+    "mechanism_feature_metrics": {
+      "micro_precision": 0.0,
+      "micro_recall": 0.0,
+      "micro_f1": 0.0,
+      "macro_case_f1": null,
+      "exact_set_accuracy": null
+    },
+    "interaction_case_count": 180,
+    "interaction_scored_case_count": 0,
+    "interaction_metric_coverage": 0.0,
+    "interaction_all_fields_recovery_rate": null,
+    "support_top1_sufficiency_rate": 1.0,
+    "support_top1_minimal_exact_hit_rate": 1.0,
+    "support_any_minimal_hit_at_4": 1.0,
+    "support_mean_recall_at_4": 0.9993055555555556,
+    "support_mean_reciprocal_rank": 1.0,
+    "support_mean_best_jaccard": 1.0,
+    "rule_top1_sufficiency_rate": 0.9895833333333334,
+    "rule_top1_minimal_exact_hit_rate": 0.9895833333333334,
+    "rule_any_minimal_hit_at_4": 1.0,
+    "mean_predicted_subspace_fraction": 0.1538387345679012,
+    "template_cluster_ci95": {
+      "structured_output_rate": {
+        "estimate": 1.0,
+        "ci95_low": 1.0,
+        "ci95_high": 1.0,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_top1_sufficiency_rate": {
+        "estimate": 1.0,
+        "ci95_low": 1.0,
+        "ci95_high": 1.0,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_top1_minimal_exact_hit_rate": {
+        "estimate": 1.0,
+        "ci95_low": 1.0,
+        "ci95_high": 1.0,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_any_minimal_hit_at_4": {
+        "estimate": 1.0,
+        "ci95_low": 1.0,
+        "ci95_high": 1.0,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_mean_recall_at_4": {
+        "estimate": 0.9993055555555556,
+        "ci95_low": 0.9979166666666666,
+        "ci95_high": 1.0,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_mean_reciprocal_rank": {
+        "estimate": 1.0,
+        "ci95_low": 1.0,
+        "ci95_high": 1.0,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_mean_best_jaccard": {
+        "estimate": 1.0,
+        "ci95_low": 1.0,
+        "ci95_high": 1.0,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "mean_predicted_subspace_fraction": {
+        "estimate": 0.1538387345679012,
+        "ci95_low": 0.13001543209876543,
+        "ci95_high": 0.17766203703703703,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      }
+    },
+    "template_cluster_ci95_method": "resample 24 templates with replacement; retain all cases per sampled template"
+  },
+  "oracle_rule": {
+    "n_cases": 288,
+    "n_structurally_valid": 288,
+    "structured_output_rate": 1.0,
+    "task_label_coverage": 0.0,
+    "mechanism_metric_coverage": 0.0,
+    "abstention_rate_on_valid_predictions": 0.0,
+    "task_label_accuracy_on_valid_predictions": null,
+    "mechanism_feature_metrics": {
+      "micro_precision": 0.0,
+      "micro_recall": 0.0,
+      "micro_f1": 0.0,
+      "macro_case_f1": null,
+      "exact_set_accuracy": null
+    },
+    "interaction_case_count": 180,
+    "interaction_scored_case_count": 0,
+    "interaction_metric_coverage": 0.0,
+    "interaction_all_fields_recovery_rate": null,
+    "support_top1_sufficiency_rate": 1.0,
+    "support_top1_minimal_exact_hit_rate": 1.0,
+    "support_any_minimal_hit_at_4": 1.0,
+    "support_mean_recall_at_4": 0.8773726851851852,
+    "support_mean_reciprocal_rank": 1.0,
+    "support_mean_best_jaccard": 1.0,
+    "rule_top1_sufficiency_rate": 1.0,
+    "rule_top1_minimal_exact_hit_rate": 1.0,
+    "rule_any_minimal_hit_at_4": 1.0,
+    "mean_predicted_subspace_fraction": 0.15393518518518517,
+    "template_cluster_ci95": {
+      "structured_output_rate": {
+        "estimate": 1.0,
+        "ci95_low": 1.0,
+        "ci95_high": 1.0,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_top1_sufficiency_rate": {
+        "estimate": 1.0,
+        "ci95_low": 1.0,
+        "ci95_high": 1.0,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_top1_minimal_exact_hit_rate": {
+        "estimate": 1.0,
+        "ci95_low": 1.0,
+        "ci95_high": 1.0,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_any_minimal_hit_at_4": {
+        "estimate": 1.0,
+        "ci95_low": 1.0,
+        "ci95_high": 1.0,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_mean_recall_at_4": {
+        "estimate": 0.8773726851851852,
+        "ci95_low": 0.8582175925925926,
+        "ci95_high": 0.8958333333333334,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_mean_reciprocal_rank": {
+        "estimate": 1.0,
+        "ci95_low": 1.0,
+        "ci95_high": 1.0,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_mean_best_jaccard": {
+        "estimate": 1.0,
+        "ci95_low": 1.0,
+        "ci95_high": 1.0,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "mean_predicted_subspace_fraction": {
+        "estimate": 0.15393518518518517,
+        "ci95_low": 0.12962962962962962,
+        "ci95_high": 0.17824074074074073,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      }
+    },
+    "template_cluster_ci95_method": "resample 24 templates with replacement; retain all cases per sampled template"
+  },
+  "random_subspace": {
+    "n_replicates": 100,
+    "n_cases_per_replicate": 288,
+    "metrics": {
+      "structured_output_rate": {
+        "mean": 1.0,
+        "sd": 0.0,
+        "p05": 1.0,
+        "p50": 1.0,
+        "p95": 1.0
+      },
+      "support_top1_sufficiency_rate": {
+        "mean": 0.12357638888888889,
+        "sd": 0.0495836629393893,
+        "p05": 0.05503472222222222,
+        "p50": 0.11458333333333333,
+        "p95": 0.2222222222222222
+      },
+      "support_top1_minimal_exact_hit_rate": {
+        "mean": 0.04395833333333333,
+        "sd": 0.033378240303210564,
+        "p05": 0.010069444444444445,
+        "p50": 0.034722222222222224,
+        "p95": 0.11510416666666663
+      },
+      "support_any_minimal_hit_at_4": {
+        "mean": 0.14385416666666667,
+        "sd": 0.0471234375376694,
+        "p05": 0.0796875,
+        "p50": 0.1371527777777778,
+        "p95": 0.2361111111111111
+      },
+      "support_mean_recall_at_4": {
+        "mean": 0.1148599537037037,
+        "sd": 0.041987245271414196,
+        "p05": 0.051765046296296295,
+        "p50": 0.1086226851851852,
+        "p95": 0.19464699074074074
+      },
+      "support_mean_reciprocal_rank": {
+        "mean": 0.08105902777777779,
+        "sd": 0.033679714376749936,
+        "p05": 0.038396990740740745,
+        "p50": 0.0753761574074074,
+        "p95": 0.15050636574074072
+      },
+      "support_mean_best_jaccard": {
+        "mean": 0.36208391203703705,
+        "sd": 0.05595675758411977,
+        "p05": 0.28629340277777776,
+        "p50": 0.35515046296296293,
+        "p95": 0.4667679398148148
+      },
+      "rule_top1_sufficiency_rate": {
+        "mean": 0.10805555555555556,
+        "sd": 0.04969451666840214,
+        "p05": 0.041493055555555554,
+        "p50": 0.09895833333333334,
+        "p95": 0.21197916666666664
+      },
+      "rule_any_minimal_hit_at_4": {
+        "mean": 0.123125,
+        "sd": 0.04844402702625489,
+        "p05": 0.052083333333333336,
+        "p50": 0.11805555555555555,
+        "p95": 0.20868055555555554
+      },
+      "mean_predicted_subspace_fraction": {
+        "mean": 0.16083875868055553,
+        "sd": 0.009566592853979271,
+        "p05": 0.14606963734567902,
+        "p50": 0.16044560185185183,
+        "p95": 0.17593677662037033
+      }
+    },
+    "template_cluster_ci95_on_seed_averaged_cases": {
+      "structured_output_rate": {
+        "estimate": 1.0,
+        "ci95_low": 1.0,
+        "ci95_high": 1.0,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_top1_sufficiency_rate": {
+        "estimate": 0.1235763888888889,
+        "ci95_low": 0.08319444444444445,
+        "ci95_high": 0.1629861111111111,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_top1_minimal_exact_hit_rate": {
+        "estimate": 0.043958333333333335,
+        "ci95_low": 0.03097222222222222,
+        "ci95_high": 0.0567013888888889,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_any_minimal_hit_at_4": {
+        "estimate": 0.14385416666666667,
+        "ci95_low": 0.10548611111111111,
+        "ci95_high": 0.17961805555555557,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_mean_recall_at_4": {
+        "estimate": 0.11485995370370371,
+        "ci95_low": 0.08208217592592593,
+        "ci95_high": 0.14480324074074075,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_mean_reciprocal_rank": {
+        "estimate": 0.08105902777777778,
+        "ci95_low": 0.0590162037037037,
+        "ci95_high": 0.10330439814814814,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "support_mean_best_jaccard": {
+        "estimate": 0.362083912037037,
+        "ci95_low": 0.35376157407407405,
+        "ci95_high": 0.3716996527777778,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      },
+      "mean_predicted_subspace_fraction": {
+        "estimate": 0.16083875868055555,
+        "ci95_low": 0.1603589168595679,
+        "ci95_high": 0.16134367766203703,
+        "n_template_clusters": 24,
+        "n_bootstrap": 2000
+      }
+    },
+    "template_cluster_ci95_method": "average each case over random seeds, then resample 24 templates with replacement"
+  }
+}

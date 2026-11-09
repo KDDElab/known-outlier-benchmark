@@ -1,0 +1,105 @@
+{
+  "protocol_id": "adbench_uci_llm_reference_v1",
+  "annotation_records_latest_per_model_case": 390,
+  "stale_prompt_records_excluded": 55,
+  "parse_valid_records": 350,
+  "parse_or_inference_failures": 40,
+  "outputs_with_explicit_parser_normalization": 3,
+  "annotator_quality": [
+    {
+      "annotator_id": "deepseek_v2_lite_chat",
+      "model_id": "DeepSeek-V2-Lite-Chat",
+      "model_family": "DeepSeek",
+      "n_cases": 78,
+      "n_latest_outputs": 78,
+      "n_schema_valid_outputs": 44,
+      "n_parse_or_inference_failures": 34,
+      "n_outputs_with_explicit_normalization": 0,
+      "n_abstentions": 0,
+      "n_valid_nonabstaining_outputs": 44,
+      "schema_valid_rate": 0.564103
+    },
+    {
+      "annotator_id": "gemma3_4b",
+      "model_id": "Gemma-3-4B-it",
+      "model_family": "Gemma",
+      "n_cases": 78,
+      "n_latest_outputs": 78,
+      "n_schema_valid_outputs": 78,
+      "n_parse_or_inference_failures": 0,
+      "n_outputs_with_explicit_normalization": 3,
+      "n_abstentions": 0,
+      "n_valid_nonabstaining_outputs": 78,
+      "schema_valid_rate": 1.0
+    },
+    {
+      "annotator_id": "llama31_8b_instruct",
+      "model_id": "Llama-3.1-8B-Instruct",
+      "model_family": "Llama",
+      "n_cases": 78,
+      "n_latest_outputs": 78,
+      "n_schema_valid_outputs": 78,
+      "n_parse_or_inference_failures": 0,
+      "n_outputs_with_explicit_normalization": 0,
+      "n_abstentions": 0,
+      "n_valid_nonabstaining_outputs": 78,
+      "schema_valid_rate": 1.0
+    },
+    {
+      "annotator_id": "phi4_mini",
+      "model_id": "Phi-4-mini-instruct",
+      "model_family": "Phi",
+      "n_cases": 78,
+      "n_latest_outputs": 78,
+      "n_schema_valid_outputs": 72,
+      "n_parse_or_inference_failures": 6,
+      "n_outputs_with_explicit_normalization": 0,
+      "n_abstentions": 0,
+      "n_valid_nonabstaining_outputs": 72,
+      "schema_valid_rate": 0.923077
+    },
+    {
+      "annotator_id": "qwen35_9b",
+      "model_id": "Qwen3.5-9B",
+      "model_family": "Qwen",
+      "n_cases": 78,
+      "n_latest_outputs": 78,
+      "n_schema_valid_outputs": 78,
+      "n_parse_or_inference_failures": 0,
+      "n_outputs_with_explicit_normalization": 0,
+      "n_abstentions": 1,
+      "n_valid_nonabstaining_outputs": 77,
+      "schema_valid_rate": 1.0
+    }
+  ],
+  "annotators": [
+    {
+      "annotator_id": "deepseek_v2_lite_chat",
+      "model_id": "DeepSeek-V2-Lite-Chat",
+      "family": "DeepSeek"
+    },
+    {
+      "annotator_id": "gemma3_4b",
+      "model_id": "Gemma-3-4B-it",
+      "family": "Gemma"
+    },
+    {
+      "annotator_id": "llama31_8b_instruct",
+      "model_id": "Llama-3.1-8B-Instruct",
+      "family": "Llama"
+    },
+    {
+      "annotator_id": "phi4_mini",
+      "model_id": "Phi-4-mini-instruct",
+      "family": "Phi"
+    },
+    {
+      "annotator_id": "qwen35_9b",
+      "model_id": "Qwen3.5-9B",
+      "family": "Qwen"
+    }
+  ],
+  "cases": 78,
+  "ground_truth_available_for_feature_subsets": false,
+  "metrics_interpretation": "inter-annotator agreement and leave-one-model-out stability only"
+}

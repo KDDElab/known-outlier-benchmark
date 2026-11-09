@@ -1,0 +1,46 @@
+{
+  "complete": true,
+  "scope": "Descriptive means over four fixed standards-derived synthetic relations; no significance tests.",
+  "input_sha256": "e18c99333e5a711cb5efd2549715a41fe8b33c697bde64a8835f1bac016b2f60",
+  "gold_sha256": "796605781de3f7400710c15a7ed6ab60281ed2afecf615fc27132f5230b5b003",
+  "protocol_sha256": "5e9eae4147414d54c7ffa72307c45d1321484206ed3b4c69b5341b66ecf5e902",
+  "sources": {
+    "qwen35_9b": "61915ff4eca07da4a390f446977f033ce74f58ffaf4c941dffe8b4b10b3458ff",
+    "deepseek_v2_lite_chat": "917d07413626bb3e580544195e266e22dfe3c9202da106001a4c00d29a93c159",
+    "llama31_8b_instruct": "f29295bb4e657af69c34e16e8574e596d1c0ea30dc2b42aecbd982b74302600b",
+    "gower_lof_subspace": "5a7f47594f28b6dad0ee4988367a9d6188079ec035b1192dd3d2078197f26929",
+    "gower_knn_subspace": "ce2eaa6d21244b027d682377a52f9e076c086548caa3ea304ccd83a395f1c979"
+  },
+  "model_counts": {
+    "qwen35_9b": {
+      "records": 96,
+      "input_or_inference_failures": 0,
+      "parse_failures": 2,
+      "output_cap_reached": 2
+    },
+    "deepseek_v2_lite_chat": {
+      "records": 96,
+      "input_or_inference_failures": 0,
+      "parse_failures": 6,
+      "output_cap_reached": 6
+    },
+    "llama31_8b_instruct": {
+      "records": 96,
+      "input_or_inference_failures": 0,
+      "parse_failures": 8,
+      "output_cap_reached": 6
+    }
+  },
+  "n_queries": 96,
+  "n_model_outputs": 288,
+  "labels_independently_reenumerated": 96,
+  "scorer_sha256": "3c1874dd21f26f7474938c1be42cad3192c88aef41ebc429c86817bc1a6f02a2",
+  "analysis_sha256": "2651fccfa00c7c531246526156f96ceb4b6d9b7b1c48d23f032b1c6f53732ace",
+  "csv_sha256": {
+    "scores_per_case.csv": "e6cad6f0026ee6df3bbc9ee5705d4d5de009b01fed3a8babac3a90d60c873d91",
+    "scores_by_relation.csv": "75bf9cc70c38c944975dd829e7842d0f796122a589fc95135cbcb7f12d58ac52",
+    "summary.csv": "78153b425d6592eeb0d5df74fa7adea2e590d6f129798e45340a8d5a5c226a52",
+    "label_audit.csv": "f5263b842c84d6415f9cfe643e23f8bea5acabdd3ae9850a0f709e2b472654ea"
+  },
+  "table_tex_sha256": "f93b0b6bd9b3bab100967eab4c2309f670a8f20e63e9f97c4cd6bca26e8574fd"
+}

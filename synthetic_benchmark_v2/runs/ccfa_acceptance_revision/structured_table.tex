@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering\scriptsize
+\caption{Fixed JSON decoding with the same minimal prompt and 512-token budget; all 96 queries, no three-field prior. Valid is parser validity; Hit is Hit@4.}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}|l|rrr|rrr|}
+\hline
+Model & \multicolumn{3}{c|}{Unconstrained} & \multicolumn{3}{c|}{JSON schema} \\
+\cline{2-7}
+ & Valid & Exact & Hit & Valid & Exact & Hit \\
+\hline
+Qwen & 0.010 & 0.000 & 0.010 & 0.990 & 0.375 & 0.531 \\
+DeepSeek & 0.823 & 0.000 & 0.010 & 0.875 & 0.000 & 0.010 \\
+Llama & 0.333 & 0.021 & 0.042 & 1.000 & 0.031 & 0.083 \\
+\hline
+\end{tabular*}
+\renewcommand{\arraystretch}{1.0}
+\label{tab:structured}
+\end{table}

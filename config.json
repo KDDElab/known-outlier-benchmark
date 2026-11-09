@@ -1,0 +1,77 @@
+{
+  "protocol_id": "adbench_uci_llm_reference_v1",
+  "created_date": "2026-11-04",
+  "sampling_seed": 20261104,
+  "max_anomalies_per_dataset": 8,
+  "normal_reference_examples_per_case": 12,
+  "max_features": 3,
+  "annotation_label": "LLM-generated reference annotation",
+  "selected_adbench": [
+    "4_breastw.npz",
+    "14_glass.npz",
+    "15_Hepatitis.npz",
+    "21_Lymphography.npz",
+    "29_Pima.npz",
+    "37_Stamps.npz",
+    "39_vertebral.npz",
+    "42_WBC.npz",
+    "45_wine.npz"
+  ],
+  "uci_supplement": {
+    "dataset": "Lymphography",
+    "uci_id": 63,
+    "anomaly_class_codes": [
+      2,
+      3,
+      4
+    ],
+    "normal_class_codes": [
+      1
+    ],
+    "mapping_note": "Source class 1 is normal find; source disease classes 2-4 are treated as anomalies. The normal reference pool contains only two rows."
+  },
+  "excluded_uci": {
+    "dataset": "SECOM",
+    "rows": 1567,
+    "predictors": 590,
+    "reason": "High-dimensional input requires a separate protocol."
+  },
+  "annotators": [
+    {
+      "annotator_id": "qwen35_9b",
+      "model_id": "Qwen3.5-9B",
+      "model_path": "<SET_LOCAL_CHECKPOINT_PATH>",
+      "family": "Qwen"
+    },
+    {
+      "annotator_id": "phi4_mini",
+      "model_id": "Phi-4-mini-instruct",
+      "model_path": "<SET_LOCAL_CHECKPOINT_PATH>",
+      "family": "Phi"
+    },
+    {
+      "annotator_id": "gemma3_4b",
+      "model_id": "Gemma-3-4B-it",
+      "model_path": "<SET_LOCAL_CHECKPOINT_PATH>",
+      "family": "Gemma"
+    },
+    {
+      "annotator_id": "deepseek_v2_lite_chat",
+      "model_id": "DeepSeek-V2-Lite-Chat",
+      "model_path": "<SET_LOCAL_CHECKPOINT_PATH>",
+      "family": "DeepSeek"
+    },
+    {
+      "annotator_id": "llama31_8b_instruct",
+      "model_id": "Llama-3.1-8B-Instruct",
+      "model_path": "<SET_LOCAL_CHECKPOINT_PATH>",
+      "family": "Llama"
+    }
+  ],
+  "decoding": {
+    "temperature": 0.0,
+    "do_sample": false,
+    "max_new_tokens": 256,
+    "max_input_tokens": 8192
+  }
+}

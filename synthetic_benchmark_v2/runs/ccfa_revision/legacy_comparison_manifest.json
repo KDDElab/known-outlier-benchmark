@@ -1,0 +1,72 @@
+{
+  "scope": "Post-hoc descriptive comparison with historical raw outputs; no new significance tests",
+  "common_scoring": "Current parser, explicit abstention semantics, and primary template estimator in both conditions",
+  "inputs": "Identical schema/value/reference content verified; display order differs",
+  "limitation": "Historical execution versus revision execution; not an independent randomized method-capability experiment",
+  "sources": [
+    {
+      "seed": 20261106,
+      "method": "qwen35_9b",
+      "path": "runs/multiseed/seed_20261106_rt522/annotations_qwen35_9b.jsonl",
+      "sha256": "e5519bc376418f1cd584c3b3b22140aa8f643b712d9bccd19c61a3dfa7dcf537",
+      "records": 288
+    },
+    {
+      "seed": 20261107,
+      "method": "qwen35_9b",
+      "path": "runs/multiseed/seed_20261107/annotations_qwen35_9b.jsonl",
+      "sha256": "37a2644605607924c60363259ccaecc81f957e94c1c10ed0300bb306a02396f9",
+      "records": 288
+    },
+    {
+      "seed": 20261108,
+      "method": "qwen35_9b",
+      "path": "runs/multiseed/seed_20261108/annotations_qwen35_9b.jsonl",
+      "sha256": "543bfd93aa7e22f9da94032b523eca82419387a6d98b71a47e4280301781969a",
+      "records": 288
+    },
+    {
+      "seed": 20261106,
+      "method": "deepseek_v2_lite_chat",
+      "path": "runs/multiseed/seed_20261106_rt522/annotations_deepseek_v2_lite_chat.jsonl",
+      "sha256": "0b82e7e06245b422633a7ac28bd174c724e690dd00d4db014d09fa5399464e34",
+      "records": 288
+    },
+    {
+      "seed": 20261107,
+      "method": "deepseek_v2_lite_chat",
+      "path": "runs/multiseed/seed_20261107/annotations_deepseek_v2_lite_chat.jsonl",
+      "sha256": "a9dd1a402dec60eb282567c0459c369085ec010ac13d4eb0bbc7d532ab41fc0b",
+      "records": 288
+    },
+    {
+      "seed": 20261108,
+      "method": "deepseek_v2_lite_chat",
+      "path": "runs/multiseed/seed_20261108/annotations_deepseek_v2_lite_chat.jsonl",
+      "sha256": "e4de6a07b822e2fff1631a355da0705de391c2e2bfab056dd1db45e50a55ae63",
+      "records": 288
+    },
+    {
+      "seed": 20261106,
+      "method": "llama31_8b_instruct",
+      "path": "runs/multiseed/seed_20261106_rt522/annotations_llama31_8b_instruct.jsonl",
+      "sha256": "c822631c5c02ae812e0bb715659f8a27edefbb8b88301ad18f049173ebfe68dd",
+      "records": 288
+    },
+    {
+      "seed": 20261107,
+      "method": "llama31_8b_instruct",
+      "path": "runs/multiseed/seed_20261107/annotations_llama31_8b_instruct.jsonl",
+      "sha256": "8e06a46b880db111e664bc2d57942edb35f1fc060230547d8cc80b7bcfbb05c8",
+      "records": 288
+    },
+    {
+      "seed": 20261108,
+      "method": "llama31_8b_instruct",
+      "path": "runs/multiseed/seed_20261108/annotations_llama31_8b_instruct.jsonl",
+      "sha256": "72c270db4335a683d205afa598a50553ed8db9ff393acd96b7d3c8b7be714b86",
+      "records": 288
+    }
+  ],
+  "analysis_sha256": "dc3f440093562e850ff473ea4beb713015023e17326123ff6e7669239377af60"
+}

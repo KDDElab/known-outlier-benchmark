@@ -1,0 +1,17 @@
+{
+  "protocol_id": "known_outlier_structured_v1",
+  "frozen_at_utc": "2026-11-08T11:30:36.953289+00:00",
+  "n_cases": 96,
+  "comparison": "Same original minimal512 prompt, refs, target, order, model checkpoints and 512-token cap; add JSON Schema token filtering only. No size-three prior in either condition.",
+  "decoder": "lm-format-enforcer==0.11.3; interegular==0.3.3; Transformers prefix_allowed_tokens_fn; greedy batch1; no sampling; default whitespace/key-order settings.",
+  "schema": "object: explanations array 0..4 of {features: array 1..D of legal feature IDs}, abstain boolean; no additional properties. Uniqueness still validated by the original strict parser; grammar alone does not force unique entries.",
+  "compatibility": "In-process alias from transformers.tokenization_utils_base.PreTrainedTokenizerBase to the old tokenization_utils location required by LMFE; no package downgrade or weight change.",
+  "metrics": "Strict parse coverage, non-abstaining answered coverage, all-query Exact@1/Hit@4; conditional accuracy separately. Keep all 96 including input-limit rejections, and report tokenizer-common-feasible sensitivity.",
+  "audit": "Archived errors inspected without replacing old raw outputs or scoring repaired strings. A diagnostic single missing brace insertion records syntactic recoverability only, not new accuracy.",
+  "files": {
+    "annotate_v2.py": "fafee6146239a7088553f5410f941c2cebc8d183524f6ae28cb75280796e8e18",
+    "annotate_acceptance_structured.py": "14516aa0f777fd199ba34100ca12a3aecd90dce5d532c7282a333d7e6fd66cdd",
+    "prepare_acceptance_structured.py": "c92f9c9e493009fe15ad8b8902ccd9a474aedda5c1d5343014a25ddb9394d5bb"
+  },
+  "inputs_sha256": "bc2288dbcb573fd117e8a5acace0917e30833b91de8752961bdd03412e96a070"
+}

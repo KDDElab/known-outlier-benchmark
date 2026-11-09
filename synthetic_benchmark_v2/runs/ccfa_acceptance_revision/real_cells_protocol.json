@@ -1,0 +1,274 @@
+{
+  "protocol_id": "public_corrected_cells_v1",
+  "frozen_at_utc": "2026-11-08T11:33:29.003066+00:00",
+  "seed": 930761,
+  "n_cases": 72,
+  "sources": {
+    "commit": "7be1334b8c7bbdac3f47ef514fb3e1e8c5fc181c",
+    "source": "https://github.com/BigDaMa/raha",
+    "files": [
+      {
+        "name": "beers_dirty.csv",
+        "url": "https://raw.githubusercontent.com/BigDaMa/raha/7be1334b8c7bbdac3f47ef514fb3e1e8c5fc181c/datasets/beers/dirty.csv",
+        "sha256": "7110bf4931a9445a1675e544d6c996817c739136239f8a2b02e088c7ec0a1f68"
+      },
+      {
+        "name": "beers_clean.csv",
+        "url": "https://raw.githubusercontent.com/BigDaMa/raha/7be1334b8c7bbdac3f47ef514fb3e1e8c5fc181c/datasets/beers/clean.csv",
+        "sha256": "373227df59ad197e154dd5149125789e415019535c7223355e9486ee1b3b93de"
+      },
+      {
+        "name": "flights_dirty.csv",
+        "url": "https://raw.githubusercontent.com/BigDaMa/raha/7be1334b8c7bbdac3f47ef514fb3e1e8c5fc181c/datasets/flights/dirty.csv",
+        "sha256": "1b5c1afa10aa0e7c20fd7e14d05c56772715b2771aa0f5fa67ed1709e1eecd46"
+      },
+      {
+        "name": "flights_clean.csv",
+        "url": "https://raw.githubusercontent.com/BigDaMa/raha/7be1334b8c7bbdac3f47ef514fb3e1e8c5fc181c/datasets/flights/clean.csv",
+        "sha256": "0acfcfd8985b06fdd363965c9e8d9522c43e7589a93d79ae7dc311e1c37fdf3b"
+      },
+      {
+        "name": "rayyan_dirty.csv",
+        "url": "https://raw.githubusercontent.com/BigDaMa/raha/7be1334b8c7bbdac3f47ef514fb3e1e8c5fc181c/datasets/rayyan/dirty.csv",
+        "sha256": "7e25e6db262b0c72ca2d9735d5959599cf5a582e1c705459507c7b45d0d1d174"
+      },
+      {
+        "name": "rayyan_clean.csv",
+        "url": "https://raw.githubusercontent.com/BigDaMa/raha/7be1334b8c7bbdac3f47ef514fb3e1e8c5fc181c/datasets/rayyan/clean.csv",
+        "sha256": "23159f43c0706782388ed8957ad0c74eb7b88bc98f34d65bd49296e186d4673f"
+      }
+    ],
+    "paper": "https://doi.org/10.1145/3299869.3324956",
+    "provenance_passage": "Raha section 6.1: Beers scraped and manually cleaned; Rayyan cleaned by dataset owners; Flights obtained with ground truth from previous research. No new human labels."
+  },
+  "datasets": [
+    {
+      "dataset": "flights",
+      "rows": 2376,
+      "fields_evaluated": [
+        "src",
+        "flight",
+        "sched_dep_time",
+        "act_dep_time",
+        "sched_arr_time",
+        "act_arr_time"
+      ],
+      "removed_metadata_fields": [
+        "tuple_id"
+      ],
+      "clean_header_original": [
+        "tuple_id",
+        "src",
+        "flight",
+        "sched_dep_time",
+        "act_dep_time",
+        "sched_arr_time",
+        "act_arr_time"
+      ],
+      "eligible_dirty_rows": 1904,
+      "selected_rows": [
+        668,
+        842,
+        2158,
+        228,
+        653,
+        485,
+        542,
+        1134,
+        244,
+        1356,
+        2182,
+        2213,
+        201,
+        146,
+        2096,
+        1170,
+        805,
+        2195,
+        97,
+        242,
+        1231,
+        2266,
+        1954,
+        1037
+      ],
+      "corrected_cell_counts_by_column": {
+        "src": 0,
+        "flight": 0,
+        "sched_dep_time": 911,
+        "act_dep_time": 1558,
+        "sched_arr_time": 1100,
+        "act_arr_time": 1351
+      },
+      "sample_strata_counts": [
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "dataset": "beers",
+      "rows": 2410,
+      "fields_evaluated": [
+        "beer_name",
+        "style",
+        "ounces",
+        "abv",
+        "ibu",
+        "brewery_id",
+        "brewery_name",
+        "city",
+        "state"
+      ],
+      "removed_metadata_fields": [
+        "index",
+        "id"
+      ],
+      "clean_header_original": [
+        "index",
+        "id",
+        "beer-name",
+        "style",
+        "ounces",
+        "abv",
+        "ibu",
+        "brewery_id",
+        "brewery-name",
+        "city",
+        "state"
+      ],
+      "eligible_dirty_rows": 2410,
+      "selected_rows": [
+        980,
+        185,
+        2034,
+        1610,
+        839,
+        1268,
+        2230,
+        1861,
+        1169,
+        696,
+        2392,
+        1383,
+        675,
+        1969,
+        2321,
+        253,
+        689,
+        716,
+        123,
+        864,
+        161,
+        326,
+        663,
+        47
+      ],
+      "corrected_cell_counts_by_column": {
+        "beer_name": 0,
+        "style": 0,
+        "ounces": 2410,
+        "abv": 693,
+        "ibu": 1005,
+        "brewery_id": 0,
+        "brewery_name": 0,
+        "city": 127,
+        "state": 127
+      },
+      "sample_strata_counts": [
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "dataset": "rayyan",
+      "rows": 1000,
+      "fields_evaluated": [
+        "article_title",
+        "article_language",
+        "journal_title",
+        "jounral_abbreviation",
+        "journal_issn",
+        "article_jvolumn",
+        "article_jissue",
+        "article_jcreated_at",
+        "article_pagination",
+        "author_list"
+      ],
+      "removed_metadata_fields": [
+        "id"
+      ],
+      "clean_header_original": [
+        "id",
+        "article_title",
+        "article_language",
+        "journal_title",
+        "jounral_abbreviation",
+        "journal_issn",
+        "article_jvolumn",
+        "article_jissue",
+        "article_jcreated_at",
+        "article_pagination",
+        "author_list"
+      ],
+      "eligible_dirty_rows": 774,
+      "selected_rows": [
+        564,
+        195,
+        736,
+        458,
+        336,
+        731,
+        587,
+        245,
+        289,
+        500,
+        287,
+        71,
+        720,
+        604,
+        240,
+        690,
+        384,
+        322,
+        158,
+        356,
+        181,
+        704,
+        312,
+        975
+      ],
+      "corrected_cell_counts_by_column": {
+        "article_title": 14,
+        "article_language": 0,
+        "journal_title": 9,
+        "jounral_abbreviation": 0,
+        "journal_issn": 12,
+        "article_jvolumn": 22,
+        "article_jissue": 53,
+        "article_jcreated_at": 722,
+        "article_pagination": 32,
+        "author_list": 84
+      },
+      "sample_strata_counts": [
+        8,
+        8,
+        8
+      ]
+    }
+  ],
+  "selection": "24 dirty targets/dataset, up to8 with1/2/3+ corrected fields; shortages filled randomly from remaining dirty rows, before any predictions.",
+  "references": "32 sampled corrected rows excluding all24 heldout target rows. Flights additionally excludes every record of the same flight as the query. Corrected version of target is hidden from every method.",
+  "methods": "Three frozen checkpoints; a fixed field-inspection minimal JSON prompt, greedy512, strict parsing. Gower kNN/LOF singleton novelty k3 on same references; categorical mismatch on raw CSV strings. No learned data-cleaning baseline claim.",
+  "contract": "Up to4 distinct singleton field candidates. Multi-field candidate output is invalid. No posthoc conversion of explanations into a better field ranking.",
+  "metrics": "Equal dataset mean of FieldHit@1/FieldHit@3, precision among first3 returned fields, corrected-field recall within first3, number of inspected fields until first recorded correction (failure assigned D+1), answered coverage. These are offline list metrics, not observed human time savings.",
+  "multiple_answers": "Each publicly corrected field is a valid individual inspection target; not an enumeration of alternative minimal support explanations.",
+  "human_evidence": "Blank two-rater forms provided; no completed human ratings, disagreement statistic, or measured usability benefit claimed.",
+  "limits": "Public corrected versions may include canonicalization and imperfect labels; 3 datasets and72 stratified rows, no claim to representative production accuracy.",
+  "sha256": {
+    "inputs_real_cells.jsonl": "ce5ebf0e3c6920e6716be86abaeba164895fcf885b75443a9f52996e41fb15ea",
+    "ground_truth_real_cells.jsonl": "c18e3b61556215ba3a27baf458f24c6f9897767f1d590d564f81bc3306c79430"
+  },
+  "generator_sha256": "c24a36ed6d6567075c5bcbe8f30b3ca9881e1150ebaa7dadfbbf90b0b1e90578"
+}

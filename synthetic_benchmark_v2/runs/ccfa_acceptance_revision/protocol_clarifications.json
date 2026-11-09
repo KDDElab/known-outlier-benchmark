@@ -1,0 +1,11 @@
+{
+  "timestamp_utc": "2026-11-08T11:57:38.459441+00:00",
+  "new_rules_complete_condition": {
+    "original_protocol_preserved": true,
+    "correction": "The phrase more rows in the frozen protocol is inaccurate: complete populations have 16-32 unique rows, while each sampled condition has32 rows with replacement. The intervention changes support coverage and its explicit completeness declaration, not necessarily total row count.",
+    "inputs_changed": false,
+    "predictions_changed": false,
+    "generator_code_sha256": "b54f8e7a87a4dbeb1a9ffddd0f4ed018a7f73357ed5a2ece44c2fe5bdbf5ddcf"
+  },
+  "d6_label_correction": "diagnostic_corrections/initial_d6_rule_label/correction.json"
+}

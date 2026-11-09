@@ -1,0 +1,25 @@
+{
+  "development_cases": 24,
+  "development_templates": 8,
+  "RLAX_optimizer_seeds": [
+    20261106,
+    20261117,
+    20261128
+  ],
+  "RLAX_steps": [
+    256,
+    1024,
+    4096
+  ],
+  "RLAX_PPO_epochs": 4,
+  "M2OE_epochs": [
+    30,
+    90
+  ],
+  "M2OE_budget_optimizer_seeds": [
+    20261106
+  ],
+  "encoding_panel_cases": 96,
+  "development_setting": "seed-20261106 only; descriptive budget response, not an unseen-template generalization claim",
+  "analysis_sha256": "c003d4781530a40af22d00279461eeb5dfbb7f3e6a4545a8256d4e7de7051a1d"
+}

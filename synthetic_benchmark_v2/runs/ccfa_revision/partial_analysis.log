@@ -1,0 +1,47 @@
+{
+  "qwen35_9b": {
+    "observed": 687,
+    "required": 1728,
+    "complete": false
+  },
+  "deepseek_v2_lite_chat": {
+    "observed": 673,
+    "required": 1728,
+    "complete": false
+  },
+  "llama31_8b_instruct": {
+    "observed": 691,
+    "required": 1728,
+    "complete": false
+  },
+  "gower_knn_subspace": {
+    "observed": 1728,
+    "required": 1728,
+    "complete": true
+  },
+  "gower_lof_subspace": {
+    "observed": 1728,
+    "required": 1728,
+    "complete": true
+  },
+  "sod_subspace_adaptation": {
+    "observed": 1728,
+    "required": 1728,
+    "complete": true
+  },
+  "cop_error_vector_adaptation": {
+    "observed": 1728,
+    "required": 1728,
+    "complete": true
+  },
+  "rlax_reference_adaptation": {
+    "observed": 864,
+    "required": 864,
+    "complete": true
+  },
+  "m2oe_choice": {
+    "observed": 0,
+    "required": 864,
+    "complete": false
+  }
+}

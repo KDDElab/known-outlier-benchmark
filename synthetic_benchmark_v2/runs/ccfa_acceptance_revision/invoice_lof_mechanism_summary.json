@@ -1,0 +1,10 @@
+{
+  "calibrated_exact": 0.23958333333333334,
+  "calibrated_hit4": 0.3229166666666667,
+  "top_has_floored_neighbor": 96,
+  "top_has_distractor": 88,
+  "raw_top_range": [
+    18518519.185185183,
+    499999999.99999994
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "scope": "Post-hoc descriptive diagnostics. No new model inference, no new significance family.",
+  "historical_lm_source": "../legacy_comparison_manifest.json",
+  "historical_gower_sources": [
+    {
+      "method": "gower_lof_subspace",
+      "seed": 20261106,
+      "file": "runs/baseline_predictions/predictions_gower_lof_subspace.jsonl",
+      "sha256": "0ddc633140dc2b1ca5ea6478c190758af65027cff0ecf81dbccc078076e5752c",
+      "manifest_sha256": "de2600f93d3902ccec2a10d4d26987672c5ef6cd6c591fa56dc5dc25cec5c691"
+    },
+    {
+      "method": "gower_lof_subspace",
+      "seed": 20261107,
+      "file": "runs/multiseed/seed_20261107/gower/predictions_gower_lof_subspace.jsonl",
+      "sha256": "0feca554d352808386d53b6f42aafd0c97234090e775ce92e7bc402ef18dd0f5",
+      "manifest_sha256": "35ded5f18de6e1e4dde0de8ed6aa58970bccf078ac7790722d97f02c6fd9d2b4"
+    },
+    {
+      "method": "gower_lof_subspace",
+      "seed": 20261108,
+      "file": "runs/multiseed/seed_20261108/gower/predictions_gower_lof_subspace.jsonl",
+      "sha256": "934cbef7597899418b3e90aae1d2e48b2ab9c5094f6b8721f652e9dc609616de",
+      "manifest_sha256": "665b2ace1c8364065719271de9051ba335c62ced7be857c643fdc4630c4a998d"
+    },
+    {
+      "method": "gower_knn_subspace",
+      "seed": 20261106,
+      "file": "runs/baseline_predictions/predictions_gower_knn_subspace.jsonl",
+      "sha256": "f96b47d51b0e3d6af298680bae220043b7ba405694163dc9d20c5cbfd2df1882",
+      "manifest_sha256": "de2600f93d3902ccec2a10d4d26987672c5ef6cd6c591fa56dc5dc25cec5c691"
+    },
+    {
+      "method": "gower_knn_subspace",
+      "seed": 20261107,
+      "file": "runs/multiseed/seed_20261107/gower/predictions_gower_knn_subspace.jsonl",
+      "sha256": "c44fbf0e16020b15fac82aa07cc2bf17b8ffb08f017f973d668883661e922607",
+      "manifest_sha256": "35ded5f18de6e1e4dde0de8ed6aa58970bccf078ac7790722d97f02c6fd9d2b4"
+    },
+    {
+      "method": "gower_knn_subspace",
+      "seed": 20261108,
+      "file": "runs/multiseed/seed_20261108/gower/predictions_gower_knn_subspace.jsonl",
+      "sha256": "69246bd9031c871c454db36e5c78881ed589fa472d3c5fcfba41aa2c8f89a940",
+      "manifest_sha256": "665b2ace1c8364065719271de9051ba335c62ced7be857c643fdc4630c4a998d"
+    }
+  ],
+  "scoring_control": "Both historical and revised predictions use the current abstention semantics and template estimator.",
+  "attribution": "LM comparison changes display while fixing semantic prompt content and scoring; historical versus revised execution remains a limitation. Gower also changes canonical tie ordering and summation order, so its difference is not solely a display effect.",
+  "script_sha256": "16dc2a735ed7873dfb71953e95150a6d45e51261e3aafa6870af2def0429f9da",
+  "main_table_sha256": "c7b6ad915732e81fe9d304973e89f63f7d09e83d9f8932560ed2c34f1a18ed00",
+  "panel_summary_sha256": "d83e6ce344171b92465830b64b041c79cd0fc2643e3bc6ec1a857759f84ef0e7",
+  "outputs": {
+    "width_reference_counts.csv": "929811efc365a213bf4c01514eaeeb647144333676c83b4f76e79615967d2e40",
+    "four_order_scores.csv": "cde283e209d006b7b9b92cee6d8cc9a84a5e26743cc07f7571852593c5e59675",
+    "historical_common_estimator_summary.csv": "7f1d23f2d454a7b39a100df91dc67b2b60a6fb7eb75fe5479c5b89f57b52a701",
+    "historical_reconciliation.csv": "94e33b4e8c05a07adb19df0c5821665d5b2aa64fba33f8eb7ab50f00a44e69fe"
+  }
+}

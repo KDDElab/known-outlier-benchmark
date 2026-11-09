@@ -1,0 +1,18 @@
+{
+  "name": "m2oe_dev_epochs30",
+  "returncode": 0,
+  "wall_seconds": 142.57798552513123,
+  "expected_exists": true,
+  "command": [
+    "/tmp/m2oe_tf_env/bin/python",
+    "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/run_m2oe_baseline_v2.py",
+    "--inputs-path",
+    "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/inputs_dev_budget.jsonl",
+    "--split",
+    "dev",
+    "--epochs",
+    "30",
+    "--output-path",
+    "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_revision/m2oe_dev_epochs30/predictions_m2oe_choice.jsonl"
+  ]
+}

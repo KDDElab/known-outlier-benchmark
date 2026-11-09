@@ -1,0 +1,249 @@
+{
+  "design": "Within each case, apply a deterministic bijection over opaque F### feature IDs. Values, feature order, reference-row order, task wording, and case membership are unchanged. Model predictions are mapped back to original IDs before scoring.",
+  "n_cases": 96,
+  "n_templates": 24,
+  "control_structurally_valid": 95,
+  "id_permutation_structurally_valid": 94,
+  "metrics": [
+    {
+      "metric": "support_any_minimal_hit",
+      "control_mean": 0.4791666666666667,
+      "id_permutation_mean": 0.46875,
+      "paired_difference_permutation_minus_control": -0.010416666666666666,
+      "template_cluster_bootstrap_95_ci": [
+        -0.09375,
+        0.07291666666666667
+      ],
+      "two_sided_template_sign_flip_p": 1.0,
+      "n_cases": 96,
+      "n_template_clusters": 24,
+      "holm_adjusted_p_two_primary_metrics": 1.0
+    },
+    {
+      "metric": "support_best_jaccard",
+      "control_mean": 0.661892361111111,
+      "id_permutation_mean": 0.6546875,
+      "paired_difference_permutation_minus_control": -0.007204861111111109,
+      "template_cluster_bootstrap_95_ci": [
+        -0.05442708333333333,
+        0.04062934027777775
+      ],
+      "two_sided_template_sign_flip_p": 0.7752612369381531,
+      "n_cases": 96,
+      "n_template_clusters": 24,
+      "holm_adjusted_p_two_primary_metrics": 1.0
+    }
+  ],
+  "top1_prediction_stability": {
+    "n_valid_pairs": 94,
+    "mean_jaccard": 0.7513297872340428
+  },
+  "inference": "Two-sided template-level sign-flip tests and template-cluster bootstrap; Holm adjustment across the two primary metrics.",
+  "bootstrap_replicates": 2000,
+  "permutations": 20000,
+  "analysis_seed": 20261110,
+  "runtime": {
+    "analysis_python": "3.13.11",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "control_run_metadata": {
+      "event": "completed",
+      "protocol_id": "known_anomaly_subspace_benchmark_v2_order_probe_original_v1",
+      "run_id": "qwen35_9b_20261105T164110Z_74442484",
+      "annotator_id": "qwen35_9b",
+      "model_id": "Qwen3.5-9B",
+      "model_family": "Qwen",
+      "model_path": "<LOCAL_MODEL_ROOT>/Qwen3.5/Qwen3.5-9B",
+      "model_type": "qwen3_5",
+      "checkpoint_transformers_version": "4.57.0.dev0",
+      "inference_transformers_version": "5.22.1",
+      "torch_version": "2.14.1+cu126",
+      "decoding": {
+        "temperature": 0.0,
+        "do_sample": false,
+        "num_beams": 1,
+        "max_input_tokens": 16384,
+        "max_new_tokens": 512,
+        "input_truncation": false
+      },
+      "split": "all",
+      "n_cases": 96,
+      "gpu": {
+        "device_name": "NVIDIA GeForce RTX 3090",
+        "visible_devices": "2"
+      },
+      "model_files": {
+        "config": {
+          "name": "config.json",
+          "bytes": 3126,
+          "sha256": "d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05"
+        },
+        "weights": [
+          {
+            "name": "model.safetensors-00001-of-00004.safetensors",
+            "bytes": 5276436216,
+            "sha256": "db6f444b43d318c92f360a13a25561a6a65b10c0631b8ed305a426dbaa6c380e"
+          },
+          {
+            "name": "model.safetensors-00002-of-00004.safetensors",
+            "bytes": 5335161512,
+            "sha256": "31c7d7e2dd5d207840b31cc59083c8f4c4718959149e0358c0364052bb9a0330"
+          },
+          {
+            "name": "model.safetensors-00003-of-00004.safetensors",
+            "bytes": 5368717440,
+            "sha256": "7ec36ba3a4176a44c3c0876ad80c56a2f70c84bf008d82e9501df642f17dadec"
+          },
+          {
+            "name": "model.safetensors-00004-of-00004.safetensors",
+            "bytes": 3325995712,
+            "sha256": "b62b0c4cd7e44edee103ee8f4fe225f246d5e768e07bfd5f25b63a8aa1fdd0c6"
+          }
+        ],
+        "tokenizer_files": [
+          {
+            "name": "chat_template.jinja",
+            "bytes": 7756,
+            "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+          },
+          {
+            "name": "merges.txt",
+            "bytes": 3353259,
+            "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+          },
+          {
+            "name": "tokenizer.json",
+            "bytes": 12807982,
+            "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+          },
+          {
+            "name": "tokenizer_config.json",
+            "bytes": 16710,
+            "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+          },
+          {
+            "name": "vocab.json",
+            "bytes": 6722759,
+            "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+          }
+        ]
+      },
+      "started_at_utc": "2026-11-05T16:41:11+00:00",
+      "dtype": "torch.bfloat16",
+      "loaded_model_type": "qwen3_5",
+      "completed_at_utc": "2026-11-05T17:00:50+00:00",
+      "elapsed_seconds": 1107.515,
+      "annotation_records_written": 96,
+      "total_annotation_records_in_file": 96
+    },
+    "id_permutation_run_metadata": {
+      "event": "completed",
+      "protocol_id": "known_anomaly_subspace_v2_opaque_feature_id_permutation_v1",
+      "run_id": "qwen35_9b_20261106T094428Z_7a81c79a",
+      "annotator_id": "qwen35_9b",
+      "model_id": "Qwen3.5-9B",
+      "model_family": "Qwen",
+      "model_path": "<LOCAL_MODEL_ROOT>/Qwen3.5/Qwen3.5-9B",
+      "model_type": "qwen3_5",
+      "runner_code_sha256": "63d3edc08675974769988426768eb1d09753000fc752ca5af2464e4930444188",
+      "checkpoint_transformers_version": "4.57.0.dev0",
+      "inference_transformers_version": "5.22.1",
+      "torch_version": "2.14.1+cu126",
+      "decoding": {
+        "temperature": 0.0,
+        "do_sample": false,
+        "num_beams": 1,
+        "max_input_tokens": 16384,
+        "max_new_tokens": 512,
+        "input_truncation": false
+      },
+      "split": "test",
+      "n_cases": 96,
+      "gpu": {
+        "device_name": "NVIDIA GeForce RTX 3090",
+        "visible_devices": "3"
+      },
+      "model_files": {
+        "config": {
+          "name": "config.json",
+          "bytes": 3126,
+          "sha256": "d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05"
+        },
+        "weights": [
+          {
+            "name": "model.safetensors-00001-of-00004.safetensors",
+            "bytes": 5276436216,
+            "sha256": "db6f444b43d318c92f360a13a25561a6a65b10c0631b8ed305a426dbaa6c380e"
+          },
+          {
+            "name": "model.safetensors-00002-of-00004.safetensors",
+            "bytes": 5335161512,
+            "sha256": "31c7d7e2dd5d207840b31cc59083c8f4c4718959149e0358c0364052bb9a0330"
+          },
+          {
+            "name": "model.safetensors-00003-of-00004.safetensors",
+            "bytes": 5368717440,
+            "sha256": "7ec36ba3a4176a44c3c0876ad80c56a2f70c84bf008d82e9501df642f17dadec"
+          },
+          {
+            "name": "model.safetensors-00004-of-00004.safetensors",
+            "bytes": 3325995712,
+            "sha256": "b62b0c4cd7e44edee103ee8f4fe225f246d5e768e07bfd5f25b63a8aa1fdd0c6"
+          }
+        ],
+        "tokenizer_files": [
+          {
+            "name": "chat_template.jinja",
+            "bytes": 7756,
+            "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+          },
+          {
+            "name": "merges.txt",
+            "bytes": 3353259,
+            "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+          },
+          {
+            "name": "tokenizer.json",
+            "bytes": 12807982,
+            "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+          },
+          {
+            "name": "tokenizer_config.json",
+            "bytes": 16710,
+            "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+          },
+          {
+            "name": "vocab.json",
+            "bytes": 6722759,
+            "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+          }
+        ]
+      },
+      "started_at_utc": "2026-11-06T09:44:28+00:00",
+      "dtype": "torch.bfloat16",
+      "loaded_model_type": "qwen3_5",
+      "completed_at_utc": "2026-11-06T10:04:08+00:00",
+      "elapsed_seconds": 1133.082,
+      "annotation_records_written": 96,
+      "total_annotation_records_in_file": 96
+    },
+    "matched_model_runtime_checkpoint": true,
+    "matched_gpu_model": "NVIDIA GeForce RTX 3090",
+    "gpu_device_index_equal": false
+  },
+  "sha256": {
+    "runs/order_probe_original_inputs.jsonl": "b40280adbda8a38d1d7c91a9c1f9b02224a5945e16d7092c121d72b54ac0610f",
+    "runs/id_permutation_probe/inputs_opaque_id_permutation.jsonl": "535151ca87a12be2ba26e313748f012bfaf514951ff9e3823a2934a5bda520d1",
+    "ground_truth.jsonl": "4bd36c032d8f1530248bb0e50d5d1f91d3f08e5a5e5b95403375f62e440a8932",
+    "runs/annotations_qwen35_9b_order_probe_original.jsonl": "6d4e4d21b7d466297980cd405e814aefa6152400fc1f5045142f96e39a77ec34",
+    "runs/id_permutation_probe/annotations_qwen35_9b_id_permutation.jsonl": "b92c093a896fce9925090fd0bd2102bd0e63f01c220dcf3d62a7761da636ff64",
+    "runs/id_permutation_probe/manifest.json": "662b74c78d8887eaba7728af81a05a6c48f50a16335d791027005994ef442b11",
+    "evaluate_benchmark.py": "cea01adf8301aad075628d41ece2f8045ea6beb56c05867705ec6a0fbf7f7f0a",
+    "analyze_id_permutation_probe_v2.py": "f0113a7230173b4b24411b613765725e0f47af5613f902455b516599f3ef96bf",
+    "runs/id_permutation_probe/predictions_qwen35_9b_control.jsonl": "53ded134981e1ca83a1b245a35dc359535943055a35682fe1b4e59e28fe38a56",
+    "runs/id_permutation_probe/predictions_qwen35_9b_id_permutation_mapped_back.jsonl": "278966c88efd1151c50e938bb7ce7f7588c25657a86ea0bd8eae40bb75014a18",
+    "runs/id_permutation_probe/evaluation_control/per_case.csv": "2d363df8df63bf6110a6ed1df1a79ab7c94c83221fa234fe01affa0c30bfc693",
+    "runs/id_permutation_probe/evaluation_id_permutation/per_case.csv": "8a17ae9b3e7fc7c1b3020eaaae2aa5bbc03a1b6863cbd7b6d14bfa3412f1d3a6"
+  },
+  "interpretation_limit": "Tests invariance to arbitrary opaque IDs only; it does not test semantic names, natural-language evidence faithfulness, or other models."
+}

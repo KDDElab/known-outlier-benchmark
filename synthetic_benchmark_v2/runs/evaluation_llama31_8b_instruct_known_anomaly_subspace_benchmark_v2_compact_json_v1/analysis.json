@@ -1,0 +1,430 @@
+{
+  "model": "llama31_8b_instruct",
+  "protocol_id": "known_anomaly_subspace_benchmark_v2_compact_json_v1",
+  "n_test_cases": 288,
+  "n_template_clusters": 24,
+  "n_protocol_records": 288,
+  "n_parsed_records": 236,
+  "mean_latency_seconds": 7.005010416666667,
+  "n_latency_measurements": 288,
+  "p95_latency_seconds": 14.9935,
+  "mean_prompt_tokens": 4860.774305555556,
+  "n_prompt_token_measurements": 288,
+  "mean_prompt_tokens_including_recorded_over_cap_inputs": 4860.774305555556,
+  "n_recorded_input_over_cap": 0,
+  "max_recorded_prompt_tokens_including_over_cap": 11974,
+  "mean_output_tokens": 220.5625,
+  "n_output_token_measurements": 288,
+  "total_prompt_tokens": 1399903,
+  "total_output_tokens": 63522,
+  "parse_failure_reasons": {
+    "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 3 column 45 (char 86)": 1,
+    "no JSON object found": 29,
+    "JSON decode failed: JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)": 7,
+    "JSON decode failed: JSONDecodeError: Expecting property name enclosed in double quotes: line 12 column 6 (char 288)": 1,
+    "JSON decode failed: JSONDecodeError: Expecting value: line 7 column 18 (char 166)": 1,
+    "JSON decode failed: JSONDecodeError: Expecting value: line 18 column 21 (char 734)": 1,
+    "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 21 column 7 (char 683)": 1,
+    "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 8 column 1 (char 118)": 1,
+    "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 13 column 7 (char 342)": 1,
+    "JSON decode failed: JSONDecodeError: Expecting value: line 2 column 16 (char 17)": 1,
+    "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 2 column 17 (char 18)": 1,
+    "JSON decode failed: JSONDecodeError: Expecting ',' delimiter: line 13 column 24 (char 367)": 1,
+    "JSON decode failed: JSONDecodeError: Expecting property name enclosed in double quotes: line 3 column 2 (char 43)": 1,
+    "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 11 column 20 (char 364)": 1,
+    "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 24 column 5 (char 315)": 1,
+    "JSON decode failed: JSONDecodeError: Expecting value: line 3 column 27 (char 68)": 1,
+    "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 17 column 19 (char 652)": 1,
+    "JSON decode failed: JSONDecodeError: Unterminated string starting at: line 12 column 19 (char 301)": 1
+  },
+  "output_protocol_audit": {
+    "n_test_cases": 288,
+    "n_parseable_schema_records": 236,
+    "parseable_schema_rate": 0.8194444444444444,
+    "strict_json_only_exact_schema_and_evidence_limit_count": 186,
+    "strict_json_only_exact_schema_and_evidence_limit_rate": 0.6458333333333334,
+    "exact_key_schema_count": 236,
+    "exact_key_schema_rate": 0.8194444444444444,
+    "all_candidate_evidence_within_20_words_count_among_parsed": 223,
+    "all_candidate_evidence_within_20_words_rate_among_parsed": 0.9449152542372882,
+    "outputs_with_non_json_prefix_count": 90,
+    "outputs_with_non_json_suffix_count": 38
+  },
+  "run_metadata": {
+    "run_id": "llama31_8b_instruct_20261105T055712Z_e98a5548",
+    "model_id": "Llama-3.1-8B-Instruct",
+    "model_path": "<LOCAL_MODEL_ROOT>/llama/Llama-3.1-8B-Instruct",
+    "model_type": "llama",
+    "dtype": "torch.bfloat16",
+    "inference_transformers_version": "5.15.0",
+    "torch_version": "2.13.0+cu130",
+    "gpu": {
+      "device_name": "NVIDIA GeForce RTX 3090",
+      "visible_devices": "2"
+    },
+    "decoding": {
+      "temperature": 0.0,
+      "do_sample": false,
+      "num_beams": 1,
+      "max_input_tokens": 16384,
+      "max_new_tokens": 512,
+      "input_truncation": false
+    },
+    "started_at_utc": "2026-11-05T05:57:12+00:00",
+    "completed_at_utc": "2026-11-05T06:31:43+00:00",
+    "elapsed_seconds": 2019.142,
+    "model_files": {
+      "config": {
+        "name": "config.json",
+        "bytes": 855,
+        "sha256": "29e4c210b0d6ac178b16b2a255a568bdb23b581e50ca1ef6a6d071dd85704e6e"
+      },
+      "weights": [
+        {
+          "name": "model-00001-of-00004.safetensors",
+          "bytes": 4976698672,
+          "sha256": "2b1879f356aed350030bb40eb45ad362c89d9891096f79a3ab323d3ba5607668"
+        },
+        {
+          "name": "model-00002-of-00004.safetensors",
+          "bytes": 4999802720,
+          "sha256": "09d433f650646834a83c580877bd60c6d1f88f7755305c12576b5c7058f9af15"
+        },
+        {
+          "name": "model-00003-of-00004.safetensors",
+          "bytes": 4915916176,
+          "sha256": "fc1cdddd6bfa91128d6e94ee73d0ce62bfcdb7af29e978ddcab30c66ae9ea7fa"
+        },
+        {
+          "name": "model-00004-of-00004.safetensors",
+          "bytes": 1168138808,
+          "sha256": "92ecfe1a2414458b4821ac8c13cf8cb70aed66b5eea8dc5ad9eeb4ff309d6d7b"
+        }
+      ],
+      "tokenizer_files": [
+        {
+          "name": "special_tokens_map.json",
+          "bytes": 68,
+          "sha256": "b7455f0e8f00539108837bfa586c4fbf424e31f8717819a6798be74bef813d05"
+        },
+        {
+          "name": "tokenizer.json",
+          "bytes": 9084449,
+          "sha256": "bbc1904d35169c542dffbe1f7589a5994ec7426d9e5b609d07bab876f32e97ab"
+        },
+        {
+          "name": "tokenizer_config.json",
+          "bytes": 50870,
+          "sha256": "24e8a6dc2547164b7002e3125f10b415105644fcf02bf9ad8b674c87b1eaaed6"
+        }
+      ]
+    }
+  },
+  "evaluator_summary": {
+    "n_cases": 288,
+    "n_structurally_valid": 236,
+    "structured_output_rate": 0.8194444444444444,
+    "task_label_coverage": 0.8194444444444444,
+    "mechanism_metric_coverage": 0.8194444444444444,
+    "abstention_rate_on_valid_predictions": 0.0,
+    "task_label_accuracy_on_valid_predictions": 0.1483050847457627,
+    "mechanism_feature_metrics": {
+      "micro_precision": 0.5331905781584583,
+      "micro_recall": 0.5914489311163895,
+      "micro_f1": 0.5608108108108109,
+      "macro_case_f1": 0.5509887005649717,
+      "exact_set_accuracy": 0.2330508474576271
+    },
+    "interaction_case_count": 180,
+    "interaction_scored_case_count": 180,
+    "interaction_metric_coverage": 1.0,
+    "interaction_all_fields_recovery_rate": 0.2833333333333333,
+    "support_top1_sufficiency_rate": 0.4166666666666667,
+    "support_top1_minimal_exact_hit_rate": 0.18055555555555555,
+    "support_any_minimal_hit_at_4": 0.21180555555555555,
+    "support_mean_recall_at_4": 0.17297453703703705,
+    "support_mean_reciprocal_rank": 0.1941550925925926,
+    "support_mean_best_jaccard": 0.4079861111111111,
+    "rule_top1_sufficiency_rate": 0.4027777777777778,
+    "rule_top1_minimal_exact_hit_rate": 0.16666666666666666,
+    "rule_any_minimal_hit_at_4": 0.19444444444444445,
+    "mean_predicted_subspace_fraction": 0.1973870056497175
+  },
+  "cluster_bootstrap_metrics": {
+    "structured_output_rate": {
+      "estimate": 0.8194444444444444,
+      "ci95_low": 0.7708333333333334,
+      "ci95_high": 0.8645833333333334,
+      "bootstrap_replicates": 2000,
+      "n_template_clusters": 24
+    },
+    "strict_json_contract_compliance_rate": {
+      "estimate": 0.6458333333333334,
+      "ci95_low": 0.6006944444444444,
+      "ci95_high": 0.6875,
+      "bootstrap_replicates": 2000,
+      "n_template_clusters": 24
+    },
+    "support_top1_sufficiency_rate": {
+      "estimate": 0.4166666666666667,
+      "ci95_low": 0.3298611111111111,
+      "ci95_high": 0.4965277777777778,
+      "bootstrap_replicates": 2000,
+      "n_template_clusters": 24
+    },
+    "support_top1_minimal_exact_hit_rate": {
+      "estimate": 0.18055555555555555,
+      "ci95_low": 0.10416666666666667,
+      "ci95_high": 0.2604166666666667,
+      "bootstrap_replicates": 2000,
+      "n_template_clusters": 24
+    },
+    "support_any_minimal_hit_at_4": {
+      "estimate": 0.21180555555555555,
+      "ci95_low": 0.13194444444444445,
+      "ci95_high": 0.2986111111111111,
+      "bootstrap_replicates": 2000,
+      "n_template_clusters": 24
+    },
+    "support_mean_best_jaccard": {
+      "estimate": 0.4079861111111111,
+      "ci95_low": 0.3420138888888889,
+      "ci95_high": 0.47106481481481477,
+      "bootstrap_replicates": 2000,
+      "n_template_clusters": 24
+    },
+    "support_mean_reciprocal_rank": {
+      "estimate": 0.1941550925925926,
+      "ci95_low": 0.11603009259259259,
+      "ci95_high": 0.2824074074074074,
+      "bootstrap_replicates": 2000,
+      "n_template_clusters": 24
+    },
+    "mechanism_micro_f1_on_valid_predictions": {
+      "estimate": 0.5608108108108109,
+      "ci95_low": 0.49821215733015495,
+      "ci95_high": 0.6148723640399556,
+      "bootstrap_replicates": 2000,
+      "n_template_clusters": 24
+    },
+    "mechanism_micro_f1_invalid_as_empty": {
+      "estimate": 0.5128733264675592,
+      "ci95_low": 0.4573991031390135,
+      "ci95_high": 0.5601539942252165,
+      "bootstrap_replicates": 2000,
+      "n_template_clusters": 24
+    },
+    "interaction_all_fields_recovery_rate": {
+      "estimate": 0.2833333333333333,
+      "ci95_low": 0.18888888888888888,
+      "ci95_high": 0.37222222222222223,
+      "bootstrap_replicates": 2000,
+      "n_template_clusters": 15,
+      "n_interaction_cases": 180
+    },
+    "task_label_accuracy_on_scored": {
+      "estimate": 0.1483050847457627,
+      "ci95_low": 0.01639344262295082,
+      "ci95_high": 0.29777777777777775,
+      "bootstrap_replicates": 2000,
+      "n_template_clusters": 24
+    },
+    "task_label_accuracy_invalid_as_wrong": {
+      "estimate": 0.12152777777777778,
+      "ci95_low": 0.013888888888888888,
+      "ci95_high": 0.2569444444444444,
+      "bootstrap_replicates": 2000,
+      "n_template_clusters": 24
+    },
+    "support_mean_recall_at_4": {
+      "estimate": 0.17297453703703705,
+      "ci95_low": 0.10474537037037038,
+      "ci95_high": 0.24305555555555555,
+      "bootstrap_replicates": 2000,
+      "n_template_clusters": 24
+    },
+    "mean_predicted_subspace_fraction": {
+      "estimate": 0.1973870056497175,
+      "ci95_low": 0.19108992467043315,
+      "ci95_high": 0.20453117144293614,
+      "bootstrap_replicates": 2000,
+      "n_template_clusters": 24
+    }
+  },
+  "subgroups": {
+    "task_label_gold": {
+      "categorical_rare": {
+        "n_cases": 36,
+        "support_top1_minimal_exact_hit_rate": 0.0,
+        "support_any_minimal_hit_at_4": 0.027777777777777776,
+        "support_mean_best_jaccard": 0.2916666666666667,
+        "structured_output_rate": 0.7222222222222222
+      },
+      "conditional_group": {
+        "n_cases": 36,
+        "support_top1_minimal_exact_hit_rate": 0.4166666666666667,
+        "support_any_minimal_hit_at_4": 0.4444444444444444,
+        "support_mean_best_jaccard": 0.5787037037037037,
+        "structured_output_rate": 0.9444444444444444
+      },
+      "higher_order": {
+        "n_cases": 36,
+        "support_top1_minimal_exact_hit_rate": 0.1388888888888889,
+        "support_any_minimal_hit_at_4": 0.19444444444444445,
+        "support_mean_best_jaccard": 0.49074074074074076,
+        "structured_output_rate": 0.8611111111111112
+      },
+      "modified_vs_mechanism": {
+        "n_cases": 36,
+        "support_top1_minimal_exact_hit_rate": 0.08333333333333333,
+        "support_any_minimal_hit_at_4": 0.08333333333333333,
+        "support_mean_best_jaccard": 0.2777777777777778,
+        "structured_output_rate": 0.7777777777777778
+      },
+      "multiple_valid": {
+        "n_cases": 36,
+        "support_top1_minimal_exact_hit_rate": 0.0,
+        "support_any_minimal_hit_at_4": 0.05555555555555555,
+        "support_mean_best_jaccard": 0.3472222222222222,
+        "structured_output_rate": 0.75
+      },
+      "numeric_marginal": {
+        "n_cases": 36,
+        "support_top1_minimal_exact_hit_rate": 0.08333333333333333,
+        "support_any_minimal_hit_at_4": 0.08333333333333333,
+        "support_mean_best_jaccard": 0.2777777777777778,
+        "structured_output_rate": 0.7777777777777778
+      },
+      "pairwise_interaction": {
+        "n_cases": 36,
+        "support_top1_minimal_exact_hit_rate": 0.25,
+        "support_any_minimal_hit_at_4": 0.2777777777777778,
+        "support_mean_best_jaccard": 0.4259259259259259,
+        "structured_output_rate": 0.8888888888888888
+      },
+      "relational": {
+        "n_cases": 36,
+        "support_top1_minimal_exact_hit_rate": 0.4722222222222222,
+        "support_any_minimal_hit_at_4": 0.5277777777777778,
+        "support_mean_best_jaccard": 0.5740740740740741,
+        "structured_output_rate": 0.8333333333333334
+      }
+    },
+    "feature_count": {
+      "12": {
+        "n_cases": 96,
+        "support_top1_minimal_exact_hit_rate": 0.14583333333333334,
+        "support_any_minimal_hit_at_4": 0.17708333333333334,
+        "support_mean_best_jaccard": 0.3532986111111111,
+        "structured_output_rate": 0.71875
+      },
+      "24": {
+        "n_cases": 96,
+        "support_top1_minimal_exact_hit_rate": 0.1875,
+        "support_any_minimal_hit_at_4": 0.20833333333333334,
+        "support_mean_best_jaccard": 0.39496527777777773,
+        "structured_output_rate": 0.78125
+      },
+      "6": {
+        "n_cases": 96,
+        "support_top1_minimal_exact_hit_rate": 0.20833333333333334,
+        "support_any_minimal_hit_at_4": 0.25,
+        "support_mean_best_jaccard": 0.4756944444444444,
+        "structured_output_rate": 0.9583333333333334
+      }
+    },
+    "reference_count": {
+      "16": {
+        "n_cases": 96,
+        "support_top1_minimal_exact_hit_rate": 0.16666666666666666,
+        "support_any_minimal_hit_at_4": 0.19791666666666666,
+        "support_mean_best_jaccard": 0.4114583333333333,
+        "structured_output_rate": 0.8541666666666666
+      },
+      "32": {
+        "n_cases": 96,
+        "support_top1_minimal_exact_hit_rate": 0.21875,
+        "support_any_minimal_hit_at_4": 0.25,
+        "support_mean_best_jaccard": 0.4817708333333333,
+        "structured_output_rate": 0.875
+      },
+      "8": {
+        "n_cases": 96,
+        "support_top1_minimal_exact_hit_rate": 0.15625,
+        "support_any_minimal_hit_at_4": 0.1875,
+        "support_mean_best_jaccard": 0.3307291666666667,
+        "structured_output_rate": 0.7291666666666666
+      }
+    },
+    "nuisance_profile": {
+      "deterministic_proxy_broken": {
+        "n_cases": 48,
+        "support_top1_minimal_exact_hit_rate": 0.22916666666666666,
+        "support_any_minimal_hit_at_4": 0.2708333333333333,
+        "support_mean_best_jaccard": 0.484375,
+        "structured_output_rate": 0.7916666666666666
+      },
+      "deterministic_proxy_preserved": {
+        "n_cases": 48,
+        "support_top1_minimal_exact_hit_rate": 0.2708333333333333,
+        "support_any_minimal_hit_at_4": 0.2916666666666667,
+        "support_mean_best_jaccard": 0.517361111111111,
+        "structured_output_rate": 0.875
+      },
+      "high_cardinality_noise": {
+        "n_cases": 48,
+        "support_top1_minimal_exact_hit_rate": 0.2708333333333333,
+        "support_any_minimal_hit_at_4": 0.2708333333333333,
+        "support_mean_best_jaccard": 0.41840277777777773,
+        "structured_output_rate": 0.8125
+      },
+      "independent": {
+        "n_cases": 48,
+        "support_top1_minimal_exact_hit_rate": 0.10416666666666667,
+        "support_any_minimal_hit_at_4": 0.125,
+        "support_mean_best_jaccard": 0.3159722222222222,
+        "structured_output_rate": 0.8541666666666666
+      },
+      "missingness_noise": {
+        "n_cases": 48,
+        "support_top1_minimal_exact_hit_rate": 0.125,
+        "support_any_minimal_hit_at_4": 0.14583333333333334,
+        "support_mean_best_jaccard": 0.3211805555555555,
+        "structured_output_rate": 0.75
+      },
+      "noisy_proxy": {
+        "n_cases": 48,
+        "support_top1_minimal_exact_hit_rate": 0.08333333333333333,
+        "support_any_minimal_hit_at_4": 0.16666666666666666,
+        "support_mean_best_jaccard": 0.390625,
+        "structured_output_rate": 0.8333333333333334
+      }
+    },
+    "field_name_mode": {
+      "neutral_names": {
+        "n_cases": 144,
+        "support_top1_minimal_exact_hit_rate": 0.1527777777777778,
+        "support_any_minimal_hit_at_4": 0.1875,
+        "support_mean_best_jaccard": 0.39641203703703703,
+        "structured_output_rate": 0.8055555555555556
+      },
+      "opaque": {
+        "n_cases": 144,
+        "support_top1_minimal_exact_hit_rate": 0.20833333333333334,
+        "support_any_minimal_hit_at_4": 0.2361111111111111,
+        "support_mean_best_jaccard": 0.4195601851851852,
+        "structured_output_rate": 0.8333333333333334
+      }
+    }
+  },
+  "bootstrap": {
+    "method": "resample eligible template groups with replacement; retain all cases in each sampled group",
+    "n_replicates": 2000,
+    "seed": 20261105
+  },
+  "paths": {
+    "predictions": "<PROJECT_ROOT>/synthetic_benchmark_v2/runs/predictions_llama31_8b_instruct_known_anomaly_subspace_benchmark_v2_compact_json_v1.jsonl",
+    "evaluation": "<PROJECT_ROOT>/synthetic_benchmark_v2/runs/evaluation_llama31_8b_instruct_known_anomaly_subspace_benchmark_v2_compact_json_v1",
+    "protocol_compliance": "<PROJECT_ROOT>/synthetic_benchmark_v2/runs/evaluation_llama31_8b_instruct_known_anomaly_subspace_benchmark_v2_compact_json_v1/protocol_compliance.csv"
+  }
+}
