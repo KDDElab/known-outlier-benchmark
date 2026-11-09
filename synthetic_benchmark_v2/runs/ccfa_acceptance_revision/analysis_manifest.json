@@ -1,6 +1,6 @@
 {
   "complete": true,
-  "created_at_utc": "2026-11-08T14:34:47.112405+00:00",
+  "created_at_utc": "2026-11-09T16:29:23.486986+00:00",
   "model_condition_records": 1368,
   "cohorts": [
     {
@@ -340,7 +340,7 @@
     "structured_protocol.json": "1580aeeb3b3aa7032f8e92a33f75d5bf7764428edcbddcf970c2c8504fcd54a7",
     "structured_queue.json": "f1b89aaafa873012258ceea6c8d8ed403c7aa22c9cd5cb3fea77642fdf6082e3",
     "structured_table.tex": "662900324d16080ae45ae84c566b0801af50cd2b262e3ae5cdb0d29b60b8d8a4",
-    "summary.json": "352276d1eea19e28aef553958220c5ce9930ba497036dcd3a200a37a1c368567",
+    "summary.json": "a106905d68f53ce4531ce0e9ef74ab86f2a336eadda3bf985dd852f1fd27795b",
     "workers_prior3.json": "b02e64ff35b1d33bd8a3e868a64fb1685e11db35dc92933e125bbdc30b39281a"
   },
   "analysis_code_sha256": {

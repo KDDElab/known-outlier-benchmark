@@ -1,0 +1,32 @@
+{
+  "qwen35_9b": {
+    "n": 360,
+    "expected": 360,
+    "complete": true
+  },
+  "deepseek_v2_lite_chat": {
+    "n": 360,
+    "expected": 360,
+    "complete": true
+  },
+  "llama31_8b_instruct": {
+    "n": 360,
+    "expected": 360,
+    "complete": true
+  },
+  "sample_minimal": {
+    "n": 360,
+    "expected": 360,
+    "complete": true
+  },
+  "gower_knn": {
+    "n": 360,
+    "expected": 360,
+    "complete": true
+  },
+  "gower_lof": {
+    "n": 360,
+    "expected": 360,
+    "complete": true
+  }
+}

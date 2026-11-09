@@ -15,6 +15,7 @@ from manuscript_page_accounting import page_accounting
 ROOT=Path(__file__).resolve().parent
 RUN=ROOT/'synthetic_benchmark_v2/runs/ccfa_revision'
 ACCEPT=ROOT/'synthetic_benchmark_v2/runs/ccfa_acceptance_revision'
+UNIFIED=ROOT/'synthetic_benchmark_v2/runs/ccfa_unified_revision'
 DEST=ROOT/'artifact_release_revised'
 
 README=r'''# Known-outlier explanation benchmark
@@ -24,7 +25,7 @@ and analysis code for **Evaluating Language Models and Subspace Methods for
 Explaining Known Tabular Outliers**.
 
 - Public repository: https://github.com/KDDElab/known-outlier-benchmark
-- Fixed artifact release: https://github.com/KDDElab/known-outlier-benchmark/releases/tag/icde2027-eab-v2
+- Fixed artifact release: https://github.com/KDDElab/known-outlier-benchmark/releases/tag/icde2027-eab-v3
 - Paper: [PDF](phase_d_manuscript_draft.pdf) and [LaTeX](phase_d_manuscript_draft.tex).
 - The paper has **12 main-text pages plus one page of AI disclosure and references**,
   following the [ICDE 2027 EAB page rule](https://icde2027.github.io/cf-research-papers.html).
@@ -54,7 +55,33 @@ analysis from frozen predictions. The supplied author name and ORCID are retaine
 
 ## Which results belong to the revision?
 
-`synthetic_benchmark_v2/runs/ccfa_acceptance_revision/` contains the latest
+`synthetic_benchmark_v2/runs/ccfa_unified_revision/` contains the current primary
+comparison: **1,080 newly executed model-query records** (360 per checkpoint)
+under one core task with shared candidate-size information and fixed JSON-schema
+decoding. Its 96 paired original targets, 120 new-rule evidence conditions,
+96 invoices, and 48 UCI Car decisions are separate evaluation tracks.
+All failures and abstentions remain misses. `protocol.json` was frozen before
+new inference; it does not constitute preregistration or a fresh blind test on
+previously examined targets. The independent Car source is a complete expert
+decision table, not observed anomaly incidents.
+
+The same directory includes direct sample-minimal enumeration (SME), matched
+Gower baselines, 14 LOF conditions with all candidate scores, repeated-reference
+and complete-population diagnostics, and a post-hoc public-correction audit.
+SME uses only visible references and canonical size/field-ID order. Complete
+population labels are hidden from all candidate generators. The new-rule source
+field originally named `reference_support_sufficient_minimal_subspaces` contains
+sample minima; the documented mapping correction in `corrections/` preserves
+those diagnostics and maps the new comparison to independently checked population
+labels. No input or model response was changed by that correction.
+
+`verification.json` records 168 independent population-label checks, 624
+unchanged Gower lists, and 552 scalar LOF checks. `reconstruction_verification.json`
+checks exact prompt/population bytes and semantic equality of effective gold JSON
+(key insertion order differs after the recorded correction). `analysis_manifest.json`
+refuses complete publication exports until every model query finishes.
+
+`synthetic_benchmark_v2/runs/ccfa_acceptance_revision/` contains the earlier
 review-driven experiments: 1,368 new model-condition records (456 per model),
 paired size priors, 12 new rule compositions with repeated/complete evidence,
 fixed JSON-schema decoding, and 72 public corrected-cell queries per model under
@@ -67,8 +94,8 @@ byte. Public correction pairs come from the pinned Raha repository commit and
 retain source indices, raw strings, license and hashes. The blank human annotation
 packet is a proposed study instrument, not completed human evidence.
 
-`synthetic_benchmark_v2/runs/ccfa_revision/` is the authoritative revised experiment
-root. `protocol.json` freezes inputs, seeds, reuse rules and statistical estimators.
+`synthetic_benchmark_v2/runs/ccfa_revision/` preserves the original comparison.
+Its `protocol.json` freezes inputs, seeds, reuse rules and statistical estimators.
 `analysis_manifest.json` identifies the complete main comparison. The main study
 has 864 cases; the 96-target intervention panel yields 1,728 conditions per model.
 `reused_*.jsonl` preserves 673 prompt-identical records per model, and
@@ -97,7 +124,7 @@ run root contains historical rescoring, four-order scores, and the n/T grid.
 
 ## Result presentation
 
-The manuscript contains six figures and six tables. Result tables display
+The manuscript contains seven figures and four tables. Result tables display
 mean plus/minus sample SD across their stated aggregation units: original
 templates, new compositions, and public sources. Individual-source correction
 columns instead use case SD. Conditional first-set size uses coverage-weighted
@@ -106,7 +133,7 @@ The original 95% template-bootstrap intervals remain in the main-result figure.
 `figures/make_acceptance_figures.py` also calls
 `synthetic_benchmark_v2/present_acceptance_results.py`, regenerating the three
 presentation tables and their 194 mean/SD entries from frozen per-case scores.
-The supplied Qwen logo remains in Figures 1 and 2.
+The supplied Qwen logo remains in the Figure 2 framework.
 
 ## Recompute scores and figures from frozen predictions
 
@@ -129,6 +156,11 @@ python figures/make_manuscript_figures.py
 python figures/make_manuscript_result_figures.py
 python figures/make_acceptance_figures.py
 python synthetic_benchmark_v2/finalize_acceptance_manifest.py
+python synthetic_benchmark_v2/analyze_unified_revision.py
+python synthetic_benchmark_v2/audit_unified_corrections.py
+python synthetic_benchmark_v2/verify_unified_revision.py
+python figures/make_unified_figures.py
+python synthetic_benchmark_v2/finalize_unified_manifest.py
 pdflatex -interaction=nonstopmode -halt-on-error phase_d_manuscript_draft.tex
 bibtex phase_d_manuscript_draft
 pdflatex -interaction=nonstopmode -halt-on-error phase_d_manuscript_draft.tex
@@ -149,22 +181,22 @@ Figure files under `figures/` are provided as PDF, SVG and PNG:
 
 | Manuscript figure | File stem |
 | --- | --- |
-| 1 | `figure_intro_real_dataset` |
+| 1 | `figure_intro_support_semantics` |
 | 2 | `figure2_overall_framework` |
-| 3 | `figure_acceptance_primary_intervals` |
-| 4 | `figure_acceptance_shared_prior` |
-| 5 | `figure_acceptance_structured_output` |
-| 6 | `figure_acceptance_invoice_mechanism` |
+| 3 | `figure_unified_transfer` |
+| 4 | `figure_unified_evidence` |
+| 5 | `figure_unified_contract` |
+| 6 | `figure_unified_lof` |
+| 7 | `figure_unified_corrections` |
 
-Figure 1 uses the same orange headers, thin borders and aligned field cells in
-a single-column real Pima example (C0035, source row 259). It displays all eight
-target values, the glucose/BMI projection (752 nonzero rows out of 768), twelve
-normal references, Qwen's recorded ranks, four-peer vote bars and the strict
-majority mask. Votes are recomputed from the archived leave-one-model-out
-report: [4, 3, 0, 0, 4, 0, 1, 0] for F001--F008. Jaccard 2/4 = 0.500 measures
-peer agreement, not field-level accuracy. The original Qwen logo is retained.
+Figure 1 uses the recorded invoice example and its exact finite clean population
+to distinguish an edited field from two minimal support explanations. The earlier
+Pima agreement figure remains in the archive as a diagnostic and is not the
+paper's visual entry point.
 
 Figure 2 follows the supplied two-module overview and three-row invoice trace.
+Its upper overview describes the unified comparison; its lower trace explicitly
+retains original-prompt outputs and must not be read as new joint predictions.
 Query components, checkpoint names and output validation are explicit. Shared
 field colors link the invoice to its candidate/gold sets; the example contrasts
 sample absence with population support and minimal joint exclusion.
@@ -214,6 +246,22 @@ experiment hashes and exits unsuccessfully on missing or different files. Matchi
 files does not guarantee bitwise generation across different kernels or hardware.
 
 ### Inputs, inference and baselines
+
+For the current unified protocol, reconstruct inputs without overwriting the
+frozen records:
+
+```bash
+python synthetic_benchmark_v2/prepare_unified_revision.py --outdir regenerated_unified
+```
+
+The included UCI Car data and source/CC BY 4.0 attribution require no network
+access for reconstruction. Run `annotate_unified_support.py --help` and use the
+frozen `runs/ccfa_unified_revision/inputs.jsonl` with new annotation/log paths,
+the original checkpoint hashes, and `requirements-structured.txt`. The runner
+enforces the per-track size cap in its JSON grammar. Do not overwrite archived
+predictions. On a disposable checkout, `run_unified_baselines.py` reruns the
+statistical/SME predictions and `run_unified_lof_diagnostics.py` reruns all 14
+LOF conditions. These CPU commands write into the unified run directory.
 
 To reconstruct the frozen protocol in a separate output directory:
 
@@ -280,7 +328,13 @@ both the 30- and 300-epoch budgets, including the worse longer-budget result.
 
 ## Statistical and evidence boundaries
 
-Primary scores average cases within a seed/template, available seeds within a
+Current primary scores average four cases within each of 24 templates, then
+templates equally. New rules use 12 rule units, invoices four relations, and
+Car 48 selected cases from one decision source. Reported SDs use these declared
+units. No accuracy is pooled across task semantics. The 18 paired-panel contrast
+tests form one Holm family and are descriptive after earlier test inspection.
+
+Original scores average cases within a seed/template, available seeds within a
 template, then the 38 templates equally. Bootstrap intervals and paired tests use
 that same estimator. Abstentions and failures remain misses in all-query scores;
 top-one size is defined only for answered queries. Main, intervention, and unordered
@@ -331,6 +385,10 @@ def main():
     assert json.loads((ACCEPT/'summary.json').read_text())['complete']
     assert json.loads((ACCEPT/'analysis_manifest.json').read_text())['complete']
     assert json.loads((ACCEPT/'reconstruction_verification.json').read_text())['all_checks_passed']
+    assert json.loads((UNIFIED/'analysis_manifest.json').read_text())['complete']
+    assert json.loads((UNIFIED/'verification.json').read_text())['all_checks_passed']
+    assert json.loads((UNIFIED/'reconstruction_verification.json').read_text())['all_checks_passed']
+    assert json.loads((UNIFIED/'execution_manifest.json').read_text())['complete']
     for m in ['qwen35_9b','deepseek_v2_lite_chat','llama31_8b_instruct']:
         assert sum(1 for _ in (RUN/f'new_{m}.jsonl').open())==1055
     pdf=ROOT/'phase_d_manuscript_draft.pdf'
@@ -342,12 +400,14 @@ def main():
     assert pdf.stat().st_mtime>(RUN/'analysis_manifest.json').stat().st_mtime,'Compile final manuscript after completed analysis'
     assert pdf.stat().st_mtime>(transfer/'analysis_manifest.json').stat().st_mtime
     assert pdf.stat().st_mtime>(ACCEPT/'summary.json').stat().st_mtime
+    assert pdf.stat().st_mtime>(UNIFIED/'analysis_manifest.json').stat().st_mtime
     ignore=shutil.ignore_patterns('__pycache__','*.pyc','.git','*_partial.csv','*_partial.json','partial_*')
     DEST.mkdir(exist_ok=True)
     shutil.copytree(ROOT/'artifact_release_staging',DEST,dirs_exist_ok=True,ignore=ignore)
     shutil.copytree(RUN,DEST/'synthetic_benchmark_v2/runs/ccfa_revision',dirs_exist_ok=True,ignore=ignore)
     shutil.copytree(transfer,DEST/'synthetic_benchmark_v2/runs/ccfa_constraint_transfer',dirs_exist_ok=True,ignore=ignore)
     shutil.copytree(ACCEPT,DEST/'synthetic_benchmark_v2/runs/ccfa_acceptance_revision',dirs_exist_ok=True,ignore=ignore)
+    shutil.copytree(UNIFIED,DEST/'synthetic_benchmark_v2/runs/ccfa_unified_revision',dirs_exist_ok=True,ignore=ignore)
     shutil.copytree(ROOT/'circuit_track',DEST/'circuit_track',dirs_exist_ok=True,ignore=ignore)
     # The reference-support audit is invariant to display order and is reused by
     # the repaired figure code. Its raw per-case file remains exactly preserved.
@@ -358,7 +418,7 @@ def main():
         patterns=['*.py'] if folder!='figures' else ['*.py','*.pdf','*.svg','*.png','*.webp']
         for pattern in patterns:
             for p in src.glob(pattern):shutil.copy2(p,dst/p.name)
-    for name in ['phase_d_manuscript_draft.pdf','phase_d_manuscript_draft.tex','phase_d_references.bib','revision_execution.md','experiment_design_and_improvement_plan.md']:
+    for name in ['phase_d_manuscript_draft.pdf','phase_d_manuscript_draft.tex','phase_d_references.bib','revision_execution.md','experiment_design_and_improvement_plan.md','unified_revision_report.md']:
         shutil.copy2(ROOT/name,DEST/name)
     shutil.copy2(ROOT/'MODEL_SOURCES.json',DEST/'MODEL_SOURCES.json')
     backup=ROOT.parent/'ccfa-workfiles/revision/known-outlier/before'
@@ -398,6 +458,10 @@ def main():
                        'presentation_real_cells_table.tex','presentation_statistics.csv',
                        'presentation_group_values.csv']
     extra_paths += [Path('synthetic_benchmark_v2/runs/ccfa_acceptance_revision')/name for name in acceptance_tables]
+    extra_paths += [Path('synthetic_benchmark_v2/runs/ccfa_unified_revision')/name for name in
+        ['summary.csv','per_case.csv','repeated_summary.csv','paired_comparisons.csv',
+         'common_feasible_summary.csv','stratified_summary.csv','reference_stability.csv',
+         'primary_table.tex','original_compact_table.tex','beers_non_ounces_summary.csv']]
     extra_expected={str(p):sha(ROOT/p) for p in extra_paths}
     env={**os.environ,'CUDA_VISIBLE_DEVICES':'','OMP_NUM_THREADS':'1','OPENBLAS_NUM_THREADS':'1'}
     with (DEST/'packaged_analysis_execution.log').open('w') as log:
@@ -415,7 +479,12 @@ def main():
                        'figures/make_manuscript_figures.py',
                        'figures/make_manuscript_result_figures.py',
                        'figures/make_acceptance_figures.py',
-                       'synthetic_benchmark_v2/finalize_acceptance_manifest.py']:
+                       'synthetic_benchmark_v2/finalize_acceptance_manifest.py',
+                       'synthetic_benchmark_v2/analyze_unified_revision.py',
+                       'synthetic_benchmark_v2/audit_unified_corrections.py',
+                       'synthetic_benchmark_v2/verify_unified_revision.py',
+                       'figures/make_unified_figures.py',
+                       'synthetic_benchmark_v2/finalize_unified_manifest.py']:
             log.write(f'Running {script}\n');log.flush()
             subprocess.run([sys.executable,script],cwd=DEST,env=env,
                            stdout=log,stderr=subprocess.STDOUT,check=True)
@@ -428,6 +497,9 @@ def main():
                   'figure5_matched_reference_and_output','figure_acceptance_primary_intervals',
                   'figure_acceptance_invoice_mechanism','figure_acceptance_shared_prior',
                   'figure_acceptance_structured_output']
+    figure_names += ['figure_intro_support_semantics','figure_unified_transfer',
+                     'figure_unified_evidence','figure_unified_contract',
+                     'figure_unified_lof','figure_unified_corrections']
     def rendered_hash(path):
         with pymupdf.open(path) as document:
             assert len(document)==1

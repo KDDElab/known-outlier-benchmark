@@ -1,0 +1,9 @@
+{
+  "all_checks_passed": true,
+  "byte_identical_files": {
+    "inputs.jsonl": true,
+    "car_populations.jsonl": true
+  },
+  "effective_ground_truth_json_equal": true,
+  "note": "The documented label-mapping correction appended JSON keys in a different order; all effective gold values reconstruct exactly. Freeze timestamps and script fingerprints are execution-specific."
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "track": "car_decision",
+    "condition": "sample",
+    "n": 48,
+    "candidate_count": 4.625,
+    "extra_minima": 3.2916666666666665,
+    "truth_retention": 0.9513888888888888,
+    "any_truth_available": 1.0,
+    "exact_family_match": 0.10416666666666667
+  },
+  {
+    "track": "invoices",
+    "condition": "sample",
+    "n": 96,
+    "candidate_count": 16.197916666666668,
+    "extra_minima": 15.375,
+    "truth_retention": 0.5277777777777778,
+    "any_truth_available": 0.5625,
+    "exact_family_match": 0.0
+  },
+  {
+    "track": "new_rules",
+    "condition": "complete",
+    "n": 24,
+    "candidate_count": 1.8333333333333333,
+    "extra_minima": 0.0,
+    "truth_retention": 1.0,
+    "any_truth_available": 1.0,
+    "exact_family_match": 1.0
+  },
+  {
+    "track": "new_rules",
+    "condition": "draw0",
+    "n": 48,
+    "candidate_count": 3.0833333333333335,
+    "extra_minima": 1.4166666666666667,
+    "truth_retention": 0.779513888888889,
+    "any_truth_available": 0.8125,
+    "exact_family_match": 0.3541666666666667
+  },
+  {
+    "track": "new_rules",
+    "condition": "draw1",
+    "n": 24,
+    "candidate_count": 2.7916666666666665,
+    "extra_minima": 1.2083333333333333,
+    "truth_retention": 0.8166666666666668,
+    "any_truth_available": 0.8333333333333334,
+    "exact_family_match": 0.2916666666666667
+  },
+  {
+    "track": "new_rules",
+    "condition": "draw2",
+    "n": 24,
+    "candidate_count": 2.4583333333333335,
+    "extra_minima": 1.0,
+    "truth_retention": 0.7805555555555556,
+    "any_truth_available": 0.8333333333333334,
+    "exact_family_match": 0.4583333333333333
+  },
+  {
+    "track": "paired96",
+    "condition": "sample",
+    "n": 96,
+    "candidate_count": 96.60416666666667,
+    "extra_minima": 95.375,
+    "truth_retention": 0.9114583333333334,
+    "any_truth_available": 0.9166666666666666,
+    "exact_family_match": 0.0
+  }
+]

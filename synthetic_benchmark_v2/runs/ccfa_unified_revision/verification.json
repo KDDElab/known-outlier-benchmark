@@ -1,0 +1,10 @@
+{
+  "all_checks_passed": true,
+  "population_labels_independently_checked": 168,
+  "unchanged_gower_lists_checked": 624,
+  "inclusive_LOF_scalar_checks": 552,
+  "inputs_sha256": "ee42b6f3ea0fc1aa5533197367ddf5e3902a31c2617629358bd2eb7ddc83e2f0",
+  "effective_gold_sha256": "c377931d447218045b3700132eca40c4ed2d8ecd69bfa26099bbc55d6a58ff64",
+  "runner_sha256": "f56dad3b3ce87a068a10ad9c3dfbbac068d4812372a8035680832d9e3dcfe0f2",
+  "protocol_reconstruction_passed": true
+}

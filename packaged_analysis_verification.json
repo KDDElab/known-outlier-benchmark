@@ -48,64 +48,44 @@
     "synthetic_benchmark_v2/runs/ccfa_acceptance_revision/presentation_new_rules_table.tex": "b7b47d4f6f1c3dae6fd4bdf64721a039c7f7795b573bf15df6ba5746181e9eae",
     "synthetic_benchmark_v2/runs/ccfa_acceptance_revision/presentation_real_cells_table.tex": "2da3f63638244ab424a97fd3d091817fbed97236172c6bc1f2650a12ee91437d",
     "synthetic_benchmark_v2/runs/ccfa_acceptance_revision/presentation_statistics.csv": "246d17a42f04a76480646fabbf0d8ea82bc53024719d3f10d0121f5b6c49edfe",
-    "synthetic_benchmark_v2/runs/ccfa_acceptance_revision/presentation_group_values.csv": "78ca65b81ed6cc4d094af14891ffd23d164623ccea8ae72fb583f7d4f3a7bbc8"
+    "synthetic_benchmark_v2/runs/ccfa_acceptance_revision/presentation_group_values.csv": "78ca65b81ed6cc4d094af14891ffd23d164623ccea8ae72fb583f7d4f3a7bbc8",
+    "synthetic_benchmark_v2/runs/ccfa_unified_revision/summary.csv": "134943102c6ec75948c35b8484e6182d64da964d6c87d73874e84007316c1add",
+    "synthetic_benchmark_v2/runs/ccfa_unified_revision/per_case.csv": "601256cec860475f9b31c4208eb771c1fcb1bda1f1b6c2b3f2923869a71b3659",
+    "synthetic_benchmark_v2/runs/ccfa_unified_revision/repeated_summary.csv": "4db9ad188201d6ecb5a4f8cdf92e66d1c6570a7f97ce8ea30f7365f400dfb45f",
+    "synthetic_benchmark_v2/runs/ccfa_unified_revision/paired_comparisons.csv": "11e5c83cefc535fcc85e1199a8cc1efd75c8265cdec5228b54f93f8911b5dffe",
+    "synthetic_benchmark_v2/runs/ccfa_unified_revision/common_feasible_summary.csv": "72da3756d5ec37ccd2991e684ecf4d8ee0cd038d5218cd90aa98424397322334",
+    "synthetic_benchmark_v2/runs/ccfa_unified_revision/stratified_summary.csv": "b736b0e8694ac8dc6a30cb62083164b3353f065c491412f07f3a3c95094d8fd3",
+    "synthetic_benchmark_v2/runs/ccfa_unified_revision/reference_stability.csv": "32e49cbed23d5ae85ab26561861fd6bdf5f0c82eb561a5f7b8e00fbb4d87074d",
+    "synthetic_benchmark_v2/runs/ccfa_unified_revision/primary_table.tex": "47d9d9ab73b46c47c1c53e601cdfca965ecd2af02caab9f562ea07d553ffb6e0",
+    "synthetic_benchmark_v2/runs/ccfa_unified_revision/original_compact_table.tex": "419df696b3daddcb29190a9e1fc9b5bec56f8ff9735ded5e74a3a95d2062c150",
+    "synthetic_benchmark_v2/runs/ccfa_unified_revision/beers_non_ounces_summary.csv": "069aa29eea491e253e693c0d3b5587e2d2c1aba354a8c2ca626594b3900f3ce8"
   },
   "compared_figure_render_sha256": {
     "figure_intro_real_dataset": "88eeffdd759d6f87a01585231d93f2f6da2a833700b88d479ecb0f69d033054f",
-    "figure2_overall_framework": "005c6f473d090bb40ecaa042bc4080495134d887912d8d35f2789a3b81fa1cf3",
+    "figure2_overall_framework": "94ddfd70b38e3022be297eacf47d3ffb67909c7379f26f75e8a704e9fc006e32",
     "figure3_reference_and_order_robustness": "bc7b806941502945a69f0cd55920fb26b5fdda1748504862859f5b6c967846ef",
     "figure2_sufficiency_compactness_validity": "7703b3006fbdf262341ffa1fc0d31e484de1e1e02f6dfa00862eca2f083cee69",
     "figure5_matched_reference_and_output": "8d98e7e506d1c7a91df79f87c106c0ec4b3073e2d22cf43c0e4352a807c7df08",
     "figure_acceptance_primary_intervals": "29ff5d1d74ce655e58dd28afcffb1218c285fbb76812d05265d737efd3cba673",
     "figure_acceptance_invoice_mechanism": "8506d2dd51bc8700c53f411fd806e5d2cdaacb76ba1a10d70d690f57765bb4e2",
     "figure_acceptance_shared_prior": "f49f1aeb83e4f5232f56421fb712844756286f8e837d9568134c55868f8e5c65",
-    "figure_acceptance_structured_output": "35bb98021c2fc7acea1c827c4141bc4cd7c2d629aaaacb5df14aaff39267ca43"
+    "figure_acceptance_structured_output": "35bb98021c2fc7acea1c827c4141bc4cd7c2d629aaaacb5df14aaff39267ca43",
+    "figure_intro_support_semantics": "b2029489a698ff55d0a0211ec551edfe8ab7904daf946c279131e3ea62453ab7",
+    "figure_unified_transfer": "9bb0252f004c39afd83d0e70ee0d612188369ca08b860ecad3033f30e087ccfa",
+    "figure_unified_evidence": "daad50aba7cfe5d8e2bd8764c462b50f97f4a8735fdf628b37c44ffc61aea0c5",
+    "figure_unified_contract": "ad2480f6e800d4880ded776206e6e058985c4c5176a1bc12b39a647d50a733cd",
+    "figure_unified_lof": "dc6f1302d958bd44d155fb42eb807ed62adafe9f0453f1332c87fb441b4d7a73",
+    "figure_unified_corrections": "f7f751c64c7deed4d7e73fceaf6eb6fe7dfefbcb6cd5cd1a2a553d6cab35d42d"
   },
   "acceptance_summary_equal": true,
   "acceptance_input_reconstruction_passed": true,
   "model_inference_rerun": false,
   "independent_machine_reproduction": false,
-  "manuscript_compile_pages": 13,
-  "manuscript_render_sha256": [
-    "2e0f6021e2bbbc7d44ad5ca82751d7c69ad2045d8200a4404a4223f7237db27c",
-    "58fd7d79f68ae87d73627b6f6ae33b2dc78a42b755540c3c3eb24a522f617855",
-    "84cf9afd96934a128f3361f2cdc29c1571b98478bc3568c3ac4afdf7b3a4a9d1",
-    "e049b70eba37887e156e56d4300772dc6abb2b5eff5aec5a6c3975f2f99e59d9",
-    "69cbded41384a426b33b3b2d34cab3f844376e18236372542662e12582680e08",
-    "4c362e8e6dc6b23331e77e0d04f4f9bb4a38fa1093f496de3c1ec41753aec8bc",
-    "f6db792d3a755d32003adbabde91802bbc327006a88e7cfd80e45c841629ac3f",
-    "c7e2f49e66e930d7a2e652748b4044a0c14f72ba96f9d54f79e5963da1ab5a1d",
-    "e50ab4d6b4849d483aecf7439fcf646fc4acbe47f8ae03a9571ceb0f33c01570",
-    "3106a21c5efe38699daf3e25cf1f5ef7773a24384a1c01eb6050a76bb68d1725",
-    "8c6a3194aa915f2f48ca365198ebf75c4953d852c2fee86971c36210e6954d8e",
-    "bf22f48a4ee7096e98211866d41d555bca86c974b8a41afc13d498901860b0af",
-    "23935e38dfe8c1e87367b93d8cd69d6f67331e6b5d37997e1a64d9f599207305"
-  ],
-  "final_pdf_sha256": "cfcbae16726a46c528a5cc406228975af8a180b81b8341c295363b7c33e01110",
-  "final_tex_sha256": "23db1dda126772ba386333774b396f4da8d20478fd53842db3e85a0fc6bfc01b",
-  "manuscript_refresh_scope": "Nine verified ICDE 2024\u20132026 references added and cited in Introduction and Related Work, including four ICDE 2026 EAB papers. Redundant prose compressed to retain 12 main-text pages plus one full references/disclosure page. All figures, statistical tables and raw results are unchanged. No appendix",
-  "packaged_pdf_compilation_passed": true,
-  "qwen_logo_sha256": "794b43dad06ab847ba1b27a791f6ccc393e16d12ec87898d7bc509476f8cdd7f",
-  "manuscript_figures": 6,
-  "manuscript_tables": 6,
-  "mean_sd_table_cells": 194,
-  "model_logo_sha256": {
-    "qwen_logo_user.png": "794b43dad06ab847ba1b27a791f6ccc393e16d12ec87898d7bc509476f8cdd7f",
-    "llama_logo_official.webp": "b202ff7373a9f14706f9cd4afd55cbb4c513e0f53763675dd93552693a623bf8",
-    "deepseek_logo_official.svg": "ac13bdc805820c46bf0faf053aa5d31f72b051794abfe1dd72a682f09de2966b"
-  },
-  "page_accounting": {
-    "total_pages": 13,
-    "main_text_pages": 12,
-    "disclosure_starts_page": 13,
-    "excluded_reference_and_disclosure_pages": 1,
-    "main_text_within_limit": true,
-    "appendix": false
-  },
-  "public_artifact": {
-    "url": "https://github.com/KDDElab/known-outlier-benchmark",
-    "anonymous_access_verified": true,
-    "verification_commit": "80602f1a2ce3e629da9d10203c83c111582fbe28"
-  },
-  "manuscript_references": 41
+  "final_terminology_check": {
+    "change": "Numerical floor in prose; reachability floor on the LOF axis; auxiliary framework configurations made explicit.",
+    "numerical_exports_unchanged": true,
+    "all_figure_pixels_match": true,
+    "pdf_pages": 13,
+    "main_text_pages": 12
+  }
 }

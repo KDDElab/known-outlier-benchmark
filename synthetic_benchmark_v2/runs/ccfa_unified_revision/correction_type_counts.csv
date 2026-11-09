@@ -1,0 +1,12 @@
+source,correction_type,evidence_class,n_cells
+beers,location_split,row_local_cross_field,6
+beers,missing_marker,row_local_null,12
+beers,percentage_convention,source_convention_required,7
+beers,quantity_representation,row_local_quantity,24
+flights,clock_preserving_format,source_convention_required,3
+flights,time_imputation,external_fact_required,21
+flights,time_value_change,external_fact_required,28
+rayyan,bibliographic_serialization,source_convention_required,3
+rayyan,date_serialization,source_convention_required,23
+rayyan,encoding_normalization,source_convention_required,14
+rayyan,missing_sentinel,source_convention_required,10

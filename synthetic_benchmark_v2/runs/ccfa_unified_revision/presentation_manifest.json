@@ -1,0 +1,12 @@
+{
+  "source_sha256": {
+    "summary.csv": "134943102c6ec75948c35b8484e6182d64da964d6c87d73874e84007316c1add",
+    "per_case.csv": "601256cec860475f9b31c4208eb771c1fcb1bda1f1b6c2b3f2923869a71b3659",
+    "repeated_summary.csv": "4db9ad188201d6ecb5a4f8cdf92e66d1c6570a7f97ce8ea30f7365f400dfb45f",
+    "complete_error_counts.csv": "2c7909fdb8c9067e2123cea2811c73a3eb221f6f849651a43407589da598533a",
+    "lof_sensitivity_summary.csv": "94311efee54692e06cce8a28114250a02dd4a6442b4250da9b32efb399dbfcda",
+    "correction_strata_per_case.csv": "634f777becb6227278fa62b8db1f48e95b31028264baf07086c40b687938a73b",
+    "beers_non_ounces_per_case.csv": "febdb0a68a4c914cf013acb4e4445389486caaccbc9fce4760e4bc206ca33bb9"
+  },
+  "complete": true
+}

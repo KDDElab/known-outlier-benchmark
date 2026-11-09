@@ -1,0 +1,59 @@
+{
+  "complete": true,
+  "frozen_at_utc": "2026-11-09T15:46:32.095590+00:00",
+  "query_records": 1080,
+  "actual_generations": 1076,
+  "cohorts": [
+    {
+      "model": "qwen35_9b",
+      "query_records": 360,
+      "actual_generations": 358,
+      "inference_or_parse_errors": {
+        "none": 358,
+        "inference failed: ValueError: rendered input has 16532 tokens, exceeding 16384; input was not truncated": 1,
+        "inference failed: ValueError: rendered input has 16416 tokens, exceeding 16384; input was not truncated": 1
+      },
+      "first_record_utc": "2026-11-09T15:48:55+00:00",
+      "last_record_utc": "2026-11-09T16:18:05+00:00",
+      "responses_sha256": "a006fb35ada26fdbaccb0948878eef1a1239be501f51e829a1ca0a740ac07c4d"
+    },
+    {
+      "model": "deepseek_v2_lite_chat",
+      "query_records": 360,
+      "actual_generations": 358,
+      "inference_or_parse_errors": {
+        "none": 358,
+        "inference failed: ValueError: rendered input has 16593 tokens, exceeding 16384; input was not truncated": 1,
+        "inference failed: ValueError: rendered input has 16480 tokens, exceeding 16384; input was not truncated": 1
+      },
+      "first_record_utc": "2026-11-09T15:49:36+00:00",
+      "last_record_utc": "2026-11-09T16:17:27+00:00",
+      "responses_sha256": "90f6f66d40ac7c7f36b7309aaef996bcc68cd0e84285550964298f18d29f0997"
+    },
+    {
+      "model": "llama31_8b_instruct",
+      "query_records": 360,
+      "actual_generations": 360,
+      "inference_or_parse_errors": {
+        "none": 360
+      },
+      "first_record_utc": "2026-11-09T15:48:43+00:00",
+      "last_record_utc": "2026-11-09T16:08:17+00:00",
+      "responses_sha256": "3c496302653f45ed9349741cb3483af8e80b5cc48004e1b59980a8df45dfa0cf"
+    }
+  ],
+  "current_code_sha256": {
+    "analyze_unified_revision.py": "2e80b0f78dba18b6cc2fd14431b29dc30e6688c7ad691fba3261d3266502bbb0",
+    "annotate_unified_support.py": "c403bd69a2e5f25eb2505cdadde4b0397d5b9d741c62d44b0b3194641dd50a63",
+    "audit_unified_corrections.py": "a28ed8fe256530d36e662c097239f119cf87745758618416ed01820e4243d0b9",
+    "finalize_unified_manifest.py": "66ae3c1d5e1cb68bb6e9654ac11bb01e0f4862940e5859efb5d42a97dd18cecb",
+    "prepare_unified_revision.py": "083f64671f9a4bbf4a0ef5dafe2858fb0e7d500f0f2aad5555b7a0348221e052",
+    "run_unified_baselines.py": "2fa4301693e73f382ea384f0af33afb60b2e1a1c3a8635940936aedb4e0a9255",
+    "run_unified_lof_diagnostics.py": "a14920efae039f4b7c066f57e3780b9d54b353a3ac42374eb9d0c17669b386a4",
+    "verify_unified_revision.py": "f56dad3b3ce87a068a10ad9c3dfbbac068d4812372a8035680832d9e3dcfe0f2"
+  },
+  "inputs_sha256": "ee42b6f3ea0fc1aa5533197367ddf5e3902a31c2617629358bd2eb7ddc83e2f0",
+  "effective_population_labels_sha256": "c377931d447218045b3700132eca40c4ed2d8ecd69bfa26099bbc55d6a58ff64",
+  "label_mapping_correction": "corrections/population_label_mapping/correction.json",
+  "independent_machine_replication": false
+}

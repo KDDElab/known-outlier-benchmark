@@ -1,0 +1,27 @@
+\begin{table}[t]
+\centering\footnotesize
+\caption{Original 864-case diagnostic: mean $\pm$ SD across 38 templates. Gower and SME use a three-field prior absent from the original LLM prompt. Rule, size and behavior metrics remain in the artifact; this is not the unified primary comparison.}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{lrrr}
+\toprule
+Method & Exact@1 & Hit@4 & Suff.@1 \\
+\midrule
+Qwen (original) & $0.231\!\pm\!0.215$ & $0.249\!\pm\!0.210$ & $0.537\!\pm\!0.300$ \\
+DeepSeek (original) & $0.023\!\pm\!0.037$ & $0.039\!\pm\!0.051$ & $0.291\!\pm\!0.145$ \\
+Llama (original) & $0.032\!\pm\!0.043$ & $0.049\!\pm\!0.059$ & $0.183\!\pm\!0.161$ \\
+Gower-LOF & $0.514\!\pm\!0.360$ & $0.637\!\pm\!0.328$ & $0.538\!\pm\!0.366$ \\
+Gower-kNN & $0.411\!\pm\!0.302$ & $0.499\!\pm\!0.284$ & $0.608\!\pm\!0.330$ \\
+SME & $0.232\!\pm\!0.218$ & $0.549\!\pm\!0.359$ & $0.232\!\pm\!0.218$ \\
+RLAX adaptation & $0.426\!\pm\!0.384$ & $0.478\!\pm\!0.367$ & $0.498\!\pm\!0.407$ \\
+SOD adaptation & $0.000\!\pm\!0.000$ & $0.000\!\pm\!0.000$ & $0.610\!\pm\!0.438$ \\
+COP adaptation & $0.011\!\pm\!0.028$ & $0.021\!\pm\!0.035$ & $0.011\!\pm\!0.028$ \\
+Univariate top four & $0.144\!\pm\!0.207$ & $0.391\!\pm\!0.406$ & $0.144\!\pm\!0.207$ \\
+Random size & $0.033\!\pm\!0.021$ & $0.123\!\pm\!0.076$ & $0.108\!\pm\!0.084$ \\
+All fields & $0.000\!\pm\!0.000$ & $0.000\!\pm\!0.000$ & $1.000\!\pm\!0.000$ \\
+First three & $0.002\!\pm\!0.014$ & $0.002\!\pm\!0.014$ & $0.220\!\pm\!0.139$ \\
+\bottomrule
+\end{tabular}
+\renewcommand{\arraystretch}{1.0}
+\label{tab:original}
+\end{table}

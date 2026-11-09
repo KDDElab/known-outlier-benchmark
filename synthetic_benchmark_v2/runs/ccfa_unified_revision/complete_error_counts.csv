@@ -1,0 +1,7 @@
+method,exact,population_absent_nonminimal,supported_in_visible_references,unavailable
+deepseek_v2_lite_chat,0,5,9,10
+gower_knn,15,5,4,0
+gower_lof,14,5,5,0
+llama31_8b_instruct,2,6,16,0
+qwen35_9b,5,9,10,0
+sample_minimal,24,0,0,0

@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering\footnotesize
+\caption{Unified configuration on 96 targets: mean $\pm$ SD over 24 templates. All methods share the three-field cap and four-candidate budget; LLMs use the minimal task and fixed JSON schema. Failures remain misses.}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{lrrr}
+\toprule
+Method & Exact@1 & Hit@4 & Answered \\
+\midrule
+Qwen & $0.385\!\pm\!0.383$ & $0.510\!\pm\!0.372$ & $0.979\!\pm\!0.071$ \\
+DeepSeek & $0.031\!\pm\!0.084$ & $0.042\!\pm\!0.095$ & $0.542\!\pm\!0.241$ \\
+Llama & $0.042\!\pm\!0.095$ & $0.052\!\pm\!0.104$ & $1.000\!\pm\!0.000$ \\
+SME & $0.313\!\pm\!0.348$ & $0.646\!\pm\!0.403$ & $1.000\!\pm\!0.000$ \\
+Gower-kNN & $0.594\!\pm\!0.429$ & $0.667\!\pm\!0.373$ & $1.000\!\pm\!0.000$ \\
+Gower-LOF & $0.646\!\pm\!0.396$ & $0.719\!\pm\!0.378$ & $1.000\!\pm\!0.000$ \\
+\bottomrule
+\end{tabular}
+\renewcommand{\arraystretch}{1.0}
+\label{tab:unified}
+\end{table}

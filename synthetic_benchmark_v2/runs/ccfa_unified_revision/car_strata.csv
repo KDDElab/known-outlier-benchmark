@@ -1,0 +1,13 @@
+method,size_bin,n,exact,hit4
+deepseek_v2_lite_chat,multi-field,5,0.0,0.0
+deepseek_v2_lite_chat,singleton,43,0.06976744186046512,0.11627906976744186
+gower_knn,multi-field,5,0.0,0.0
+gower_knn,singleton,43,1.0,1.0
+gower_lof,multi-field,5,0.2,0.4
+gower_lof,singleton,43,1.0,1.0
+llama31_8b_instruct,multi-field,5,0.0,0.0
+llama31_8b_instruct,singleton,43,0.09302325581395349,0.09302325581395349
+qwen35_9b,multi-field,5,0.0,0.2
+qwen35_9b,singleton,43,0.5348837209302325,0.6744186046511628
+sample_minimal,multi-field,5,0.6,0.8
+sample_minimal,singleton,43,1.0,1.0

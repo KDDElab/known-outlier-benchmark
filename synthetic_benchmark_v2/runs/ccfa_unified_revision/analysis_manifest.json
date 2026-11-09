@@ -1,0 +1,8 @@
+{
+  "complete": true,
+  "publication_export": true,
+  "expected_model_records": 1080,
+  "observed_model_records": 1080,
+  "runner_sha256": "2e80b0f78dba18b6cc2fd14431b29dc30e6688c7ad691fba3261d3266502bbb0",
+  "inputs_sha256": "ee42b6f3ea0fc1aa5533197367ddf5e3902a31c2617629358bd2eb7ddc83e2f0"
+}

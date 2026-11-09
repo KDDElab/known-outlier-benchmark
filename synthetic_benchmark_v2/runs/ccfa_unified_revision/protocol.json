@@ -1,0 +1,62 @@
+{
+  "protocol_id": "known_outlier_unified_support_v1",
+  "frozen_at_utc": "2026-11-09T15:46:32.095590+00:00",
+  "status": "Frozen before new outputs; requested revision after inspecting earlier results, not preregistration.",
+  "models": [
+    "qwen35_9b",
+    "deepseek_v2_lite_chat",
+    "llama31_8b_instruct"
+  ],
+  "counts": {
+    "paired96": 96,
+    "new_rules": 120,
+    "invoices": 96,
+    "car_decision": 48
+  },
+  "core_task": "Rank at most four distinct nonempty inclusion-minimal support-exclusion sets; abstention allowed; no auxiliary tasks.",
+  "output": "Fixed minimal JSON schema with legal IDs and per-track size cap; strict unique IDs; duplicate sets collapse in order; failures/abstentions remain misses.",
+  "decoding": "Original checkpoints/loader/chat templates; greedy batch1; 16384 input, no truncation; 512 output; LMFE0.11.3.",
+  "candidate_caps": {
+    "paired96": 3,
+    "new_rules": 6,
+    "invoices": 8,
+    "car_decision": 6
+  },
+  "sample_minimal": "All sample-absent inclusion-minimal sets within cap, ranked by cardinality then canonical feature-ID tuple; first four. No hidden truth, frequency fitting or outcome selection.",
+  "statistics": "Exact@1/Hit@4/Answered, all queries. Equal template means for paired96 and new rules; equal four-relation means for invoices; case mean for one Car source. SD at declared aggregation unit. 2000 paired template bootstraps for paired96; descriptive transfer results; no pooling across tracks.",
+  "lof_diagnostics": {
+    "queries": "same96 invoices,255 candidates,k3",
+    "epsilon": [
+      1e-06,
+      1e-09,
+      1e-12
+    ],
+    "neighbors": [
+      "original fixed-k argpartition",
+      "fixed-k canonical ascending",
+      "fixed-k canonical descending",
+      "include all k-distance boundary ties"
+    ],
+    "duplicates": "Additional collapse of identical projections with inclusive boundaries; explicitly changes empirical weights.",
+    "ranking": "descending score, size, canonical IDs; unchanged across variants"
+  },
+  "car_source": {
+    "url": "https://archive.ics.uci.edu/dataset/19/car+evaluation",
+    "download": "https://archive.ics.uci.edu/static/public/19/car+evaluation.zip",
+    "doi": "10.24432/C5JP48",
+    "license": "CC BY 4.0",
+    "n_domain": 1728,
+    "n_normal": 518,
+    "selection": "12 unacc targets per buying category, seed20261109, before inference; opaque IDs and published categorical values;32 acceptable refs without replacement.",
+    "boundary": "Independent public expert decision model, not real incidents, and pretraining exposure cannot be excluded."
+  },
+  "inputs_sha256": "ee42b6f3ea0fc1aa5533197367ddf5e3902a31c2617629358bd2eb7ddc83e2f0",
+  "ground_truth_sha256": "d2aae954206597fe2c0f9bd30cbcbaedf1b0dafa333b7268ff3bdb8d64412afe",
+  "source_hashes": {
+    "prepare_unified_revision.py": "8a417439119a7b2e675e08789036d529b8057560f6e421d8111777bfab11ba61",
+    "annotate_v2.py": "fafee6146239a7088553f5410f941c2cebc8d183524f6ae28cb75280796e8e18",
+    "annotate_unified_support.py": "c403bd69a2e5f25eb2505cdadde4b0397d5b9d741c62d44b0b3194641dd50a63",
+    "run_gower_subspace_baseline.py": "fc6a01fd7e673b9a552fbcc0da20187924b8e60cbd0d1a728fc813d4dbc72a31",
+    "runs/ccfa_unified_revision/public_data/car.data": "b703a9ac69f11e64ce8c223c0a40de4d2e9d769f7fb20be5f8f2e8a619893d83"
+  }
+}

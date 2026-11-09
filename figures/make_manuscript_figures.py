@@ -424,12 +424,12 @@ def make_framework_figure():
         box(ax,x,2.20,w,1.57,'#FFFEFC',edge,.75,.08)
         box(ax,x,3.55,w,.22,band,'none',0,.075)
         txt(ax,x+w/2,3.66,title,9.0,INK,'bold',ha='center')
-    sources=[('Original rules','864 targets','table'),
+    sources=[('Original rules','864 / paired 96','table'),
              ('New compositions','48 targets','table'),
              ('Invoices','96 targets','invoice'),
+             ('Car decisions','48 targets','table'),
              ('Public corrections','72 targets','database'),
-             ('Circuits','86 queries','circuit'),
-             ('ADBench / UCI','70 / 8 queries','database')]
+             ('Circuit / peer pilots','86 / 78 queries','circuit')]
     for j,(name,n,kind) in enumerate(sources):
         xx=.15+(j%2)*1.14;yy=3.37-(j//2)*.28
         box(ax,xx,yy-.19,1.09,.25,neutral,'none',0,.025)
@@ -460,10 +460,10 @@ def make_framework_figure():
         icon(ax,xx,3.15,.21 if name.startswith('Qwen') else .25)
         txt(ax,xx,2.99,name,8.0,ha='center')
         txt(ax,xx,2.875,version,7.1,GRAY,ha='center')
-    txt(ax,3.765,2.72,'Direct / fixed-schema decoding',7.4,GRAY,ha='center')
-    txt(ax,3.765,2.60,'Shared size prior in paired tests',7.3,GRAY,ha='center')
+    txt(ax,3.765,2.72,'Core task + fixed JSON decoding',7.4,GRAY,ha='center')
+    txt(ax,3.765,2.60,'Shared candidate sizes and budget',7.3,GRAY,ha='center')
     box(ax,2.87,2.28,1.79,.23,neutral,'#AEB5BE',.65,.045,dash=True)
-    txt(ax,3.765,2.395,'Gower-kNN / LOF + other baselines',7.7,INK,'bold',ha='center')
+    txt(ax,3.765,2.395,'Sample minima / Gower-kNN / LOF',7.5,INK,'bold',ha='center')
     rule(ax,4.68,3.15,4.83,3.15,line,.8)
     rule(ax,4.68,2.39,4.83,2.39,line,.8)
     rule(ax,4.83,2.39,4.83,3.32,line,.8)
@@ -485,7 +485,7 @@ def make_framework_figure():
 
     # Lower panel: expanded case with data-bound masks and support graphics.
     box(ax,.04,.035,7.08,2.095,'#FFFEFC',edge,.75,.08)
-    txt(ax,.16,2.06,'Recorded invoice',8.6,INK,'bold')
+    txt(ax,.16,2.06,'Original-prompt invoice',8.3,INK,'bold')
     txt(ax,2.00,2.06,'8 fields · 32 references R · 20 clean triples P · recorded predictions',7.9,GRAY)
     box(ax,.15,1.08,1.56,.82,'white','#AEB5BE',.6,.035,dash=True)
     for xx,name,fid in zip([.75,1.11,1.48],['Net','Tax','Gross'],ids):

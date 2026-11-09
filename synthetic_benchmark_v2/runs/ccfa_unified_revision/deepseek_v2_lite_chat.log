@@ -1,0 +1,46 @@
+{"wrapper_sha256": "c403bd69a2e5f25eb2505cdadde4b0397d5b9d741c62d44b0b3194641dd50a63", "decoder": "LMFE0.11.3", "argv": ["/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/annotate_unified_support.py", "--model", "deepseek_v2_lite_chat", "--inputs-path", "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_unified_revision/inputs.jsonl", "--annotations-path", "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_unified_revision/annotations_deepseek_v2_lite_chat.jsonl", "--run-log-path", "/root/nas/SPELT-master/adbench_llm_reference_v1/synthetic_benchmark_v2/runs/ccfa_unified_revision/model_runs_deepseek_v2_lite_chat.jsonl", "--protocol-id", "known_outlier_unified_support_v1", "--resume"]}
+[deepseek_v2_lite_chat] loading /data/yuguangya/ALLYOUNEED/deepseek/DeepSeek-V2-Lite-Chat; cases=360; GPUs=1,2
+[transformers] `tokenizer_class` is `LlamaTokenizerFast` but `tokenizer.json` is ByteLevel; loading `TokenizersBackend`. Set `tokenizer_class` to `TokenizersBackend` in `tokenizer_config.json`.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/351 [00:00<?, ?it/s]Loading weights:   0%|          | 1/351 [00:02<13:44,  2.36s/it]Loading weights:   1%|▏         | 5/351 [00:02<02:18,  2.50it/s]Loading weights:   2%|▏         | 7/351 [00:03<01:53,  3.04it/s]Loading weights:   2%|▏         | 8/351 [00:03<01:40,  3.40it/s]Loading weights:   3%|▎         | 10/351 [00:03<01:13,  4.64it/s]Loading weights:   3%|▎         | 12/351 [00:03<00:55,  6.06it/s]Loading weights:   4%|▍         | 14/351 [00:16<12:23,  2.21s/it]Loading weights:   4%|▍         | 15/351 [00:16<10:15,  1.83s/it]Loading weights:   7%|▋         | 23/351 [00:16<03:20,  1.63it/s]Loading weights:   8%|▊         | 27/351 [00:29<07:47,  1.44s/it]Loading weights:   8%|▊         | 28/351 [00:30<07:20,  1.37s/it]Loading weights:  11%|█▏        | 40/351 [00:40<05:30,  1.06s/it]Loading weights:  12%|█▏        | 41/351 [00:41<05:29,  1.06s/it]Loading weights:  12%|█▏        | 42/351 [00:41<05:01,  1.02it/s]Loading weights:  15%|█▌        | 53/351 [00:53<04:59,  1.00s/it]Loading weights:  15%|█▌        | 54/351 [00:56<05:40,  1.15s/it]Loading weights:  16%|█▌        | 56/351 [00:56<04:48,  1.02it/s]Loading weights:  19%|█▉        | 66/351 [01:05<04:33,  1.04it/s]Loading weights:  19%|█▉        | 67/351 [01:07<04:39,  1.02it/s]Loading weights:  23%|██▎       | 79/351 [01:18<04:15,  1.07it/s]Loading weights:  23%|██▎       | 80/351 [01:19<04:22,  1.03it/s]Loading weights:  26%|██▌       | 92/351 [01:29<03:55,  1.10it/s]Loading weights:  26%|██▋       | 93/351 [01:31<04:02,  1.06it/s]Loading weights:  30%|██▉       | 105/351 [01:42<03:55,  1.04it/s]Loading weights:  30%|███       | 106/351 [01:44<03:57,  1.03it/s]Loading weights:  32%|███▏      | 113/351 [01:44<02:32,  1.56it/s]Loading weights:  32%|███▏      | 114/351 [01:44<02:25,  1.63it/s]Loading weights:  34%|███▎      | 118/351 [01:54<04:24,  1.13s/it]Loading weights:  34%|███▍      | 119/351 [01:55<04:20,  1.12s/it]Loading weights:  34%|███▍      | 120/351 [01:55<03:55,  1.02s/it]Loading weights:  37%|███▋      | 130/351 [01:55<01:26,  2.54it/s]Loading weights:  38%|███▊      | 133/351 [02:01<02:29,  1.46it/s]Loading weights:  41%|████      | 144/351 [02:03<01:30,  2.29it/s]Loading weights:  42%|████▏     | 146/351 [02:04<01:26,  2.38it/s]Loading weights:  45%|████▍     | 157/351 [02:06<01:02,  3.11it/s]Loading weights:  45%|████▌     | 158/351 [02:07<01:10,  2.73it/s]Loading weights:  48%|████▊     | 170/351 [02:09<00:48,  3.72it/s]Loading weights:  49%|████▊     | 171/351 [02:09<00:48,  3.72it/s]Loading weights:  52%|█████▏    | 183/351 [02:12<00:43,  3.87it/s]Loading weights:  56%|█████▌    | 195/351 [02:13<00:24,  6.35it/s]Loading weights:  56%|█████▋    | 198/351 [02:16<00:44,  3.42it/s]Loading weights:  59%|█████▉    | 208/351 [02:16<00:26,  5.35it/s]Loading weights:  60%|██████    | 212/351 [02:19<00:40,  3.43it/s]Loading weights:  61%|██████▏   | 215/351 [02:20<00:34,  3.94it/s]Loading weights:  63%|██████▎   | 222/351 [02:22<00:35,  3.60it/s]Loading weights:  64%|██████▍   | 224/351 [02:23<00:36,  3.43it/s]Loading weights:  67%|██████▋   | 235/351 [02:25<00:29,  4.00it/s]Loading weights:  67%|██████▋   | 236/351 [02:25<00:29,  3.84it/s]Loading weights:  71%|███████   | 248/351 [02:28<00:25,  4.07it/s]Loading weights:  71%|███████   | 249/351 [02:29<00:26,  3.85it/s]Loading weights:  74%|███████▍  | 260/351 [02:29<00:12,  7.03it/s]Loading weights:  75%|███████▌  | 264/351 [02:31<00:20,  4.23it/s]Loading weights:  78%|███████▊  | 274/351 [02:34<00:18,  4.18it/s]Loading weights:  79%|███████▊  | 276/351 [02:34<00:17,  4.38it/s]Loading weights:  82%|████████▏ | 287/351 [02:36<00:13,  4.84it/s]Loading weights:  82%|████████▏ | 289/351 [02:36<00:12,  4.81it/s]Loading weights:  85%|████████▌ | 300/351 [02:39<00:10,  4.79it/s]Loading weights:  86%|████████▌ | 301/351 [02:39<00:11,  4.52it/s]Loading weights:  86%|████████▋ | 303/351 [02:39<00:09,  4.88it/s]Loading weights:  89%|████████▉ | 313/351 [02:41<00:07,  4.89it/s]Loading weights:  89%|████████▉ | 314/351 [02:42<00:07,  4.71it/s]Loading weights:  93%|█████████▎| 326/351 [02:44<00:05,  4.82it/s]Loading weights:  93%|█████████▎| 327/351 [02:45<00:05,  4.38it/s]Loading weights:  93%|█████████▎| 328/351 [02:45<00:05,  4.37it/s]Loading weights:  94%|█████████▎| 329/351 [02:45<00:04,  4.60it/s]Loading weights:  97%|█████████▋| 339/351 [02:47<00:02,  4.52it/s]Loading weights: 100%|██████████| 351/351 [02:47<00:00,  2.09it/s]
+[deepseek_v2_lite_chat] 1/360 case=unified_s20261106_main_V2_0007 parse=ok
+[deepseek_v2_lite_chat] 10/360 case=unified_s20261106_main_V2_0062 parse=ok
+[deepseek_v2_lite_chat] 20/360 case=unified_s20261106_main_V2_0092 parse=ok
+[deepseek_v2_lite_chat] 30/360 case=unified_s20261106_main_V2_0137 parse=ok
+[deepseek_v2_lite_chat] 40/360 case=unified_s20261106_main_V2_0178 parse=ok
+[W1109 23:53:55.462975314 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 794820608 bytes (free: 212926464, total: 25298141184).
+[W1109 23:53:56.868340617 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 1 while trying to allocate 794820608 bytes (free: 194052096, total: 25298141184).
+[deepseek_v2_lite_chat] 50/360 case=unified_s20261106_main_V2_0229 parse=ok
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (16593 > 16384). Running this sequence through the model will result in indexing errors
+[deepseek_v2_lite_chat] 60/360 case=unified_s20261106_main_V2_0272 parse=ok
+[deepseek_v2_lite_chat] 70/360 case=unified_s20261106_main_V2_0331 parse=ok
+[deepseek_v2_lite_chat] 80/360 case=unified_s20261106_main_V2_0395 parse=ok
+[deepseek_v2_lite_chat] 90/360 case=unified_s20261106_main_V2_0452 parse=ok
+[deepseek_v2_lite_chat] 100/360 case=unified_new_parity4_00_complete parse=ok
+[deepseek_v2_lite_chat] 110/360 case=unified_new_and_xor_pairs_00_complete parse=ok
+[deepseek_v2_lite_chat] 120/360 case=unified_new_or_and_pairs_00_complete parse=ok
+[deepseek_v2_lite_chat] 130/360 case=unified_new_xor_and_pairs_00_complete parse=ok
+[deepseek_v2_lite_chat] 140/360 case=unified_new_exactly_two4_00_complete parse=ok
+[deepseek_v2_lite_chat] 150/360 case=unified_new_threshold_three4_00_complete parse=ok
+[deepseek_v2_lite_chat] 160/360 case=unified_new_implication_chain4_00_complete parse=ok
+[deepseek_v2_lite_chat] 170/360 case=unified_new_multiplexer4_00_complete parse=ok
+[deepseek_v2_lite_chat] 180/360 case=unified_new_conditional_parity5_00_complete parse=ok
+[deepseek_v2_lite_chat] 190/360 case=unified_new_parity6_00_complete parse=ok
+[deepseek_v2_lite_chat] 200/360 case=unified_new_count_balance6_00_complete parse=ok
+[deepseek_v2_lite_chat] 210/360 case=unified_new_majority_output6_00_complete parse=ok
+[deepseek_v2_lite_chat] 220/360 case=unified_constraint_line_net_003 parse=ok
+[deepseek_v2_lite_chat] 230/360 case=unified_constraint_line_net_013 parse=ok
+[deepseek_v2_lite_chat] 240/360 case=unified_constraint_line_net_023 parse=ok
+[deepseek_v2_lite_chat] 250/360 case=unified_constraint_document_net_009 parse=ok
+[deepseek_v2_lite_chat] 260/360 case=unified_constraint_document_net_019 parse=ok
+[deepseek_v2_lite_chat] 270/360 case=unified_constraint_tax_total_005 parse=ok
+[deepseek_v2_lite_chat] 280/360 case=unified_constraint_tax_total_015 parse=ok
+[deepseek_v2_lite_chat] 290/360 case=unified_constraint_amount_due_001 parse=ok
+[deepseek_v2_lite_chat] 300/360 case=unified_constraint_amount_due_011 parse=ok
+[deepseek_v2_lite_chat] 310/360 case=unified_constraint_amount_due_021 parse=ok
+[deepseek_v2_lite_chat] 320/360 case=unified_car_decision_007 parse=ok
+[deepseek_v2_lite_chat] 330/360 case=unified_car_decision_017 parse=ok
+[deepseek_v2_lite_chat] 340/360 case=unified_car_decision_027 parse=ok
+[deepseek_v2_lite_chat] 350/360 case=unified_car_decision_037 parse=ok
+[deepseek_v2_lite_chat] 360/360 case=unified_car_decision_047 parse=ok
+[deepseek_v2_lite_chat] completed; new records=360

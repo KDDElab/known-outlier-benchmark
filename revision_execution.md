@@ -250,3 +250,11 @@ This EAB study evaluates feature-subspace explanations for already flagged table
 - 输出合同意外结果：Qwen精简合同96例中1例输入超限、94例JSON解码失败、1例有效；95次实际生成均未达到512上限，94例有末候选对象缺闭合括号模式。提示中的JSON示例合法。该模式仅作事后语法诊断，不修复原始文本、不补计定位分。
 
 - 补齐 E1 的历史对照：按原run-selection清单及SHA核验旧三模型2,592条回答，核对与新输入的schema、目标值、参考值一致，再用当前解析、弃答和模板加权口径重算。旧角色前缀条件的Exact@1为Qwen 0.414108、DeepSeek 0.109284、Llama 0.148392；新独立展示条件为0.230629、0.023026、0.031798。输出 `legacy_revision_descriptive_deltas.csv` 和逐案例评分；仅作事后描述，不增加显著性检验家族，不直接使用旧PDF不同口径的数值作差。
+
+
+## 2026-11-10：统一配置与样本最小集合修订
+
+- 完成 1,080 条新模型查询记录（1,076 次实际生成，4 条输入超限），以及 SME、匹配 Gower、14 条件 LOF 诊断、Car 同语义外部来源、纠错类型审计。
+- 统一比较主表与所有新图由实际记录生成。正文已重组为标签、证据/合同、评分机制三条主线，12 页正文加 1 页参考文献与 AI 声明。
+- 168 组总体标签、624 组 Gower 输出、552 组 LOF 标量对照均通过；完整输入/有效标签可重建。
+- 详细逐项回应见 `unified_revision_report.md`；包内重算状态见 `artifact_release_revised/packaged_analysis_verification.json`。独立机器复现未执行。

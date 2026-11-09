@@ -2,12 +2,12 @@ group,left,right,n_common_queries_all_five,jaccard
 ADBench,deepseek_v2_lite_chat,gemma3_4b,40,0.3125
 ADBench,deepseek_v2_lite_chat,llama31_8b_instruct,40,0.325
 ADBench,deepseek_v2_lite_chat,phi4_mini,40,0.34208333333333335
-ADBench,deepseek_v2_lite_chat,qwen35_9b,40,0.21333333333333332
+ADBench,deepseek_v2_lite_chat,qwen35_9b,40,0.2133333333333333
 ADBench,gemma3_4b,llama31_8b_instruct,40,0.495
 ADBench,gemma3_4b,phi4_mini,40,0.5195833333333333
 ADBench,gemma3_4b,qwen35_9b,40,0.34249999999999997
 ADBench,llama31_8b_instruct,phi4_mini,40,0.4770833333333333
-ADBench,llama31_8b_instruct,qwen35_9b,40,0.37499999999999994
+ADBench,llama31_8b_instruct,qwen35_9b,40,0.375
 ADBench,phi4_mini,qwen35_9b,40,0.35666666666666663
 UCI Lymphography,deepseek_v2_lite_chat,gemma3_4b,1,0.2
 UCI Lymphography,deepseek_v2_lite_chat,llama31_8b_instruct,1,0.5

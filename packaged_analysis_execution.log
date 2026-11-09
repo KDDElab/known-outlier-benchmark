@@ -123,7 +123,7 @@ Running synthetic_benchmark_v2/analyze_acceptance_revision.py
 Running synthetic_benchmark_v2/write_acceptance_tables.py
 exported prior, structured, new_rules, real_cells
 Running synthetic_benchmark_v2/verify_acceptance_revision.py
-{"protocol": "known_outlier_acceptance_diagnostics_v1", "prior_cases": 96, "output": "/tmp/known_outlier_reconstruction_mjp71rs3/prepare_acceptance_revision"}
+{"protocol": "known_outlier_acceptance_diagnostics_v1", "prior_cases": 96, "output": "/tmp/known_outlier_reconstruction_92lt4kd7/prepare_acceptance_revision"}
 {"inputs": 120, "targets": 48, "populations": [32, 16, 28, 24, 24, 20, 20, 32, 32, 32, 20, 32]}
 structured inputs 96 brace pattern 94
 frozen 72 real corrected-cell cases
@@ -156,5 +156,104 @@ frozen structured real-cell inputs 72
 Running figures/make_manuscript_figures.py
 Running figures/make_manuscript_result_figures.py
 Running figures/make_acceptance_figures.py
+Published estimators preserved; generated 194 mean +/- SD table entries.
+Qwen Suff@1: $0.537\!\pm\!0.300$
+Rendered four experimental figures from frozen records.
 Running synthetic_benchmark_v2/finalize_acceptance_manifest.py
 {"complete": true, "records": 1368, "batches": 15}
+Running synthetic_benchmark_v2/analyze_unified_revision.py
+       track condition                method  n  n_units    exact  exact_sd     hit4  hit4_sd  answered  answered_sd  sufficient  sufficient_sd    valid  valid_sd
+car_decision    sample deepseek_v2_lite_chat 48       48 0.062500  0.244623 0.104167 0.308709  0.895833     0.308709    0.604167       0.494204 1.000000  0.000000
+car_decision    sample             gower_knn 48       48 0.895833  0.308709 0.895833 0.308709  1.000000     0.000000    0.937500       0.244623 1.000000  0.000000
+car_decision    sample             gower_lof 48       48 0.916667  0.279310 0.937500 0.244623  1.000000     0.000000    0.916667       0.279310 1.000000  0.000000
+car_decision    sample   llama31_8b_instruct 48       48 0.083333  0.279310 0.083333 0.279310  1.000000     0.000000    0.645833       0.483321 1.000000  0.000000
+car_decision    sample             qwen35_9b 48       48 0.479167  0.504852 0.625000 0.489246  1.000000     0.000000    0.937500       0.244623 1.000000  0.000000
+car_decision    sample        sample_minimal 48       48 0.958333  0.201941 0.979167 0.144338  1.000000     0.000000    0.958333       0.201941 1.000000  0.000000
+    invoices    sample deepseek_v2_lite_chat 96        4 0.010417  0.020833 0.010417 0.020833  0.854167     0.024056    0.625000       0.122663 1.000000  0.000000
+    invoices    sample             gower_knn 96        4 0.406250  0.190561 0.510417 0.137668  1.000000     0.000000    0.510417       0.181222 1.000000  0.000000
+    invoices    sample             gower_lof 96        4 0.000000  0.000000 0.114583 0.128987  1.000000     0.000000    0.010417       0.020833 1.000000  0.000000
+    invoices    sample   llama31_8b_instruct 96        4 0.031250  0.039893 0.072917 0.052429  1.000000     0.000000    0.729167       0.161374 1.000000  0.000000
+    invoices    sample             qwen35_9b 96        4 0.010417  0.020833 0.208333 0.068041  1.000000     0.000000    0.083333       0.034021 1.000000  0.000000
+    invoices    sample        sample_minimal 96        4 0.166667  0.090010 0.427083 0.277169  1.000000     0.000000    0.166667       0.090010 1.000000  0.000000
+   new_rules  complete deepseek_v2_lite_chat 24       12 0.000000  0.000000 0.000000 0.000000  0.583333     0.468718    0.208333       0.396481 1.000000  0.000000
+   new_rules  complete             gower_knn 24       12 0.625000  0.482654 0.833333 0.389249  1.000000     0.000000    0.833333       0.389249 1.000000  0.000000
+   new_rules  complete             gower_lof 24       12 0.583333  0.514929 0.833333 0.389249  1.000000     0.000000    0.791667       0.396481 1.000000  0.000000
+   new_rules  complete   llama31_8b_instruct 24       12 0.083333  0.194625 0.125000 0.226134  1.000000     0.000000    0.333333       0.443813 1.000000  0.000000
+   new_rules  complete             qwen35_9b 24       12 0.208333  0.334279 0.375000 0.433013  1.000000     0.000000    0.583333       0.417424 1.000000  0.000000
+   new_rules  complete        sample_minimal 24       12 1.000000  0.000000 1.000000 0.000000  1.000000     0.000000    1.000000       0.000000 1.000000  0.000000
+   new_rules     draw0 deepseek_v2_lite_chat 48       12 0.041667  0.097312 0.041667 0.097312  1.000000     0.000000    0.354167       0.310028 1.000000  0.000000
+   new_rules     draw0             gower_knn 48       12 0.625000  0.445941 0.833333 0.342672  1.000000     0.000000    0.708333       0.450168 1.000000  0.000000
+   new_rules     draw0             gower_lof 48       12 0.541667  0.424175 0.729167 0.445410  1.000000     0.000000    0.687500       0.441137 1.000000  0.000000
+   new_rules     draw0   llama31_8b_instruct 48       12 0.041667  0.097312 0.145833 0.225084  1.000000     0.000000    0.250000       0.319801 1.000000  0.000000
+   new_rules     draw0             qwen35_9b 48       12 0.104167  0.225084 0.312500 0.303858  1.000000     0.000000    0.375000       0.291937 1.000000  0.000000
+   new_rules     draw0        sample_minimal 48       12 0.666667  0.456435 0.812500 0.322014  1.000000     0.000000    0.666667       0.456435 1.000000  0.000000
+   new_rules     draw1 deepseek_v2_lite_chat 24       12 0.000000  0.000000 0.041667 0.144338  1.000000     0.000000    0.250000       0.337100 1.000000  0.000000
+   new_rules     draw1             gower_knn 24       12 0.583333  0.514929 0.875000 0.310791  1.000000     0.000000    0.666667       0.443813 1.000000  0.000000
+   new_rules     draw1             gower_lof 24       12 0.541667  0.498102 0.791667 0.396481  1.000000     0.000000    0.666667       0.443813 1.000000  0.000000
+   new_rules     draw1   llama31_8b_instruct 24       12 0.125000  0.226134 0.166667 0.246183  1.000000     0.000000    0.250000       0.337100 1.000000  0.000000
+   new_rules     draw1             qwen35_9b 24       12 0.000000  0.000000 0.291667 0.450168  1.000000     0.000000    0.208333       0.396481 1.000000  0.000000
+   new_rules     draw1        sample_minimal 24       12 0.625000  0.376889 0.833333 0.389249  1.000000     0.000000    0.625000       0.376889 1.000000  0.000000
+   new_rules     draw2 deepseek_v2_lite_chat 24       12 0.041667  0.144338 0.041667 0.144338  1.000000     0.000000    0.333333       0.389249 1.000000  0.000000
+   new_rules     draw2             gower_knn 24       12 0.583333  0.468718 0.708333 0.450168  1.000000     0.000000    0.708333       0.450168 1.000000  0.000000
+   new_rules     draw2             gower_lof 24       12 0.458333  0.450168 0.750000 0.398862  1.000000     0.000000    0.625000       0.433013 1.000000  0.000000
+   new_rules     draw2   llama31_8b_instruct 24       12 0.041667  0.144338 0.125000 0.226134  1.000000     0.000000    0.125000       0.226134 1.000000  0.000000
+   new_rules     draw2             qwen35_9b 24       12 0.083333  0.194625 0.291667 0.396481  1.000000     0.000000    0.250000       0.261116 1.000000  0.000000
+   new_rules     draw2        sample_minimal 24       12 0.708333  0.396481 0.833333 0.389249  1.000000     0.000000    0.708333       0.396481 1.000000  0.000000
+    paired96    sample deepseek_v2_lite_chat 96       24 0.031250  0.084458 0.041667 0.095173  0.541667     0.240772    0.072917       0.137508 0.979167  0.070582
+    paired96    sample             gower_knn 96       24 0.593750  0.428677 0.666667 0.373487  1.000000     0.000000    0.666667       0.414851 1.000000  0.000000
+    paired96    sample             gower_lof 96       24 0.645833  0.396429 0.718750 0.378157  1.000000     0.000000    0.666667       0.394711 1.000000  0.000000
+    paired96    sample   llama31_8b_instruct 96       24 0.041667  0.095173 0.052083 0.103713  1.000000     0.000000    0.270833       0.254489 1.000000  0.000000
+    paired96    sample             qwen35_9b 96       24 0.385417  0.382918 0.510417 0.372121  0.979167     0.070582    0.510417       0.451322 0.979167  0.070582
+    paired96    sample        sample_minimal 96       24 0.312500  0.347741 0.645833 0.403225  1.000000     0.000000    0.312500       0.347741 1.000000  0.000000
+Running synthetic_benchmark_v2/audit_unified_corrections.py
+source   correction_type              evidence_class            
+beers    location_split               row_local_cross_field          6
+         missing_marker               row_local_null                12
+         percentage_convention        source_convention_required     7
+         quantity_representation      row_local_quantity            24
+flights  clock_preserving_format      source_convention_required     3
+         time_imputation              external_fact_required        21
+         time_value_change            external_fact_required        28
+rayyan   bibliographic_serialization  source_convention_required     3
+         date_serialization           source_convention_required    23
+         encoding_normalization       source_convention_required    14
+         missing_sentinel             source_convention_required    10
+                                                   n      hit1   hit1_sd      hit3   recall3
+source  stratum            method                                                           
+beers   mixed              deepseek_v2_lite_chat   7  0.000000  0.000000  0.285714  0.119048
+                           gower_knn_subspace      7  1.000000  0.000000  1.000000  0.690476
+                           gower_lof_subspace      7  1.000000  0.000000  1.000000  0.666667
+                           llama31_8b_instruct     7  0.857143  0.377964  1.000000  0.761905
+                           qwen35_9b               7  1.000000  0.000000  1.000000  1.000000
+        row_local_only     deepseek_v2_lite_chat  17  0.117647  0.332106  0.176471  0.117647
+                           gower_knn_subspace     17  1.000000  0.000000  1.000000  0.887255
+                           gower_lof_subspace     17  1.000000  0.000000  1.000000  0.882353
+                           llama31_8b_instruct    17  0.705882  0.469668  0.882353  0.808824
+                           qwen35_9b              17  0.941176  0.242536  0.941176  0.926471
+flights external_or_source deepseek_v2_lite_chat  24  0.250000  0.442326  0.541667  0.440972
+                           gower_knn_subspace     24  0.041667  0.204124  0.625000  0.329861
+                           gower_lof_subspace     24  0.000000  0.000000  0.291667  0.090278
+                           llama31_8b_instruct    24  0.208333  0.414851  0.666667  0.486111
+                           qwen35_9b              24  0.666667  0.481543  1.000000  0.878472
+rayyan  external_or_source deepseek_v2_lite_chat  24  0.166667  0.380693  0.458333  0.312500
+                           gower_knn_subspace     24  0.166667  0.380693  0.500000  0.236111
+                           gower_lof_subspace     24  0.208333  0.414851  0.500000  0.253472
+                           llama31_8b_instruct    24  0.250000  0.442326  0.666667  0.451389
+                           qwen35_9b              24  0.333333  0.481543  0.541667  0.336806
+Running synthetic_benchmark_v2/verify_unified_revision.py
+{
+  "all_checks_passed": true,
+  "population_labels_independently_checked": 168,
+  "unchanged_gower_lists_checked": 624,
+  "inclusive_LOF_scalar_checks": 552,
+  "inputs_sha256": "ee42b6f3ea0fc1aa5533197367ddf5e3902a31c2617629358bd2eb7ddc83e2f0",
+  "effective_gold_sha256": "c377931d447218045b3700132eca40c4ed2d8ecd69bfa26099bbc55d6a58ff64",
+  "runner_sha256": "f56dad3b3ce87a068a10ad9c3dfbbac068d4812372a8035680832d9e3dcfe0f2",
+  "protocol_reconstruction_passed": true
+}
+Running figures/make_unified_figures.py
+sweep conditions <StringArray>
+['all', 'unique_projection_diagnostic', 'roles_only_oracle']
+Length: 3, dtype: str
+Running synthetic_benchmark_v2/finalize_unified_manifest.py
+{"complete": true, "query_records": 1080, "actual_generations": 1076}

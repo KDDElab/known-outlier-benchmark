@@ -1,0 +1,11 @@
+{
+  "complete": true,
+  "n_queries": 360,
+  "original_diagnostic": 864,
+  "elapsed_seconds": 13.306056261062622,
+  "runner_sha256": "2fa4301693e73f382ea384f0af33afb60b2e1a1c3a8635940936aedb4e0a9255",
+  "inputs_sha256": "ee42b6f3ea0fc1aa5533197367ddf5e3902a31c2617629358bd2eb7ddc83e2f0",
+  "uses_hidden_labels": false,
+  "max_candidates": 4,
+  "tie_order": "size then canonical feature IDs"
+}

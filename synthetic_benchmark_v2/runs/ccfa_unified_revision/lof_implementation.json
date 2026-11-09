@@ -1,0 +1,60 @@
+{
+  "runner_sha256": "a14920efae039f4b7c066f57e3780b9d54b353a3ac42374eb9d0c17669b386a4",
+  "variants": [
+    [
+      "original",
+      1e-06
+    ],
+    [
+      "original",
+      1e-09
+    ],
+    [
+      "original",
+      1e-12
+    ],
+    [
+      "ascending",
+      1e-06
+    ],
+    [
+      "ascending",
+      1e-09
+    ],
+    [
+      "ascending",
+      1e-12
+    ],
+    [
+      "descending",
+      1e-06
+    ],
+    [
+      "descending",
+      1e-09
+    ],
+    [
+      "descending",
+      1e-12
+    ],
+    [
+      "inclusive",
+      1e-06
+    ],
+    [
+      "inclusive",
+      1e-09
+    ],
+    [
+      "inclusive",
+      1e-12
+    ]
+  ],
+  "additional": [
+    "unique_inclusive",
+    "distinct_radius_multiplicity"
+  ],
+  "distinct_radius": "k distinct non-identical reference coordinate groups; all boundary ties; original point weights retained; k capped to available groups.",
+  "ties_tolerance": 1e-12,
+  "fitted_population": "reference only"
+}

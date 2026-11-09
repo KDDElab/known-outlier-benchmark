@@ -25,6 +25,11 @@ ANALYSES = [
     'figures/make_manuscript_result_figures.py',
     'figures/make_acceptance_figures.py',
     'synthetic_benchmark_v2/finalize_acceptance_manifest.py',
+    'synthetic_benchmark_v2/analyze_unified_revision.py',
+    'synthetic_benchmark_v2/audit_unified_corrections.py',
+    'synthetic_benchmark_v2/verify_unified_revision.py',
+    'figures/make_unified_figures.py',
+    'synthetic_benchmark_v2/finalize_unified_manifest.py',
 ]
 
 
