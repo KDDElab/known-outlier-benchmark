@@ -72,12 +72,12 @@ def main():
         out.mkdir(parents=True, exist_ok=True)
         env = {**os.environ, 'BIBINPUTS': str(ROOT) + ':' + os.environ.get('BIBINPUTS', '')}
         latex = ['pdflatex', '-interaction=nonstopmode', '-halt-on-error',
-                 '-output-directory', str(out), 'phase_d_manuscript_draft.tex']
-        for command, cwd in [(latex, ROOT), (['bibtex', 'phase_d_manuscript_draft'], out),
+                 '-output-directory', str(out), 'IEEE-conference-template-062824.tex']
+        for command, cwd in [(latex, ROOT), (['bibtex', 'IEEE-conference-template-062824'], out),
                              (latex, ROOT), (latex, ROOT)]:
             subprocess.run(command, cwd=cwd, env=env, check=True)
         from manuscript_page_accounting import page_accounting
-        print(json.dumps(page_accounting(out / 'phase_d_manuscript_draft.pdf'), indent=2))
+        print(json.dumps(page_accounting(out / 'IEEE-conference-template-062824.pdf'), indent=2))
 
 
 if __name__ == '__main__':

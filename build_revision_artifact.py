@@ -25,11 +25,17 @@ and analysis code for **Evaluating Language Models and Subspace Methods for
 Explaining Known Tabular Outliers**.
 
 - Public repository: https://github.com/KDDElab/known-outlier-benchmark
-- Fixed artifact release: https://github.com/KDDElab/known-outlier-benchmark/releases/tag/icde2027-eab-v7
-- Paper: [PDF](phase_d_manuscript_draft.pdf) and [LaTeX](phase_d_manuscript_draft.tex).
-- The paper has **12 main-text pages plus one page of AI disclosure and references**,
+- Historical artifact release (v7): https://github.com/KDDElab/known-outlier-benchmark/releases/tag/icde2027-eab-v7
+- Paper: [PDF](IEEE-conference-template-062824.pdf) and [LaTeX](IEEE-conference-template-062824.tex).
+- The paper has **14 pages: 12 main-text pages and two pages containing AI disclosure and references**,
   following the [ICDE 2027 EAB page rule](https://icde2027.github.io/cf-research-papers.html).
   There is no appendix. This repository does not claim conference acceptance.
+
+The current manuscript is `IEEE-conference-template-062824.tex` and its compiled
+PDF. The `icde2027-eab-v7` release and root-level `phase_d_manuscript_draft.*` files
+preserve the earlier manuscript snapshot; they are not the current 14-page PDF.
+Use the current checkout for the mapping below, or check out the v7 tag when
+reproducing that historical release.
 
 ## Quick start
 
@@ -46,12 +52,13 @@ recomputes scores from the included predictions, regenerates plots and tables,
 and writes the compiled PDF to `reproduced/paper/`. It does not run model inference.
 Use a fresh checkout for each reproduction: analysis can rewrite derived files,
 so a later checksum comparison with the untouched release can then differ.
-All frozen cohorts, failures and source records remain included. A downloadable
-release archive and its SHA-256 file provide the same artifact without Git.
+All frozen cohorts, failures and source records remain included. The v7 release archive and its SHA-256 file preserve the earlier snapshot;
+GitHub source archives for the current commit contain this updated documentation
+and IEEE-template manuscript.
 
 Model weights are obtained from the original providers; see the model section
 below. No GitHub login is needed to download the artifact or reproduce its
-analysis from frozen predictions. The supplied author name and ORCID are retained.
+analysis from frozen predictions. Author information follows the current manuscript.
 
 ## Which results belong to the revision?
 
@@ -138,6 +145,8 @@ Original 95% template-bootstrap intervals remain in the archived diagnostic plot
 presentation tables and their 194 mean/SD entries from frozen per-case scores.
 The supplied Qwen logo remains in the Figure 2 framework.
 
+### Historical presentation revisions (v4--v7)
+
 The v4 revision changes presentation only. Figure 1 uses the approved Figure 2
 visual grammar; Figures 2 and 3 retain their v3 exports. Figures 4--7 return to
 the earlier boxed-axis, method-color and condition-hatch style. Run
@@ -167,6 +176,23 @@ and all archived data are preserved. The caption and prose references now descri
 the Pima pilot; invoice references point to Figure 2. Figures 2--7 and table source
 contents are unchanged. No new experiments or model calls were made for this edit.
 
+### Current IEEE-template revision (2026-11-11)
+
+The current paper contains seven figures (1--7) and six tables (I--VI). The body
+ends on page 12; AI disclosure and references occupy pages 13--14. The current
+LaTeX inlines the tables in the supplied IEEE conference template. Historical
+`.tex` table exports remain numerical provenance; compiling the current source
+does not import their older formatting. Best and second-best values in Tables
+II--V are bold and underlined, respectively.
+
+The revision restores the UCI Car Evaluation dataset citation, corrects PVLDB
+publication names, and describes 862/864 as sample--population minimal-family
+disagreement. It does not interpret this count as an unidentifiable-case rate.
+No inference or experiment was rerun for these editorial corrections. The seven
+figure PDFs were compared with the current manuscript assets and match. This
+file comparison and PDF compilation do not establish independent reproduction
+of the underlying experiments.
+
 ## Recompute scores and figures from frozen predictions
 
 Run from the unpacked package root, using the environment versions recorded in
@@ -194,10 +220,11 @@ python synthetic_benchmark_v2/verify_unified_revision.py
 python figures/make_unified_figures.py
 python figures/make_presentation_restoration.py
 python synthetic_benchmark_v2/finalize_unified_manifest.py
-pdflatex -interaction=nonstopmode -halt-on-error phase_d_manuscript_draft.tex
-bibtex phase_d_manuscript_draft
-pdflatex -interaction=nonstopmode -halt-on-error phase_d_manuscript_draft.tex
-pdflatex -interaction=nonstopmode -halt-on-error phase_d_manuscript_draft.tex
+mkdir -p reproduced/paper
+pdflatex -interaction=nonstopmode -halt-on-error -output-directory=reproduced/paper IEEE-conference-template-062824.tex
+(cd reproduced/paper && BIBINPUTS=../..: bibtex IEEE-conference-template-062824)
+pdflatex -interaction=nonstopmode -halt-on-error -output-directory=reproduced/paper IEEE-conference-template-062824.tex
+pdflatex -interaction=nonstopmode -halt-on-error -output-directory=reproduced/paper IEEE-conference-template-062824.tex
 ```
 
 These commands do not require model weights or GPU inference. The shared parser
@@ -210,17 +237,45 @@ The package verification also uses PyMuPDF for figure-pixel comparisons.
 The manuscript's result statements were edited after reading the exported tables;
 compilation does not automatically rewrite prose if a new experiment changes them.
 
-Figure files under `figures/` are provided as PDF, SVG and PNG:
+### Current figure and table map
 
-| Manuscript figure | File stem |
-| --- | --- |
-| 1 | `figure_intro_real_dataset` |
-| 2 | `figure2_overall_framework` |
-| 3 | `figure_unified_transfer` |
-| 4 | `figure_unified_evidence` |
-| 5 | `figure_unified_contract` |
-| 6 | `figure_unified_lof` |
-| 7 | `figure_unified_corrections` |
+Figure files under `figures/` are provided as PDF, SVG and PNG. In the tables
+below, run-directory abbreviations mean:
+
+- **U**: [`synthetic_benchmark_v2/runs/ccfa_unified_revision/`](synthetic_benchmark_v2/runs/ccfa_unified_revision/).
+- **A**: [`synthetic_benchmark_v2/runs/ccfa_acceptance_revision/`](synthetic_benchmark_v2/runs/ccfa_acceptance_revision/).
+- **C**: [`synthetic_benchmark_v2/runs/ccfa_constraint_transfer/`](synthetic_benchmark_v2/runs/ccfa_constraint_transfer/).
+- **R**: [`synthetic_benchmark_v2/runs/ccfa_revision/`](synthetic_benchmark_v2/runs/ccfa_revision/).
+
+| Figure | Export stem in `figures/` | Evaluation and frozen data | Final renderer |
+| --- | --- | --- | --- |
+| 1 | `figure_intro_real_dataset` | Pima C0035 / row 259; `data/adbench/29_Pima.npz`, `manifests/cases.csv`, `runs/annotations.jsonl`, `reports/leave_one_model_out_by_case.csv`; peer agreement only | `make_manuscript_figures.py`, also called by `make_presentation_restoration.py --intro-only` |
+| 2 | `figure2_overall_framework` | Unified task overview; original-prompt invoice trace `constraint_tax_total_000`; C: `ground_truth.jsonl`, `populations.jsonl`, `scores_per_case.csv`, model and baseline prediction files | `make_manuscript_figures.py` |
+| 3 | `figure_unified_transfer` | Unified new rules (48 targets), invoices (96), and Car (48); U: `summary.csv`, `per_case.csv` | `make_unified_figures.py` |
+| 4 | `figure_unified_evidence` | Same 24 new-rule targets, three reference draws and complete evidence; U: `repeated_summary.csv`, `complete_error_counts.csv`; original Qwen comparison from A | `make_presentation_restoration.py` |
+| 5 | `figure_unified_contract` | Same 96 targets under separate and joint configuration controls; A: `prior_per_case.csv`, `structured_per_case.csv`; U: `summary.csv` | `make_presentation_restoration.py` |
+| 6 | `figure_unified_lof` | Invoice duplicate, tie, numerical-floor, and neighbor diagnostics; U: `lof_sensitivity_summary.csv`, `lof_candidate_scores/constraint_line_net_000.npz`; A: `invoice_sweep_summary.csv` | `make_presentation_restoration.py` |
+| 7 | `figure_unified_corrections` | Public corrected-field inspection; U: `correction_strata_per_case.csv`, `beers_non_ounces_per_case.csv`; 72 queries and the 16-query Beers subset | `make_presentation_restoration.py` |
+
+| Table | Current purpose | Frozen numerical source / semantic source | LaTeX label |
+| --- | --- | --- | --- |
+| I | Distinct explanation-label semantics | Definitions in Section II; no pooled empirical score | `tab:semantics` |
+| II | Primary unified comparison across four support workloads | U: `summary.csv`, `per_case.csv`; source export `presentation_primary_wide.tex` | `tab:unified` |
+| III | Unified new-rule evidence and stability | U: `repeated_summary.csv`, `per_case.csv`; source export `presentation_evidence_wide.tex` | `tab:unified-evidence` |
+| IV | Original 864-case diagnostic, including controls | R: `all_scores.csv`, `main_summary.csv`; A: `presentation_statistics.csv`; U: `presentation_original_wide.tex`; original Gower size prior remains asymmetric | `tab:original` |
+| V | Public corrected-field inspection | A: `real_cells_per_case.csv`, `presentation_statistics.csv`, `presentation_real_cells_table.tex`; this is correction localization | `tab:real-cells` |
+| VI | Neighboring evaluation targets | Cited work and the manuscript's semantic classification; no benchmark accuracy cells | `tab:related-work` |
+
+U contains `inputs.jsonl`, `annotations_*.jsonl`, `predictions_*.jsonl`, and
+`protocol.json` for the unified runs. The Figure 2 trace belongs to C's original
+prompt, and Table IV belongs to R's original comparison. They must not be pooled
+with U as if they shared the joint configuration. The original-prompt Qwen column
+in Figure 4 is also labeled separately.
+
+Run the figure commands in the order above: the final presentation-restoration
+step replaces Figures 1 and 4--7 and retains the final Figure 2/3 exports. The
+current IEEE source contains the publication table layouts; numerical exports
+support their values but do not rewrite those layouts automatically.
 
 Figure 1 follows the author's supplied Pima screenshot. The top panel shows the
 real glucose--BMI scatter, 12 archived references and all eight target values.
@@ -364,6 +419,13 @@ both the 30- and 300-epoch budgets, including the worse longer-budget result.
 
 ## Statistical and evidence boundaries
 
+The original audit found different sample-minimal and population-minimal families
+in 862 of 864 cases. This is a family-disagreement count, not an unidentifiability
+rate, an impossibility proof, or an error lower bound for every method. A family
+can contain spurious sample minima while retaining valid population explanations.
+Label retention, extra candidates, repeated references, and complete-population
+conditions describe complementary aspects of the evidence.
+
 Current primary scores average four cases within each of 24 templates, then
 templates equally. New rules use 12 rule units, invoices four relations, and
 Car 48 selected cases from one decision source. Reported SDs use these declared
@@ -374,8 +436,8 @@ Original scores average cases within a seed/template, available seeds within a
 template, then the 38 templates equally. Bootstrap intervals and paired tests use
 that same estimator. Abstentions and failures remain misses in all-query scores;
 top-one size is defined only for answered queries. Main, intervention, and unordered
-choice comparisons have separate declared correction families. Stored intervals
-are retained even though manuscript tables show point estimates.
+choice comparisons have separate declared correction families. Stored bootstrap intervals
+remain archived; manuscript tables report means and their stated SDs.
 `legacy_revision_descriptive_deltas.csv` separately compares historical role-prefix
 responses with the revision under the current parser, abstention rule and estimator.
 This post-hoc diagnostic does not introduce an additional hypothesis-test family.
@@ -427,8 +489,8 @@ def main():
     assert json.loads((UNIFIED/'execution_manifest.json').read_text())['complete']
     for m in ['qwen35_9b','deepseek_v2_lite_chat','llama31_8b_instruct']:
         assert sum(1 for _ in (RUN/f'new_{m}.jsonl').open())==1055
-    pdf=ROOT/'phase_d_manuscript_draft.pdf'
-    source=(ROOT/'phase_d_manuscript_draft.tex').read_text()
+    pdf=ROOT/'IEEE-conference-template-062824.pdf'
+    source=(ROOT/'IEEE-conference-template-062824.tex').read_text()
     assert 'RESULT_PENDING_' not in source,'Populate every result-dependent manuscript section before release'
     assert 'example.org' not in source,'Placeholder artifact URLs are not release identifiers'
     accounting=page_accounting(pdf)
@@ -454,7 +516,7 @@ def main():
         patterns=['*.py'] if folder!='figures' else ['*.py','*.pdf','*.svg','*.png','*.webp']
         for pattern in patterns:
             for p in src.glob(pattern):shutil.copy2(p,dst/p.name)
-    for name in ['phase_d_manuscript_draft.pdf','phase_d_manuscript_draft.tex','phase_d_references.bib','revision_execution.md','experiment_design_and_improvement_plan.md','unified_revision_report.md']:
+    for name in ['IEEE-conference-template-062824.pdf','IEEE-conference-template-062824.tex','phase_d_manuscript_draft.pdf','phase_d_manuscript_draft.tex','phase_d_references.bib','revision_execution.md','experiment_design_and_improvement_plan.md','unified_revision_report.md']:
         shutil.copy2(ROOT/name,DEST/name)
     shutil.copy2(ROOT/'MODEL_SOURCES.json',DEST/'MODEL_SOURCES.json')
     backup=ROOT.parent/'ccfa-workfiles/revision/known-outlier/before'
