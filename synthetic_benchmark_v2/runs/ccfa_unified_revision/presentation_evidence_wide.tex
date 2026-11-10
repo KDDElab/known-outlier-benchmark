@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering\scriptsize
+\caption{Unified new-rule evidence diagnostics, mean $\pm$ SD across 12 rules. The three draws and Complete use the same 24 targets. Complete also declares exhaustive normal evidence. Stable counts targets with an answered, nonempty and identical first set across all three draws.}
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.14}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}|l|rr|rrr|rr|r|}
+\hline
+Method & \multicolumn{2}{c|}{New targets (48)} & \multicolumn{3}{c|}{Repeated references (same 24)} & \multicolumn{2}{c|}{Complete population (24)} & Stable \\
+\cline{2-8}
+ & Exact@1 & Hit@4 & Draw 1 Exact & Draw 2 Exact & Draw 3 Exact & Exact@1 & Hit@4 & / 24 \\
+\hline
+Qwen & $0.104\!\pm\!0.225$ & $0.313\!\pm\!0.304$ & $0.125\!\pm\!0.311$ & $0.000\!\pm\!0.000$ & $0.083\!\pm\!0.195$ & $0.208\!\pm\!0.334$ & $0.375\!\pm\!0.433$ & 1 \\
+DeepSeek & $0.042\!\pm\!0.097$ & $0.042\!\pm\!0.097$ & $0.000\!\pm\!0.000$ & $0.000\!\pm\!0.000$ & $0.042\!\pm\!0.144$ & $0.000\!\pm\!0.000$ & $0.000\!\pm\!0.000$ & 8 \\
+Llama & $0.042\!\pm\!0.097$ & $0.146\!\pm\!0.225$ & $0.042\!\pm\!0.144$ & $0.125\!\pm\!0.226$ & $0.042\!\pm\!0.144$ & $0.083\!\pm\!0.195$ & $0.125\!\pm\!0.226$ & 0 \\
+\hline
+SME & $0.667\!\pm\!0.456$ & $0.813\!\pm\!0.322$ & $0.708\!\pm\!0.450$ & $0.625\!\pm\!0.377$ & $0.708\!\pm\!0.396$ & $1.000\!\pm\!0.000$ & $1.000\!\pm\!0.000$ & 11 \\
+Gower-kNN & $0.625\!\pm\!0.446$ & $0.833\!\pm\!0.343$ & $0.583\!\pm\!0.469$ & $0.583\!\pm\!0.515$ & $0.583\!\pm\!0.469$ & $0.625\!\pm\!0.483$ & $0.833\!\pm\!0.389$ & 10 \\
+Gower-LOF & $0.542\!\pm\!0.424$ & $0.729\!\pm\!0.445$ & $0.542\!\pm\!0.498$ & $0.542\!\pm\!0.498$ & $0.458\!\pm\!0.450$ & $0.583\!\pm\!0.515$ & $0.833\!\pm\!0.389$ & 12 \\
+\hline
+\end{tabular*}
+\renewcommand{\arraystretch}{1.0}
+\label{tab:unified-evidence}
+\end{table*}

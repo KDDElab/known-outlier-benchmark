@@ -5,7 +5,7 @@ and analysis code for **Evaluating Language Models and Subspace Methods for
 Explaining Known Tabular Outliers**.
 
 - Public repository: https://github.com/KDDElab/known-outlier-benchmark
-- Fixed artifact release: https://github.com/KDDElab/known-outlier-benchmark/releases/tag/icde2027-eab-v3
+- Fixed artifact release: https://github.com/KDDElab/known-outlier-benchmark/releases/tag/icde2027-eab-v4
 - Paper: [PDF](phase_d_manuscript_draft.pdf) and [LaTeX](phase_d_manuscript_draft.tex).
 - The paper has **12 main-text pages plus one page of AI disclosure and references**,
   following the [ICDE 2027 EAB page rule](https://icde2027.github.io/cf-research-papers.html).
@@ -104,16 +104,26 @@ run root contains historical rescoring, four-order scores, and the n/T grid.
 
 ## Result presentation
 
-The manuscript contains seven figures and four tables. Result tables display
+The manuscript contains seven figures and six tables, including five full-width
+tables. Table VI restores the complete neighboring-evaluation-target matrix.
+The unified comparison, repeated-reference diagnostics, original 864-case suite,
+and public corrections have grouped wide result tables. Result tables display
 mean plus/minus sample SD across their stated aggregation units: original
 templates, new compositions, and public sources. Individual-source correction
 columns instead use case SD. Conditional first-set size uses coverage-weighted
 template SD. These SDs describe heterogeneity, not repeated-model-run variability.
-The original 95% template-bootstrap intervals remain in the main-result figure.
+Original 95% template-bootstrap intervals remain in the archived diagnostic plot.
 `figures/make_acceptance_figures.py` also calls
 `synthetic_benchmark_v2/present_acceptance_results.py`, regenerating the three
 presentation tables and their 194 mean/SD entries from frozen per-case scores.
 The supplied Qwen logo remains in the Figure 2 framework.
+
+The v4 revision changes presentation only. Figure 1 uses the approved Figure 2
+visual grammar; Figures 2 and 3 retain their v3 exports. Figures 4--7 return to
+the earlier boxed-axis, method-color and condition-hatch style. Run
+`figures/make_presentation_restoration.py` after the previous figure generators;
+it rebuilds Figure 1, Figures 4--7 and the three restored wide result tables from
+frozen records. No additional inference or experiments were performed for v4.
 
 ## Recompute scores and figures from frozen predictions
 
@@ -140,6 +150,7 @@ python synthetic_benchmark_v2/analyze_unified_revision.py
 python synthetic_benchmark_v2/audit_unified_corrections.py
 python synthetic_benchmark_v2/verify_unified_revision.py
 python figures/make_unified_figures.py
+python figures/make_presentation_restoration.py
 python synthetic_benchmark_v2/finalize_unified_manifest.py
 pdflatex -interaction=nonstopmode -halt-on-error phase_d_manuscript_draft.tex
 bibtex phase_d_manuscript_draft

@@ -29,6 +29,7 @@ ANALYSES = [
     'synthetic_benchmark_v2/audit_unified_corrections.py',
     'synthetic_benchmark_v2/verify_unified_revision.py',
     'figures/make_unified_figures.py',
+    'figures/make_presentation_restoration.py',
     'synthetic_benchmark_v2/finalize_unified_manifest.py',
 ]
 

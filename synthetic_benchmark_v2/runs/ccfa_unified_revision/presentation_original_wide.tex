@@ -1,0 +1,31 @@
+\begin{table*}[t]
+\centering\scriptsize
+\caption{Original 864-case diagnostic: mean $\pm$ SD across 38 templates; answered-only size uses coverage-weighted template SD. Gower uses a three-field prior absent from the original LLM prompt. This table preserves the original configuration; Table~\ref{tab:unified} gives the joint comparison. Bold marks the best non-control mean; M\textsuperscript{2}OE is assessed separately.}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}|c|l|rrrr|rr|rr|}
+\hline
+\multicolumn{2}{|c|}{Methods} & \multicolumn{4}{c|}{Population-support labels ($\uparrow$)} & \multicolumn{2}{c|}{Rule labels ($\uparrow$)} & \multicolumn{2}{c|}{Output behavior} \\
+\cline{1-10}
+Group & Method & Suff.@1 & Exact@1 & Hit@4 & Jaccard@4 & Exact@1 & Hit@4 & \shortstack{Top-one\\fraction} & Answered \\
+\hline
+\multirow{3}{*}{\scriptsize LMs} & Qwen3.5-9B & $0.537\!\pm\!0.300$ & $0.231\!\pm\!0.215$ & $0.249\!\pm\!0.210$ & $0.460\!\pm\!0.168$ & $0.202\!\pm\!0.198$ & $0.235\!\pm\!0.218$ & $0.228\!\pm\!0.065$ & $0.992\!\pm\!0.019$ \\
+ & DeepSeek-V2-Lite-Chat & $0.291\!\pm\!0.145$ & $0.023\!\pm\!0.037$ & $0.039\!\pm\!0.051$ & $0.200\!\pm\!0.052$ & $0.020\!\pm\!0.036$ & $0.032\!\pm\!0.050$ & $0.406\!\pm\!0.089$ & $0.731\!\pm\!0.087$ \\
+ & Llama-3.1-8B-Instruct & $0.183\!\pm\!0.161$ & $0.032\!\pm\!0.043$ & $0.049\!\pm\!0.059$ & $0.216\!\pm\!0.066$ & $0.024\!\pm\!0.032$ & $0.041\!\pm\!0.050$ & $0.202\!\pm\!0.013$ & $0.821\!\pm\!0.102$ \\
+\hline
+\multirow{3}{*}{\scriptsize Rankers} & Gower-LOF & $0.538\!\pm\!0.366$ & $\mathbf{0.514\!\pm\!0.360}$ & $\mathbf{0.637\!\pm\!0.328}$ & $\mathbf{0.762\!\pm\!0.206}$ & $\mathbf{0.451\!\pm\!0.340}$ & $\mathbf{0.603\!\pm\!0.358}$ & $0.131\!\pm\!0.032$ & $1.000\!\pm\!0.000$ \\
+ & Gower-kNN & $0.608\!\pm\!0.330$ & $0.411\!\pm\!0.302$ & $0.499\!\pm\!0.284$ & $0.683\!\pm\!0.187$ & $0.351\!\pm\!0.289$ & $0.480\!\pm\!0.303$ & $0.197\!\pm\!0.053$ & $1.000\!\pm\!0.000$ \\
+ & RLAX adaptation & $0.498\!\pm\!0.407$ & $0.426\!\pm\!0.384$ & $0.478\!\pm\!0.367$ & $0.665\!\pm\!0.243$ & $0.393\!\pm\!0.359$ & $0.440\!\pm\!0.354$ & $0.143\!\pm\!0.041$ & $1.000\!\pm\!0.000$ \\
+\hline
+\multirow{2}{*}{\scriptsize Adapt.} & SOD adaptation & $\mathbf{0.610\!\pm\!0.438}$ & $0.000\!\pm\!0.000$ & $0.000\!\pm\!0.000$ & $0.162\!\pm\!0.102$ & $0.000\!\pm\!0.000$ & $0.000\!\pm\!0.000$ & $0.577\!\pm\!0.087$ & $1.000\!\pm\!0.000$ \\
+ & COP adaptation & $0.011\!\pm\!0.028$ & $0.011\!\pm\!0.028$ & $0.021\!\pm\!0.035$ & $0.144\!\pm\!0.071$ & $0.009\!\pm\!0.022$ & $0.018\!\pm\!0.030$ & $0.097\!\pm\!0.000$ & $1.000\!\pm\!0.000$ \\
+\hline
+\multirow{4}{*}{\scriptsize Controls} & Univariate top four & $0.144\!\pm\!0.207$ & $0.144\!\pm\!0.207$ & $0.391\!\pm\!0.406$ & $0.537\!\pm\!0.281$ & $0.129\!\pm\!0.188$ & $0.386\!\pm\!0.402$ & $0.097\!\pm\!0.000$ & $1.000\!\pm\!0.000$ \\
+ & Random size prior & $0.108\!\pm\!0.084$ & $0.033\!\pm\!0.021$ & $0.123\!\pm\!0.076$ & $0.343\!\pm\!0.018$ & $0.028\!\pm\!0.019$ & $0.106\!\pm\!0.072$ & $0.162\!\pm\!0.002$ & $1.000\!\pm\!0.000$ \\
+ & All fields & $1.000\!\pm\!0.000$ & $0.000\!\pm\!0.000$ & $0.000\!\pm\!0.000$ & $0.157\!\pm\!0.066$ & $0.000\!\pm\!0.000$ & $0.000\!\pm\!0.000$ & $1.000\!\pm\!0.000$ & $1.000\!\pm\!0.000$ \\
+ & First three positions & $0.220\!\pm\!0.139$ & $0.002\!\pm\!0.014$ & $0.002\!\pm\!0.014$ & $0.154\!\pm\!0.056$ & $0.002\!\pm\!0.014$ & $0.002\!\pm\!0.014$ & $0.292\!\pm\!0.000$ & $1.000\!\pm\!0.000$ \\
+\hline
+\end{tabular*}
+\renewcommand{\arraystretch}{1.0}
+\label{tab:original}
+\end{table*}

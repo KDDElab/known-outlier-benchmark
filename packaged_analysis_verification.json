@@ -58,7 +58,10 @@
     "synthetic_benchmark_v2/runs/ccfa_unified_revision/reference_stability.csv": "32e49cbed23d5ae85ab26561861fd6bdf5f0c82eb561a5f7b8e00fbb4d87074d",
     "synthetic_benchmark_v2/runs/ccfa_unified_revision/primary_table.tex": "47d9d9ab73b46c47c1c53e601cdfca965ecd2af02caab9f562ea07d553ffb6e0",
     "synthetic_benchmark_v2/runs/ccfa_unified_revision/original_compact_table.tex": "419df696b3daddcb29190a9e1fc9b5bec56f8ff9735ded5e74a3a95d2062c150",
-    "synthetic_benchmark_v2/runs/ccfa_unified_revision/beers_non_ounces_summary.csv": "069aa29eea491e253e693c0d3b5587e2d2c1aba354a8c2ca626594b3900f3ce8"
+    "synthetic_benchmark_v2/runs/ccfa_unified_revision/beers_non_ounces_summary.csv": "069aa29eea491e253e693c0d3b5587e2d2c1aba354a8c2ca626594b3900f3ce8",
+    "synthetic_benchmark_v2/runs/ccfa_unified_revision/presentation_primary_wide.tex": "4cd4268fd915cbb5da491bdba9758f9fffb869671e3bad59407d4657216e4eb4",
+    "synthetic_benchmark_v2/runs/ccfa_unified_revision/presentation_evidence_wide.tex": "0f80a24a02ce2da7601667c5d4923a624d42b05722d6968e17786fbec7ad4f1d",
+    "synthetic_benchmark_v2/runs/ccfa_unified_revision/presentation_original_wide.tex": "7a33a1c7642dafa8589c34d89de6d2191195563367432a1d0890088a06e23bc8"
   },
   "compared_figure_render_sha256": {
     "figure_intro_real_dataset": "88eeffdd759d6f87a01585231d93f2f6da2a833700b88d479ecb0f69d033054f",
@@ -70,12 +73,12 @@
     "figure_acceptance_invoice_mechanism": "8506d2dd51bc8700c53f411fd806e5d2cdaacb76ba1a10d70d690f57765bb4e2",
     "figure_acceptance_shared_prior": "f49f1aeb83e4f5232f56421fb712844756286f8e837d9568134c55868f8e5c65",
     "figure_acceptance_structured_output": "35bb98021c2fc7acea1c827c4141bc4cd7c2d629aaaacb5df14aaff39267ca43",
-    "figure_intro_support_semantics": "b2029489a698ff55d0a0211ec551edfe8ab7904daf946c279131e3ea62453ab7",
+    "figure_intro_support_semantics": "039a7befd0b5d3749a11777091b607d7456aa1c972b90fa4498d46daeeba0327",
     "figure_unified_transfer": "9bb0252f004c39afd83d0e70ee0d612188369ca08b860ecad3033f30e087ccfa",
-    "figure_unified_evidence": "daad50aba7cfe5d8e2bd8764c462b50f97f4a8735fdf628b37c44ffc61aea0c5",
-    "figure_unified_contract": "ad2480f6e800d4880ded776206e6e058985c4c5176a1bc12b39a647d50a733cd",
-    "figure_unified_lof": "dc6f1302d958bd44d155fb42eb807ed62adafe9f0453f1332c87fb441b4d7a73",
-    "figure_unified_corrections": "f7f751c64c7deed4d7e73fceaf6eb6fe7dfefbcb6cd5cd1a2a553d6cab35d42d"
+    "figure_unified_evidence": "e4d334e69fae0b28c34e9c40aed6eb134cd04b4453156a2a44b6bb2007e9e401",
+    "figure_unified_contract": "3c0b32b091a4eb03a82f4ae6a229ae219f97149ed9c70148a3fc67dabdaa1999",
+    "figure_unified_lof": "1b72813e59fe79a991b28650ca3246692296b79cada97a08eebea1da1d15c36b",
+    "figure_unified_corrections": "a3100f48f6710a5195eb806748e2ff88ffd41c79cc1a6c49b8bf07692c38899f"
   },
   "acceptance_summary_equal": true,
   "acceptance_input_reconstruction_passed": true,
@@ -87,5 +90,25 @@
     "all_figure_pixels_match": true,
     "pdf_pages": 13,
     "main_text_pages": 12
+  },
+  "presentation_refresh": {
+    "release": "icde2027-eab-v4",
+    "scope": "Presentation only; numerical analysis verification retained from v3",
+    "unchanged_evidence_files": 1416,
+    "new_model_inference": false,
+    "new_experiments": false,
+    "presentation_source_files_identical_to_v3": 15,
+    "changed_presentation_rebuilt_from_packaged_records": true,
+    "seven_figure_pixels_match": true,
+    "three_wide_tables_match": true,
+    "figure_2_and_3_exports_byte_identical_to_v3": true,
+    "page_accounting": {
+      "total_pages": 13,
+      "main_text_pages": 12,
+      "disclosure_starts_page": 13,
+      "excluded_reference_and_disclosure_pages": 1,
+      "main_text_within_limit": true,
+      "appendix": false
+    }
   }
 }

@@ -27,17 +27,24 @@ Investigating a data-quality alert requires choosing fields to inspect. A value 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{figures/figure_intro_support_semantics.pdf}
-\caption{The recorded invoice used throughout the paper. Blue points are all 20 clean net--gross pairs; the cross is the target. Gross 14 has a normal witness, whereas the pair $(25,14)$ has none. The recorded edited field and the two minimal support explanations are different evaluation targets.}
+\caption{One recorded invoice, traced from a gross-value edit to support checks. Gross 14 has a normal witness in the 20-triple population, while the net--gross and tax--gross pairs are absent and minimal. The three-field set is redundant. The edit history and the two minimal support explanations define different targets.}
 \label{fig:intro-support}
 \end{figure}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/figure2_overall_framework.pdf}
+\caption{Evaluation framework and recorded invoice \texttt{constraint\_tax\_total\_000}. The overview shows the unified core task; auxiliary tracks retain their own configurations and labels. The lower trace preserves outputs from the original prompt, illustrating why candidate generation and support verification differ. It displays three of eight fields and two of 32 references. Gross 14 is absent from $R$ but present in the 20-triple population $P$; the net--gross pair is excluded; LOF's second candidate is minimal. Purple paths carry evaluator-only information.}
+\label{fig:framework}
+\end{figure*}
 
 \textbf{Why compare language models?} A prompt can describe mixed field types, serialize examples, and request candidate subsets without fitting a separate model to every schema. LLM-based data-quality systems such as ZeroED and ZeroEC generate criteria, labels, or correction rules from context~\cite{ni2025zeroed,wu2025zeroec}. Table-anomaly and cleaning benchmarks similarly motivate evaluating this interface~\cite{choudhury2025tabard,gu2025radar,li2025autodcworkflow}. Here, three fixed local models must infer useful combinations from the supplied rows. Opaque or neutral names restrict the main comparison to that evidence; the experiment does not establish performance for larger models, tool-using systems, or domain-rich prompts.
 
 \textbf{The evaluation problem.} Relevant-subspace evaluation already allows multiple correct subsets and exact set matching~\cite{myrtakis2021comparative}. The unresolved issue addressed here is how to define \emph{all} minimal explanations of a population, distinguish those labels from an edit history, and assess methods that see only a sample. A projection absent from the references may occur elsewhere in the normal population. Conversely, a model may return a supported or redundant set even when every normal row is visible. Candidate size information and output requirements can further change a method comparison.
 
-\textbf{Our approach.} We enumerate complete finite clean populations and retain every inclusion-minimal support exclusion, with separate rule and provenance labels. The original 864-case study supplies 38 test templates and exposes evidence ambiguity. We then compare methods under one frozen core task: identical targets, references, candidate-size information, and four-candidate budgets; the LLMs use a minimal JSON schema. A sample-minimal enumeration baseline directly checks the visible support relation. The same configuration is applied to new rule compositions, invoice constraints, and an independent public expert decision table. Figure~\ref{fig:framework} connects these inputs, candidate generators, and evaluation targets.
+\textbf{Our approach.} We enumerate complete clean populations and their inclusion-minimal support exclusions, separating rule and provenance labels. The original 864 cases span 38 templates. The unified comparison shares targets, references, size information, and four-candidate budgets, with fixed JSON output for LLMs and a direct sample-enumeration baseline. New rules, invoice constraints, and an independent expert table extend the comparison (Figure~\ref{fig:framework}).
 
-The study follows three questions. \textbf{RQ1: Labels.} How do population support, rules, and recorded changes alter explanation evaluation? \textbf{RQ2: Evidence and configuration.} How do finite references, candidate priors, and output contracts affect comparisons under a common core task? \textbf{RQ3: Scoring mechanisms.} Why can a subspace ranker's performance reverse across workloads, and which implementation choices contribute?
+The study asks: \textbf{RQ1: Labels.} How do population support, rules, and recorded changes alter evaluation? \textbf{RQ2: Evidence and configuration.} How do references, candidate priors, and output contracts affect a common-task comparison? \textbf{RQ3: Scoring mechanisms.} Which implementation choices contribute to cross-workload ranking reversals?
 
 Our contributions are:
 \begin{itemize}
@@ -46,12 +53,7 @@ Our contributions are:
 \item \textbf{A mechanism analysis of discrete subspace ranking.} Matched invoice experiments isolate numerical floors, boundary ties, and duplicate handling. Public corrections and expert decisions clarify which conclusions transfer under unchanged explanation semantics and which concern a different target.
 \end{itemize}
 
-\begin{figure*}[t]
-\centering
-\includegraphics[width=\textwidth]{figures/figure2_overall_framework.pdf}
-\caption{Evaluation framework and recorded invoice \texttt{constraint\_tax\_total\_000}. The overview shows the unified core task; auxiliary tracks retain their own configurations and labels. The lower trace preserves outputs from the original prompt, illustrating why candidate generation and support verification differ. It displays three of eight fields and two of 32 references. Gross 14 is absent from $R$ but present in the 20-triple population $P$; the net--gross pair is excluded; LOF's second candidate is minimal. Purple paths carry evaluator-only information.}
-\label{fig:framework}
-\end{figure*}
+
 
 \section{Task and Label Semantics}
 
@@ -104,7 +106,7 @@ Peer agreement & Overlap with other model selections; no field truth & Agreement
 \section{Benchmark Construction}
 \subsection{Procedural support benchmark}
 
-Each of three seeds generates 40 templates with 12 cases each, split into eight training, eight development, and 24 test templates. The combined 864 test cases cover 38 templates. Splits are disjoint within a seed, but development/test unions overlap across seeds. This version was reevaluated after inspecting earlier results. Bootstrap and multiplicity correction describe repeated evidence on 38 templates; they cannot remove that selection bias. The new-composition validation freezes methods before generating different rules.
+Each of three seeds generates 40 templates with 12 cases each, split into eight training, eight development, and 24 test templates. The 864 test cases cover 38 templates. Splits are disjoint within each seed but overlap across seeds. Earlier results informed this reevaluation; bootstrap and multiplicity correction cannot remove that selection bias. New-composition validation freezes methods before generating different rules.
 
 Eight families cover numeric marginals, categorical rarity, pairs, conditional groups, multiple valid sets, edit/mechanism differences, relational comparisons, and higher-order logic. Each seed tests three of five templates per family; pooled family summaries involve four or five templates and remain descriptive.
 
@@ -123,17 +125,17 @@ The primary paired panel consists of all 96 first-split test targets with 32 ref
 
 An independent finite-domain workload instantiates four Peppol billing relations~\cite{peppol2026billing}: line net equals quantity times unit price plus charges minus allowances (R120, base quantity one); document net equals summed line nets plus charges minus allowances (BR-CO-13); gross equals net plus tax (BR-CO-15); and amount due equals gross minus paid plus rounding (BR-CO-16). These are synthetic integer amounts, not collected invoices or a full conformance test.
 
-We enumerate each normal relation, yielding 144, 144, 20, and 48 structured rows. One structured field of a clean row is changed to another value in its own clean marginal. We retain 24 distinct invalid targets per relation before model inference. Each of the 96 queries has eight opaque fields, independent categorical distractors, 32 sampled clean references, and independent display order. Complete population enumeration gives all minimal support alternatives, marginalizing independent distractors. The anomaly predicate is the complement of the normal relation, so support and rule labels coincide. Direct edits remain separate. The original prompt is retained as a diagnostic; the unified comparison uses the core configuration of Section IV. Both Gower methods search all 255 nonempty subsets. Scores average targets within each relation and the four relations equally; they are descriptive for these fixed relations.
+The four normal relations contain 144, 144, 20, and 48 structured rows. We change one field to another value in its clean marginal, retaining 24 distinct invalid targets per relation before inference. Each query has eight opaque fields, independent categorical distractors, 32 clean references, and independently ordered columns. Exhaustive population checks enumerate all support minima, marginalizing distractors. Support and rule labels coincide because the anomaly predicate complements the normal relation; direct edits remain separate. The original prompt is diagnostic; the unified comparison follows Section IV. Both Gower methods search all 255 nonempty subsets. Scores average the four relations equally.
 
 
 
 \subsection{New compositions and complete evidence}
 
-We freeze the three checkpoints, original full prompt, parser, and decoding protocol before generating 48 targets from 12 new Boolean compositions. Each composition has four to six essential coordinates in six visible binary fields; the original generator's rules have at most three. The new rules include parity, disjoint conjunctions, conditional parity, a multiplexer, count balance, and majority-output consistency. Their complete 64-row truth tables are distinct. Four invalid targets per rule are selected with a fixed seed before inference. Both Gower methods search all 63 nonempty subsets, with the same four-answer budget as the models.
+We freeze the checkpoints, original prompt, parser, and decoding before generating four invalid targets for each of 12 new Boolean compositions. The six-field rules use four to six essential coordinates, exceeding the original maximum of three. Parity, disjoint conjunctions, conditional parity, multiplexer, count-balance, and majority-consistency rules have distinct 64-row truth tables. Fixed-seed target selection precedes inference. Gower searches all 63 subsets; all methods have four answers.
 
-Each target receives an independent 32-row sample with replacement. The first two targets per rule, fixed before inference, additionally receive two independent samples and the complete normal population. This gives 24 matched targets under three draws and complete evidence, or 120 inputs per method in total. Complete evidence contains every normal six-field tuple, including all nuisance combinations, and the prompt explicitly identifies it as complete. This condition changes evidence coverage and the completeness declaration together. The rules are newly designed after review, rather than externally curated blind tasks; model and protocol choices are not adjusted to their results.
+Each target receives an independent 32-row sample with replacement. The first two targets per rule additionally receive two samples and the complete normal population, yielding 24 matched targets and 120 inputs per method. Complete evidence includes every normal tuple and declares completeness in the prompt; these changes are inseparable. The rules were designed after review, not externally curated as blind tasks. Model and protocol choices were not adjusted to their results.
 
-We average targets within each new rule and the 12 rules equally. Prespecified strata use minimum truth size (1--2, 3, 4--6), number of minimal alternatives (1, 2--4, 5 or more), and extra sample minima (0, 1--3, 4 or more). Repeated samples hold target, schema, display order, and population labels fixed. They measure sampling sensitivity without treating repeated observations as independent tasks.
+Scores average targets within rules, then the 12 rules equally. Strata use minimum truth size (1--2, 3, 4--6), alternative count (1, 2--4, $\geq5$), and extra sample minima (0, 1--3, $\geq4$). Repeated samples fix the target, schema, display, and population labels; they are not independent tasks.
 
 
 The unified configuration is fixed before its new generations on these existing queries. We retain the original full-prompt results as diagnostics; the joint rerun does not make this previously examined workload a fresh blind test.
@@ -141,10 +143,10 @@ The unified configuration is fixed before its new generations on these existing 
 \subsection{Independent expert decision table}
 UCI Car Evaluation is derived from an expert decision model and completely covers its six-attribute categorical domain~\cite{bohanec1988car}. We verify that the 1,728 distinct rows equal the Cartesian product of the published domains. The 518 configurations labeled acceptable, good, or very good define $P_X$; an unacceptable configuration is the flagged target. Exhaustive projection checks produce the same population-minimal support labels as in Section II. This supplies an independent source of normal constraints, with no injected edit serving as explanation truth.
 
-Before inference, a fixed seed selects 12 unacceptable targets per buying-price category, for 48 targets. Each query receives 32 acceptable references sampled without replacement. Random opaque field IDs and independently shuffled display order preserve the categorical values. The price stratum is used for selection only; source labels, decision rules, and full populations are hidden. All 63 nonempty subsets are eligible. Results describe this one expert decision system; its configurations are not observed anomaly incidents, and opaque IDs do not exclude pretraining exposure.
+Before inference, a fixed seed selects 12 unacceptable targets per buying-price category. Each of the 48 queries receives 32 acceptable references without replacement. Random opaque IDs and independently shuffled columns preserve values. Selection strata, source labels, rules, and populations are hidden; all 63 nonempty subsets are eligible. This is one expert decision system, not observed anomaly incidents; opaque IDs cannot exclude pretraining exposure.
 
 \subsection{Auxiliary targets}
-\textbf{Public corrections.} We retain 72 queries from the Flights, Beers, and Rayyan dirty/clean pairs distributed with Raha and Baran~\cite{mahdavi2019raha,mahdavi2020baran}. Each source contributes 24 targets: eight with one, two, or at least three recorded corrections, chosen before the original predictions. Methods receive 32 corrected reference rows excluding held-out targets; Flights also excludes other records of the same flight. Raw strings and source row identities are preserved; record-index fields are removed. The hidden corrected counterpart supplies acceptable singleton inspection targets, including source-specific formatting changes. These labels do not enumerate minimal support explanations.
+\textbf{Public corrections.} Flights, Beers, and Rayyan dirty/clean pairs from Raha and Baran supply 72 queries~\cite{mahdavi2019raha,mahdavi2020baran}. Each source contributes eight targets with one, two, or at least three corrections, selected before predictions. Each query has 32 corrected references excluding held-out targets; Flights also excludes the same flight. Raw strings and source identities are retained; index fields are removed. Hidden clean counterparts identify acceptable singleton inspection targets, including formatting changes, not minimal support explanations.
 
 \textbf{Circuits and peer agreement.} Sixteen table pairs from four gate-negation circuits yield 64 targets and 86 focus-output queries, with 16 references each. Their fault input sets contain 1--12 fields; 47 exceed three. The artifact verifies changed-output alignment over 66,834 anomalous rows~\cite{antwarg2024groundtruth}. A separate five-model pilot covers 70 ADBench queries and eight UCI Lymphography queries~\cite{han2022adbench,zwitter1988lymphography}. UCI uses two source-class-1 normal rows, whereas ADBench uses its binary labels and 142 normal rows. Circuit fault recovery and peer agreement retain their own denominators and are never pooled with support accuracy.
 
@@ -154,12 +156,12 @@ The primary comparison includes Qwen3.5-9B, DeepSeek-V2-Lite-Chat, Llama-3.1-8B-
 
 The three checkpoints use the existing shared loader and chat templates, greedy batch-one decoding, a 16,384-token input limit without truncation, and 512 output tokens. A fixed JSON-schema token filter enforces the core object, legal IDs, four candidates, and the relevant size cap~\cite{lmfe2026}. The original parser rejects repeated IDs; repeated candidate sets collapse in their existing order. An oversized or empty set invalidates an answer, without truncating or reranking fields. Abstention suppresses attached candidates. Invalid, missing, input-rejected, and abstained queries remain recovery failures.
 
-This configuration is frozen before 1,080 new model queries: 360 per checkpoint, covering the paired panel, all 120 new-rule evidence conditions, 96 invoices, and 48 Car decisions. It follows inspection of earlier experiments and is not a preregistered confirmation. The comparison evaluates these checkpoints, prompts, and decoding rules together. Auxiliary task classification, mechanism descriptions, evidence sentences, and confidence values are excluded from the core contract.
+The configuration is frozen before 1,080 new model queries: 360 per checkpoint across the paired panel, 120 new-rule conditions, 96 invoices, and 48 Car targets. It follows earlier-result inspection, not preregistration. Checkpoints, prompts, and decoding are evaluated together. The core contract excludes auxiliary classification, mechanisms, evidence sentences, and confidence.
 
 \subsection{Direct sample-minimal enumeration}
-SME enumerates every nonempty field set within the shared cap using only the target and visible reference rows. A set is retained when the target projection is absent and every single-field removal restores a match. Candidates are sorted by cardinality and then the canonical feature-ID tuple; the first four are returned. This rule is fixed before scoring and uses neither population labels nor learned field relevance. Canonical IDs prevent display order from changing ties, but are not a claim of an optimal ranking policy.
+SME enumerates nonempty field sets within the shared cap using only visible rows. It retains a set if the target projection is absent and each single-field removal restores support. Candidates are sorted by cardinality, then canonical feature-ID tuple; the first four are returned. This fixed ranking uses no hidden labels or learned relevance. Canonical IDs make ties independent of display order, without claiming optimal ranking.
 
-We report the full candidate family's size and population-label retention as diagnostics in addition to top-four recovery. These quantities distinguish failure to expose a population minimum from failure to rank it. With complete normal evidence and a full candidate space, SME must return valid population minima whenever the target is outside that population. This is a correctness reference implied by the definition. With finite references, additional absences can create small spurious candidates that precede valid population explanations.
+Full-family size and population-label retention distinguish candidate availability from ranking. With complete normal evidence and an unrestricted candidate space, SME must return population minima for any target outside the population. Finite references can instead create small spurious candidates that rank before valid explanations.
 
 \subsection{Statistical rankers and original adapters}
 \textbf{Gower rankers.} Gower distance averages reference-range-scaled differences for numeric, ordinal, and date-like fields and mismatch distances for categorical, binary, and identifier fields~\cite{gower1971similarity}. Missing-value mismatches score one. Exhaustive search uses the same candidate caps as the LLMs and SME. Gower-kNN ranks the target's three-neighbor mean distance relative to the median and dispersion of reference leave-one-out distances. Gower-LOF uses reference-only local reachability densities~\cite{breunig2000lof}. The target never enters the fitted reference graph. Score ties are resolved by subset size and canonical IDs. The existing ranker predictions are reproduced exactly on all 312 previously evaluated query conditions per method.
@@ -177,12 +179,12 @@ Support Exact@1 and Hit@4 are the primary endpoints. For ranked candidates $(S_1
 \end{align}
 Sufficiency, best-set Jaccard, rule scores, candidate size, and validity remain secondary. An answer requires a valid, non-abstaining, nonempty candidate list. The all-query denominator is retained; conditional size and quality use answered queries only. Duplicate sets add no credit.
 
-The paired panel averages cases within 24 templates, then templates equally. New-rule scores average targets within each of 12 rules. Invoice scores average 24 targets within each of four relations, then relations equally. Car scores average the 48 selected targets from one decision source. The original 864-case estimator averages cases within seed--template cells, seeds within templates, and then 38 templates equally. These are different units, and no overall cross-track accuracy is computed.
+Aggregation units are 24 templates for paired targets, 12 rules for new compositions, four relations for invoices, and 48 cases from one source for Car. Cases are averaged within each unit before equal-unit averaging. The original estimator averages seed--template cells, then seeds within templates, then 38 templates. No cross-track accuracy is computed.
 
 Tables report mean $\pm$ sample SD across the declared units. SD describes between-unit heterogeneity, not repeated-model-run variation or uncertainty of the mean. Paired-panel contrasts additionally use 2,000 template-bootstrap replicates. Archived sign-flip diagnostics assume null symmetry of template differences and apply Holm correction within their declared endpoint families; they cannot remove bias from repeated inspection of original templates. New transfer tasks, parameter sweeps, and source strata are descriptive. The artifact retains original intervals and all per-case scores.
 
 \subsection{Configuration and evidence diagnostics}
-The original panel separately varied a shared three-field instruction, the full versus minimal output contract, structured decoding, output length, field order, and reference quantity. The full contract also requires task labels, mechanism fields, evidence, and confidence; its removal is not merely a formatting change. These historical configurations are retained to explain the unified design, not combined into a factorial causal estimate. Four independent random displays and nested 8/16/32 reference sets preserve targets and labels. Role-aware front/back displays are explicitly oracle diagnostics.
+Original diagnostics vary the size instruction, output contract, structured decoding, output length, field order, and reference quantity. The full contract additionally requests task labels, mechanisms, evidence, and confidence; removing these changes the task beyond formatting. Historical conditions explain the unified design but do not form a factorial causal estimate. Four random displays and nested 8/16/32 references preserve targets and labels; role-aware front/back displays are oracle diagnostics.
 
 For the same 24 new-rule targets, three independent 32-row draws are compared with the complete normal population. The complete condition also declares completeness to the model. Its effect therefore combines coverage with that declaration. Error categories distinguish unavailable answers, valid minima, nonminimal population exclusions, sample-only exclusions, and projections already supported by visible rows. The categories describe observable errors; they do not establish a universal reasoning-error rate or an information-theoretic recovery bound.
 
@@ -198,12 +200,12 @@ Support and rule families coincide in 653 of 864 original cases. All 211 differe
 In \texttt{s20261106\_main\_V2\_0012}, the rule requires $F011>0.5$ and $F007\in\{c4,c5\}$, while F008 copies F007. The rule minimum is \{F007,F011\}; support also accepts \{F008,F011\}. The target has $F011=1$ and $F007=F008=c4$. An edit to F007 propagates to F008. Rule scoring rejects the proxy alternative, whereas evaluating all changed fields rewards a redundant set. Figure~\ref{fig:intro-support} supplies the complementary invoice example: every target has one edited field, but its valid support minima contain at least two fields. Multiple valid answers and exact set matching are established evaluation ideas; the additional requirement here is complete population enumeration with explicit rule and provenance separation.
 
 \subsection{RQ2: Jointly controlling the primary comparison}
-\input{synthetic_benchmark_v2/runs/ccfa_unified_revision/primary_table.tex}
-Table~\ref{tab:unified} combines candidate-size information, candidate count, the core localization task, and fixed structured output in one comparison. Qwen reaches Exact@1/Hit@4 of 0.385/0.510, compared with 0.646/0.719 for Gower-LOF and 0.594/0.667 for kNN. DeepSeek and Llama reach Exact@1 of 0.031 and 0.042. The ordering is observed directly under the joint configuration; it is not inferred from separate prior and formatting interventions.
+\input{synthetic_benchmark_v2/runs/ccfa_unified_revision/presentation_primary_wide.tex}
+Table~\ref{tab:unified} jointly controls candidate information, four-candidate budgets, the core task, and structured output across the four support workloads. Qwen reaches Exact@1/Hit@4 of 0.385/0.510, compared with 0.646/0.719 for Gower-LOF and 0.594/0.667 for kNN. DeepSeek and Llama reach Exact@1 of 0.031 and 0.042. The ordering is observed directly under the joint configuration; it is not inferred from separate prior and formatting interventions.
 
-Qwen's Exact@1 difference from LOF is -0.260, with a template-bootstrap interval [-0.344, -0.177]. This interval describes the selected 24 templates conditional on the frozen queries. Answer coverage is 0.979/0.542/1.000 for the three models. The all-query score includes input-cap failures and abstentions, while common-feasible sensitivities remain available in the artifact. These results support this fixed local-model comparison rather than a claim about general LLM capability.
+Qwen's Exact@1 difference from LOF is -0.260, with a template-bootstrap interval [-0.344, -0.177], conditional on these 24 templates and frozen queries. Model coverage is 0.979/0.542/1.000. Input-cap failures and abstentions remain misses; common-feasible sensitivities are archived. The comparison concerns these fixed configurations, not general LLM capability.
 
-\textbf{Finding candidates versus ranking them.} SME scores 0.313 at Exact@1 and 0.646 at Hit@4. Its top-four coverage exceeds Qwen's, although Qwen places a valid first choice more often. SME exposes 96.604 candidates per query on average, retaining 0.911 of population-minimal labels under equal-template weighting. Its size/ID ranking intentionally uses no hidden knowledge to resolve this ambiguity. Comparing only one endpoint would miss the difference between the candidate family and the first-choice decision.
+\textbf{Finding candidates versus ranking them.} SME obtains Exact@1/Hit@4 of 0.313/0.646: greater top-four coverage than Qwen, but fewer correct first choices. Its family averages 96.604 candidates per query and retains 0.911 of population labels under equal-template weighting. This separates exposing valid alternatives from ranking them using size and IDs alone.
 
 \subsection{Finite evidence and the direct support baseline}
 In the original 864 cases, sample-minimal and population-minimal families match in only two cases; the other 862 contain extra minima. Equal-template means are 60.935 extra candidates and 0.863 population-minimum retention. SME obtains Exact@1/Hit@4 of 0.232/0.549 on this workload. The direct support test therefore supplies useful candidates without guaranteeing their order under finite evidence.
@@ -220,31 +222,33 @@ Under the original prompt, Qwen's first choice is sample-absent with frequency 0
 \label{fig:transfer}
 \end{figure*}
 
-Figure~\ref{fig:transfer} applies the same model configuration to the other support workloads. On 48 new-rule targets, Qwen/DeepSeek/Llama reach Exact@1 of 0.104/0.042/0.042. SME scores 0.667, compared with 0.625 for kNN and 0.542 for LOF. The largest truth-size stratum contains 16 targets with four- to six-field minima; complete strata and outcomes remain in the artifact. The original full-prompt Qwen score was 0.167, so the original result and the joint configuration are kept distinct.
+Figure~\ref{fig:transfer} compares the three transfer workloads under the unified configuration (Table~\ref{tab:unified}). On new rules, SME exceeds both Gower rankers at Exact@1. Sixteen targets require four- to six-field minima; full strata are archived. Original full-prompt Qwen reaches 0.167 versus the joint configuration's 0.104, so those results remain separate.
 
-On invoices, Qwen scores 0.010/0.208 at Exact@1/Hit@4; kNN scores 0.406/0.510, SME 0.167/0.427, and LOF 0.000/0.115. Eight invoice queries admit a four-field alternative, and five have only four-field minima, motivating the full 255-candidate search. Section VI investigates the LOF reversal on these fixed queries.
+On invoices, kNN exceeds SME and the three models, while LOF reaches Exact@1 of 0.000. Eight queries admit a four-field alternative, and five have only four-field minima, motivating the full 255-candidate search. Section VI investigates the reversal on these fixed queries.
 
-\textbf{Independent source with the same label semantics.} On Car decisions, SME obtains Exact@1/Hit@4 of 0.958/0.979; kNN and LOF obtain Exact@1 of 0.896 and 0.917. The model values are 0.479/0.063/0.083. This retains population-minimal support as the target, unlike corrected-cell or circuit transfer. The selected cohort contains 43 cases with a singleton minimum and 5 requiring multiple fields. On the latter subset, SME/Qwen/kNN/LOF reach 0.600/0.000/0.000/0.200. The predominance of simple exclusions and the single expert model limit conclusions about wider operational data.
+\textbf{Independent source with the same label semantics.} Car retains population-minimal support truth, unlike correction and circuit transfer. SME reaches Exact@1/Hit@4 of 0.958/0.979 (Table~\ref{tab:unified}). Of 48 targets, 43 admit a singleton minimum. On the five multi-field targets, SME/Qwen/kNN/LOF reach Exact@1 of 0.600/0.000/0.000/0.200. Simple exclusions and the single expert source limit wider conclusions.
 
 \subsection{Repeated references and complete populations}
+\input{synthetic_benchmark_v2/runs/ccfa_unified_revision/presentation_evidence_wide.tex}
+
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/figure_unified_evidence.pdf}
-\caption{Evidence diagnosis on the same 24 targets from 12 new rules. (a) Exact@1 under three reference draws and complete normal evidence. (b) Complete-population error counts for the unified configuration; the last row retains original-prompt Qwen for comparison. Completeness also changes the prompt declaration. Sample-only exclusions are impossible in this condition.}
+\caption{Evidence diagnosis on the same 24 targets from 12 new rules. (a) Exact@1 under three reference draws and complete normal evidence; hatches distinguish conditions. (b) Complete-population error counts; the last column retains original-prompt Qwen for comparison. Completeness also changes the prompt declaration. Sample-only exclusions are impossible in this condition.}
 \label{fig:evidence}
 \end{figure*}
 
-SME exactly recovers valid minima on all 24 complete-population queries (Figure~\ref{fig:evidence}), as required by its search definition. The complete visible population therefore makes this finite task algorithmically solvable without hidden labels. Gower-kNN and LOF achieve Exact@1 of 0.625 and 0.583; their remaining errors show that a novelty-score ordering does not optimize minimal support directly. A full population removes sample absence ambiguity, but it does not make an arbitrary scoring function or generator exact.
+SME recovers valid minima on all 24 complete-population queries (Figure~\ref{fig:evidence}), making this finite task solvable from visible evidence. kNN and LOF reach Exact@1 of 0.625 and 0.583: removing sample ambiguity does not make novelty-score ranking optimize minimal support.
 
-The joint Qwen configuration reaches 0.208 under complete evidence, with 5 exact answers, 9 nonminimal exclusions, 10 supported sets, and 0 unavailable answers. The original full prompt produced three exact answers, 11 nonminimal exclusions, and 10 supported sets. These configurations must not be combined into one error partition. Their recorded errors show that missing references are not the only source of failure in the evaluated settings. Because completeness is also declared in the prompt, the comparison does not isolate a pure effect of adding rows.
+Joint Qwen obtains 5 exact answers, 9 nonminimal exclusions, 10 supported sets, and no unavailable answers under complete evidence. Original full-prompt Qwen produced 3/11/10/0; these are separate partitions. Missing references therefore cannot explain all errors in these settings, although the intervention combines additional rows with a completeness declaration.
 
-Across the three finite draws, extra sample minima average 1.542/1.208/1.000 on the paired targets; complete evidence removes them. Figure~\ref{fig:evidence} reports every draw instead of selecting the most favorable sample. The artifact records first-set stability, candidate retention, and error types for each method. Stability and accuracy remain separate: a repeated wrong subset is stable, and a change between two valid minima need not be an error.
+Table~\ref{tab:unified-evidence} reports all draws and rule-level SDs. Extra sample minima average 1.542/1.208/1.000 across the three finite draws; complete evidence removes them. The archive records candidate retention and error types. Stability differs from accuracy: a repeated wrong set is stable, while switching between valid minima need not be an error.
 
 \subsection{How the output contract changes the comparison}
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{figures/figure_unified_contract.pdf}
-\caption{Configuration diagnostics on the same 96 targets. Full/cap applies the common size rule to original responses; Full+prior also states it. Minimal/JSON has constrained decoding without the three-field prior. Joint combines the core task, size information, and constrained output. Conditions differ as specified; connecting lines do not estimate individual factorial effects.}
+\caption{Configuration diagnostics on the same 96 targets. Full/cap applies the common size rule to original responses; Full+prior also states it. Minimal/JSON has constrained decoding without the three-field prior. Joint combines the core task, size information, and constrained output. Method colors and condition hatches follow the original plots. Answered reports valid non-abstaining coverage. The conditions do not isolate individual factorial effects.}
 \label{fig:contract}
 \end{figure}
 
@@ -255,10 +259,10 @@ The reduced unconstrained prompt produced 94 similarly malformed Qwen JSON objec
 The original non-answer bound, $\mathrm{Exact@1}+1-\mathrm{Answered}$, gives 0.239/0.292/0.211 for Qwen/DeepSeek/Llama, below LOF's original 0.514. This calculation holds existing answers fixed. It cannot bound an intervention that changes the content of already answered queries, as the contract experiments demonstrate.
 
 \subsection{Original suite and adapter behavior}
-\input{synthetic_benchmark_v2/runs/ccfa_unified_revision/original_compact_table.tex}
-The secondary original comparison illustrates why sufficiency alone is inadequate. Qwen and LOF have Suff@1 of 0.537 and 0.538, but Exact@1 of 0.231 and 0.514; no equivalence is claimed. SOD's Suff@1 is 0.610 with zero exact recovery and a mean selected-field fraction of 0.577. The expanded suite is useful for characterizing objectives, while the unequal original prior prevents treating it as the unified primary ranking.
+\input{synthetic_benchmark_v2/runs/ccfa_unified_revision/presentation_original_wide.tex}
+The original suite illustrates why sufficiency alone is inadequate. Qwen/LOF have Suff@1 of 0.537/0.538 but Exact@1 of 0.231/0.514; no equivalence is claimed. SOD reaches Suff@1 0.610 with zero exact recovery and selected-field fraction 0.577. Its objectives and unequal size prior distinguish this diagnostic suite from the unified ranking.
 
-Native controls help interpret low adapted scores. On M\textsuperscript{2}OE's continuous repository example, 30 epochs recover the three injected fields in 7 of 10 seeds, with mean choice precision/recall 1.000/0.900. Returned patches reduce distance outside the unit cube by 0.827 on average. At 300 epochs, exact recovery is zero, recall 0.600, and distance reduction 0.375. SOD includes all three shifted low-variance coordinates in all 20 native cases, but selects extra fields and has mean precision 0.389. These checks demonstrate native behavior without validating the mixed-type minimum-support adaptation or establishing convergence.
+Native controls contextualize adapted scores. M\textsuperscript{2}OE's continuous repository example recovers all three injected fields in 7/10 seeds at 30 epochs: precision/recall 1.000/0.900 and mean distance reduction outside the clean cube 0.827. At 300 epochs these become exact recovery 0, recall 0.600, and reduction 0.375. SOD includes all three shifted low-variance coordinates in 20/20 cases but adds fields (precision 0.389). Native behavior validates neither mixed-type support adaptation nor convergence.
 
 Original sensitivity diagnostics also remain informative. Across four random displays of the paired panel, Qwen's Exact@1 spans 0.240--0.313 and its conditional top-one agreement is 0.256; Gower rankings are invariant to display order. Nested 8/16/32 references yield population-minimum retention 0.703/0.849/0.911 and original Qwen Hit@4 of 0.177/0.250/0.333. Expanding all 288 six-field cases from 41 bounded candidates to all 63 changes LOF Exact@1 from 0.550 to 0.544 and kNN from 0.467 to 0.442. Exhaustive effects at 12/24 fields remain unmeasured. These diagnostics characterize their original configurations and do not substitute for the new joint comparisons.
 
@@ -284,7 +288,7 @@ For \texttt{constraint\_line\_net\_000}, supported distractor pair \{F002,F003\}
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/figure_unified_lof.pdf}
-\caption{Matched invoice LOF diagnostics, all 96 targets and 255 candidates. (a) The floor changes score scale. (b)--(c) Recovery under fixed-$k$ tie choices, all boundary ties, distinct-coordinate radii retaining multiplicities, and unique projections. (d) Original neighbor-count sweep. (e) Supported and valid-minimal candidates in line-net case 000. (f) Fraction of winners already supported by a normal reference. Recovery panels use equal-relation means; variants retain their stated neighborhood semantics.}
+\caption{Matched invoice LOF diagnostics, all 96 targets and 255 candidates. (a)--(b) Recovery under fixed-$k$ tie choices, all boundary ties, distinct-coordinate radii retaining multiplicities, and unique projections. (c) Fraction of winners already supported by a normal reference. (d) Numerical-floor sensitivity. (e) Original neighbor-count sweep. (f) Supported and valid-minimal candidates in line-net case 000. Recovery panels use equal-relation means; variants retain their stated neighborhood semantics.}
 \label{fig:lof}
 \end{figure*}
 
@@ -299,6 +303,8 @@ Earlier diagnostic restrictions remain separate: hidden-role-only search reaches
 
 \section{External Targets and Practical Scope}
 \subsection{Public corrected-field inspection}
+\input{synthetic_benchmark_v2/runs/ccfa_acceptance_revision/presentation_real_cells_table.tex}
+
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{figures/figure_unified_corrections.pdf}
@@ -306,65 +312,88 @@ Earlier diagnostic restrictions remain separate: hidden-role-only search reaches
 \label{fig:corrections}
 \end{figure}
 
-The public-correction results concern a different task. Fixed structured decoding raises Qwen's equal-source FieldHit@1 from 0.125 to 0.653, and Llama's from 0.056 to 0.403; both Gower controls score 0.403. Qwen covers 0.721 of recorded corrections within three suggestions. Its mean first-correction inspection score is 2.819, compared with kNN's 3.681 and an analytic uniform ordering's 4.253 under the same cap and failure penalty. These are offline ranking quantities, not measurements of analyst time.
+Table~\ref{tab:real-cells} reports the original public-correction task and its fixed-schema condition. Fixed structured decoding raises Qwen's equal-source FieldHit@1 from 0.125 to 0.653, and Llama's from 0.056 to 0.403; both Gower controls score 0.403. Qwen covers 0.721 of recorded corrections within three suggestions. Its mean first-correction inspection score is 2.819, compared with kNN's 3.681 and an analytic uniform ordering's 4.253 under the same cap and failure penalty. These are offline ranking quantities, not measurements of analyst time.
 
 \textbf{Correction type matters.} All 24 Beers targets contain an ounces representation change, and both Gower methods choose a corrected field first in every case. Our source audit identifies 24 quantity representations, 12 missing-marker normalizations, six city/state split changes, and seven percentage conventions. Seventeen rows contain only the explicitly checked row-local normalizations; seven mix them with percentage interpretation. Removing ounces from the accepted fields on the same 16 multi-correction queries reduces Gower FieldHit@1 to 0.000. Qwen and Llama retain 0.500 and 0.625; Gower Hit@3 remains 0.750. The first-choice result therefore depends strongly on the repeated ounces pattern, while later candidates retain useful coverage.
 
 Flights contains 28 changed clock values and 21 imputations, alongside three clock-preserving format changes. The references exclude the query's flight; an actual-departure correction such as 11:06 to 11:05 requires event-specific evidence unavailable in other flights. Qwen's FieldHit@1 of 0.667 indicates selection of a recorded changed field, not recovery of that external fact. Rayyan contains date serialization, encoding normalization, missing sentinels, and other bibliographic conventions. The audit preserves those supplied labels without claiming an independent judgment that each canonical value is semantically correct. Neither source-convention agreement nor model consensus certifies a minimal explanation.
+
+\begin{table*}[t]
+\centering\scriptsize
+\caption{Neighboring evaluation targets. Checkmarks denote primary targets, not exhaustive software capabilities. ``Fault'' includes integrity errors and injected faults; ``Support'' means population-minimal descriptive support.}
+\setlength{\tabcolsep}{3.3pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\textwidth}{|c|>{\raggedright\arraybackslash}p{1.75cm}|>{\raggedright\arraybackslash}X|c|c|c|c|c|c|}
+\hline
+\multirow{2}{*}{Category} & \multirow{2}{*}{Task / idea} & \multirow{2}{*}{Representative work} & \multicolumn{6}{c|}{Primary object of evaluation or explanation} \\
+\cline{4-9}
+ & & & Row & Score & Subspace & Group & Fault & Support \\
+\hline
+Model & Score attribution & Shapley explanation; CAIT~\cite{kluttermann2024shapley,mok2025cait} & -- & $\checkmark$ & -- & -- & -- & -- \\
+\hline
+\multirow{5}{*}{Data} & Subspace analysis & LookOut, SOD, COP~\cite{gupta2018lookout,kriegel2009sod,kriegel2012cop} & -- & -- & $\checkmark$ & -- & -- & -- \\
+\cline{2-9}
+ & Field choices and repair mask & M\textsuperscript{2}OE~\cite{angiulli2024m2oe} & -- & -- & $\checkmark$ & -- & -- & -- \\
+\cline{2-9}
+ & Ranked subspace search & RLAX~\cite{amirato2026rlax} & -- & -- & $\checkmark$ & -- & -- & -- \\
+\cline{2-9}
+ & Aggregate diagnosis & Adtributor, iDice, HotSpot, Squeeze~\cite{bhagwan2014adtributor,lin2016idice,sun2018hotspot,li2019squeeze} & -- & -- & -- & $\checkmark$ & -- & -- \\
+\cline{2-9}
+ & Data cleaning & HoloClean; AutoDCWorkflow~\cite{rekatsinas2017holoclean,li2025autodcworkflow} & -- & -- & -- & -- & $\checkmark$ & -- \\
+\hline
+\multirow{4}{*}{Evaluation} & Anomaly benchmarks & ADBench, TABARD, RADAR~\cite{han2022adbench,choudhury2025tabard,gu2025radar} & $\checkmark$ & -- & -- & -- & $\checkmark$ & -- \\
+\cline{2-9}
+ & Relevant-subspace evaluation & Myrtakis et al.: Beam, RefOut, LookOut, HiCS~\cite{myrtakis2021comparative} & -- & -- & $\checkmark$ & -- & -- & -- \\
+\cline{2-9}
+ & Fault-label studies & Gate-negation circuit explanations~\cite{antwarg2024groundtruth} & -- & -- & $\checkmark$ & -- & $\checkmark$ & -- \\
+\cline{2-9}
+ & Minimal-set benchmark & This study: known outlier + finite references & -- & -- & $\checkmark$ & -- & -- & $\checkmark$ \\
+\hline
+\end{tabularx}
+\renewcommand{\arraystretch}{1.0}
+\label{tab:related-work}
+\end{table*}
 
 \subsection{Auxiliary pilots and interpretation}
 The peer pilot retains 390 model outputs, including 349 valid non-abstentions. Pairwise Jaccard ranges from 0.213 to 0.520 on 40 ADBench queries answered by all five models; UCI has only one common-valid query. The archived Pima example has Qwen/peer-majority overlap 0.500, with no field-level truth. These measurements characterize agreement only.
 
 With all circuit outputs visible, Qwen/DeepSeek/Llama achieve Jaccard@4 of 0.349/0.109/0.038, compared with input-only Gower-kNN/LOF at 0.456/0.428. Qwen's Hit@4 is 0.016 and the others retrieve no exact fault set. Scores average queries within targets, targets within table pairs, and pairs within four circuits. These fault labels and the limited number of circuits prevent treating the pilot as validation of population-minimal support.
 
-\textbf{Method selection.} First specify the accepted object: an irreducible unusual combination, a rule mechanism, or a field recorded as corrected. Under the support objective, inspect both candidate coverage and rank: SME can expose useful alternatives while placing a spurious small set first. For density-based search, inspect projection duplicates, boundary ties, and score magnitudes. For LLMs, the prompt, candidate information, decoder, parser, and abstention rule together define the compared method. The unified results and the invoice diagnostics support these choices within the measured workloads; they do not yield one ranking across all label types.
+\textbf{Method selection.} Specify whether the target is an irreducible combination, a rule mechanism, or a corrected field. For support, compare candidate coverage with rank: SME's first choice can be a spurious small set. For density search, inspect duplicates, ties, and score scales. For LLMs, evaluate the prompt, candidate information, decoder, parser, and abstention rule together. Rankings remain workload- and target-specific.
 
-\textbf{Continuous and noisy data.} For independently sampled continuous values, an exact match to a new normal value almost surely does not occur in a finite reference sample. Applying literal sample absence would then make ordinary singletons appear explanatory. Extending this benchmark requires a specified support model or explicit scales, tolerance neighborhoods, and a mass threshold, which change the gold labels. The integer invoice constraints and finite expert decision table avoid that ambiguity. Native continuous adapter checks do not validate a continuous version of the support benchmark.
+\textbf{Continuous and noisy data.} Independently sampled continuous values almost surely lack exact matches in finite references, making ordinary singletons appear explanatory. Extension requires a support model or explicit scales, tolerance neighborhoods, and a mass threshold; these change the gold labels. Finite invoice and expert domains avoid this ambiguity. Native continuous controls do not validate continuous support labels.
 
 \section{Related Work}
-\textbf{Closest evaluation predecessor.} Myrtakis et al.~\cite{myrtakis2021comparative} compare relevant-subspace explanation algorithms using multiple ground-truth subspaces and exact membership for Recall/MAP. Their synthetic evaluation includes cases where lower-dimensional projections mix outliers with normal points. We build on that evaluation setting rather than claim multiple answers or exact matching as new. Our increment is complete enumeration of population-minimal support families, an explicit finite-reference interface, and separate rule/edit labels. These distinctions enable audits of extra sample minima and label-dependent scores. Beam permits varying dimensions; RefOut fixes dimensionality. Our Beam adaptation is accompanied by a size-matched exhaustive control.
+Table~\ref{tab:related-work} compares the primary evaluation targets of neighboring work.
 
-\begin{table}[t]
-\centering\footnotesize
-\caption{Direct relationship to neighboring evaluation targets. Entries describe the evaluated object, not exhaustive software capabilities.}
-\setlength{\tabcolsep}{3pt}
-\begin{tabularx}{\columnwidth}{lXX}
-\toprule
-Work & Evaluation target & Relation to this study \\
-\midrule
-Myrtakis et al.~\cite{myrtakis2021comparative} & Relevant subspaces; multiple labels, exact match & We enumerate full population minima and audit finite evidence \\
-M\textsuperscript{2}OE~\cite{angiulli2024m2oe} & Field choices and repairs & Repair fields and minimal support are separated \\
-Circuit labels~\cite{antwarg2024groundtruth} & Fault-related input sets & Auxiliary fault target, not support truth \\
-Raha/Baran~\cite{mahdavi2019raha,mahdavi2020baran} & Detection/correction of dirty cells & Published changes provide inspection targets \\
-\bottomrule
-\end{tabularx}
-\label{tab:closest}
-\end{table}
+\textbf{Closest evaluation predecessor.} Myrtakis et al.~\cite{myrtakis2021comparative} use multiple relevant subspaces and exact membership in Recall/MAP, including outliers mixed with normal points in lower-dimensional projections. Our contribution is complete population-minimum enumeration, finite-reference audits, and separate rule/edit labels, rather than multiple answers or exact matching. Beam allows varying dimensionality; RefOut fixes it. A size-matched exhaustive control accompanies our Beam adaptation.
+
+
 
 \textbf{Explanation objectives.} Surveys distinguish instance descriptions from detector-score explanations~\cite{panjei2022survey,li2024xadsurvey}. Shapley-style explanations and CAIT attribute model behavior~\cite{kluttermann2024shapley,mok2025cait}; LookOut, SOD, COP, and RLAX select or rank subspaces~\cite{gupta2018lookout,kriegel2009sod,kriegel2012cop,amirato2026rlax}. M\textsuperscript{2}OE also optimizes repair information~\cite{angiulli2024m2oe}. Aggregate diagnosis systems such as Scorpion, Adtributor, iDice, HotSpot, and Squeeze explain changes in aggregate behavior~\cite{wu2013scorpion,bhagwan2014adtributor,lin2016idice,sun2018hotspot,li2019squeeze}. These objectives need not identify the same fields as support minimality.
 
-\textbf{Data quality and recent ICDE systems.} HoloClean, holistic repair, and AutoDCWorkflow address cleaning workflows and integrity errors~\cite{rekatsinas2017holoclean,chu2013holistic,li2025autodcworkflow}. BClean uses Bayesian networks and user priors~\cite{qin2024bclean}; ZeroED and ZeroEC use LLMs for error detection and context-informed correction~\cite{ni2025zeroed,wu2025zeroec}. Query verification and AutoTest study additional data-quality operations~\cite{schreiber2026verification,chen2025autotest}. These systems motivate the application, while the present task deliberately withholds the clean target and evaluates combinations rather than a unique repair value.
+\textbf{Data quality and recent ICDE systems.} HoloClean, holistic repair, and AutoDCWorkflow address cleaning and integrity errors~\cite{rekatsinas2017holoclean,chu2013holistic,li2025autodcworkflow}. BClean uses Bayesian networks and user priors~\cite{qin2024bclean}; ZeroED and ZeroEC use LLMs for detection and correction~\cite{ni2025zeroed,wu2025zeroec}. Query verification and AutoTest cover further quality operations~\cite{schreiber2026verification,chen2025autotest}. Our task instead withholds the clean target and evaluates field combinations.
 
 \textbf{Benchmarks and component analysis.} ADBench supplies anomaly benchmarks~\cite{han2022adbench}; TABARD, RADAR, AnTBench, and SEC-FinTables evaluate perturbed tables, anomaly reasoning, awareness, or financial inconsistencies~\cite{choudhury2025tabard,gu2025radar,wei2026antbench,ke2026secfintables}. Papadakis et al.~\cite{papadakis2024reevaluation} show why candidate construction matters in record linkage. Recent ICDE EAB studies decompose retrieval and generation, table-retrieval design, counting methods, and adaptive-query-processing components~\cite{zhang2026xrag,yang2026tr360,zhu2026beacon,mu2026aqp}. Our analogous methodological goal is to identify which evidence, output, and scoring conditions produce the observed explanation rankings.
 
 \section{Artifact and Reproducibility}
-The public repository at \url{https://github.com/KDDElab/known-outlier-benchmark} and its fixed \href{https://github.com/KDDElab/known-outlier-benchmark/releases/tag/icde2027-eab-v3}{\texttt{icde2027-eab-v3}} release provide generators, frozen inputs and population labels, raw responses, baseline outputs, analysis, figures, manuscript sources, dependencies, and file hashes. Inspecting predictions and recomputing scores require no private inference service. UCI Car Evaluation is attributed under CC BY 4.0; existing correction and circuit sources retain their provenance and licenses.
+The public repository at \url{https://github.com/KDDElab/known-outlier-benchmark} and fixed \href{https://github.com/KDDElab/known-outlier-benchmark/releases/tag/icde2027-eab-v4}{\texttt{icde2027-eab-v4}} release provide generators, frozen inputs/labels, raw responses, baseline outputs, analysis, editable figures, manuscript sources, dependencies, and hashes. Recomputing scores requires no private inference service. Car is attributed under CC BY 4.0; other sources retain their provenance and licenses.
 
-The new unified archive contains 1,080 model-query records, 1,080 statistical/enumeration predictions, and 14 LOF diagnostic conditions with candidate scores. It preserves the original 5,184 model-condition records, 288 invoice responses, and 1,368 earlier revision records separately. IDs and manifests prevent counting provenance copies as extra cases. The population-label mapping of the new-rule source is explicit: its sample-reference minima remain diagnostic, while complete-population labels are independently reconstructed from its normal table.
+The unified archive contains 1,080 model-query records, 1,080 baseline predictions, and candidate scores for 14 LOF conditions. The original 5,184 model-condition records, 288 invoice responses, and 1,368 earlier revision records remain separate. IDs prevent counting provenance copies as extra cases. New-rule sample minima remain diagnostic; population labels are independently reconstructed from complete normal tables.
 
-Inference uses Transformers 5.22.1, PyTorch 2.14.1+cu126, bf16, RTX 3090 GPUs, and batch size one. Model and tokenizer fingerprints, chat templates, input hashes, greedy settings, LM Format Enforcer 0.11.3, and its compatibility shim are recorded. Weights are obtained from the documented upstream providers under their access terms. Different GPU allocations and tokenizers preclude a controlled cost or speed ranking.
+Inference uses Transformers 5.22.1, PyTorch 2.14.1+cu126, bf16, RTX 3090 GPUs, and batch size one. The archive records model/tokenizer fingerprints, templates, input hashes, greedy settings, LM Format Enforcer 0.11.3 and its compatibility shim. Weights follow upstream access terms. Hardware allocation and tokenizer differences preclude a controlled speed ranking.
 
-README commands rebuild analyses and the PDF from frozen outputs. Changed-path checks independently verify 168 new-rule/Car population label sets, reproduce 624 existing Gower candidate lists, and compare 552 inclusive-neighborhood scores with a scalar implementation. Complete-population SME outputs match the independently enumerated gold families. Packaged reconstruction is performed on the original host; independent-machine and bitwise fresh-inference reproduction remain unverified.
+README commands rebuild analyses and the PDF. Independent checks cover 168 population-label sets, 624 reproduced Gower lists, and 552 inclusive-neighborhood scores against a scalar implementation. Complete-population SME matches the independent gold families. Packaged reconstruction was checked on the original host; independent-machine and bitwise fresh-inference reproduction remain unverified.
 
 \section{Limitations}
-\textbf{Coverage and independence.} The original templates overlap between development and test across seeds, and earlier results informed later evaluation choices. Twelve new compositions provide a small Boolean workload; the current joint protocol reuses those already examined queries. Car adds an independently published decision model with targets selected before joint inference, but it is one finite expert system with many singleton exclusions. Four invoice relations and four circuits do not establish broad operational coverage. Temporal anomalies and MAR/MNAR missingness remain untested.
+\textbf{Coverage and independence.} Original development/test templates overlap across seeds; earlier results informed later choices. The joint protocol reuses the twelve new rules after their first evaluation. Car contributes one published expert system, dominated by singleton exclusions. Four invoice relations and four circuits provide limited operational coverage. Temporal anomalies and MAR/MNAR missingness remain untested.
 
-\textbf{Methods and evidence.} The results concern three local checkpoints and fixed prompts, not the capability frontier of LLMs. Development checks do not prove adapter convergence. Three reference draws and 24 complete-population targets do not identify a universal lower bound on error; completeness jointly changes coverage and the prompt declaration. Support--rule discrepancies concentrate in deterministic proxies, and exact finite-domain support does not directly extend to continuous noise.
+\textbf{Methods and evidence.} Three local checkpoints do not represent the LLM capability frontier; native checks do not establish adapter convergence. Three reference draws and 24 complete-population targets do not identify a universal error bound. Completeness changes both coverage and the prompt. Support--rule discrepancies concern deterministic proxies; finite exact support does not directly extend to continuous noise.
 
-\textbf{External meaning.} Published corrections include canonicalization and source conventions; agreement with them is not an independently adjudicated minimal explanation. The source audit adds no human judgments, disagreement records, or observed time-saving measurements. The independent expert table preserves the core label semantics but does not supply natural anomaly incidents. Pretraining exposure cannot be excluded by opaque identifiers, and fresh inference remains sensitive to software, kernels, and checkpoint access.
+\textbf{External meaning.} Published corrections include canonicalization and conventions, not independently adjudicated minimal explanations. No human disagreement or observed time-saving data were collected. The expert table preserves core label semantics without representing natural anomaly incidents. Opaque IDs cannot exclude pretraining exposure; fresh inference depends on software, kernels, and checkpoint access.
 
 \section{Conclusion}
-Anomaly-explanation evaluation depends on the object being recovered. Complete population-minimal labels expose differences from rule mechanisms and edit histories; finite references introduce additional plausible sets. The unified comparison jointly controls candidate information and output structure, while direct sample enumeration separates candidate coverage from ranking. Complete populations make the finite task solvable but do not make every tested generator or score exact. Invoice diagnostics connect a ranking reversal to duplicate structures, neighbor selection, and cross-subspace density competition, with effects that persist under several numerical choices. These findings support configuration-specific method comparisons and keep correction localization, fault recovery, and peer agreement distinct from minimal support explanation.
+Explanation evaluation depends on the accepted object. Complete population-minimal labels distinguish support from rules and edits; finite references add plausible alternatives. Unified candidate information and output structure enable matched comparisons, while sample enumeration separates coverage from ranking. Invoice diagnostics connect ranking reversal to projection duplicates, neighbor selection, and density-score competition. These results concern measured configurations; correction localization, fault recovery, and peer agreement remain distinct targets.
 
 \label{page:main-end}
 \clearpage

@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering\scriptsize
+\caption{Unified support comparison, mean $\pm$ SD. Paired targets use 24 template means, new rules 12 rule means, invoices four relation means, and Car 48 cases from one source. Shared size caps and four-candidate budgets apply within each track; all LLMs use fixed JSON decoding. Failures remain misses.}
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.14}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}|l|rr|rr|rr|rr|}
+\hline
+Method & \multicolumn{2}{c|}{Paired targets (96; cap 3)} & \multicolumn{2}{c|}{New rules (48; cap 6)} & \multicolumn{2}{c|}{Invoices (96; cap 8)} & \multicolumn{2}{c|}{Car decisions (48; cap 6)} \\
+\cline{2-9}
+ & Exact@1 & Hit@4 & Exact@1 & Hit@4 & Exact@1 & Hit@4 & Exact@1 & Hit@4 \\
+\hline
+Qwen & $0.385\!\pm\!0.383$ & $0.510\!\pm\!0.372$ & $0.104\!\pm\!0.225$ & $0.313\!\pm\!0.304$ & $0.010\!\pm\!0.021$ & $0.208\!\pm\!0.068$ & $0.479\!\pm\!0.505$ & $0.625\!\pm\!0.489$ \\
+DeepSeek & $0.031\!\pm\!0.084$ & $0.042\!\pm\!0.095$ & $0.042\!\pm\!0.097$ & $0.042\!\pm\!0.097$ & $0.010\!\pm\!0.021$ & $0.010\!\pm\!0.021$ & $0.063\!\pm\!0.245$ & $0.104\!\pm\!0.309$ \\
+Llama & $0.042\!\pm\!0.095$ & $0.052\!\pm\!0.104$ & $0.042\!\pm\!0.097$ & $0.146\!\pm\!0.225$ & $0.031\!\pm\!0.040$ & $0.073\!\pm\!0.052$ & $0.083\!\pm\!0.279$ & $0.083\!\pm\!0.279$ \\
+\hline
+SME & $0.313\!\pm\!0.348$ & $0.646\!\pm\!0.403$ & $0.667\!\pm\!0.456$ & $0.813\!\pm\!0.322$ & $0.167\!\pm\!0.090$ & $0.427\!\pm\!0.277$ & $0.958\!\pm\!0.202$ & $0.979\!\pm\!0.144$ \\
+Gower-kNN & $0.594\!\pm\!0.429$ & $0.667\!\pm\!0.373$ & $0.625\!\pm\!0.446$ & $0.833\!\pm\!0.343$ & $0.406\!\pm\!0.191$ & $0.510\!\pm\!0.138$ & $0.896\!\pm\!0.309$ & $0.896\!\pm\!0.309$ \\
+Gower-LOF & $0.646\!\pm\!0.396$ & $0.719\!\pm\!0.378$ & $0.542\!\pm\!0.424$ & $0.729\!\pm\!0.445$ & $0.000\!\pm\!0.000$ & $0.115\!\pm\!0.129$ & $0.917\!\pm\!0.279$ & $0.938\!\pm\!0.245$ \\
+\hline
+\end{tabular*}
+\renewcommand{\arraystretch}{1.0}
+\label{tab:unified}
+\end{table*}

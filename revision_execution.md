@@ -258,3 +258,10 @@ This EAB study evaluates feature-subspace explanations for already flagged table
 - 统一比较主表与所有新图由实际记录生成。正文已重组为标签、证据/合同、评分机制三条主线，12 页正文加 1 页参考文献与 AI 声明。
 - 168 组总体标签、624 组 Gower 输出、552 组 LOF 标量对照均通过；完整输入/有效标签可重建。
 - 详细逐项回应见 `unified_revision_report.md`；包内重算状态见 `artifact_release_revised/packaged_analysis_verification.json`。独立机器复现未执行。
+
+## 2026-11-10：图表样式恢复（v4）
+
+- 按用户要求重新绘制图 1，保护图 2、图 3 六个导出文件不变；其余四张定量图恢复上一版样式。
+- 原 Table VI 完整分类勾选矩阵恢复；四张结果大表采用分组表头。全稿 7 图、6 表（5 张通栏）。
+- 通过精简重复叙述和提前声明跨栏浮动体，正文保持 12 页；AI 声明和 42 条参考文献位于第 13 页。
+- 无新实验或推理；新增呈现脚本仅读取冻结记录，表格保留均值 ± SD。独立机器复现仍未执行。
