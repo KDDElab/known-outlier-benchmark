@@ -82,3 +82,11 @@ SME 的首选准确率低于 Qwen，前四候选覆盖高于 Qwen。因此正文
 - 表中均值 ± SD 的统计口径保持不变；删减重复叙述以容纳大表，没有更改正文尺寸或页边距。正文 12 页，参考文献与 AI 声明 1 页。
 - 本次仅改呈现，未增加推理、实验或显著性检验。新呈现脚本为 `figures/make_presentation_restoration.py`。证据哈希和包内呈现核对见 `presentation_verification.json`。
 - 固定工件：`https://github.com/KDDElab/known-outlier-benchmark/releases/tag/icde2027-eab-v4`；v3 保留为上一版。
+
+## 2026-11-10：图 1 的图标与案例叙事（v5）
+
+- 按用户澄清增加图标：发票、编辑笔、异常提示、计算器、正常数据、检索、字段关联与核查；没有新增统计图。
+- 使用冻结的 `constraint_tax_total_000` 发票案例：修改前 (25,1,26)、修改后 (25,1,14)，及正常见证 (10,4,14)。
+- 展示“总额修改 → 正常记录检索 → 两组最小解释”，字段颜色沿用图 2。图注明确总体和编辑历史属于评估信息。
+- 图 2--7 与六张表保持 v4 内容和导出文件；实验数据不变。正文 12 页、参考文献及 AI 声明 1 页。
+- 使用 `make_presentation_restoration.py --intro-only` 更新图 1，PDF/SVG/PNG 同步导出。固定版本入口为 `icde2027-eab-v5`。

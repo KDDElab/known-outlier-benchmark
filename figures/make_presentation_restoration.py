@@ -13,7 +13,7 @@ import pandas as pd
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from matplotlib.patches import Patch,Rectangle
+from matplotlib.patches import Patch,Rectangle,Polygon,Ellipse,Circle
 from matplotlib.ticker import LogFormatterMathtext
 HERE=Path(__file__).resolve().parent;ROOT=HERE.parent;SYN=ROOT/'synthetic_benchmark_v2'
 RUN=SYN/'runs/ccfa_unified_revision';ACC=SYN/'runs/ccfa_acceptance_revision'
@@ -46,6 +46,14 @@ def legend(ax,labels,hatches,anchor=(.5,1.12),ncol=None):
         fontsize=6.5,borderpad=.3,handlelength=1.25,columnspacing=.85,edgecolor='#B0B0B0')
 
 def introduction():
+    """Single-column, icon-led invoice story; no additional quantitative charts.
+
+    All values come from constraint_tax_total_000 and its finite population.
+    Receipt/edit/alert, database/search, and linked-field/check icons explain
+    the three operations. Native vector geometry follows the Figure 2 family;
+    icons are authoring primitives, without external assets or fictional data.
+    Population and edit-history views are explanatory, evaluator-only evidence.
+    """
     import make_manuscript_figures as native
     g,p,_,_,ids,witness=native.invoice_example()
     target=tuple(g['target_row'][f] for f in ids);population=p['clean_role_rows']
@@ -61,42 +69,86 @@ def introduction():
         box(ax,.035,y,3.42,h,'white',border,.8,.065)
         box(ax,.035,y+h-.245,3.42,.245,header,header,0,.055)
         txt(ax,.14,y+h-.125,title,9,weight='bold')
-    panel(2.42,1.04,'(a) One flagged invoice')
-    native.doc(ax,.14,2.98,.17,.20,native.GRAY)
-    txt(ax,.41,3.075,'Record',8.4,color=native.GRAY)
-    xs=[1.47,2.18,2.94];cs=[blue,teal,orange]
-    for x,name,c in zip(xs,['Net','Tax','Gross'],cs):txt(ax,x,3.075,name,8.8,c,ha='center')
-    rule(ax,.13,2.965,3.35,2.965,native.GRID,.6)
-    txt(ax,.15,2.855,'Before edit',8.4)
-    for x,v,c in zip(xs,clean,cs):txt(ax,x,2.855,str(v),9.6,c,ha='center')
-    box(ax,.13,2.49,3.22,.245,'#FBE8C9','none',0,.025)
-    txt(ax,.15,2.615,'Flagged row',8.6,weight='bold')
-    for x,v,c in zip(xs,target,cs):txt(ax,x,2.615,str(v),10,c,ha='center',weight='bold')
-    arrow(ax,3.23,2.86,3.23,2.63,orange,.8)
-    arrow(ax,1.745,2.405,1.745,2.295,native.GRAY,.85)
-    panel(.98,1.30,'(b) Check normal support and minimality')
-    txt(ax,1.745,1.935,'P: 20 clean triples satisfying net + tax = gross',7.8,native.GRAY,ha='center')
-    for x,s,ha in [(.15,'Candidate','left'),(1.94,'Evidence in P','center'),(3.08,'Minimal?','center')]:txt(ax,x,1.755,s,7.8,weight='bold',ha=ha)
-    rule(ax,.13,1.675,3.35,1.675,native.GRID,.55)
-    rows=[('{gross}',[2],'Witness (10, 4, 14)'),('{net, gross}',[0,2],'No matching row'),
-          ('{tax, gross}',[1,2],'No matching row'),('{net, tax, gross}',[0,1,2],'Absent, redundant')]
-    for i,(label,subset,evidence) in enumerate(rows):
-        y=1.575-i*.165;is_minimal=frozenset(subset) in minima
-        supported=any(all(r[j]==target[j] for j in subset) for r in population)
-        assert supported==(i==0)
-        if is_minimal:box(ax,.13,y-.073,3.22,.15,'#F0F6EE','none',0,.015)
-        txt(ax,.15,y,label,7.8,color=teal if is_minimal else native.INK)
-        txt(ax,1.94,y,evidence,7.1,native.GRAY,ha='center')
-        native.status(ax,3.08,y,is_minimal)
-    arrow(ax,1.745,.962,1.745,.855,native.GRAY,.85)
-    panel(.045,.79,'(c) Two evaluation targets')
-    box(ax,.13,.125,1.10,.39,'#FFF5E9',border,.5,.035)
-    box(ax,1.37,.125,1.98,.39,'#F3EFF8','#B5A3CB',.5,.035)
-    txt(ax,.68,.425,'Recorded edit',7.8,native.GRAY,ha='center')
-    txt(ax,.68,.245,'{gross}',9,orange,ha='center',weight='bold')
-    txt(ax,2.36,.43,'Minimal support explanations',7.7,native.PURPLE,ha='center')
-    txt(ax,2.36,.30,'{net, gross}',8.5,blue,ha='center')
-    txt(ax,2.36,.19,'or  {tax, gross}',8.5,teal,ha='center')
+    def receipt(x,values,title,flag=False):
+        y=2.48;w=1.12;h=.68;fold=.105
+        ax.add_patch(Polygon([(x,y),(x+w,y),(x+w,y+h-fold),(x+w-fold,y+h),(x,y+h)],
+            fc='#FFFCF6' if flag else 'white',ec=border if flag else native.GRID,lw=.8,zorder=3))
+        rule(ax,x+w-fold,y+h,x+w-fold,y+h-fold,border if flag else native.GRID,.6)
+        rule(ax,x+w-fold,y+h-fold,x+w,y+h-fold,border if flag else native.GRID,.6)
+        txt(ax,x+.10,3.06,title,8.2,weight='bold')
+        rule(ax,x+.08,2.975,x+w-.08,2.975,native.GRID,.5)
+        for i,(label,value,color) in enumerate(zip(['Net','Tax','Gross'],values,[blue,teal,orange])):
+            yy=2.885-i*.145
+            if flag and i==2:box(ax,x+.065,yy-.064,w-.13,.13,'#FBE8C9','none',0,.015,z=4)
+            txt(ax,x+.10,yy,label,8.2,color)
+            txt(ax,x+w-.14,yy,str(value),9.3,color,ha='right',weight='bold' if flag else 'normal')
+        if flag:
+            xx=x+w-.025;yy=3.12
+            ax.add_patch(Polygon([(xx-.075,yy-.055),(xx+.075,yy-.055),(xx,yy+.075)],fc='#FFF2CC',ec=orange,lw=.7,zorder=7))
+            txt(ax,xx,yy-.005,'!',7.2,orange,ha='center',weight='bold')
+    def pencil(x,y):
+        ax.add_patch(Polygon([(x-.09,y-.065),(x-.055,y-.10),(x+.10,y+.055),(x+.065,y+.09)],
+            fc='#FBE8C9',ec=orange,lw=.8,zorder=7))
+        ax.add_patch(Polygon([(x-.09,y-.065),(x-.055,y-.10),(x-.105,y-.115)],fc=orange,ec=orange,lw=.5,zorder=7))
+        rule(ax,x+.04,y+.065,x+.075,y+.03,orange,.6)
+    def calculator(x,y):
+        box(ax,x-.075,y-.08,.15,.16,'white',native.GRAY,.7,.018,z=7)
+        box(ax,x-.05,y+.020,.10,.033,native.BLUE_BG,native.GRAY,.5,.004,z=8)
+        for dx in [-.033,.033]:
+            for dy in [-.016,-.050]:ax.add_patch(Rectangle((x+dx-.012,y+dy-.009),.024,.018,fc=native.GRAY,ec='none',zorder=8))
+    def colored_text(cx,y,parts,size,weight='normal'):
+        from matplotlib.font_manager import FontProperties
+        font=FontProperties(family='Liberation Serif',size=size,weight=weight)
+        widths=[fig.canvas.get_renderer().get_text_width_height_descent(text,font,False)[0]/fig.dpi for text,_ in parts]
+        x=cx-sum(widths)/2
+        for (text,color),width in zip(parts,widths):
+            txt(ax,x,y,text,size,color,weight=weight);x+=width
+    def chain(x,y,color):
+        for dx,dy in [(-.035,-.025),(.035,.025)]:
+            ax.add_patch(Ellipse((x+dx,y+dy),.145,.077,angle=38,fill=False,ec=color,lw=.95,zorder=8))
+    def shield(x,y):
+        ax.add_patch(Polygon([(x-.071,y+.067),(x+.071,y+.067),(x+.065,y-.018),(x,y-.083),(x-.065,y-.018)],
+            fc=native.TEAL_BG,ec=teal,lw=.7,zorder=7))
+        rule(ax,x-.033,y,x-.008,y-.025,teal,.9);rule(ax,x-.008,y-.025,x+.036,y+.027,teal,.9)
+    panel(2.26,1.20,'1. Follow one flagged invoice')
+    receipt(.14,clean,'Before edit');receipt(2.23,target,'Flagged row',True)
+    pencil(1.745,3.04)
+    txt(ax,1.745,2.845,'Edit gross',8.1,orange,ha='center')
+    arrow(ax,1.39,2.73,2.09,2.73,orange,.95)
+    txt(ax,1.745,2.58,'26 → 14',8.6,orange,ha='center')
+    calculator(.31,2.37)
+    txt(ax,.48,2.37,'25 + 1 ≠ 14: the total is inconsistent',8.0)
+    arrow(ax,1.745,2.245,1.745,2.175,native.GRAY,.85)
+    panel(1.17,.99,'2. Search the clean population')
+    native.database(ax,.26,1.80,.20,native.PURPLE)
+    txt(ax,.47,1.80,'20 clean triples: net + tax = gross',8.1,native.PURPLE)
+    for x,title,values in [(.14,'Net / tax match',clean),(1.81,'Gross match',tuple(witness))]:
+        box(ax,x,1.335,1.54,.365,native.BLUE_BG,native.GRID,.6,.04)
+        native.search(ax,x+.16,1.51,.22,native.BLUE)
+        txt(ax,x+.88,1.60,title,7.9,native.GRAY,ha='center')
+        parts=[('(',native.GRAY)]
+        for j,(v,c) in enumerate(zip(values,[blue,teal,orange])):
+            if j:parts.append((', ',native.GRAY))
+            parts.append((str(v),c if v==target[j] else native.GRAY))
+        parts.append((')',native.GRAY));colored_text(x+.88,1.43,parts,9.0)
+    txt(ax,1.745,1.25,'Every single target value has a normal match.',7.7,ha='center')
+    arrow(ax,1.745,1.155,1.745,1.085,native.GRAY,.85)
+    panel(.035,1.035,'3. Keep each minimal explanation')
+    for x,label,subset,color in [(.14,'{net, gross}',[0,2],blue),(1.81,'{tax, gross}',[1,2],teal)]:
+        assert frozenset(subset) in minima
+        assert not any(all(r[j]==target[j] for j in subset) for r in population)
+        assert all(any(r[j]==target[j] for r in population) for j in subset)
+        box(ax,x,.38,1.54,.395,'#F0F6EE','#ACBFA7',.6,.04)
+        chain(x+.16,.58,color);shield(x+1.39,.58)
+        colored_text(x+.79,.65,[('{',native.GRAY),('net' if subset[0]==0 else 'tax',color),
+            (', ',native.GRAY),('gross',orange),('}',native.GRAY)],8.4,'bold')
+        colored_text(x+.79,.475,[('(',native.GRAY),(str(target[subset[0]]),color),
+            (', ',native.GRAY),(str(target[2]),orange),(')',native.GRAY)],9.0)
+    txt(ax,1.745,.285,'No joint match; either field alone has support.',7.6,ha='center')
+    native.doc(ax,.18,.075,.12,.15,native.GRAY)
+    native.doc(ax,.24,.095,.12,.15,native.GRAY)
+    txt(ax,.48,.15,'All three fields: redundant',8.1,native.GRAY)
+    native.status(ax,3.20,.15,False)
     save(fig,'figure_intro_support_semantics')
 
 def evidence():
@@ -247,12 +299,15 @@ def tables():
     (RUN/'presentation_original_wide.tex').write_text(old)
 
 def main():
-    introduction();plot_style();evidence();contract();lof();corrections();tables()
+    introduction()
+    if '--intro-only' not in sys.argv:
+        plot_style();evidence();contract();lof();corrections();tables()
     sources=[RUN/name for name in ['summary.csv','repeated_summary.csv','complete_error_counts.csv','per_case.csv','lof_sensitivity_summary.csv','correction_strata_per_case.csv','beers_non_ounces_per_case.csv']]
     (RUN/'presentation_restoration_manifest.json').write_text(json.dumps({'scope':'Presentation only; unchanged frozen experiments',
         'protected_figures':['figure2_overall_framework','figure_unified_transfer'],
         'style_reference':'Previous manuscript and 2511.16455v1.pdf: boxed axes, method colors, hatches, grouped wide tables',
         'source_sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sources},
         'script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest()},indent=2)+'\n')
-    print('Rendered figures 1 and 4--7 and three wide tables; figures 2/3 untouched.')
+    print('Rendered Figure 1 only; other exports untouched.' if '--intro-only' in sys.argv else
+          'Rendered figures 1 and 4--7 and three wide tables; figures 2/3 untouched.')
 if __name__=='__main__':main()

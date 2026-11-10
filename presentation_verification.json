@@ -1,14 +1,14 @@
 {
-  "release": "icde2027-eab-v4",
-  "scope": "Presentation only; numerical analysis verification retained from v3",
+  "release": "icde2027-eab-v5",
+  "scope": "Figure 1 icons and caption only; numerical verification retained from v3",
   "unchanged_evidence_files": 1416,
   "new_model_inference": false,
   "new_experiments": false,
-  "presentation_source_files_identical_to_v3": 15,
+  "presentation_source_files_identical_to_previous_release": 15,
   "changed_presentation_rebuilt_from_packaged_records": true,
   "seven_figure_pixels_match": true,
   "three_wide_tables_match": true,
-  "figure_2_and_3_exports_byte_identical_to_v3": true,
+  "figure_2_through_7_exports_byte_identical_to_v4": true,
   "page_accounting": {
     "total_pages": 13,
     "main_text_pages": 12,
@@ -1436,7 +1436,7 @@
     "synthetic_benchmark_v2/runs/subgroup_analysis_v2/by_task_family.csv": "375272ef197188f943d54d4b286adbef650f1da0cebdf4845783d603a5ec44f6"
   },
   "figure_render_sha256": {
-    "figure_intro_support_semantics": "039a7befd0b5d3749a11777091b607d7456aa1c972b90fa4498d46daeeba0327",
+    "figure_intro_support_semantics": "ade1297ca21ddc6d253f1799ce7d26760c76e46486c2eae3a215e37f96c68681",
     "figure2_overall_framework": "94ddfd70b38e3022be297eacf47d3ffb67909c7379f26f75e8a704e9fc006e32",
     "figure_unified_transfer": "9bb0252f004c39afd83d0e70ee0d612188369ca08b860ecad3033f30e087ccfa",
     "figure_unified_evidence": "e4d334e69fae0b28c34e9c40aed6eb134cd04b4453156a2a44b6bb2007e9e401",
@@ -1455,7 +1455,19 @@
     "figures/figure2_overall_framework.png": "37a3bb7fb4a3b6587a718ac2f4d37be3117d0898891ebf6b2418b6b8bd9b4cbe",
     "figures/figure_unified_transfer.pdf": "28848e045216e3107e89694f0c323a1420944e0a8705fef36f2f2a6430663906",
     "figures/figure_unified_transfer.svg": "f5a833268e0d17b7fbe4f18f3656f2bb11f79efdee33180710f5e565ebc73c59",
-    "figures/figure_unified_transfer.png": "a4362c25dd6ca305cff0e76d85bbdc68bd70e0165d1c5fc0d258e1553f2e7cbe"
+    "figures/figure_unified_transfer.png": "a4362c25dd6ca305cff0e76d85bbdc68bd70e0165d1c5fc0d258e1553f2e7cbe",
+    "figures/figure_unified_evidence.pdf": "87d42acb5f4c09c408d73f8888aa5431a8138fde50bde4d5187bdc9957578a80",
+    "figures/figure_unified_evidence.svg": "1945cb67610af8a5c2c13f8a3ed882094b4698684bdd114d87e8ba28646ac514",
+    "figures/figure_unified_evidence.png": "adbd19c4a338d87b2c82007bbc72d10881e5e5b70fd45cafaa76c9fa64cb159c",
+    "figures/figure_unified_contract.pdf": "562c5937a0eadacf4ad507a873c11f046f9fa52105f1f46feba47b226760a362",
+    "figures/figure_unified_contract.svg": "fefd2b69987032613fa63d02e8b34f74fc3501db323030bf933d15e6adca11a6",
+    "figures/figure_unified_contract.png": "249baec4a834df590d8af0aa3a24772fd1d3636ce69cb9e7dcee777741d6eb8c",
+    "figures/figure_unified_lof.pdf": "755c539a912a809f3e5c3b6743a25f0d413ade92c78caf66402a7b0eae3d9577",
+    "figures/figure_unified_lof.svg": "d953dd85c356be8853bdf81961b2e4cbf199cb7771e7fe4bc5901dc42205bc70",
+    "figures/figure_unified_lof.png": "b7f1de990270513010d331220fffef6df906800e7535ec6804478538f439cf5c",
+    "figures/figure_unified_corrections.pdf": "d75da35dcf9f5dfd4cc4c1e2149be66c9a49682f9d59770e05a96b1b888247bf",
+    "figures/figure_unified_corrections.svg": "b824713fe5f44d0b7d046cd9c41e63c89a2d62c54bf913836855ff1645c1e667",
+    "figures/figure_unified_corrections.png": "fffbd72897a4cc363d63793a276bbb4717c76fb14ea4181ac5fcaf15b70bed12"
   },
-  "pdf_sha256": "3a1bade7aa8c342e16006d4e0ca8479b9f5696d7a20ff766fcaffac9dca736a4"
+  "pdf_sha256": "786626811b83259f1335626b48fdf64f13c6c3f4d5af061ce970f17895595a1b"
 }

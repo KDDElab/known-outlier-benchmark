@@ -5,7 +5,7 @@ and analysis code for **Evaluating Language Models and Subspace Methods for
 Explaining Known Tabular Outliers**.
 
 - Public repository: https://github.com/KDDElab/known-outlier-benchmark
-- Fixed artifact release: https://github.com/KDDElab/known-outlier-benchmark/releases/tag/icde2027-eab-v4
+- Fixed artifact release: https://github.com/KDDElab/known-outlier-benchmark/releases/tag/icde2027-eab-v5
 - Paper: [PDF](phase_d_manuscript_draft.pdf) and [LaTeX](phase_d_manuscript_draft.tex).
 - The paper has **12 main-text pages plus one page of AI disclosure and references**,
   following the [ICDE 2027 EAB page rule](https://icde2027.github.io/cf-research-papers.html).
@@ -124,6 +124,14 @@ the earlier boxed-axis, method-color and condition-hatch style. Run
 `figures/make_presentation_restoration.py` after the previous figure generators;
 it rebuilds Figure 1, Figures 4--7 and the three restored wide result tables from
 frozen records. No additional inference or experiments were performed for v4.
+
+The v5 revision refines Figure 1 with native vector icons for invoices, an edit,
+an alert, a calculator, normal-data search, linked fields and verification. The
+recorded tax-total case 000 supplies the before/after values and normal witnesses.
+Field colors match Figure 2. Figures 2--7 and all table contents retain their v4
+exports. To update Figure 1 alone, use
+`python figures/make_presentation_restoration.py --intro-only`.
+No experimental outputs or numerical conclusions change in this revision.
 
 ## Recompute scores and figures from frozen predictions
 
