@@ -273,3 +273,11 @@ This EAB study evaluates feature-subspace explanations for already flagged table
 - 展示“总额修改 → 正常记录检索 → 两组最小解释”，字段颜色沿用图 2。图注明确总体和编辑历史属于评估信息。
 - 图 2--7 与六张表保持 v4 内容和导出文件；实验数据不变。正文 12 页、参考文献及 AI 声明 1 页。
 - 使用 `make_presentation_restoration.py --intro-only` 更新图 1，PDF/SVG/PNG 同步导出。固定版本入口为 `icde2027-eab-v5`。
+
+## Figure 1 scatter restoration (v6, 2026-11-10)
+
+Restored the earlier invoice Net--Gross scatter and its caption at the author's
+request. All 20 clean population projections, the target (25, 14), the normal
+witness (10, 14), the recorded edit and the two support minima use the same frozen
+case as Figure 2. The active renderer delegates to the original figure source.
+Figures 2--7, table contents and all experimental outputs are unchanged.

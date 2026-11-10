@@ -25,7 +25,7 @@ and analysis code for **Evaluating Language Models and Subspace Methods for
 Explaining Known Tabular Outliers**.
 
 - Public repository: https://github.com/KDDElab/known-outlier-benchmark
-- Fixed artifact release: https://github.com/KDDElab/known-outlier-benchmark/releases/tag/icde2027-eab-v5
+- Fixed artifact release: https://github.com/KDDElab/known-outlier-benchmark/releases/tag/icde2027-eab-v6
 - Paper: [PDF](phase_d_manuscript_draft.pdf) and [LaTeX](phase_d_manuscript_draft.tex).
 - The paper has **12 main-text pages plus one page of AI disclosure and references**,
   following the [ICDE 2027 EAB page rule](https://icde2027.github.io/cf-research-papers.html).
@@ -152,6 +152,13 @@ Field colors match Figure 2. Figures 2--7 and all table contents retain their v4
 exports. To update Figure 1 alone, use
 `python figures/make_presentation_restoration.py --intro-only`.
 No experimental outputs or numerical conclusions change in this revision.
+
+The v6 revision restores the earlier Figure 1 Net--Gross scatter. Its 20 blue
+points are the complete clean population of the recorded invoice case, the cross
+marks (25, 14), and a highlighted normal witness supports gross 14 alone. The
+caption and editable renderer are restored consistently. Figures 2--7, all table
+contents and all frozen experimental outputs are unchanged from v5. The same
+`--intro-only` command regenerates this scatter from the packaged records.
 
 ## Recompute scores and figures from frozen predictions
 

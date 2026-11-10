@@ -27,7 +27,7 @@ Investigating a data-quality alert requires choosing fields to inspect. A value 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{figures/figure_intro_support_semantics.pdf}
-\caption{Recorded benchmark invoice: edit, normal-record search, and minimal explanation. Gross changes from 26 to 14. Normal witnesses support each individual value, but neither the net--gross nor tax--gross combination occurs. Both pairs are minimal; all three fields are redundant. Icons mark each operation. Population and edit-history checks are evaluator-only.}
+\caption{The recorded invoice used throughout the paper. Blue points are all 20 clean net--gross pairs; the cross is the target. Gross 14 has a normal witness, whereas the pair $(25,14)$ has none. The recorded edited field and the two minimal support explanations are different evaluation targets.}
 \label{fig:intro-support}
 \end{figure}
 
@@ -377,7 +377,7 @@ Table~\ref{tab:related-work} compares the primary evaluation targets of neighbor
 \textbf{Benchmarks and component analysis.} ADBench supplies anomaly benchmarks~\cite{han2022adbench}; TABARD, RADAR, AnTBench, and SEC-FinTables evaluate perturbed tables, anomaly reasoning, awareness, or financial inconsistencies~\cite{choudhury2025tabard,gu2025radar,wei2026antbench,ke2026secfintables}. Papadakis et al.~\cite{papadakis2024reevaluation} show why candidate construction matters in record linkage. Recent ICDE EAB studies decompose retrieval and generation, table-retrieval design, counting methods, and adaptive-query-processing components~\cite{zhang2026xrag,yang2026tr360,zhu2026beacon,mu2026aqp}. Our analogous methodological goal is to identify which evidence, output, and scoring conditions produce the observed explanation rankings.
 
 \section{Artifact and Reproducibility}
-The public repository at \url{https://github.com/KDDElab/known-outlier-benchmark} and fixed \href{https://github.com/KDDElab/known-outlier-benchmark/releases/tag/icde2027-eab-v5}{\texttt{icde2027-eab-v5}} release provide generators, frozen inputs/labels, raw responses, baseline outputs, analysis, editable figures, manuscript sources, dependencies, and hashes. Recomputing scores requires no private inference service. Car is attributed under CC BY 4.0; other sources retain their provenance and licenses.
+The public repository at \url{https://github.com/KDDElab/known-outlier-benchmark} and fixed \href{https://github.com/KDDElab/known-outlier-benchmark/releases/tag/icde2027-eab-v6}{\texttt{icde2027-eab-v6}} release provide generators, frozen inputs/labels, raw responses, baseline outputs, analysis, editable figures, manuscript sources, dependencies, and hashes. Recomputing scores requires no private inference service. Car is attributed under CC BY 4.0; other sources retain their provenance and licenses.
 
 The unified archive contains 1,080 model-query records, 1,080 baseline predictions, and candidate scores for 14 LOF conditions. The original 5,184 model-condition records, 288 invoice responses, and 1,368 earlier revision records remain separate. IDs prevent counting provenance copies as extra cases. New-rule sample minima remain diagnostic; population labels are independently reconstructed from complete normal tables.
 
