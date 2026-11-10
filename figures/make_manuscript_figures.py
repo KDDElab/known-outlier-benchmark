@@ -240,6 +240,8 @@ def make_intro_figure():
     """One-column real-data companion to the accepted Figure 2.
 
     Same thin orange frame, title bands, neutral panels and field-index grids.
+    The supplied Pima screenshot is the layout reference. Field columns and
+    vote counts use slightly larger type at the final single-column width.
     All values, ranks and peer votes come from case C0035. The scatter omits
     rows with a zero glucose or BMI only for visualization (752/768 remain).
     Models receive eight opaque fields, the target and twelve reference rows;
@@ -278,8 +280,8 @@ def make_intro_figure():
         arrowprops={'arrowstyle':'-','color':warm,'lw':.65},zorder=7)
     sc.set(xlim=(35,205),ylim=(14,70),xlabel='F002: glucose (mg/dL)',ylabel='F006: BMI')
     sc.set_xticks([40,80,120,160,200]);sc.set_yticks([20,40,60])
-    sc.tick_params(labelsize=6.8,length=2,width=.5,pad=1.5)
-    sc.xaxis.label.set_size(7.2);sc.yaxis.label.set_size(7.2)
+    sc.tick_params(labelsize=7.0,length=2,width=.5,pad=1.5)
+    sc.xaxis.label.set_size(7.4);sc.yaxis.label.set_size(7.4)
     sc.xaxis.labelpad=2;sc.yaxis.labelpad=2
     for side in ['top','right']:sc.spines[side].set_visible(False)
     for side in ['left','bottom']:sc.spines[side].set_color('#8D98A3')
@@ -294,14 +296,14 @@ def make_intro_figure():
         if j in [1,5]:box(ax,2.33,yy-.058,.95,.116,'#E7EFF6','none',0,.014)
         txt(ax,2.37,yy,fid,7.3,BLUE if j in [1,5] else INK)
         txt(ax,3.25,yy,f'{X[target,j]:g}',7.4,BLUE if j in [1,5] else INK,ha='right')
-    txt(ax,1.745,1.615,'Model input: x* + 12 references + eight field IDs',7.7,ha='center')
+    txt(ax,1.745,1.615,f'Model input: x* + {len(refs)} references + eight field IDs',7.7,ha='center')
     arrow(ax,1.745,1.52,1.745,1.44,'#727579',.8)
 
     panel(.045,1.395,'(b) Recorded selections and peer agreement')
     # Column alignment exposes shared fields, differing fields and rank order.
     cx=[1.38+j*.256 for j in range(8)]
     txt(ax,.15,1.115,'Field',7.4,GRAY)
-    for xx,fid in zip(cx,fields):txt(ax,xx,1.115,fid,6.7,GRAY,ha='center')
+    for xx,fid in zip(cx,fields):txt(ax,xx,1.115,fid,7.0,GRAY,ha='center')
     for yy in [.94,.445]:box(ax,.12,yy-.115,3.24,.23,neutral,'none',0,.03)
     qwen_logo(ax,.245,.948,.18)
     txt(ax,.39,.965,'Qwen',8.0,weight='bold')
@@ -320,11 +322,11 @@ def make_intro_figure():
                 label=str(pred.index(fid)+1) if selection is pred else '•'
                 txt(ax,xx,yy,label,7.7,'white',ha='center')
         # A four-unit bar with its exact count, including visible zero baselines.
-        box(ax,xx-.061,.60,.122,.14,'#EEF0F2','none',0,.008)
+        box(ax,xx-.061,.58,.122,.17,'#EEF0F2','none',0,.008)
         if n:
-            box(ax,xx-.061,.60,.122,.14*n/4,
+            box(ax,xx-.061,.58,.122,.17*n/4,
                 BLUE if fid in shared else warm,'none',0,.008)
-        txt(ax,xx,.785,str(n),7.1,GRAY if n==0 else INK,ha='center')
+        txt(ax,xx,.792,str(n),7.4,GRAY if n==0 else INK,ha='center')
     rule(ax,.15,.278,3.34,.278,'#D3D6DB',.55)
     n_shared=len(shared);n_union=len(set(pred)|set(peer))
     txt(ax,1.745,.207,f"Shared {n_shared} / union {n_union} = {float(score['jaccard']):.3f} Jaccard",7.8,ha='center')

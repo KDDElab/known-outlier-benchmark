@@ -64,7 +64,7 @@
     "synthetic_benchmark_v2/runs/ccfa_unified_revision/presentation_original_wide.tex": "7a33a1c7642dafa8589c34d89de6d2191195563367432a1d0890088a06e23bc8"
   },
   "compared_figure_render_sha256": {
-    "figure_intro_real_dataset": "88eeffdd759d6f87a01585231d93f2f6da2a833700b88d479ecb0f69d033054f",
+    "figure_intro_real_dataset": "1c63c080b2e509e4abb2baf5c925c52a26e077316825c28468a46b664f94a2b6",
     "figure2_overall_framework": "94ddfd70b38e3022be297eacf47d3ffb67909c7379f26f75e8a704e9fc006e32",
     "figure3_reference_and_order_robustness": "bc7b806941502945a69f0cd55920fb26b5fdda1748504862859f5b6c967846ef",
     "figure2_sufficiency_compactness_validity": "7703b3006fbdf262341ffa1fc0d31e484de1e1e02f6dfa00862eca2f083cee69",
@@ -92,16 +92,16 @@
     "main_text_pages": 12
   },
   "presentation_refresh": {
-    "release": "icde2027-eab-v6",
-    "scope": "Figure 1 scatter and caption restored; numerical verification retained from v3",
+    "release": "icde2027-eab-v7",
+    "scope": "Pima Figure 1, caption and cross-references; numerical verification retained from v3",
     "unchanged_evidence_files": 1416,
     "new_model_inference": false,
     "new_experiments": false,
-    "presentation_source_files_identical_to_previous_release": 15,
+    "presentation_source_files_identical_to_previous_release": 20,
     "changed_presentation_rebuilt_from_packaged_records": true,
     "seven_figure_pixels_match": true,
     "three_wide_tables_match": true,
-    "figure_2_through_7_exports_byte_identical_to_v5": true,
+    "figure_2_through_7_exports_byte_identical_to_v6": true,
     "page_accounting": {
       "total_pages": 13,
       "main_text_pages": 12,

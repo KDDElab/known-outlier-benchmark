@@ -1,6 +1,7 @@
 """Restore the approved figure/table grammar without changing experiments.
 
-Figure 1 restores the earlier invoice scatter, normal witness and label summary. Figures 4--7 use the earlier 2511-style
+Figure 1 follows the supplied Pima screenshot: a real-data scatter, the complete
+target record, Qwen ranks, peer votes and agreement. Figures 4--7 use the earlier 2511-style
 boxed axes, sans-serif type, method colors and condition hatches. Figure 2
 and Figure 3 exports are protected: this script never writes them.
 All numerical panels bind frozen CSV/NPZ records by method/case identity.
@@ -45,15 +46,14 @@ def legend(ax,labels,hatches,anchor=(.5,1.12),ncol=None):
         fontsize=6.5,borderpad=.3,handlelength=1.25,columnspacing=.85,edgecolor='#B0B0B0')
 
 def introduction():
-    """Restore the earlier data-bound Net--Gross scatter introduction.
+    """Render only the Pima introduction from archived case C0035.
 
-    The original renderer uses the same recorded invoice as Figure 2 and plots
-    all 20 clean population pairs. It highlights the target and a normal witness
-    for gross 14, then separates the edited field from both support minima.
-    Only Figure 1 is exported by this call. Population evidence is evaluator-only.
+    The selected screenshot fixes the two-panel layout. Native source binds
+    every target value, reference row, rank and vote to the frozen peer pilot.
+    Agreement has no field-level gold labels. The invoice remains in Figure 2.
     """
-    import make_unified_figures as previous
-    previous.introduction()
+    import make_manuscript_figures as native
+    native.make_intro_figure()
 
 
 def evidence():
@@ -208,7 +208,11 @@ def main():
     if '--intro-only' not in sys.argv:
         plot_style();evidence();contract();lof();corrections();tables()
     sources=[RUN/name for name in ['summary.csv','repeated_summary.csv','complete_error_counts.csv','per_case.csv','lof_sensitivity_summary.csv','correction_strata_per_case.csv','beers_non_ounces_per_case.csv']]
+    intro_sources=[ROOT/name for name in ['data/adbench/29_Pima.npz','manifests/cases.csv',
+        'runs/annotations.jsonl','reports/leave_one_model_out_by_case.csv','figures/qwen_logo_user.png']]
     (RUN/'presentation_restoration_manifest.json').write_text(json.dumps({'scope':'Presentation only; unchanged frozen experiments',
+        'figure_1':'figure_intro_real_dataset; Pima case C0035, source row 259; peer agreement only',
+        'intro_source_sha256':{str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in intro_sources},
         'protected_figures':['figure2_overall_framework','figure_unified_transfer'],
         'style_reference':'Previous manuscript and 2511.16455v1.pdf: boxed axes, method colors, hatches, grouped wide tables',
         'source_sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sources},

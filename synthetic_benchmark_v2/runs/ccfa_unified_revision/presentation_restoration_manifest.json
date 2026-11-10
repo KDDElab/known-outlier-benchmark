@@ -14,5 +14,13 @@
     "correction_strata_per_case.csv": "634f777becb6227278fa62b8db1f48e95b31028264baf07086c40b687938a73b",
     "beers_non_ounces_per_case.csv": "febdb0a68a4c914cf013acb4e4445389486caaccbc9fce4760e4bc206ca33bb9"
   },
-  "script_sha256": "5a5124700bb64327c734a5cb034ef398691f72e1e2cc7b091528b4e6594ef9e0"
+  "script_sha256": "4f0ae24eac7b3470267e5a725e14398eddf114d7dc093286c63961ba6c74fd9a",
+  "figure_1": "figure_intro_real_dataset; Pima case C0035, source row 259; peer agreement only",
+  "intro_source_sha256": {
+    "data/adbench/29_Pima.npz": "215454bb263a2f040945c9ea7bd7f06f1e89a61a3143bdb6f196e3887e801a7d",
+    "manifests/cases.csv": "991e3c6fb6ccc8840441ebe739a7587d39de8854b46fdb6d5239bfeaee8b77c2",
+    "runs/annotations.jsonl": "108debd65c4bf6b73ba0abbc2cdabcca7961bc11e839173932c445d05f3155e1",
+    "reports/leave_one_model_out_by_case.csv": "af6b84b5f51cc2d8c132f05a48a45ec0551578e6ace50dc732c8033ca0f8101e",
+    "figures/qwen_logo_user.png": "794b43dad06ab847ba1b27a791f6ccc393e16d12ec87898d7bc509476f8cdd7f"
+  }
 }

@@ -20,15 +20,15 @@ data quality, anomaly explanation, feature subspaces, large language models, ben
 \end{IEEEkeywords}
 
 \section{Introduction}
-Investigating a data-quality alert requires choosing fields to inspect. A value can be ordinary alone and unusual in combination with other attributes. In \emph{known-outlier explanation}, a method receives a flagged row, its schema, and finite normal references, then returns ranked field subsets. The upstream detector score and the target's clean counterpart are unavailable~\cite{li2024xadsurvey}. The evaluation must specify what makes one of those subsets a correct explanation.
+Investigating a data-quality alert requires choosing fields to inspect. A value can be ordinary alone and unusual in combination with other attributes. In \emph{known-outlier explanation}, a method receives a flagged row, its schema, and finite normal references, then returns ranked field subsets. The upstream detector score and the target's clean counterpart are unavailable~\cite{li2024xadsurvey}. The evaluation must specify what makes one of those subsets a correct explanation. Figure~\ref{fig:intro-real} shows an archived Pima query and peer agreement~\cite{han2022adbench}.
 
-\textbf{One invoice, different targets.} Consider net $25$, tax $1$, and gross $14$ (Figure~\ref{fig:intro-support}). The finite clean domain permits net values $\{10,15,20,25\}$, tax values $0$--$4$, and gross $=\text{net}+\text{tax}$. The recorded edit changes gross. Yet gross 14 also occurs in the normal triple $(10,4,14)$, so the edited singleton does not exclude normal data. Both \{net, gross\} and \{tax, gross\} are minimal exclusions. Their union excludes normal data too, but contains a redundant field. Recovering the edit, a sufficient combination, and a minimal explanation therefore produces different answers for the same row.
+\textbf{One invoice, different targets.} Consider net $25$, tax $1$, and gross $14$ (Figure~\ref{fig:framework}). The clean domain permits net $\in\{10,15,20,25\}$, tax $\in\{0,\ldots,4\}$, and gross $=\text{net}+\text{tax}$. The recorded edit changes gross, yet $(10,4,14)$ is normal, so gross alone has normal support. Both \{net, gross\} and \{tax, gross\} are minimal exclusions; their union is redundant. Recovering the edit and recovering a minimal explanation therefore give different answers.
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\columnwidth]{figures/figure_intro_support_semantics.pdf}
-\caption{The recorded invoice used throughout the paper. Blue points are all 20 clean net--gross pairs; the cross is the target. Gross 14 has a normal witness, whereas the pair $(25,14)$ has none. The recorded edited field and the two minimal support explanations are different evaluation targets.}
-\label{fig:intro-support}
+\includegraphics[width=\columnwidth]{figures/figure_intro_real_dataset.pdf}
+\caption{Pima query C0035 (row 259): 752 nonzero glucose/BMI pairs, 12 reference rings, and the target star. Cells align Qwen ranks with the four-peer majority; bars show votes. Brown marks disagreement. Models receive opaque IDs; Jaccard measures agreement without field-level truth.}
+\label{fig:intro-real}
 \end{figure}
 
 \begin{figure*}[t]
@@ -197,7 +197,7 @@ The public-correction task requests four singleton suggestions; FieldHit@$k$ mea
 \subsection{RQ1: What changes when the explanation label changes?}
 Support and rule families coincide in 653 of 864 original cases. All 211 differences involve deterministic proxies. On those cases, changing only the scoring label reduces original Qwen Exact@1 from 0.275 to 0.137 and Gower-LOF from 0.487 to 0.191. Thus, part of an apparent performance difference can arise from which explanatory object the evaluator accepts.
 
-In \texttt{s20261106\_main\_V2\_0012}, the rule requires $F011>0.5$ and $F007\in\{c4,c5\}$, while F008 copies F007. The rule minimum is \{F007,F011\}; support also accepts \{F008,F011\}. The target has $F011=1$ and $F007=F008=c4$. An edit to F007 propagates to F008. Rule scoring rejects the proxy alternative, whereas evaluating all changed fields rewards a redundant set. Figure~\ref{fig:intro-support} supplies the complementary invoice example: every target has one edited field, but its valid support minima contain at least two fields. Multiple valid answers and exact set matching are established evaluation ideas; the additional requirement here is complete population enumeration with explicit rule and provenance separation.
+In \texttt{s20261106\_main\_V2\_0012}, the rule requires $F011>0.5$ and $F007\in\{c4,c5\}$, while F008 copies F007. The rule minimum is \{F007,F011\}; support also accepts \{F008,F011\}. The target has $F011=1$ and $F007=F008=c4$. An edit to F007 propagates to F008. Rule scoring rejects the proxy alternative, whereas evaluating all changed fields rewards a redundant set. Figure~\ref{fig:framework} supplies the complementary invoice example: every target has one edited field, but its valid support minima contain at least two fields. Multiple valid answers and exact set matching are established evaluation ideas; the additional requirement here is complete population enumeration with explicit rule and provenance separation.
 
 \subsection{RQ2: Jointly controlling the primary comparison}
 \input{synthetic_benchmark_v2/runs/ccfa_unified_revision/presentation_primary_wide.tex}
@@ -355,7 +355,7 @@ Model & Score attribution & Shapley explanation; CAIT~\cite{kluttermann2024shapl
 \end{table*}
 
 \subsection{Auxiliary pilots and interpretation}
-The peer pilot retains 390 model outputs, including 349 valid non-abstentions. Pairwise Jaccard ranges from 0.213 to 0.520 on 40 ADBench queries answered by all five models; UCI has only one common-valid query. The archived Pima example has Qwen/peer-majority overlap 0.500, with no field-level truth. These measurements characterize agreement only.
+The peer pilot retains 390 model outputs, including 349 valid non-abstentions. Pairwise Jaccard ranges from 0.213 to 0.520 on 40 ADBench queries answered by all five models; UCI has only one common-valid query. The archived Pima example in Figure~\ref{fig:intro-real} has Qwen/peer-majority overlap 0.500, with no field-level truth. These measurements characterize agreement only.
 
 With all circuit outputs visible, Qwen/DeepSeek/Llama achieve Jaccard@4 of 0.349/0.109/0.038, compared with input-only Gower-kNN/LOF at 0.456/0.428. Qwen's Hit@4 is 0.016 and the others retrieve no exact fault set. Scores average queries within targets, targets within table pairs, and pairs within four circuits. These fault labels and the limited number of circuits prevent treating the pilot as validation of population-minimal support.
 
@@ -377,7 +377,7 @@ Table~\ref{tab:related-work} compares the primary evaluation targets of neighbor
 \textbf{Benchmarks and component analysis.} ADBench supplies anomaly benchmarks~\cite{han2022adbench}; TABARD, RADAR, AnTBench, and SEC-FinTables evaluate perturbed tables, anomaly reasoning, awareness, or financial inconsistencies~\cite{choudhury2025tabard,gu2025radar,wei2026antbench,ke2026secfintables}. Papadakis et al.~\cite{papadakis2024reevaluation} show why candidate construction matters in record linkage. Recent ICDE EAB studies decompose retrieval and generation, table-retrieval design, counting methods, and adaptive-query-processing components~\cite{zhang2026xrag,yang2026tr360,zhu2026beacon,mu2026aqp}. Our analogous methodological goal is to identify which evidence, output, and scoring conditions produce the observed explanation rankings.
 
 \section{Artifact and Reproducibility}
-The public repository at \url{https://github.com/KDDElab/known-outlier-benchmark} and fixed \href{https://github.com/KDDElab/known-outlier-benchmark/releases/tag/icde2027-eab-v6}{\texttt{icde2027-eab-v6}} release provide generators, frozen inputs/labels, raw responses, baseline outputs, analysis, editable figures, manuscript sources, dependencies, and hashes. Recomputing scores requires no private inference service. Car is attributed under CC BY 4.0; other sources retain their provenance and licenses.
+The public repository at \url{https://github.com/KDDElab/known-outlier-benchmark} and fixed \href{https://github.com/KDDElab/known-outlier-benchmark/releases/tag/icde2027-eab-v7}{\texttt{icde2027-eab-v7}} release provide generators, frozen inputs/labels, raw responses, baseline outputs, analysis, editable figures, manuscript sources, dependencies, and hashes. Recomputing scores requires no private inference service. Car is attributed under CC BY 4.0; other sources retain their provenance and licenses.
 
 The unified archive contains 1,080 model-query records, 1,080 baseline predictions, and candidate scores for 14 LOF conditions. The original 5,184 model-condition records, 288 invoice responses, and 1,368 earlier revision records remain separate. IDs prevent counting provenance copies as extra cases. New-rule sample minima remain diagnostic; population labels are independently reconstructed from complete normal tables.
 

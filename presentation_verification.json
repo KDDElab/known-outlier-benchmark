@@ -1,14 +1,14 @@
 {
-  "release": "icde2027-eab-v6",
-  "scope": "Figure 1 scatter and caption restored; numerical verification retained from v3",
+  "release": "icde2027-eab-v7",
+  "scope": "Pima Figure 1, caption and cross-references; numerical verification retained from v3",
   "unchanged_evidence_files": 1416,
   "new_model_inference": false,
   "new_experiments": false,
-  "presentation_source_files_identical_to_previous_release": 15,
+  "presentation_source_files_identical_to_previous_release": 20,
   "changed_presentation_rebuilt_from_packaged_records": true,
   "seven_figure_pixels_match": true,
   "three_wide_tables_match": true,
-  "figure_2_through_7_exports_byte_identical_to_v5": true,
+  "figure_2_through_7_exports_byte_identical_to_v6": true,
   "page_accounting": {
     "total_pages": 13,
     "main_text_pages": 12,
@@ -1436,7 +1436,7 @@
     "synthetic_benchmark_v2/runs/subgroup_analysis_v2/by_task_family.csv": "375272ef197188f943d54d4b286adbef650f1da0cebdf4845783d603a5ec44f6"
   },
   "figure_render_sha256": {
-    "figure_intro_support_semantics": "b2029489a698ff55d0a0211ec551edfe8ab7904daf946c279131e3ea62453ab7",
+    "figure_intro_real_dataset": "1c63c080b2e509e4abb2baf5c925c52a26e077316825c28468a46b664f94a2b6",
     "figure2_overall_framework": "94ddfd70b38e3022be297eacf47d3ffb67909c7379f26f75e8a704e9fc006e32",
     "figure_unified_transfer": "9bb0252f004c39afd83d0e70ee0d612188369ca08b860ecad3033f30e087ccfa",
     "figure_unified_evidence": "e4d334e69fae0b28c34e9c40aed6eb134cd04b4453156a2a44b6bb2007e9e401",
@@ -1469,5 +1469,5 @@
     "figures/figure_unified_corrections.svg": "b824713fe5f44d0b7d046cd9c41e63c89a2d62c54bf913836855ff1645c1e667",
     "figures/figure_unified_corrections.png": "fffbd72897a4cc363d63793a276bbb4717c76fb14ea4181ac5fcaf15b70bed12"
   },
-  "pdf_sha256": "489fd1e834b5ed4fec0e6400deac7e0c6d84be58235ec52656367c2852fde84e"
+  "pdf_sha256": "1710c965ee8e5a56237c197e5c919ebdd559e8ad68f5465f7c1631926ae643bf"
 }

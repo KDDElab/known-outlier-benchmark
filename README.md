@@ -5,7 +5,7 @@ and analysis code for **Evaluating Language Models and Subspace Methods for
 Explaining Known Tabular Outliers**.
 
 - Public repository: https://github.com/KDDElab/known-outlier-benchmark
-- Fixed artifact release: https://github.com/KDDElab/known-outlier-benchmark/releases/tag/icde2027-eab-v6
+- Fixed artifact release: https://github.com/KDDElab/known-outlier-benchmark/releases/tag/icde2027-eab-v7
 - Paper: [PDF](phase_d_manuscript_draft.pdf) and [LaTeX](phase_d_manuscript_draft.tex).
 - The paper has **12 main-text pages plus one page of AI disclosure and references**,
   following the [ICDE 2027 EAB page rule](https://icde2027.github.io/cf-research-papers.html).
@@ -140,6 +140,13 @@ caption and editable renderer are restored consistently. Figures 2--7, all table
 contents and all frozen experimental outputs are unchanged from v5. The same
 `--intro-only` command regenerates this scatter from the packaged records.
 
+The v7 revision follows the supplied Pima screenshot for Figure 1. It restores
+the real-data scatter and aligned selection/vote panels, slightly enlarges field
+labels and vote counts, and increases the bar height for legibility. The Qwen logo
+and all archived data are preserved. The caption and prose references now describe
+the Pima pilot; invoice references point to Figure 2. Figures 2--7 and table source
+contents are unchanged. No new experiments or model calls were made for this edit.
+
 ## Recompute scores and figures from frozen predictions
 
 Run from the unpacked package root, using the environment versions recorded in
@@ -187,7 +194,7 @@ Figure files under `figures/` are provided as PDF, SVG and PNG:
 
 | Manuscript figure | File stem |
 | --- | --- |
-| 1 | `figure_intro_support_semantics` |
+| 1 | `figure_intro_real_dataset` |
 | 2 | `figure2_overall_framework` |
 | 3 | `figure_unified_transfer` |
 | 4 | `figure_unified_evidence` |
@@ -195,10 +202,13 @@ Figure files under `figures/` are provided as PDF, SVG and PNG:
 | 6 | `figure_unified_lof` |
 | 7 | `figure_unified_corrections` |
 
-Figure 1 uses the recorded invoice example and its exact finite clean population
-to distinguish an edited field from two minimal support explanations. The earlier
-Pima agreement figure remains in the archive as a diagnostic and is not the
-paper's visual entry point.
+Figure 1 follows the author's supplied Pima screenshot. The top panel shows the
+real glucose--BMI scatter, 12 archived references and all eight target values.
+The lower panel aligns Qwen ranks, votes from four other models and their majority.
+Case C0035 (source row 259) supplies every displayed value. Jaccard 0.500 denotes
+peer agreement without field-level truth. Zero glucose/BMI rows are omitted only
+from the scatter (752/768 remain), never from the experimental input. The invoice
+in Figure 2 retains the motivating distinction between edits and support minima.
 
 Figure 2 follows the supplied two-module overview and three-row invoice trace.
 Its upper overview describes the unified comparison; its lower trace explicitly

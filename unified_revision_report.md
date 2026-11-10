@@ -98,3 +98,14 @@ request. All 20 clean population projections, the target (25, 14), the normal
 witness (10, 14), the recorded edit and the two support minima use the same frozen
 case as Figure 2. The active renderer delegates to the original figure source.
 Figures 2--7, table contents and all experimental outputs are unchanged.
+
+## Pima Figure 1 refinement (v7, 2026-11-10)
+
+The author supplied the Pima screenshot as the intended layout. Figure 1 now
+uses that two-panel composition: glucose--BMI scatter and complete target values,
+followed by aligned Qwen ranks, four-peer votes and majority selection. Field IDs,
+vote counts and plot axes receive small final-size readability adjustments. Case
+C0035 (source row 259) supplies the same archived values, 12 references, rankings
+and Jaccard 0.500. Agreement remains separate from field-level explanation truth.
+The caption and text references were reconciled; the invoice stays in Figure 2.
+All Figure 2--7 exports, table sources and experimental results are preserved.
